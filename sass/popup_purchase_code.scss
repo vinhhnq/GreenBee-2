@@ -1,0 +1,151 @@
+#Nov_purchasecode{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:100000;
+    padding:30px;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background: linear-gradient(89deg, #041a2c, #042c22 94%);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+#Nov_purchasecode:not(.hidden):not(.hide){
+    display:flex !important
+}
+#Nov_purchasecode.hide{
+    display:none !important
+}
+#Nov_purchasecode-heading {
+    font-weight: 800;
+    font-size: 30px;
+    color: #fff;
+}
+#Nov_purchasecode-text {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+#Nov_purchasecode-guide {
+    border: 2px dashed rgba(white, .3);
+    border-radius: 100px;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 700;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 100px;
+    span {
+        background: linear-gradient(to right, #00e4ff 0%, #00ff6c 100%);
+        background-clip: text;
+        color: transparent;
+    }
+    @media(max-width: 900px) {
+        padding: 14px 30px;
+    }
+}
+#Nov_purchasecode-link {
+    a {
+        position: relative;
+        @include rtl-pl(15px);
+        font-size: 12px;
+        color: white;
+        font-weight: 600;
+        @include rtl-text-align-left();
+        display: block;
+        &:hover {
+            text-decoration: underline;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            background: white;
+            border-radius: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            @include rtl-l(0)
+        }
+    }
+    a:not(:last-child) {
+        @include rtl-mr(5rem);
+        @media(max-width: 767px) {
+            margin-bottom: 5px;
+        }
+    }
+}
+#Nov_purchasecode-waring {
+    color: #e1ff00;
+    font-weight: 500;
+    margin-bottom: 20px;
+    position: relative;
+    &:before {
+        content: "\f1f9";
+        display: inline-block;
+        font-family: "Material-Design-Iconic-Font";
+        @include rtl-mr(10px);
+        font-size: 15px;
+        vertical-align: middle;
+    }
+}
+#Nov_purchasecode-center {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#Nov_purchasecode-bottom {
+    padding-top: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: white;
+    i {
+        font-size: 30px;
+        margin-bottom: 15px;
+        color: #e1ff00;
+    }
+}
+.abcd{
+    display:none !important
+}
+@-webkit-keyframes shaket4code{
+    from,to{
+        transform:translate3d(0, 0, 0)
+    }
+    10%,30%,50%,70%,90%{
+        transform:translate3d(-10px, 0, 0)
+    }
+    20%,40%,60%,80%{
+        transform:translate3d(10px, 0, 0)
+    }
+}
+@keyframes shaket4code{
+    from,to{
+        transform:translate3d(0, 0, 0)
+    }
+    10%,30%,50%,70%,90%{
+        transform:translate3d(-10px, 0, 0)
+    }
+    20%,40%,60%,80%{
+        transform:translate3d(10px, 0, 0)
+    }
+}
+.shaket4code{
+    -webkit-animation-name:shaket4code;
+    animation-name:shaket4code;
+    -webkit-animation-duration:1s;
+    animation-duration:1s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both
+}

@@ -1,0 +1,465 @@
+* {
+   outline: none;
+}
+html {
+   padding-bottom: 0 !important;
+   font-size: 62.5%;
+}
+img {
+   max-width: 100%;
+}
+input,
+select,
+textarea {
+   @include display(block);
+   width: 100%;
+   border: 1px solid #e3e0d3;
+   background-color: white;
+   color: #162950;
+   max-width: 100%;
+   line-height: 1.2;
+   font-family: inherit;
+   @include border-radius(0);
+   padding: 13px 15px;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+   -webkit-box-shadow: 0 0 0px 1000px #f2f2f2 inset;
+   transition: background-color 5000s ease-in-out 0s;
+}
+
+.form-vertical {
+   .title_block {
+      font-family: var(--font-family-default);
+      font-weight: 800;
+      font-size: 2.4rem;
+      color: var(--color-heading);
+      text-transform: uppercase;
+   }
+   input,
+   select,
+   textarea {
+      @include display(inline-block);
+      margin-bottom: 30px;
+   }
+}
+
+/*============================================================================
+  Fast Tap
+  enables no-delay taps (FastClick-esque) on supporting browsers
+==============================================================================*/
+a,
+button,
+[role="button"],
+input,
+label,
+select,
+textarea {
+   touch-action: manipulation;
+}
+
+@for $i from 0 through 20 {
+   $value: 5 * $i;
+   .mt-#{$value} {
+      margin-top: #{$value}px !important;
+   }
+   .mb-#{$value} {
+      margin-bottom: #{$value}px !important;
+   }
+   .pt-#{$value} {
+      padding-top: #{$value}px !important;
+   }
+   .pb-#{$value} {
+      padding-bottom: #{$value}px !important;
+   }
+}
+
+@media (max-width: 1440px) {
+   @for $i from 0 through 10 {
+      $value: 5 * $i;
+      .mt-xl-#{$value} {
+         margin-top: #{$value}px !important;
+      }
+      .mb-xl-#{$value} {
+         margin-bottom: #{$value}px !important;
+      }
+      .pt-xl-#{$value} {
+         padding-top: #{$value}px !important;
+      }
+      .pb-xl-#{$value} {
+         padding-bottom: #{$value}px !important;
+      }
+   }
+}
+@media (max-width: 1199px) {
+   @for $i from 0 through 10 {
+      $value: 5 * $i;
+      .mt-lg-#{$value} {
+         margin-top: #{$value}px !important;
+      }
+      .mb-lg-#{$value} {
+         margin-bottom: #{$value}px !important;
+      }
+      .pt-lg-#{$value} {
+         padding-top: #{$value}px !important;
+      }
+      .pb-lg-#{$value} {
+         padding-bottom: #{$value}px !important;
+      }
+   }
+}
+@media (max-width: 991px) {
+   @for $i from 0 through 10 {
+      $value: 5 * $i;
+      .mt-md-#{$value} {
+         margin-top: #{$value}px !important;
+      }
+      .mb-md-#{$value} {
+         margin-bottom: #{$value}px !important;
+      }
+      .pt-md-#{$value} {
+         padding-top: #{$value}px !important;
+      }
+      .pb-md-#{$value} {
+         padding-bottom: #{$value}px !important;
+      }
+   }
+}
+@media (max-width: 767px) {
+   @for $i from 0 through 10 {
+      $value: 5 * $i;
+      .mt-sm-#{$value} {
+         margin-top: #{$value}px !important;
+      }
+      .mb-sm-#{$value} {
+         margin-bottom: #{$value}px !important;
+      }
+      .pt-sm-#{$value} {
+         padding-top: #{$value}px !important;
+      }
+      .pb-sm-#{$value} {
+         padding-bottom: #{$value}px !important;
+      }
+   }
+}
+@media (max-width: 575px) {
+   @for $i from 0 through 10 {
+      $value: 5 * $i;
+      .mt-xs-#{$value} {
+         margin-top: #{$value}px !important;
+      }
+      .mb-xs-#{$value} {
+         margin-bottom: #{$value}px !important;
+      }
+      .pt-xs-#{$value} {
+         padding-top: #{$value}px !important;
+      }
+      .pb-xs-#{$value} {
+         padding-bottom: #{$value}px !important;
+      }
+   }
+}
+@for $i from 0 through 16 {
+   $value: 5 * $i;
+   .row.spacing-#{$value} {
+      margin-right: #{-(calc($value / 2))}px;
+      margin-left: #{-(calc($value / 2))}px;
+      > [class*="col-"],
+      > [class*=" col-"],
+      > [class*="col"],
+      .p_item {
+         padding-left: #{calc($value / 2)}px;
+         padding-right: #{calc($value / 2)}px;
+      }
+   }
+}
+@media (max-width: 1600px) {
+   @for $i from 0 through 8 {
+      $value: 5 * $i;
+      .row.spacing-xxl-#{$value} {
+         margin-right: #{-(calc($value / 2))}px;
+         margin-left: #{-(calc($value / 2))}px;
+         > [class*="col-"],
+         > [class*=" col-"],
+         > [class*="col"],
+         .p_item {
+            padding-left: #{calc($value / 2)}px;
+            padding-right: #{calc($value / 2)}px;
+         }
+      }
+   }
+}
+@media (max-width: 991px) {
+   @for $i from 0 through 6 {
+      $value: 5 * $i;
+      .row.spacing-md-#{$value} {
+         margin-right: #{-(calc($value / 2))}px;
+         margin-left: #{-(calc($value / 2))}px;
+         > [class*="col-"],
+         > [class*=" col-"],
+         > [class*="col"],
+         .p_item {
+            padding-left: #{calc($value / 2)}px;
+            padding-right: #{calc($value / 2)}px;
+         }
+      }
+   }
+}
+@media (max-width: 767px) {
+   @for $i from 0 through 6 {
+      $value: 5 * $i;
+      .row.spacing-sm-#{$value} {
+         margin-right: #{-(calc($value / 2))}px;
+         margin-left: #{-(calc($value / 2))}px;
+         > [class*="col-"],
+         > [class*=" col-"],
+         > [class*="col"],
+         .p_item {
+            padding-left: #{calc($value / 2)}px;
+            padding-right: #{calc($value / 2)}px;
+         }
+      }
+   }
+}
+@media (max-width: 575px) {
+   @for $i from 0 through 4 {
+      $value: 5 * $i;
+      .row.spacing-xs-#{$value} {
+         margin-right: #{-(calc($value / 2))}px;
+         margin-left: #{-(calc($value / 2))}px;
+         > [class*="col-"],
+         > [class*=" col-"],
+         > [class*="col"],
+         .p_item {
+            padding-left: #{calc($value / 2)}px;
+            padding-right: #{calc($value / 2)}px;
+         }
+      }
+   }
+}
+.row.spacing-1 {
+   margin-left: -0.5px;
+   margin-right: -0.5px;
+   > [class*="col-"],
+   > [class*=" col-"],
+   > [class*="col"],
+   .p_item {
+      padding-left: 0.5px;
+      padding-right: 0.5px;
+   }
+}
+.font-900 {
+   font-weight: 900 !important;
+}
+.font-800 {
+   font-weight: 800 !important;
+}
+.font-700 {
+   font-weight: 700 !important;
+}
+.font-600 {
+   font-weight: 600 !important;
+}
+.font-500 {
+   font-weight: 500 !important;
+}
+.font-400 {
+   font-weight: 400 !important;
+}
+.font-300 {
+   font-weight: 300 !important;
+}
+.font-200 {
+   font-weight: 200 !important;
+}
+.font-100 {
+   font-weight: 100 !important;
+}
+.flex-last {
+   -webkit-box-ordinal-group: 2;
+   -webkit-order: 1;
+   -ms-flex-order: 1;
+   order: 1;
+}
+.hidden {
+   display: none;
+}
+.hide {
+   display: none;
+}
+.white {
+   color: white !important;
+}
+.black {
+   color: black !important;
+}
+.c_b {
+   color: var(--color-body-text);
+}
+.c_df {
+   color: var(--theme-color-default);
+}
+.c_pr {
+   color: var(--theme-color-primary);
+}
+.c_h {
+   color: var(--color-heading);
+}
+.bg_black {
+   background-color: black !important;
+}
+.bg_white {
+   background-color: white !important;
+}
+.bg_df {
+   background-color: var(--theme-color-default) !important;
+}
+.bg_pr {
+   background-color: var(--theme-color-primary) !important;
+}
+.overflow_hidden {
+   overflow: hidden !important;
+}
+.f_df {
+   font-family: var(--font-family-default) !important;
+}
+.f_pr {
+   font-family: var(--font-family-primary) !important;
+}
+.hover\:c_white:hover {
+   color: white !important;
+}
+.hover\:c_black:hover {
+   color: black !important;
+}
+.hover\:c_df:hover {
+   color: var(--theme-color-default) !important;
+}
+.hover\:c_pr:hover {
+   color: var(--theme-color-primary) !important;
+}
+.hover\:bg_df:hover {
+   background-color: var(--theme-color-default) !important;
+}
+.hover\:bg_pr:hover {
+   background-color: var(--theme-color-primary) !important;
+}
+.visibility-hidden {
+   visibility: hidden;
+}
+.pointer {
+   cursor: pointer;
+}
+.position-absolute {
+   &.left-center {
+      @include rtl-l(30px);
+      top: 50%;
+      transform: translateY(-50%);
+   }
+   &.left-bottom {
+      bottom: 30px;
+      @include rtl-l(30px);
+   }
+   &.bottom-center {
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+   }
+   &.right-center {
+      bottom: 30px;
+      @include rtl-r(30px);
+   }
+   &.right-bottom {
+      @include rtl-r(30px);
+      top: 50%;
+      transform: translateY(-50%);
+   }
+   &.center-center {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+   }
+   &.b-2 {
+      bottom: 2rem;
+   }
+   &.b-4 {
+      bottom: 4rem;
+   }
+}
+.lds-facebook {
+   display: inline-block;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 26px;
+   height: 26px;
+}
+.lds-facebook div {
+   display: inline-block;
+   position: absolute;
+   left: 8px;
+   width: 6px;
+   background: #c7c7c7;
+   animation: lds-facebook 1s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+   left: 0px;
+   animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+   left: 10px;
+   animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+   left: 20px;
+   animation-delay: 0;
+}
+@keyframes lds-facebook {
+   0% {
+      top: 2px;
+      height: 10px;
+   }
+   50%,
+   100% {
+      top: 6px;
+      height: 20px;
+   }
+}
+.respone_image {
+   position: relative;
+   img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-color: #f5f5f5;
+      background-image: url("pulse.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: all 0.3s;
+      transition-delay: 0.1s;
+      object-fit: cover;
+      &.lazyloaded {
+         background: transparent;
+         transform: scale(1);
+         opacity: 1;
+      }
+   }
+}
+img.lazyload {
+   background-color: #f5f5f5;
+   background-image: url("pulse.svg");
+   background-position: center;
+   background-repeat: no-repeat;
+}

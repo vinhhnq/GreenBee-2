@@ -2,7 +2,7 @@
 {% include 'nov-breadcrumb', class_br: 'breadcrumb_default' %}
 <div class="all_collection mt-60">
   <div class="container">
-  {%- assign blocks = section.blocks | sort: 'collection.all_products_count' -%}
+  {%- assign block = section.blocks | sort: 'collection.all_products_count' -%}
 
   {% case section.settings.grid %}
     {% when '2' %}
