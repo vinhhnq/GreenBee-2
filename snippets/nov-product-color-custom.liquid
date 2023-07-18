@@ -1,0 +1,102 @@
+<style>
+	{%- if settings.img_color1 != blank -%}
+	.variant-color-{{ settings.color1 | downcase | handle }} {background-image: url("{{ settings.img_color1 | img_url: '70x' }}") !important}
+	.variant-color .variant-color-{{ settings.color1 | downcase | handle }} {box-shadow: 0 0 0 1px #d0d0d0 inset}
+	.item-swatch .variant-color-{{ settings.color1 | downcase | handle }}, .facet-color .variant-color-{{ settings.color1 | downcase | handle }} {border: 1px solid #d1d1d1 !important}
+	{%- endif -%}
+	{%- if settings.img_color2 != blank -%}
+	.variant-color-{{ settings.color2 | downcase | handle }} {background-image: url("{{ settings.img_color2 | img_url: '70x' }}") !important}
+	.variant-color .variant-color-{{ settings.color2 | downcase | handle }} {box-shadow: 0 0 0 1px #d0d0d0 inset}
+	.item-swatch .variant-color-{{ settings.color2 | downcase | handle }}, .facet-color .variant-color-{{ settings.color2 | downcase | handle }} {border: 1px solid #d1d1d1 !important}
+	{%- endif -%}
+	{%- if settings.img_color3 != blank -%}
+	.variant-color-{{ settings.color3 | downcase | handle }} {background-image: url("{{ settings.img_color3 | img_url: '70x' }}") !important}
+	.variant-color .variant-color-{{ settings.color3 | downcase | handle }} {box-shadow: 0 0 0 1px #d0d0d0 inset}
+	.item-swatch .variant-color-{{ settings.color3 | downcase | handle }}, .facet-color .variant-color-{{ settings.color3 | downcase | handle }} {box-shadow: 0 0 0 1px #d0d0d0 inset}
+	{%- endif -%}
+	{%- if settings.img_color4 != blank -%}
+	.variant-color-{{ settings.color4 | downcase | handle }} {background-image: url("{{ settings.img_color4 | img_url: '70x' }}") !important}
+	.variant-color .variant-color-{{ settings.color4 | downcase | handle }} {box-shadow: 0 0 0 1px #d0d0d0 inset}
+	.item-swatch .variant-color-{{ settings.color4 | downcase | handle }}, .facet-color .variant-color-{{ settings.color4 | downcase | handle }} {border: 1px solid #d1d1d1 !important}
+	{%- endif -%}
+	{%- if settings.img_color5 != blank -%}
+	.variant-color-{{ settings.color5 | downcase | handle }} {background-image: url("{{ settings.img_color5 | img_url: '70x' }}") !important}
+	.variant-color .variant-color-{{ settings.color5 | downcase | handle }} {box-shadow: 0 0 0 1px #d0d0d0 inset}
+	.item-swatch .variant-color-{{ settings.color5 | downcase | handle }}, .facet-color .variant-color-{{ settings.color5 | downcase | handle }} {border: 1px solid #d1d1d1 !important}
+	{%- endif -%}
+	{%- if settings.img_color6 != blank -%}
+	.variant-color-{{ settings.color6 | downcase | handle }} {background-image: url("{{ settings.img_color6 | img_url: '70x' }}") !important}
+	.variant-color .variant-color-{{ settings.color6 | downcase | handle }} {box-shadow: 0 0 0 1px #d0d0d0 inset}
+	.item-swatch .variant-color-{{ settings.color6 | downcase | handle }}, .facet-color .variant-color-{{ settings.color6 | downcase | handle }} {border: 1px solid #d1d1d1 !important}
+	{%- endif -%}
+	{%- if settings.img_color7 != blank -%}
+	.variant-color-{{ settings.color7 | downcase | handle }} {background-image: url("{{ settings.img_color7 | img_url: '70x' }}") !important}
+	.variant-color .variant-color-{{ settings.color7 | downcase | handle }} {box-shadow: 0 0 0 1px #d0d0d0 inset}
+	.item-swatch .variant-color-{{ settings.color7 | downcase | handle }}, .facet-color .variant-color-{{ settings.color7 | downcase | handle }} {border: 1px solid #d1d1d1 !important}
+	{%- endif -%}
+	{%- if settings.img_color8 != blank -%}
+	.variant-color-{{ settings.color8 | downcase | handle }} {background-image: url("{{ settings.img_color8 | img_url: '70x' }}") !important}
+	.variant-color .variant-color-{{ settings.color8 | downcase | handle }} {box-shadow: 0 0 0 1px #d0d0d0 inset}
+	.item-swatch .variant-color-{{ settings.color8 | downcase | handle }}, .facet-color .variant-color-{{ settings.color8 | downcase | handle }} {border: 1px solid #d1d1d1 !important}
+	{%- endif -%}
+	{%- if settings.img_color9 != blank -%}
+	.variant-color-{{ settings.color9 | downcase | handle }} {background-image: url("{{ settings.img_color9 | img_url: '70x' }}") !important}
+	.variant-color .variant-color-{{ settings.color9 | downcase | handle }} {box-shadow: 0 0 0 1px #d0d0d0 inset}
+	.item-swatch .variant-color-{{ settings.color9 | downcase | handle }}, .facet-color .variant-color-{{ settings.color9 | downcase | handle }} {border: 1px solid #d1d1d1 !important}
+	{%- endif -%}
+	{%- if settings.img_color10 != blank -%}
+	.variant-color-{{ settings.color10 | downcase | handle }} {background-image: url("{{ settings.img_color10 | img_url: '70x' }}") !important}
+	.variant-color .variant-color-{{ settings.color10 | downcase | handle }} {box-shadow: 0 0 0 1px #d0d0d0 inset}
+	.item-swatch .variant-color-{{ settings.color10 | downcase | handle }}, .facet-color .variant-color-{{ settings.color10 | downcase | handle }} {border: 1px solid #d1d1d1 !important}
+	{%- endif -%}
+	{%- if settings.img_color11 != blank -%}
+	.variant-color-{{ settings.color11 | downcase | handle }} {background-image: url("{{ settings.img_color11 | img_url: '70x' }}") !important}
+	.variant-color .variant-color-{{ settings.color11 | downcase | handle }} {box-shadow: 0 0 0 1px #d0d0d0 inset}
+	.item-swatch .variant-color-{{ settings.color11 | downcase | handle }}, .facet-color .variant-color-{{ settings.color11 | downcase | handle }} {border: 1px solid #d1d1d1 !important}
+	{%- endif -%}
+	{%- if settings.img_color12 != blank -%}
+	.variant-color-{{ settings.color12 | downcase | handle }} {background-image: url("{{ settings.img_color12 | img_url: '70x' }}") !important}
+	.variant-color .variant-color-{{ settings.color12 | downcase | handle }} {box-shadow: 0 0 0 1px #d0d0d0 inset}
+	.item-swatch .variant-color-{{ settings.color12 | downcase | handle }}, .facet-color .variant-color-{{ settings.color12 | downcase | handle }} {border: 1px solid #d1d1d1 !important}
+	{%- endif -%}
+	{%- if settings.img_color13 != blank -%}
+	.variant-color-{{ settings.color13 | downcase | handle }} {background-image: url("{{ settings.img_color13 | img_url: '70x' }}") !important}
+	.variant-color .variant-color-{{ settings.color13 | downcase | handle }} {box-shadow: 0 0 0 1px #d0d0d0 inset}
+	.item-swatch .variant-color-{{ settings.color13 | downcase | handle }}, .facet-color .variant-color-{{ settings.color13 | downcase | handle }} {border: 1px solid #d1d1d1 !important}
+	{%- endif -%}
+	{%- if settings.img_color14 != blank -%}
+	.variant-color-{{ settings.color14 | downcase | handle }} {background-image: url("{{ settings.img_color14 | img_url: '70x' }}") !important}
+	.variant-color .variant-color-{{ settings.color14 | downcase | handle }} {box-shadow: 0 0 0 1px #d0d0d0 inset}
+	.item-swatch .variant-color-{{ settings.color14 | downcase | handle }}, .facet-color .variant-color-{{ settings.color14 | downcase | handle }} {border: 1px solid #d1d1d1 !important}
+	{%- endif -%}
+	{%- if settings.img_color15 != blank -%}
+	.variant-color-{{ settings.color15 | downcase | handle }} {background-image: url("{{ settings.img_color15 | img_url: '70x' }}") !important}
+	.variant-color .variant-color-{{ settings.color15 | downcase | handle }} {box-shadow: 0 0 0 1px #d0d0d0 inset}
+	.item-swatch .variant-color-{{ settings.color15 | downcase | handle }}, .facet-color .variant-color-{{ settings.color15 | downcase | handle }} {border: 1px solid #d1d1d1 !important}
+	{%- endif -%}
+	{%- if settings.img_color16 != blank -%}
+	.variant-color-{{ settings.color16 | downcase | handle }} {background-image: url("{{ settings.img_color16 | img_url: '70x' }}") !important}
+	.variant-color .variant-color-{{ settings.color16 | downcase | handle }} {box-shadow: 0 0 0 1px #d0d0d0 inset}
+	.item-swatch .variant-color-{{ settings.color16 | downcase | handle }}, .facet-color .variant-color-{{ settings.color16 | downcase | handle }} {border: 1px solid #d1d1d1 !important}
+	{%- endif -%}
+	{%- if settings.img_color17 != blank -%}
+	.variant-color-{{ settings.color17 | downcase | handle }} {background-image: url("{{ settings.img_color17 | img_url: '70x' }}") !important}
+	.variant-color .variant-color-{{ settings.color17 | downcase | handle }} {box-shadow: 0 0 0 1px #d0d0d0 inset}
+	.item-swatch .variant-color-{{ settings.color17 | downcase | handle }}, .facet-color .variant-color-{{ settings.color17 | downcase | handle }} {border: 1px solid #d1d1d1 !important}
+	{%- endif -%}
+	{%- if settings.img_color18 != blank -%}
+	.variant-color-{{ settings.color18 | downcase | handle }} {background-image: url("{{ settings.img_color18 | img_url: '70x' }}") !important}
+	.variant-color .variant-color-{{ settings.color18 | downcase | handle }} {box-shadow: 0 0 0 1px #d0d0d0 inset}
+	.item-swatch .variant-color-{{ settings.color18 | downcase | handle }}, .facet-color .variant-color-{{ settings.color18 | downcase | handle }} {border: 1px solid #d1d1d1 !important}
+	{%- endif -%}
+	{%- if settings.img_color19 != blank -%}
+	.variant-color-{{ settings.color19 | downcase | handle }} {background-image: url("{{ settings.img_color19 | img_url: '70x' }}") !important}
+	.variant-color .variant-color-{{ settings.color19 | downcase | handle }} {box-shadow: 0 0 0 1px #d0d0d0 inset}
+	.item-swatch .variant-color-{{ settings.color19 | downcase | handle }}, .facet-color .variant-color-{{ settings.color19 | downcase | handle }} {border: 1px solid #d1d1d1 !important}
+	{%- endif -%}
+	{%- if settings.img_color20 != blank -%}
+	.variant-color-{{ settings.color20 | downcase | handle }} {background-image: url("{{ settings.img_color20 | img_url: '70x' }}") !important}
+	.variant-color .variant-color-{{ settings.color20 | downcase | handle }} {box-shadow: 0 0 0 1px #d0d0d0 inset}
+	.item-swatch .variant-color-{{ settings.color20 | downcase | handle }}, .facet-color .variant-color-{{ settings.color20 | downcase | handle }} {border: 1px solid #d1d1d1 !important}
+	{%- endif -%}
+</style>

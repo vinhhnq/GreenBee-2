@@ -1,0 +1,62 @@
+{% for i in (1..product_limit) %}
+   <div class="item p_item col">
+      <div class="item-product item-list-product d-flex justify-content-center align-items-center">
+         <div class="col-md-6 thumbnail-container">
+            <a href="#">
+               <div class="respone_image">
+                  {%- capture current -%}
+                     {%- cycle 1, 2, 3, 4, 5, 6 -%}
+                  {%- endcapture -%}
+                  {{ 'product-' | append: current | placeholder_svg_tag: 'fad-placeholder-svg' }}
+               </div>
+            </a>
+         </div>
+         <div class="col-md-6 product__info">
+            <div class="product__title">
+               <a href="#">
+                  <span><a class="product-title" href="#">{{ 'homepage.onboarding.product_title' | t }}</a></span>
+               </a>
+            </div>
+            <div class="price-box mt-15">
+               {% if product.title %}
+                  {%- assign compare_at_price = product.compare_at_price -%}
+                  {%- assign price = product.price -%}
+                  {%- assign price_varies = product.price_varies -%}
+                  {%- assign available = product.available -%}
+               {% else %}
+                  {%- assign compare_at_price = 1999 -%}
+                  {%- assign price = 1999 -%}
+                  {%- assign price_varies = false -%}
+                  {%- assign available = true -%}
+               {% endif %}
+
+               {%- assign money_price = price | money -%}
+
+               {% if compare_at_price > price %}
+                  {% if price_varies %}
+                     {% comment %}<span class="hidden">{{ 'products.product.regular_price' | t }}</span>{% endcomment %}
+                     <span class="product-price__price product-price__sale">
+                        {{ money_price }}
+                        {% comment %}<span class="product-price__sale-label">{{ 'products.product.on_sale' | t }}</span>{% endcomment %}
+                     </span>
+                     <s class="product-price__price">{{ compare_at_price | money }}</s>
+                  {% else %}
+                     <span class="hidden">{{ 'products.product.regular_price' | t }}</span>
+                     <span class="product-price__price product-price__sale">
+                        {{ money_price }}
+                     </span>
+                     <s class="product-price__price">{{ compare_at_price | money }}</s>
+                  {% endif %}
+                  {% else %}
+                  {% if price_varies %}
+                     <span class="product-price__price">{{ money_price }}</span>
+                  {% else %}
+                     <span class="hidden">{{ 'products.product.regular_price' | t }}</span>
+                     <span class="product-price__price">{{ money_price }}</span>
+                  {% endif %}
+               {% endif %}
+            </div>
+         </div>
+      </div>
+   </div>
+{% endfor %}

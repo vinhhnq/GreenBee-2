@@ -1,0 +1,45 @@
+{
+  "sections": {
+    "03a7c309-b07b-4bbc-8489-95436c02bbcc": {
+      "type": "nov-gallery-image2",
+      "blocks": {
+        "template--19937618100518__03a7c309-b07b-4bbc-8489-95436c02bbcc-1689662287f7f126bf-0": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "cta_label": "Vegetable Juice",
+            "cta_label_c": "#000000",
+            "cta_label_s1": 26,
+            "cta_label2": "Effective weight loss drinks",
+            "cta_label_2": "#222222",
+            "cta_label_s2": 14,
+            "banner_button": "Learn More",
+            "banner_color": "#ffffff",
+            "cta_label_bt": 14,
+            "banner_color_hover": "#2EA200",
+            "class": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19937618100518__03a7c309-b07b-4bbc-8489-95436c02bbcc-1689662287f7f126bf-0"
+      ],
+      "settings": {
+        "col_width": 2,
+        "bd_radius": 20,
+        "spacing": 30,
+        "style_img_1": false,
+        "style_img_2": true,
+        "animate": true,
+        "background_color": "",
+        "container": "container",
+        "class_section": "",
+        "distance_top": 30,
+        "distance_bottom": 30
+      }
+    }
+  },
+  "order": [
+    "03a7c309-b07b-4bbc-8489-95436c02bbcc"
+  ]
+}

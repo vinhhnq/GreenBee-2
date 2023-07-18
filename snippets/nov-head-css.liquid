@@ -1,0 +1,6 @@
+{% if template contains 'product' %}
+	{{ 'photoswipe.css' | asset_url | stylesheet_tag }}
+{% endif %}
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+{{ 'novstyle.css' | asset_url | stylesheet_tag }}
+{% include 'nov-product-color-custom' %}

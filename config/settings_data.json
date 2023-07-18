@@ -1,0 +1,681 @@
+{
+  "current": {
+    "license": "eaa0d837-feb0-4d99-ae55-4c166077a2f6",
+    "theme_color_default": "#2ea200",
+    "theme_color_primary": "#004c2a",
+    "color_body": "#ffffff",
+    "heading_text": "#222222",
+    "color_body_text": "#3f4045",
+    "color_menu": "#222222",
+    "color_menu_ac": "#2ea200",
+    "color_menu_sticky": "#222222",
+    "color_menu_sticky_ac": "#2ea200",
+    "color_sub_menu": "#666666",
+    "color_title_megamenu": "#222222",
+    "color_borders": "#e7e8eb",
+    "color_button": "#e7e8eb",
+    "color_button_hover": "#000000",
+    "color_button_text": "#222222",
+    "color_button_text_hover": "#ffffff",
+    "type_google": true,
+    "type_base_size": 14,
+    "type_header_family": "oswald_n4",
+    "type_base_family": "montserrat_n4",
+    "type_header_family_google": "Signika",
+    "type_base_family_google": "Signika",
+    "social_twitter_link": "#",
+    "social_facebook_link": "#",
+    "social_pinterest_link": "#",
+    "social_instagram_link": "#",
+    "social_vimeo_link": "",
+    "social_tiktok": "#",
+    "type_sidebar_blog": "sidebar_left",
+    "type_sidebar": "sidebar_left",
+    "type_sidebar_product": "default",
+    "enable_rtl": false,
+    "show_newsletter_popup": true,
+    "newsletter_type": "newsletter",
+    "title_newsletter": "NEWSLETTER",
+    "desc_newsletter": "Get 15% off your first purchaxse! Plus, be the first to know  about sales, new product launches and exclusive offers!",
+    "bg_newsletter": "shopify:\/\/shop_images\/newsletter-freshmate_0f450167-4ea4-4f55-8568-34a69aca6f72.jpg",
+    "supported_currencies": "USD, ($) US Dollars | EUR, (€) Euro | GBP, (£) British Pounds",
+    "key_trend_1": "FRUITS",
+    "key_trend_2": "DRINK",
+    "key_trend_3": "FRUIT JUICE",
+    "key_trend_4": "VEGETABLES",
+    "key_trend_5": "PEACHES",
+    "key_trend_6": "",
+    "bg_br_df": "#e7e8eb",
+    "c_br_h_df": "#0d2235",
+    "c_br_t_df": "#505157",
+    "spacing_br_t": 23,
+    "spacing_br_b": 23,
+    "c_br_collec": "#e7e8eb",
+    "bg_br_collec": "shopify:\/\/shop_images\/breadcrumb.png",
+    "spacing_t_collec": 147,
+    "spacing_b_collec": 147,
+    "countdown_deal_t": "END IN :",
+    "icon_deal": "shopify:\/\/shop_images\/icon-bolt.gif",
+    "countdown_deal": "2024\/09\/03",
+    "spacing_t_inner": 85,
+    "spacing_b_inner": 90,
+    "time_newproduct": 30,
+    "b_pro": false,
+    "b_pro_color": "#eaeaea",
+    "br_pi": 20,
+    "show_bg_product": false,
+    "color_product_item": "#d43131",
+    "color_product_name": "#000000",
+    "color_price": "#232630",
+    "color_reduced_price": "#d7d7d7",
+    "color_badge_new": "#7eca4e",
+    "color_badge_sale": "#bbffbb",
+    "color_product_icon": "#727272",
+    "bg_pi": "#ffffff",
+    "show_new": false,
+    "show_compare_price": true,
+    "show_rating": true,
+    "use_color_swatch": true,
+    "option_color_swatch": "color, colors, colour, couleur",
+    "color_swatch_style": "color",
+    "payment_button_enable": true,
+    "tooltip_enable": true,
+    "color1": "black white",
+    "img_color1": "shopify:\/\/shop_images\/black-white.png",
+    "color2": "blue white",
+    "img_color2": "shopify:\/\/shop_images\/blue-white.png",
+    "color3": "green white",
+    "img_color3": "shopify:\/\/shop_images\/green-white.png",
+    "color4": "red white",
+    "img_color4": "shopify:\/\/shop_images\/red-white.png",
+    "color5": "plum white",
+    "img_color5": "shopify:\/\/shop_images\/white-plum.png",
+    "color6": "black fabric",
+    "img_color6": "shopify:\/\/shop_images\/black_aa51ec9f-f20c-44e5-acfb-e78aa32eb0c4.jpg",
+    "color7": "brown fabric",
+    "img_color7": "shopify:\/\/shop_images\/brown_040fb480-8bfb-4000-8b44-2fb206e97a7b.jpg",
+    "color8": "blue fabric",
+    "img_color8": "shopify:\/\/shop_images\/blue_dbaeb76f-7411-4d40-8183-f984dd56599a.jpg",
+    "color9": "green fabric",
+    "img_color9": "shopify:\/\/shop_images\/green_515fbdb0-f3f2-4020-a6cd-05262f46acde.jpg",
+    "free_shipping": 200,
+    "terms_conditions": "<p>I agree with the <a href=\"\/pages\/term-and-services\" title=\"Term and Services\"><strong>Terms<\/strong> & <strong>conditions<\/strong><\/a><\/p>",
+    "cart": "6",
+    "collec_1_name": "Drink",
+    "collec_1": "shopify:\/\/collections\/drink",
+    "collec_2_name": "Fruits",
+    "collec_2": "shopify:\/\/collections\/fruits",
+    "collec_3_name": "Tropical Fruits",
+    "collec_3": "shopify:\/\/collections\/tropical-fruits",
+    "collec_4_name": "Meat",
+    "collec_4": "shopify:\/\/collections\/meat",
+    "i_flash": "shopify:\/\/shop_images\/cat.png",
+    "gradient_deal": "linear-gradient(90deg, rgba(249, 200, 88, 1), rgba(255, 130, 70, 1) 100%)",
+    "qv_available": false,
+    "qv_tags": false,
+    "qv_sku": false,
+    "qv_categories": false,
+    "qv_vendor": false,
+    "qv_swatch_enable": true,
+    "email": "<p>Email<strong>:<\/strong> support@domain.com<\/p>",
+    "hotline": "<p>Call Us: (012)-345-67890<\/p>",
+    "favicon": "shopify:\/\/shop_images\/favicon-nov.png",
+    "link_page_wishlist": "shopify:\/\/pages\/page-wishlist",
+    "show_popup_wishlist": true,
+    "enable_loadpage": false,
+    "icon_loadpage": "shopify:\/\/shop_images\/giphy.webp",
+    "bg_loadpage": "#ffffff",
+    "show_fake_order": true,
+    "show_fake_order_inner_page": true,
+    "fake_order_next_time": 10,
+    "product_list_fake_order": [
+      "american-beef",
+      "apple-fruit",
+      "apricot-juice",
+      "avocado",
+      "bacon"
+    ],
+    "fake_order_time": "10 minutes | 15 minutes | 20 minutes | 30 minutes | 40 minutes | 50 minutes | 1 hour | 2 hours | 3 hours",
+    "fake_order_location": "Berlin | New York | London | Paris | Amsterdam | Vienna | Rome, Italy | Madrid",
+    "fake_order_name": "Luna | Dutton | Liam | Noah | Oliver | James | Elijah | William | Henry",
+    "show_verification_popup": false,
+    "logo_verification": "shopify:\/\/shop_images\/logo-casan-3.png",
+    "product_list": [
+      "balo-laptop-15-6in",
+      "basic-sweat-joggers",
+      "mens-jackets",
+      "bomber-jacket",
+      "biker-jacket",
+      "blended-wool-coat-1",
+      "blouse-with-decorative-attachments",
+      "button-down-jumper"
+    ],
+    "search_limit": 5,
+    "desc_verification": "<p>The products available on VaporShop are age-restricted and intended for adults of legal smoking age only. By entering our website, you affirm that you are of legal smoking age in your jurisdiction and you agree to be Age Verified.<\/p><p><strong>We will not ship to any individual under the age of 21.<\/strong><\/p>",
+    "second_heading_text": "#222222",
+    "sub_heading_text": "#acacac",
+    "color_borders_second": "#d0d3d7",
+    "mini_cart_type": "canvas",
+    "c_br_df": "#0d2235",
+    "background_color": "#ffffff",
+    "background_image": "shopify:\/\/shop_images\/breadcrumb.jpg",
+    "color_text_head": "#0d2235",
+    "color_breacrumb_collection": "#ffffff",
+    "distance_top": 147,
+    "distance_bottom": 147,
+    "background_image_product_detail": "shopify:\/\/shop_images\/breacrumb-detail_82edd3aa-ceab-4206-ad41-53878e220c7d.jpg",
+    "image_overlay_opacity": 0,
+    "title_alignment": "justify-content-center",
+    "cd_tt": "END IN :",
+    "countdown_timeend": "2023\/09\/07",
+    "title_currency": "Currency",
+    "account_type": "dropdown",
+    "img_canvas_account": "shopify:\/\/shop_images\/logo_59f8cb84-ca55-4990-a5a3-47229ec1ea5f.png",
+    "img_canvas_account_link": "#",
+    "sections": {
+      "blog-template": {
+        "type": "blog-template",
+        "settings": {
+          "layout": "grid",
+          "blog_show_author": true,
+          "blog_show_date": true,
+          "blog_show_comment": true,
+          "page_show_list": 3,
+          "page_show_column": 3,
+          "page_show_grid": 3
+        }
+      },
+      "list-collections-template": {
+        "type": "list-collections-template",
+        "settings": {
+          "display_type": "all",
+          "sort": "alphabetical",
+          "grid": "4"
+        }
+      },
+      "article-template": {
+        "type": "article-template",
+        "settings": {
+          "blog_show_image_feature": true,
+          "blog_show_author": false,
+          "blog_show_date": true,
+          "show_share_buttons": true
+        }
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "settings": {
+          "cart_notes_enable": true
+        }
+      },
+      "nov-header": {
+        "type": "nov-header",
+        "blocks": {
+          "7a466ba6-56c4-4982-aa2d-297d9c0603d0": {
+            "type": "text",
+            "settings": {
+              "title": "Collections",
+              "novmenu_item": "Collections",
+              "desc": "",
+              "fw": true,
+              "novmenu_menu_enable": true,
+              "show_title": true,
+              "novmenu_xl": "col-xl-9",
+              "novmenu_lg": "col-lg-9",
+              "submenu_xl": "col-xl-4",
+              "submenu_lg": "col-lg-4",
+              "banner_br": 5,
+              "novmenu_banner_enable1": true,
+              "banner_1_xl": "col-xl-3",
+              "banner_1_lg": "col-lg-3",
+              "image_size1": "330x320",
+              "novmenu_banner_link1": "",
+              "class_bn1": "",
+              "novmenu_banner_enable2": false,
+              "banner_2_xl": "col-xl-4",
+              "banner_2_lg": "col-lg-4",
+              "image_size2": "255x300",
+              "novmenu_banner_link2": "",
+              "class_bn2": "",
+              "novmenu_banner_enable3": false,
+              "banner_3_xl": "col-xl-4",
+              "banner_3_lg": "col-lg-4",
+              "image_size3": "255x300",
+              "novmenu_banner_link3": "",
+              "class_bn3": "",
+              "collection_enable": false,
+              "collection_xl": "col-xl-3",
+              "collection_lg": "col-lg-3",
+              "name_collec_1": "Best Sellers",
+              "link_1": "",
+              "name_collec_2": "New Arrival",
+              "link_2": "",
+              "name_collec_3": "Top Trending",
+              "link_3": "",
+              "name_collec_4": "Top Trending",
+              "link_4": "",
+              "name_collec_5": "Denim Collection",
+              "link_5": "",
+              "product_enable": false,
+              "product_xl": "col-xl-4",
+              "product_lg": "col-lg-4",
+              "title_product": "Featured Product",
+              "product_1": "",
+              "product_2": "",
+              "product_3": "",
+              "autoplay": true,
+              "show_dots": true
+            }
+          },
+          "9cd4537f-f297-4926-879c-1e51210b4586": {
+            "type": "text",
+            "settings": {
+              "title": "Products",
+              "novmenu_item": "Products",
+              "desc": "",
+              "fw": true,
+              "novmenu_menu_enable": true,
+              "show_title": true,
+              "novmenu_xl": "col-xl-9",
+              "novmenu_lg": "col-lg-9",
+              "submenu_xl": "col-xl-4",
+              "submenu_lg": "col-lg-4",
+              "banner_br": 5,
+              "novmenu_banner_enable1": false,
+              "banner_1_xl": "col-xl-4",
+              "banner_1_lg": "col-lg-4",
+              "image_size1": "255x300",
+              "novmenu_banner_link1": "",
+              "class_bn1": "",
+              "novmenu_banner_enable2": false,
+              "banner_2_xl": "col-xl-4",
+              "banner_2_lg": "col-lg-4",
+              "image_size2": "255x300",
+              "novmenu_banner_link2": "",
+              "class_bn2": "",
+              "novmenu_banner_enable3": false,
+              "banner_3_xl": "col-xl-4",
+              "banner_3_lg": "col-lg-4",
+              "image_size3": "255x300",
+              "novmenu_banner_link3": "",
+              "class_bn3": "",
+              "collection_enable": false,
+              "collection_xl": "col-xl-3",
+              "collection_lg": "col-lg-3",
+              "name_collec_1": "Best Sellers",
+              "link_1": "",
+              "name_collec_2": "New Arrival",
+              "link_2": "",
+              "name_collec_3": "Top Trending",
+              "link_3": "",
+              "name_collec_4": "Top Trending",
+              "link_4": "",
+              "name_collec_5": "Denim Collection",
+              "link_5": "",
+              "product_enable": true,
+              "product_xl": "col-xl-2",
+              "product_lg": "col-lg-2",
+              "title_product": "Featured Product",
+              "product_1": "apple-fruit",
+              "product_2": "bunch-of-grapes",
+              "product_3": "beef",
+              "autoplay": true,
+              "show_dots": false
+            }
+          }
+        },
+        "block_order": [
+          "7a466ba6-56c4-4982-aa2d-297d9c0603d0",
+          "9cd4537f-f297-4926-879c-1e51210b4586"
+        ],
+        "settings": {
+          "bg": "#ffffff",
+          "bg_opacity": 100,
+          "w_logo": 165,
+          "wm_logo": 100,
+          "phone_icon": "rbb-icon-phone-4",
+          "phone": "0123-456-7890",
+          "enable_currency": true,
+          "enable_language": true,
+          "c_t": "#004c2a",
+          "c_th": "#2ea200",
+          "c_ti": "#222222",
+          "bd_c": "#e8e8e8",
+          "bg_t": "#ffffff",
+          "bg_t_opacity": 0,
+          "account": "rbb-icon-human-user-11",
+          "wishlist": "rbb-icon-wishlist-17",
+          "cart_type": "cart",
+          "cart": "6",
+          "c_count": "#ffffff",
+          "bg_count": "#2ea200",
+          "bg_button": "",
+          "stickymenu": true,
+          "c_i_sticky": "#ffffff",
+          "bg_sticky": "#ffffff",
+          "bg_sticky_opacity": 90,
+          "stickymenu_sm": true,
+          "bg_m": "#ffffff",
+          "c_icon_m": "#1d1d1d",
+          "bd_b_sm": false,
+          "bd_c_sm": "#ffffff",
+          "novmenu_enable": true,
+          "show_icons": true,
+          "main_linklist": "main-menu"
+        }
+      },
+      "nov-footer": {
+        "type": "nov-footer",
+        "blocks": {
+          "c76cbe48-7520-4d29-ba20-3ddd2e193afb": {
+            "type": "block_contact",
+            "settings": {
+              "summary_footer": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus pendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet<\/p>",
+              "block_class": "",
+              "grid_xl": "col-xl-4",
+              "grid_lg": "col-lg-4",
+              "grid_md": "col-md-8",
+              "grid_sm": "col-sm-12"
+            }
+          },
+          "bc269370-9ae4-4042-82c6-1fc53d71deb6": {
+            "type": "block_menu",
+            "settings": {
+              "block_title": "HELP",
+              "menu_handle": "footer",
+              "block_class": "mt-xs-20 mt-sm-20",
+              "grid_xl": "col-xl-2",
+              "grid_lg": "col-lg-2",
+              "grid_md": "col-md-2",
+              "grid_sm": "col-sm-6"
+            }
+          },
+          "ee472781-df32-4e69-8347-7d88757b6741": {
+            "type": "block_menu",
+            "settings": {
+              "block_title": "COMPANY",
+              "menu_handle": "",
+              "block_class": "mt-sm-20",
+              "grid_xl": "col-xl-2",
+              "grid_lg": "col-lg-2",
+              "grid_md": "col-md-2",
+              "grid_sm": "col-sm-6"
+            }
+          },
+          "53549ed7-50a5-4657-be39-458f238f5bc2": {
+            "type": "block_newsletter",
+            "settings": {
+              "block_title": "NEWSLETTER",
+              "desc": "<p>Get 15% off your first purchaxse! Plus, be the first to know about sales new product launches and exclusive offers!<\/p>",
+              "block_class": "mt-sm-50",
+              "grid_xl": "col-xl-4",
+              "grid_lg": "col-lg-4",
+              "grid_md": "col-md-6",
+              "grid_sm": "col-sm-12"
+            }
+          }
+        },
+        "block_order": [
+          "c76cbe48-7520-4d29-ba20-3ddd2e193afb",
+          "bc269370-9ae4-4042-82c6-1fc53d71deb6",
+          "ee472781-df32-4e69-8347-7d88757b6741",
+          "53549ed7-50a5-4657-be39-458f238f5bc2"
+        ],
+        "settings": {
+          "animate": false,
+          "border_top": false,
+          "border_t_c": "#ea1c1c",
+          "border_t_opaciry": 0,
+          "color_t": "#ffffff",
+          "color": "#ffffff",
+          "color_h": "#2ea200",
+          "soc_c": "#ffffff",
+          "soc_bg": "#2ea200",
+          "soc_bg_h": "#1d639f",
+          "background_color": "#004c2a",
+          "copyright": "©2023 NOVA-CREATIVE THEME",
+          "copy_c": "#000000",
+          "copy_bd": "rgba(0,0,0,0)",
+          "bg_copy": "#ffffff",
+          "opacity": 100,
+          "mobile_acc": true
+        }
+      },
+      "nov-product-template": {
+        "type": "nov-product-template",
+        "settings": {
+          "c_border": "#ececec",
+          "show_quantity_selector": true,
+          "product_swatch_enable": true,
+          "show_share": true,
+          "show_vendor": false,
+          "show_sku": true,
+          "show_categories": true,
+          "show_tags": true,
+          "show_available": true,
+          "show_des": true,
+          "enable_zoom": true,
+          "show_related": true,
+          "show_description": true,
+          "show_payments": true,
+          "title_payments": "Guaranteed safe checkout:",
+          "payments": "shopify:\/\/shop_images\/payment.png",
+          "time": "Orders ship within 5 to 10 business days.",
+          "size_time": "12px",
+          "color_time": "#494949",
+          "truck": "Hoorey ! This item ships free to the US",
+          "size_truck": "12px",
+          "color_truck": "#494949",
+          "background_color": "",
+          "bg_icon": "#ffffff",
+          "text_color": "#222222",
+          "desc_color": "#666666",
+          "show_review": true,
+          "bg_review": "#ffffff"
+        }
+      },
+      "nov-page-contact": {
+        "type": "nov-page-contact",
+        "settings": {
+          "iframe_map": "https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d4082.7742465747338!2d-79.38287617561478!3d43.64905556573276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34d2a57d767f%3A0x935ab2eb9fd5fb31!2sFirst%20Canadian%20Place!5e0!3m2!1svi!2s!4v1591603052999!5m2!1svi!2s",
+          "color_title": "#0d2235",
+          "color_sub": "#232630",
+          "c_button": "#fff",
+          "bg_button": "#0d2235",
+          "bg_button_hv": "#167bd3",
+          "c_address": "#232630",
+          "c_email": "#232630",
+          "c_call": "#232630",
+          "c_time": "#232630",
+          "social": false
+        }
+      },
+      "nov-page-faqs": {
+        "type": "nov-page-faqs",
+        "blocks": {
+          "3526ffb7-415c-4d22-ae57-ade26348009e": {
+            "type": "faq",
+            "settings": {
+              "item_title": "Sed est elit posuere ac semper at hendrerit a neque?",
+              "color_title": "#232630",
+              "item_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac pretium metus. Curabitur velit sem, egestas sit amet dolor nec, tristique vulputate enim. Etiam a lorem libero. In egestas ultricies convallis. Sed iaculis arcu id justo dapibus pharetra. Maecenas et aliquam eros, sit amet volutpat nisi. Duis feugiat mattis maximus. Nulla sollicitudin lorem vitae neque ultricies efficitur. Sed pulvinar tellus enim, non tincidunt nisl imperdiet quis. Maecenas maximus lorem eu justo tincidunt mollis",
+              "color_content": "#232630"
+            }
+          },
+          "350dd52a-5a67-4cdd-8b96-2c19bd158761": {
+            "type": "faq",
+            "settings": {
+              "item_title": "Why Lorem ipsum dolor sit amet ?",
+              "color_title": "#232630",
+              "item_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac pretium metus. Curabitur velit sem, egestas sit amet dolor nec, tristique vulputate enim. Etiam a lorem libero. In egestas ultricies convallis. Sed iaculis arcu id justo dapibus pharetra. Maecenas et aliquam eros, sit amet volutpat nisi. Duis feugiat mattis maximus. Nulla sollicitudin lorem vitae neque ultricies efficitur. Sed pulvinar tellus enim, non tincidunt nisl imperdiet quis. Maecenas maximus lorem eu justo tincidunt mollis",
+              "color_content": "#232630"
+            }
+          },
+          "ad824580-169d-4232-aac5-72de44b65a2f": {
+            "type": "faq",
+            "settings": {
+              "item_title": "What maecenas commodo mi urna, quis accumsan ligula gravida at ?",
+              "color_title": "#232630",
+              "item_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac pretium metus. Curabitur velit sem, egestas sit amet dolor nec, tristique vulputate enim. Etiam a lorem libero. In egestas ultricies convallis. Sed iaculis arcu id justo dapibus pharetra. Maecenas et aliquam eros, sit amet volutpat nisi. Duis feugiat mattis maximus. Nulla sollicitudin lorem vitae neque ultricies efficitur. Sed pulvinar tellus enim, non tincidunt nisl imperdiet quis. Maecenas maximus lorem eu justo tincidunt mollis",
+              "color_content": "#232630"
+            }
+          },
+          "ecb276ad-04cc-4c9c-832e-892642fced38": {
+            "type": "faq",
+            "settings": {
+              "item_title": "Integer venenatis suscipit urna id imperdiet. In et mi quis sapien tristique sodales sit amet nec justo ?",
+              "color_title": "#232630",
+              "item_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac pretium metus. Curabitur velit sem, egestas sit amet dolor nec, tristique vulputate enim. Etiam a lorem libero. In egestas ultricies convallis. Sed iaculis arcu id justo dapibus pharetra. Maecenas et aliquam eros, sit amet volutpat nisi. Duis feugiat mattis maximus. Nulla sollicitudin lorem vitae neque ultricies efficitur. Sed pulvinar tellus enim, non tincidunt nisl imperdiet quis. Maecenas maximus lorem eu justo tincidunt mollis",
+              "color_content": "#232630"
+            }
+          },
+          "5710c37c-6a79-481c-9fc4-1cbb239a99c5": {
+            "type": "faq",
+            "settings": {
+              "item_title": "Donec lobortis dolor a arcu auctor tincidunt ac fermentum enim ?",
+              "color_title": "#232630",
+              "item_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac pretium metus. Curabitur velit sem, egestas sit amet dolor nec, tristique vulputate enim. Etiam a lorem libero. In egestas ultricies convallis. Sed iaculis arcu id justo dapibus pharetra. Maecenas et aliquam eros, sit amet volutpat nisi. Duis feugiat mattis maximus. Nulla sollicitudin lorem vitae neque ultricies efficitur. Sed pulvinar tellus enim, non tincidunt nisl imperdiet quis. Maecenas maximus lorem eu justo tincidunt mollis",
+              "color_content": "#232630"
+            }
+          },
+          "c5f181a0-f9ad-4de1-82f0-825dc7286149": {
+            "type": "faq",
+            "settings": {
+              "item_title": "Maecenas vitae placerat metus ?",
+              "color_title": "#232630",
+              "item_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac pretium metus. Curabitur velit sem, egestas sit amet dolor nec, tristique vulputate enim. Etiam a lorem libero. In egestas ultricies convallis. Sed iaculis arcu id justo dapibus pharetra. Maecenas et aliquam eros, sit amet volutpat nisi. Duis feugiat mattis maximus. Nulla sollicitudin lorem vitae neque ultricies efficitur. Sed pulvinar tellus enim, non tincidunt nisl imperdiet quis. Maecenas maximus lorem eu justo tincidunt mollis",
+              "color_content": "#232630"
+            }
+          },
+          "122f9f41-3f4a-4b9f-9aef-3a61fb4866be": {
+            "type": "faq",
+            "settings": {
+              "item_title": "Vestibulum nulla velit, tincidunt id neque sed ?",
+              "color_title": "#232630",
+              "item_content": "Volutpat nisi. Duis feugiat mattis maximus. Nulla sollicitudin lorem vitae neque ultricies efficitur. Sed pulvinar tellus enim, non tincidunt nisl imperdiet quis. Maecenas maximus lorem eu justo tincidunt mollis",
+              "color_content": "#232630"
+            }
+          },
+          "5b3a4407-bae8-412d-a1fc-397ddedd7faa": {
+            "type": "faq",
+            "settings": {
+              "item_title": "Sed est elit posuere ac semper at hendrerit a neque?",
+              "color_title": "#232630",
+              "item_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac pretium metus. Curabitur velit sem, egestas sit amet dolor nec, tristique vulputate enim. Etiam a lorem libero. In egestas ultricies convallis. Sed iaculis arcu id justo dapibus pharetra. Maecenas et aliquam eros, sit amet volutpat nisi. Duis feugiat mattis maximus. Nulla sollicitudin lorem vitae neque ultricies efficitur. Sed pulvinar tellus enim, non tincidunt nisl imperdiet quis. Maecenas maximus lorem eu justo tincidunt mollis",
+              "color_content": "#232630"
+            }
+          }
+        },
+        "block_order": [
+          "3526ffb7-415c-4d22-ae57-ade26348009e",
+          "350dd52a-5a67-4cdd-8b96-2c19bd158761",
+          "ad824580-169d-4232-aac5-72de44b65a2f",
+          "ecb276ad-04cc-4c9c-832e-892642fced38",
+          "5710c37c-6a79-481c-9fc4-1cbb239a99c5",
+          "c5f181a0-f9ad-4de1-82f0-825dc7286149",
+          "122f9f41-3f4a-4b9f-9aef-3a61fb4866be",
+          "5b3a4407-bae8-412d-a1fc-397ddedd7faa"
+        ],
+        "settings": {
+          "color_link": "#666666",
+          "bg_name": "#f0f0f0",
+          "bg_name_hv": "#e2e2e2",
+          "title": "Frequently asked question",
+          "color_title": "#232630",
+          "color_content": "#232630",
+          "c_answer": "#0d2235",
+          "c_subanswer": "#0d2235",
+          "c_button": "#fff",
+          "bg_button": "#0d2235",
+          "bg_button_hv": "#167bd3"
+        }
+      },
+      "nov-sidebar-article": {
+        "type": "nov-sidebar-article",
+        "blocks": {
+          "c967863b-1019-4743-a670-e127ec52cc60": {
+            "type": "block_categories",
+            "settings": {
+              "sidebar_categories_title": "Categories",
+              "sidebar_categories_class": "",
+              "sidebar_categories_menu": "category"
+            }
+          },
+          "3115dece-04a7-4b75-a9bd-79f707a698f1": {
+            "type": "block_recentpost",
+            "settings": {
+              "block_title": "Recent post",
+              "block_class": "",
+              "number_show": 4,
+              "show_date": true,
+              "show_comment": true,
+              "show_author": false,
+              "show_excerpt": false,
+              "show_more": false
+            }
+          },
+          "ae6a547b-333a-4b8a-8520-7e27d1123faa": {
+            "type": "block_blogtags",
+            "settings": {
+              "block_title": "Blog Tags",
+              "block_class": "",
+              "number_show": 20
+            }
+          },
+          "70bdcdc8-dd76-4781-86ca-7504cd602fb6": {
+            "type": "block_banner",
+            "settings": {
+              "banner_title": "",
+              "banner_class": "",
+              "banner_image": "shopify:\/\/shop_images\/img-5.jpg",
+              "banner_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "c967863b-1019-4743-a670-e127ec52cc60",
+          "3115dece-04a7-4b75-a9bd-79f707a698f1",
+          "ae6a547b-333a-4b8a-8520-7e27d1123faa",
+          "70bdcdc8-dd76-4781-86ca-7504cd602fb6"
+        ],
+        "settings": {
+        }
+      },
+      "nov-promotion-bar": {
+        "type": "nov-promotion-bar",
+        "settings": {
+          "show_promotion_bar": false,
+          "type": "slider",
+          "time": 10,
+          "auto": false,
+          "timeauto": 3,
+          "show_nav": false,
+          "c_nav": "",
+          "t_s": 13,
+          "t_s_md": 13,
+          "t_c": "#222222",
+          "t_fw": "font-400",
+          "t_tt": "none",
+          "t_lh": "1.5",
+          "t_lt": "0",
+          "cd_c": "#ffffff",
+          "cd_bg": "#222222",
+          "icon_c": "#222222",
+          "dot_c": "#222222",
+          "show_close": false,
+          "close_c": "",
+          "bd_b": false,
+          "bd_bc": "",
+          "container": "container",
+          "background_color": "",
+          "bg_opacity": 100,
+          "distance_top": 5,
+          "distance_bottom": 5
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  }
+}

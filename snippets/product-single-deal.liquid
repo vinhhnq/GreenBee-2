@@ -1,0 +1,46 @@
+{% if current_variant.compare_at_price > current_variant.price %}
+  <div class="product-single__deal mb-35">
+    {%- assign productStartCount = product.metafields.stock.initial | times:1 -%}
+    {% if productStartCount != blank %}
+      <div class="deal-flash__sale">
+        {% if product.variants.size < 2 %}
+          {%- assign available = product.selected_or_first_available_variant.inventory_quantity -%}
+          {%- assign sold = productStartCount | minus:available | times: 100 | divided_by : productStartCount -%}
+          <div class="deal-flash__sale-progress position-relative" style="background-color: {{ settings.progress_deal }}">
+            <div class="progress__bar position-absolute" style="width: {{ sold }}%;background: {{ settings.gradient_deal }};"></div>
+            {% if settings.i_flash != blank %}
+              <img src="{{ settings.i_flash | img_url: '66x' }}" class="position-absolute i_flash">
+            {% endif %}
+          </div>
+          <div class="flash__sale-bottom font-500 mt-15">
+            {{ 'products.deals.flash_deals_html' | t: sold: sold, available: available }}
+          </div>
+        {% elsif product.variants.size > 1 %}
+          {% assign available = 0 %}
+          {% for variant in product.variants %}
+            {% assign available = available | plus: variant.inventory_quantity %}
+          {% endfor %}
+          {%- assign sold = productStartCount | minus:available | times: 100 | divided_by : productStartCount -%}
+          <div class="deal-flash__sale-progress position-relative" style="background-color: {{ settings.progress_deal }}">
+            <div class="progress__bar position-absolute" style="width: {{ sold }}%;background: {{ settings.gradient_deal }};"></div>
+            {% if settings.i_flash != blank %}
+              <img src="{{ settings.i_flash | img_url: '66x' }}" class="position-absolute i_flash">
+            {% endif %}
+          </div>
+          <div class="flash__sale-bottom font-500 mt-15">
+            {{ 'products.deals.flash_deals_html' | t: sold: sold, available: available }}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+    {%- assign countdown = product.metafields.sale.countdown -%}
+    {% if countdown != blank %}
+      <div class="product-single__countdown d-flex align-items-center mt-35">
+        <div class="product-single__countdown-title font-800 f_pr text-uppercase">
+          {{ 'products.deals.flash_sale' | t }}
+        </div>
+        <div class="countdownfree" data-countdown="{{ countdown }}" data-show-days="{{ settings.show_day }}" data-restart="{{ settings.restart }}"></div>
+      </div>
+    {% endif %}
+  </div>
+{% endif %}

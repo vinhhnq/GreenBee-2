@@ -1,0 +1,405 @@
+{% assign sst = section.settings %}
+{% if sst.md == 5 %}
+  {%- assign md = 'col-md-cus-5' -%}
+{% else %}
+  {%- assign md = 12 | divided_by: sst.md | prepend: 'col-md-' -%}
+{% endif %}
+<div class="distance{% if sst.class_section != blank %} {{ sst.class_section }}{% endif %}{% if sst.animate == true %} wow fadeInUp animated{% endif %}">
+  {% if sst.container == 'container' %}
+    <div class="container">
+  {% elsif sst.container == 'container-fluid' %}
+    <div class="container-fluid">
+  {% else %}
+    <div class="container-full">
+  {% endif %}
+    {% if sst.heading != blank or sst.subheading != blank %}
+      <div class="title_section {{ sst.title_alignment }}">
+        {% if sst.heading != blank %}
+          <span class="title" style="color: {{ sst.heading_c }};">{{ sst.heading }}</span>
+        {% endif %}
+        {% if sst.subheading != blank %}
+          <span class="sub_title" style="color: {{ sst.subheading_c }};">{{ sst.subheading }}</span>
+        {% endif %}
+      </div>
+    {% endif %}
+    <div class="{% if sst.type == 'split' %}split-gallery d-block d-sm-flex flex-wrap{% else %}default-gallery{% endif %} row {% if sst.spacing_1 %}spacing-1{% else %}spacing-{{ sst.spacing }}{% endif %}">
+      {% for block in section.blocks %}
+        {% assign bst = block.settings %}
+        <div class="gallery-image_column position-relative{% if sst.spacing_1 == false %} mb-{{ sst.spacing }}{% endif %}{% if sst.type == 'gallery' %} {{ md }}{% endif %}{% if bst.class != blank %} {{ bst.class }}{% endif %}">
+          <div class="gallery-image__item overflow_hidden position-relative{% if bst.cta_label != blank or bst.btn_label != blank %} hs-cap{% endif %}{% if sst.style_img_1 %} nov-sh-image-1{% endif %}{% if sst.style_img_2 %} nov-sh-image-2{% endif %}">
+            {% if bst.link != blank %}
+              <a class="w-100 gallery-image__link" href="{{ bst.link }}">
+            {% endif %}
+            {% if bst.image != blank %}
+              <img data-src="{{ bst.image | img_url: '' }}" class="lazyload{% if bst.img_xs != blank %} d-none d-sm-block{% endif %}" width="{{ bst.image.width }}" height="{{ bst.image.height }}">
+            {% else %}
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+            {% endif %}
+            {% if bst.img_xs != blank %}
+              <img data-src="{{ bst.img_xs | img_url: '' }}" class="lazyload d-sm-none" width="{{ bst.img_xs.width }}" height="{{ bst.img_xs.height }}">
+            {% endif %}
+            {% if bst.link != blank %}
+              </a>
+            {% endif %}
+
+            {% if bst.cta_label != blank or bst.cta_label2 != blank or bst.btn_label != blank %}
+              <div class="gallery-image__caption position-absolute cap-{{ forloop.index }}">
+                <div class="image-caption__content">
+                  {% if bst.cta_label != blank %}
+                  <div class="gallery-image__text1{% if bst.ff_1 == 'f_pr' %} f_pr{% endif %} font-800" style="color: {{ bst.cta_label_c }}">{{ bst.cta_label }}</div>
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div><!-- End row -->
+  </div><!-- End container -->
+</div>
+{% if section.blocks.size == 0 %}
+  {% include 'no-blocks' %}
+{% endif %}
+{% schema %}
+  {
+    "name": "Vinova Gallery Image",
+    "class": "section-gallery-image",
+    "max_blocks": 6,
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "heading",
+        "label": "Heading",
+        "default": "<p>Vinova Gallery Image</p>"
+      },
+      {
+        "type": "color",
+        "id": "heading_c",
+        "label": "Heading color",
+        "default": "#222222"
+      },
+      {
+        "type": "richtext",
+        "id": "subheading",
+        "label": "Sub heading",
+        "default": "<p>Subtitle from happy customers</p>"
+      },
+      {
+        "type": "color",
+        "id": "subheading_c",
+        "label": "Sub heading color",
+        "default": "#666666"
+      },
+      {
+        "type": "select",
+        "id": "title_alignment",
+        "label": "Heading alignment",
+        "default": "text-left",
+        "options": [
+          {
+            "value": "text-left",
+            "label": "Left"
+          },
+          {
+            "value": "text-center",
+            "label": "Center"
+          },
+          {
+            "value": "text-right",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type":  "header",
+        "content": "Image type"
+      },
+      {
+        "type": "select",
+        "id": "type",
+        "label": "Type",
+        "default": "gallery",
+        "options": [
+          {
+            "value": "gallery",
+            "label": "Gallery"
+          },
+          {
+            "value": "split",
+            "label": "Split"
+          }
+        ]
+      },
+      {
+        "type":  "header",
+        "content": "Type gallery image item per row"
+      },
+      {
+        "type": "range",
+        "id": "md",
+        "min": 1,
+        "max": 6,
+        "step": 1,
+        "label": "Image item per row",
+        "default": 3
+      },
+      {
+        "type":  "header",
+        "content": "Type split image height"
+      },
+      {
+        "type": "number",
+        "id": "height_split_xl",
+        "label": "Height large desktop (px)"
+      },
+      {
+        "type": "number",
+        "id": "height_split_lg",
+        "label": "Height desktop (px)"
+      },
+      {
+        "type": "number",
+        "id": "height_split_md",
+        "label": "Height tablet (px)"
+      },
+      {
+        "type": "number",
+        "id": "height_split_sm",
+        "label": "Height large mobile (px)"
+      },
+      {
+        "type": "header",
+        "content": "Item image style"
+      },
+      {
+        "type": "range",
+        "id": "bd_radius",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Border radius image",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "spacing",
+        "min": 0,
+        "max": 60,
+        "step": 5,
+        "label": "Spacing items",
+        "default": 0
+      },
+      {
+        "type": "checkbox",
+        "id": "spacing_1",
+        "label": "Spacing 1px"
+      },
+      {
+        "type": "header",
+        "content": "Style hover image"
+      },
+      {
+        "type": "checkbox",
+        "id": "style_img_1",
+        "label": "Style hover image 1"
+      },
+      {
+        "type": "checkbox",
+        "id": "style_img_2",
+        "label": "Style hover image 2",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Design section"
+      },
+      {
+        "type": "checkbox",
+        "id": "animate",
+        "label": "Show animated",
+        "default":   true
+      },
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background colors"
+      },
+      {
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "Background image"
+      },
+      {
+        "type": "select",
+        "id": "container",
+        "label": "Container",
+        "default": "container",
+        "options": [
+          { "value": "container", "label": "Container" },
+          { "value": "container-fluid", "label": "Container fluid" },
+          { "value": "container-full", "label": "Container full width" }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "class_section",
+        "label": "Class"
+      },
+      {
+        "type": "number",
+        "id": "px",
+        "label": "Horizontally spacing section (px)",
+        "default": 0
+      },
+      {
+        "type": "number",
+        "id": "distance_top",
+        "label": "Top spacing section (px)",
+        "default": 30
+      },
+      {
+        "type": "number",
+        "id": "distance_bottom",
+        "label": "Bottom spacing section (px)",
+        "default": 30
+      }
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "img_xs",
+            "label": "Image mobile 575px ↓"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link",
+            "info": "========================"
+          },
+          {
+            "type": "text",
+            "id": "cta_label",
+            "label": "Caption 1"
+          },
+          {
+            "type": "color",
+            "id": "cta_label_c",
+            "label": "Caption 1 color",
+            "default": "#222222"
+          },
+          {
+            "type": "number",
+            "id": "cta_label_n",
+            "label": "Caption 1 font size"
+          },
+          {
+            "type": "radio",
+            "id": "ff_1",
+            "label": "Font family",
+            "default": "f_pr",
+            "options": [
+              {"value": "f_df","label": "Body font"},
+              {"value": "f_pr","label": "Heading font"}
+            ]
+          },
+          {
+            "type": "text",
+            "id": "class",
+            "label": "Class"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Vinova Image Gallery",
+        "category": "Image",
+        "blocks": [
+          {
+            "type": "image"
+          },
+          {
+            "type": "image"
+          },
+          {
+            "type": "image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+  {%- assign bg_image = sst.background_image -%}
+  #shopify-section-{{ section.id }} .distance {
+    padding-top: {{ sst.distance_top | append: 'px' }};
+    padding-bottom: {{ sst.distance_bottom | append: 'px' }};
+    padding-left: {{ sst.px | append: 'px' }};
+    padding-right: {{ sst.px | append: 'px' }};
+    {% if sst.background_color != blank %}
+      background-color: {{ sst.background_color }};
+    {% endif %}
+    {% if bg_image.src != blank %}
+      background-image: url("{{ bg_image | img_url: '1920x' }}");background-repeat: no-repeat;background-size: cover;
+    {% endif %}
+  }
+  @media(max-width: 767px) {
+    #shopify-section-{{ section.id }} .distance {
+      {%- if sst.distance_top > 20 -%}padding-top: {{ sst.distance_top | times: 0.7 | round: 0 | append: 'px' }};{%- endif -%}
+      {%- if sst.distance_bottom > 20 -%}padding-bottom: {{ sst.distance_bottom | times: 0.7 | round: 0 | append: 'px' }};{%- endif -%}
+    }
+  }
+  #shopify-section-{{ section.id }} .gallery-image__item {
+    border-radius: {{ sst.bd_radius | append: 'px' }};
+  }
+  {% if sst.type == 'split' %}
+  @media(min-width: 576px) {
+    #shopify-section-{{ section.id }} .gallery-image_column {
+      height: {{ sst.height_split_sm }}px;
+    }
+  }
+  @media(min-width: 768px) {
+    #shopify-section-{{ section.id }} .gallery-image_column {
+      height: {{ sst.height_split_md }}px;
+    }
+  }
+  @media(min-width: 992px) {
+    #shopify-section-{{ section.id }} .gallery-image_column {
+      height: {{ sst.height_split_lg }}px;
+    }
+  }
+  @media(min-width: 1200px) {
+    #shopify-section-{{ section.id }} .gallery-image_column {
+      height: {{ sst.height_split_xl }}px;
+    }
+  }
+  {% endif %}
+
+  {% for block in section.blocks %}
+    {% assign bst = block.settings %}
+    #shopify-section-{{ section.id }} .cap-{{ forloop.index }} .gallery-image__text1 {
+      font-size: {{ bst.cta_label_n | append: 'px' }};
+    }
+    @media(max-width: 1199px) {
+      #shopify-section-{{ section.id }} .cap-{{ forloop.index }} .gallery-image__text1 {
+        font-size: {{ bst.cta_label_n | times: 0.8 | append: 'px' }};
+      }
+    }
+    @media(max-width: 767px) {
+      #shopify-section-{{ section.id }} .cap-{{ forloop.index }} .gallery-image__text1 {
+        font-size: clamp(10px, {{ bst.cta_label_n | times: 0.7 | append: 'px' }}, 20px);
+      }
+    }
+  {% endfor %}
+</style>

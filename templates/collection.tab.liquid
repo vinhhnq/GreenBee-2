@@ -1,0 +1,14 @@
+{% layout none %}
+<div class="products-grid">
+  <div class="grid-item">
+    {% for product in collection.products %}
+    	<div class="block">
+    	  <div>
+    	    <div class="item p_item col">
+    	      {% render 'product-grid-item-style-1', product: product, sectionId: collection.title | handle | append: forloop.index %}
+    	    </div>
+    	  </div>
+    	</div>
+    {% endfor %}
+  </div>
+</div>

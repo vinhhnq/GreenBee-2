@@ -1,0 +1,20 @@
+<div class="p_item">
+  <div class="item nov-sh-image-2 text-center">
+    {% if image != blank %}
+      <div class="item-image overflow_hidden">
+        {% if link != blank %}<a href="{{ link }}">{% endif %}
+          {%- render 'nov-aspect-image', image: image, aspect: aspect -%}
+        {% if link != blank %}</a>{% endif %}
+      </div>
+    {% endif %}
+    {% if text != blank %}
+      {% if link != blank %}
+        <a href="{{ link }}" class="d-block item-text f_pr font-700 mt-25">
+      {% else %}
+        <div class="item-text f_pr font-700 mt-25">
+      {% endif %}
+        {{ text }}
+      {% if link != blank %}</a>{% else %}</div>{% endif %}
+    {% endif %}
+  </div>
+</div>

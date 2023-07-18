@@ -1,0 +1,530 @@
+{% assign sst = section.settings %}
+<div class="distance{% if sst.class != blank %} {{ sst.class }}{% endif %}{% if sst.animate == true %} wow fadeInUp animated{% endif %}" data-section-id="{{ section.id }}" data-section-type="nov-slick">
+  {% if sst.container == 'container' %}
+    <div class="container">
+  {% elsif sst.container == 'container-fluid' %}
+    <div class="container-fluid">
+  {% else %}
+    <div class="container-full">
+  {% endif %} 
+    {% if sst.type == 'scroll' %}
+      <div class="nov-text-scroll overflow_hidden d-flex">
+        <div class="block-scroll d-flex">
+          {% for block in section.blocks %}
+            {% assign bst = block.settings %}
+            <div class="block-scroll__item {{ sst.t_fw }}">
+              <div class="item-content d-flex align-items-center justify-content-center">
+                {% if block.type == 'text' %}
+                  {% if bst.icon !=blank %}<i class="{{ bst.icon }}"></i>{% endif %}
+                  {% if bst.title != blank %}<div class="title {{ sst.tt_fw }}{% if bst.t != blank %} has_t{% endif %}">{{ bst.title }}</div>{% endif %}
+                  {{ bst.t }}
+                  {% if bst.btn != blank %} <a href="{{ bst.btn_link }}" class="btn">{{ bst.btn }}</a>{% endif %}
+                {% endif %}
+                {% if block.type == 'countdown' %}
+                  {% if bst.title != blank %}<div class="title {{ sst.tt_fw }}">{{ bst.title }}</div>{% endif %}
+                  <div class="countdownfree d-flex justify-content-center" data-countdown="{{ sst.countdown_timeend }}"></div>
+                  {% if bst.btn != blank %} <a href="{{ bst.btn_link }}" class="btn">{{ bst.btn }}</a>{% endif %}
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="block-scroll d-flex">
+          {% for block in section.blocks %}
+            {% assign bst = block.settings %}
+            <div class="block-scroll__item {{ sst.t_fw }}">
+              <div class="item-content d-flex align-items-center justify-content-center">
+                {% if block.type == 'text' %}
+                  {% if bst.icon !=blank %}<i class="{{ bst.icon }}"></i>{% endif %}
+                  {% if bst.title != blank %}<div class="title {{ sst.tt_fw }}{% if bst.t != blank %} has_t{% endif %}">{{ bst.title }}</div>{% endif %}
+                  {{ bst.t }}
+                  {% if bst.btn != blank %} <a href="{{ bst.btn_link }}" class="btn">{{ bst.btn }}</a>{% endif %}
+                {% endif %}
+                {% if block.type == 'countdown' %}
+                  {% if bst.title != blank %}<div class="title {{ sst.tt_fw }}">{{ bst.title }}</div>{% endif %}
+                  <div class="countdownfree d-flex justify-content-center" data-countdown="{{ bst.countdown_timeend }}"></div>
+                  {% if bst.btn != blank %} <a href="{{ bst.btn_link }}" class="btn">{{ bst.btn }}</a>{% endif %}
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% else %}
+      <div class="nov-slick-carousel justify-content-center" data-autoplay="{{ sst.auto }}"
+        data-autoplaytimeout="{{ sst.timeauto }}000"
+        data-loop="true" 
+        data-dots="false"
+        data-nav="{{ sst.show_nav }}" 
+        data-items="1"
+        data-row="1"
+        data-vertical="{{ sst.vertical }}"
+        data-vertical_sm={{ sst.vertical_sm }}
+        adaptiveheight="true">
+        {% for block in section.blocks %}
+          {% assign bst = block.settings %}
+          <div class="block-scroll__item {{ sst.t_fw }} item">
+            <div class="item-content d-md-flex text-center text-md-left flex-wrap align-items-center justify-content-center">
+              {% if block.type == 'text' %}
+                {% if bst.icon !=blank %}<i class="{{ bst.icon }}"></i>{% endif %}
+                {% if bst.title != blank %}<div class="title {{ sst.tt_fw }} mb-sm-10">{{ bst.title }}</div>{% endif %}
+                {{ bst.t }}
+                {% if bst.btn != blank %} <a href="{{ bst.btn_link }}" class="btn mt-sm-20">{{ bst.btn }}</a>{% endif %}
+              {% endif %}
+              {% if block.type == 'countdown' %}
+                {% if bst.title != blank %}<div class="title {{ sst.tt_fw }} mb-sm-10">{{ bst.title }}</div>{% endif %}
+                <div class="countdownfree d-flex justify-content-center" data-countdown="{{ bst.countdown_timeend }}"></div>
+                {% if bst.btn != blank %} <a href="{{ bst.btn_link }}" class="btn mt-sm-20">{{ bst.btn }}</a>{% endif %}
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Vinova Text slider",
+    "class": "section-text-slider",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Type"
+      },
+      {
+        "type": "radio",
+        "id": "type",
+        "label": "Type",
+        "default": "scroll",
+        "options": [
+          {"value": "scroll","label": "Scroll"},
+          {"value": "slider","label": "Slider"}
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Scroll"
+      },
+      {
+        "type": "range",
+        "id": "time",
+        "min": 5,
+        "max": 60,
+        "step": 1,
+        "unit": "s",
+        "label": "Slide run time",
+        "default": 10
+      },
+      {
+        "type": "header",
+        "content": "Slider"
+      },
+      {
+        "type": "checkbox",
+        "id": "auto",
+        "label": "Auto play slider"
+      },
+      {
+        "type": "range",
+        "id": "timeauto",
+        "min": 1,
+        "max": 6,
+        "step": 1,
+        "label": "Time auto play (seconds)",
+        "default": 3
+      },
+      {
+        "type": "checkbox",
+        "id": "vertical",
+        "label": "Vertical slider",
+        "default": true
+      },
+      {
+        "type":  "checkbox",
+        "id": "show_nav",
+        "label": "Show arrow"
+      },
+      {
+        "type":  "color",
+        "id": "c_nav",
+        "label": "Arrow color"
+      },
+      {
+        "type": "header",
+        "content": "Style item"
+      },
+      {
+        "type": "header",
+        "content": "Title"
+      },
+      {
+        "type": "range",
+        "id": "tt_s",
+        "min": 10,
+        "max": 50,
+        "step": 1,
+        "label": "Title size",
+        "default": 13
+      },
+      {
+        "type": "range",
+        "id": "tt_s_md",
+        "min": 10,
+        "max": 50,
+        "step": 1,
+        "label": "Title size tablet",
+        "default": 13,
+        "info": "Breakpoint 991px ↓"
+      },
+      {
+        "type": "color",
+        "id": "tt_c",
+        "label": "Title color",
+        "default": "#222222"
+      },
+      {
+        "type": "select",
+        "id": "tt_fw",
+        "label": "Title font weight",
+        "default": "font-400",
+        "options": [
+          {"value": "font-300","label": "Light"},
+          {"value": "font-400","label": "Regular"},
+          {"value": "font-500","label": "Medium"},
+          {"value": "font-600","label": "SemiBold"},
+          {"value": "font-700","label": "Bold"},
+          {"value": "font-800","label": "ExtraBold"},
+          {"value": "font-900","label": "Black"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "tt_tt",
+        "label": "Title transform",
+        "default": "none",
+        "options": [
+          { "value": "capitalize", "label": "Capitalize" },
+          { "value": "uppercase", "label": "Uppercase" },
+          { "value": "none", "label": "None" }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "tt_lh",
+        "label": "Title line height",
+        "default": "1.5"
+      },
+      {
+        "type": "text",
+        "id": "tt_lt",
+        "label": "Title letter spacing",
+        "default": "0"
+      },
+      {
+        "type": "header",
+        "content": "Text"
+      },
+      {
+        "type": "range",
+        "id": "t_s",
+        "min": 10,
+        "max": 50,
+        "step": 1,
+        "label": "Text size",
+        "default": 13
+      },
+      {
+        "type": "range",
+        "id": "t_s_md",
+        "min": 10,
+        "max": 50,
+        "step": 1,
+        "label": "Text size tablet",
+        "default": 13,
+        "info": "Breakpoint 991px ↓"
+      },
+      {
+        "type": "color",
+        "id": "t_c",
+        "label": "Text color",
+        "default": "#222222"
+      },
+      {
+        "type": "select",
+        "id": "t_fw",
+        "label": "Text font weight",
+        "default": "font-400",
+        "options": [
+          {"value": "font-300","label": "Light"},
+          {"value": "font-400","label": "Regular"},
+          {"value": "font-500","label": "Medium"},
+          {"value": "font-600","label": "SemiBold"},
+          {"value": "font-700","label": "Bold"},
+          {"value": "font-800","label": "ExtraBold"},
+          {"value": "font-900","label": "Black"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "t_tt",
+        "label": "Text transform",
+        "default": "none",
+        "options": [
+          { "value": "capitalize", "label": "Capitalize" },
+          { "value": "uppercase", "label": "Uppercase" },
+          { "value": "none", "label": "None" }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "t_lh",
+        "label": "Text line height",
+        "default": "1.5"
+      },
+      {
+        "type": "text",
+        "id": "t_lt",
+        "label": "Text letter spacing",
+        "default": "0"
+      },
+      {
+        "type": "color",
+        "id": "c_btn",
+        "label": "Button color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "b_btn",
+        "label": "Button background color",
+        "default": "#222222"
+      },
+      {
+        "type": "color",
+        "id": "c_btn_h",
+        "label": "Button color hover",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "b_btn_h",
+        "label": "Button background color hover",
+        "default": "#222222"
+      },
+      {
+        "type":  "header",
+        "content": "Design option"
+      },
+      {
+        "type": "checkbox",
+        "id": "animate",
+        "label": "Show animated",
+        "default":   true
+      },
+      {
+        "type": "select",
+        "id": "container",
+        "label": "Container",
+        "default": "container",
+        "options": [
+          {"value": "container", "label": "Container"},
+          {"value": "container-fluid", "label": "Container fluid"},
+          {"value": "container-full", "label": "Container full width"}
+        ]
+      },
+      
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background colors"
+      },
+      {
+        "type": "range",
+        "id": "bg_opacity",
+        "min": 10,
+        "max": 100,
+        "step": 10,
+        "label": "Background opacity",
+        "default": 100
+      },
+      {
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "Background image"
+      },
+      {
+        "type": "text",
+        "id": "class",
+        "label": "Class"
+      },
+      {
+        "type": "number",
+        "id": "distance_top",
+        "label": "Top spacing section (px)",
+        "default": 30
+      },
+      {
+        "type": "number",
+        "id": "distance_bottom",
+        "label": "Bottom spacing section (px)",
+        "default": 30
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "Item text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "icon",
+            "label": "Icon",
+            "default": "zmdi zmdi-flash",
+            "info": "[Get the icon here](https:\/\/zavoloklom.github.io\/material-design-iconic-font\/icons.html)"
+          },
+          {
+            "type": "inline_richtext",
+            "id": "title",
+            "label": "Title",
+            "default": "Lorem ipsum dolor"
+          },
+          {
+            "type": "richtext",
+            "id": "t",
+            "label": "Item text",
+            "default": "<p>New Offers on the COVID-19. This Weekend only to Get 50% Flate</p>"
+          },
+          {
+            "type": "text",
+            "id": "btn",
+            "label": "Button text"
+          },
+          {
+            "type": "url",
+            "id": "btn_link",
+            "label": "Button link"
+          }
+        ]
+      },
+      {
+        "type": "countdown",
+        "name": "Item countdown",
+        "settings": [
+          {
+            "type": "inline_richtext",
+            "id": "title",
+            "label": "Title",
+            "default": "Lorem ipsum dolor"
+          },
+          {
+            "type": "text",
+            "id": "countdown_timeend",
+            "label": "Time end product",
+            "placeholder": "YYYY\/MM\/DD"
+          },
+          {
+            "type": "paragraph",
+            "content": "Format: 'Year\/Month\/Day'"
+          },
+          {
+            "type": "paragraph",
+            "content": "Example: '2022\/01\/30'"
+          },
+          {
+            "type": "text",
+            "id": "btn",
+            "label": "Button text"
+          },
+          {
+            "type": "url",
+            "id": "btn_link",
+            "label": "Button link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Vinova Text Slider",
+        "category": "Text",
+        "blocks": [
+          {
+            "type": "text"
+          },
+          {
+            "type": "text"
+          },
+          {
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+  {%- assign bg_image = sst.background_image -%}
+  #shopify-section-{{ section.id }} .distance {
+    padding-top: {{ sst.distance_top | append: 'px' }};
+    padding-bottom: {{ sst.distance_bottom | append: 'px' }};
+    {% if sst.background_color != blank %}
+      background-color: rgba({{ sst.background_color | color_to_rgb | remove: 'rgb(' | remove: 'rgba(' | remove: ')' | remove: ', 0.0' }}, {{ sst.bg_opacity }}%);
+    {% endif %}
+    {% if bg_image.src != blank %}
+      background-image: url("{{ bg_image | img_url: '1920x' }}");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    {% endif %}
+  }
+  #shopify-section-{{ section.id }} .block-scroll {
+    animation-duration: {{ sst.time | append:  's' }};
+  }
+  #shopify-section-{{ section.id }} .block-scroll__item .title {
+    color: {{ sst.tt_c }};
+    font-size: {{ sst.tt_s | divided_by: 10.0 | append: 'rem' }};
+    line-height: {{ sst.tt_lh }};
+    letter-spacing: {{ sst.tt_lt | append: 'px' }};
+    text-transform: {{ sst.tt_tt }};
+  }
+  #shopify-section-{{ section.id }} .block-scroll__item p {
+    color: {{ sst.t_c }};
+    font-size: {{ sst.t_s | divided_by: 10.0 | append: 'rem' }};
+    line-height: {{ sst.t_lh }};
+    letter-spacing: {{ sst.t_lt | append: 'px' }};
+    text-transform: {{ sst.t_tt }};
+  }
+  #shopify-section-{{ section.id }} .block-scroll__item i {
+    color: {{ sst.t_c }};
+  }
+  #shopify-section-{{ section.id }} .block-scroll__item .item-content:after {
+    background-color: {{ sst.t_c }};
+  }
+  #shopify-section-{{ section.id }} .btn {
+    color: {{ sst.c_btn }};
+    background-color: {{ sst.b_btn }};
+  }
+  #shopify-section-{{ section.id }} .btn:hover {
+    color: {{ sst.c_btn_h }} !important;
+    background-color: {{ sst.b_btn_h }} !important;
+  }
+  #shopify-section-{{ section.id }} .nov-slick-carousel .slick-arrow {
+    color: {{ sst.c_nav }};
+  }
+  @media(max-width: 991px) {
+    #shopify-section-{{ section.id }} .block-scroll__item .title {
+      font-size: {{ sst.tt_s_md | divided_by: 10.0 | append: 'rem' }};
+    }
+    #shopify-section-{{ section.id }} .block-scroll__item p {
+      font-size: {{ sst.t_s_md | divided_by: 10.0 | append: 'rem' }};
+    }
+  }
+  @media(max-width: 575px) {
+    #shopify-section-{{ section.id }} .distance {
+      {%- if sst.distance_top > 20 -%}padding-top: {{ sst.distance_top | times: 0.7 | round: 0 | append: 'px' }};{%- endif -%}
+      {%- if sst.distance_bottom > 20 -%}padding-bottom: {{ sst.distance_bottom | times: 0.7 | round: 0 | append: 'px' }};{%- endif -%}
+    }
+  }
+</style>

@@ -1,0 +1,275 @@
+{% assign sst = section.settings %}
+{%- capture container -%}
+  {{- sst.container -}}
+{%- endcapture -%}
+
+{%- style -%}
+
+   #shopify-section-{{ section.id }} .distance {
+      padding-top: {{ sst.distance_top | append: 'px' }};
+      padding-bottom: {{ sst.distance_bottom | append: 'px' }};
+      {% if sst.background_color != blank %}
+      background-color: {{ sst.background_color }};
+      {% endif %}
+      {% if bg_image.src != blank %}
+      background-image: url("{{ bg_image | img_url: '1920x' }}");background-repeat: no-repeat;background-size: cover;
+      {% endif %}
+   }
+   #shopify-section-{{ section.id }} .content-block-text .title-block{
+      color: {{ sst.heading_c }};
+   }
+   #shopify-section-{{ section.id }} .content-block-text .description-block{
+      color: {{ sst.subheading_c }};
+      font-weight: 300;
+   }
+
+{% endstyle %}
+
+<div class="distance{% if sst.class_section != blank %} {{ sst.class_section }}{% endif %}{% if sst.animate == true %} wow fadeInUp animated{% endif %}">
+   <div  class="{{ container }}">
+      <div class="row d-flex align-items-center justify-content-center">
+         <div class="col-lg-9 col-md-12 content-block-tab d-flex align-items-center justify-content-center">
+            <ul class="tabs">
+            {% for block in section.blocks %}
+               <li class="tab-link" data-tab="tab-{{ forloop.index }}">
+                  <div class="content-text-tab d-flex align-items-center justify-content-between">
+                     <div class="d-flex align-items-center justify-content-start">
+                     {% if block.settings.icon != blank %}
+                        {% assign imagewidths = bst.icon.width %}
+                        {%- assign imagealt = bst.icon.alt | default: block.settings.text_block | strip_html | escape -%}
+                        {{ block.settings.icon | image_url: width: imagewidths | image_tag:
+                           loading: 'lazy',
+                           sizes: sizes,
+                           class: 'img-fluid',
+                           alt: imagealt,
+                           widths: '60 80 100'
+                           }}
+                        {% else %}
+                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' | replace: '<svg', '<svg style="width: 41px"' }}
+                     {% endif %}
+                     {{ block.settings.text_block }}
+                     </div>
+                     <i class="zmdi zmdi-long-arrow-right"></i>
+                  </div>
+               </li>
+            {% endfor %}
+
+            </ul>
+            <div class="tab-contents">
+               {% for block in section.blocks %}
+               <div id="tab-{{ forloop.index }}" class="tab-content">
+                  <div class="content-image">
+                     {% if block.settings.image != blank %}
+                        {% assign imagewidths = block.settings.image.width %}
+                        {%- assign imagealt = block.settings.image.alt | default: block.settings.text_block | strip_html | escape -%}
+                        {{ block.settings.image | image_url: width: imagewidths | image_tag:
+                           loading: 'lazy',
+                           sizes: sizes,
+                           class: 'img-fluid',
+                           alt: imagealt,
+                           widths: '508'
+                           }}
+                        {% else %}
+                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' | replace: '<svg', '<svg style="width: 508px; margin: auto"' }}
+                     {% endif %}
+                  </div>
+               </div>
+               {% endfor %}
+            </div>
+         </div>
+         <div class="col-lg-3 col-md-12 content-block-text">
+            <div class="title-block">
+               <h2>{{ sst.heading }}</h2>
+            </div>
+            <div class="description-block line-clamp-4">
+               {{ sst.subheading }}
+            </div>
+            <div class="item-contact align-items-center d-flex">
+              <div class="icon-phone d-flex align-items-center justify-content-center"><span class="d-flex align-items-center justify-content-center"><i class="{{ sst.phone_icon }}"></i></span></div>
+              <div class="d-flex flex-wrap align-items-start flex-column justify-content-center font-text">
+                <div class="how-order">{{ sst.text_phone }}</div>
+                <div class="mb-0 text-uppercase">{{ sst.text_phone2 }}</div>
+              </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<script type="text/javascript">
+   $(document).ready(function() {
+      $('.content-block-tab ul.tabs li:nth-child(2)').addClass('current');
+      $('.content-block-tab .tab-content:nth-child(2)').addClass('current');
+      $('.content-block-tab ul.tabs li').click(function() {
+         var tab_id = $(this).attr('data-tab');
+         if (!$(this).hasClass('current')) {
+            $('.tab-content.current').hide().removeClass('current');
+            $("#" + tab_id).addClass('current').fadeIn(500);
+
+            $('ul.tabs li').removeClass('current');
+            $(this).addClass('current');
+         }
+      });
+   });
+</script>
+
+{% schema %}
+   {
+      "name": "Vinova Image Width Text 2",
+      "class": "section-img-text2",
+      "settings": [
+         {
+            "type":  "header",
+            "content": "Block Content Text"
+         },
+         {
+            "type": "richtext",
+            "id": "heading",
+            "label": "Heading",
+            "default": "<p>Who we are<br>What We Do?</p>"
+         },
+         {
+            "type": "color",
+            "id": "heading_c",
+            "label": "Heading color",
+            "default": "#222222"
+         },
+         {
+            "type": "richtext",
+            "id": "subheading",
+            "label": "Description Block",
+            "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed dui tempor eros porttitor tristique eget eu lectus. Sed auctor mi vitae velit aliquet.</p>"
+         },
+         {
+            "type": "color",
+            "id": "subheading_c",
+            "label": "Sub heading color",
+            "default": "#434343"
+         },
+         {
+            "type":  "header",
+            "content": "Block Content Phone"
+         },
+         {
+            "type": "richtext",
+            "id": "text_phone",
+            "label": "Text Phone",
+            "default": "<p>How to Order?</p>"
+         },
+         {
+            "type": "richtext",
+            "id": "text_phone2",
+            "label": "Text Phone 2",
+            "default": "<p>Call Us: 0123-456-7890</p>"
+         },
+         {
+            "type": "select",
+            "id": "phone_icon",
+            "label": "Phone icon",
+            "default": "rbb-icon-phone-4",
+            "options": [
+               {"value": "rbb-icon-phone-1", "label": "Phone icon 1"},
+               {"value": "rbb-icon-phone-2", "label": "Phone icon 2"},
+               {"value": "rbb-icon-phone-3", "label": "Phone icon 3"},
+               {"value": "rbb-icon-phone-4", "label": "Phone icon 4"},
+               {"value": "rbb-icon-phone-5", "label": "Phone icon 5"}
+            ]
+         },
+         {
+            "type":  "header",
+            "content": "Design option"
+         },
+         {
+            "type": "checkbox",
+            "id": "animate",
+            "label": "Show animated",
+            "default":   true
+         },
+         {
+         "type": "select",
+         "id": "container",
+         "label": "Container",
+         "default": "container",
+         "options": [
+            { "value": "container", "label": "Container" },
+            { "value": "container-fluid", "label": "Container fluid" },
+            { "value": "container-full", "label": "Container full width" }
+         ]
+         },
+         {
+         "type": "color",
+         "id": "background_color",
+         "label": "Background colors"
+         },
+         {
+         "type": "image_picker",
+         "id": "background_image",
+         "label": "Background image"
+         },
+         {
+         "type": "text",
+         "id": "class",
+         "label": "Class"
+         },
+         {
+         "type": "number",
+         "id": "px",
+         "label": "Horizontally spacing section (px)",
+         "default": 0
+         },
+         {
+         "type": "number",
+         "id": "distance_top",
+         "label": "Top spacing section (px)",
+         "default": 30
+         },
+         {
+         "type": "number",
+         "id": "distance_bottom",
+         "label": "Bottom spacing section (px)",
+         "default": 30
+         }
+      ],
+      "blocks": [
+         {
+            "type": "text",
+            "name": "Text",
+            "limit": 3,
+            "settings": [
+               {
+                  "type": "image_picker",
+                  "id": "image",
+                  "label": "Image"
+               },
+               {
+                  "type": "image_picker",
+                  "id": "icon",
+                  "label": "Icon"
+               },
+               {
+                  "type": "richtext",
+                  "id": "text_block",
+                  "label": "Text Block",
+                  "default": "<p>Payment Secure</p>"
+               }
+            ]
+         }
+      ],
+      "presets": [
+         {
+            "name": "Vinova Image Width Text 2",
+             "blocks": [
+               {
+                  "type": "text"
+               },
+               {
+                  "type": "text"
+               },
+               {
+                  "type": "text"
+               }
+            ]
+         }
+      ]
+   }
+{% endschema %}

@@ -1,0 +1,85 @@
+<!-- Popup newsletter -->
+{% if settings.show_newsletter_popup == true %}
+  {% form 'customer', id: 'newsletter_contact' %}
+    {{ form.errors | default_errors }}
+    {% if form.posted_successfully? %}
+      <div id="popupAlert" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered justify-content-center" role="document">
+          <div class="modal-content">
+            <p class="form--success alert-success text-center mb-0">{{ 'general.newsletter_form.confirmation' | t }}</p>
+          </div>
+        </div>
+      </div>
+    {% else %}
+      <div id="popup-subscribe" class="{{ settings.newsletter_type }} modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header" data-dismiss="modal"><i class="zmdi zmdi-close"></i></div>
+            <div class="modal-body{% if settings.newsletter_type == 'newsletter' %} row spacing-0 p-0{% else %} text-center{% endif %} overflow-hidden">
+              {% if settings.newsletter_type == 'promotion' %}
+                {% if settings.newsletter_promoimg != blank %}
+                  {% assign imagewidths = settings.newsletter_promoimg.width %}
+                  {%- assign imagealt = settings.newsletter_promoimg.alt | default: "newsleeter" -%}
+                  {{ settings.newsletter_promoimg | image_url: width: imagewidths | image_tag:
+                      loading: 'lazy',
+                      class: 'img-fluid',
+                      sizes: sizes,
+                      alt: imagealt,
+                      widths: '655 730 850'
+                      }}
+                  {% else %}
+                  {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' | replace: '<svg', '<svg style="width: 655px;margin: auto"' }}
+                {% endif %}
+              {% else %}
+                <div class="modal-top col-md-6 position-relative">
+                  <div class="image_newsletter">
+                    {% if settings.bg_newsletter != blank %}
+                      {% assign imagewidths = settings.bg_newsletter.width %}
+                      {%- assign imagealt = settings.bg_newsletter.alt | default: "newsleeter" -%}
+                      {{ settings.bg_newsletter | image_url: width: imagewidths | image_tag:
+                          loading: 'lazy',
+                          class: 'img-fluid',
+                          sizes: sizes,
+                          alt: imagealt,
+                          widths: '600 700 800'
+                          }}
+                      {% else %}
+                      {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' | replace: '<svg', '<svg style="width: 410px; height: 550px; margin: auto"' }}
+                    {% endif %}
+                  </div>
+                </div>
+                <div class="modal-body_content col-md-6">
+                  <div class="content mt-30 pt-100 pt-md-50 pb-30">
+                    <div class="title_block f_pr c_h font-900 mb-20">{{ settings.title_newsletter }}</div>
+                    <div class="desc mb-25">{{ settings.desc_newsletter }}</div>
+                    <div class="input-subscribe-wrap">
+                      <input type="hidden" name="contact[tags]" value="newsletter">
+                      <input type="email"
+                        name="contact[email]"
+                        class="inputNew form-control grey newsletter-input"
+                        value=""
+                        placeholder="{{ 'general.newsletter_form.email_newsletter' | t }}">
+                      <span class="input-group-btn mt-10 d-block">
+                        <button id="Subscribe" type="submit" name="commit" class="btn">
+                          {{ 'general.newsletter_form.submit' | t }}
+                        </button>
+                      </span>
+                    </div>
+                    <div class="checkbox mt-100 pt-md-50 pt-30">
+                      <label id="myCheck" class="d-inline-flex">
+                        <span class="custom-checkbox">
+                          <input name="no-view" class="no-view" type="checkbox">
+                        </span>
+                        <span id="text">{{ settings.notify_newsletter }}</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% endform %}
+{% endif %}

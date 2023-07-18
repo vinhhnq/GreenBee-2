@@ -1,0 +1,313 @@
+{% assign sst = section.settings %}
+{%- capture container -%}
+  {{- section.settings.container -}}
+{%- endcapture -%}
+{%- style -%}
+  #shopify-section-{{ section.id }}{
+    padding-top: {{ section.settings.distance_top | append: 'px' -}};
+    padding-bottom: {{ section.settings.distance_bottom | append: 'px' -}};
+  }
+  #shopify-section-{{ section.id }} .offer-category-item{
+      {%  assign  col =  section.settings.grid_number | times: 1.0 %}
+      {%  assign  widthcol =  100 | divided_by: col %}
+      width: {{ widthcol  }}%;
+   }
+{%- endstyle -%}
+
+<div class="{% if sst.class != blank %} {{ sst.class }}{% endif %}{% if sst.animate == true %} wow fadeInUp animated{% endif %}"
+      data-section-id="{{ section.id }}"
+      data-section-type="nov-swiper"
+>
+   <div class="{{ container }}">
+      {% if sst.heading != blank %}
+			<div class="title_section mb-12 {{ sst.title_alignment }}">
+				<h2 class="title" style="color: {{ sst.heading_c }};">{{ sst.heading }}</h2>
+			</div>
+      {% endif %}
+      {% if section.blocks.size > 0 %}
+         <div class="nov-offer-category-content">
+            <div
+               class="nov-swiper-carousel swiper"
+               data-items="{{ sst.grid_number }}"
+               data-items_lg="{{ sst.grid_number_lg }}"
+               data-items_md="{{ sst.grid_number_md }}"
+               data-items_sm="{{ sst.grid_number_sm }}"
+               data-items_xs="{{ sst.grid_number_xs }}"
+               data-spacing="{{ sst.spacing }}"
+               data-spacing_mobile="{{ sst.spacing_mobile }}"
+               data-loop="false">
+               <div class="swiper-wrapper">
+                  {% for block in section.blocks %}
+                  {% assign bst = block.settings %}
+                     <div class="offer-category-item swiper-slide">
+                        <div class="image-offer-category">
+                           {% if bst.image_category != blank %}
+                           {% assign imagewidths = bst.image_category.width %}
+                           {%- assign imagealt = bst.image_category.alt | default: bst.text_category | strip_html | escape -%}
+                           {{ bst.image_category | image_url: width: imagewidths | image_tag:
+                              loading: 'lazy',
+                              sizes: sizes,
+                              class: 'img-fluid',
+                              alt: imagealt,
+                              widths: '234'
+                              }}
+                           {% else %}
+                           {{ 'image' | placeholder_svg_tag: 'placeholder-svg' | replace: '<svg', '<svg style="width: 234px; margin: auto"' }}
+                           {% endif %}
+                           <a class="btn-view-category" href="{% if bst.link_category != bank %} {{ bst.link_category }}{%  else %}#{% endif %}"><span><i class="zmdi zmdi-store"></i></span></a>
+                        </div>
+                        <div class="text-offer-category">
+                           <div class="number-category">
+                              <span style="color: {{ bst.color_nct }}">{{ bst.number_ct}}</span>
+                           </div>
+                           <h3 class="text-category text-center">
+                              <a class="btn-view-category" href="{% if bst.link_category != bank %} {{ bst.link_category }}{%  else %}#{% endif %}" style="color: {{ bst.color_ct }}">{{ bst.text_category}}</a>
+                           </h3>
+                        </div>
+                     </div>
+                  {% endfor %}
+               </div>
+               <div class="swiper-scrollbar"></div>
+            </div>
+         </div>
+      {% endif %}
+   </div>
+</div>
+
+{% schema %}
+   {
+      "name": "Nov Offer Category Text",
+      "class": "section-offer-category-text",
+      "settings": [
+         {
+            "type":  "header",
+            "content": "Style Offer Category"
+         },
+         {
+            "type": "richtext",
+            "id": "heading",
+            "label": "Heading",
+            "default": "<p>Top Offers This Week</p>"
+         },
+         {
+            "type": "color",
+            "id": "heading_c",
+            "label": "Heading color",
+            "default": "#000000"
+         },
+         {
+            "type": "select",
+            "id": "title_alignment",
+            "label": "Heading alignment",
+            "default": "text-center",
+            "options": [
+               {
+                  "value": "text-left",
+                  "label": "Left"
+               }, {
+                  "value": "text-center",
+                  "label": "Center"
+               }, {
+                  "value": "text-right",
+                  "label": "Right"
+               }
+            ]
+         },
+         {
+            "type": "header",
+            "content": "Category item per row"
+         },
+         {
+            "type": "range",
+            "id": "grid_number",
+            "min": 1,
+            "max": 6,
+            "step": 1,
+            "label": "Categorys per row large desktop",
+            "default": 5,
+            "info": "Breakpoint 1200px ↑"
+         },
+         {
+            "type": "range",
+            "id": "grid_number_lg",
+            "min": 1,
+            "max": 6,
+            "step": 1,
+            "label": "Categorys per row desktop",
+            "default": 4,
+            "info": "Breakpoint 992px ↑"
+         },
+         {
+            "type": "range",
+            "id": "grid_number_md",
+            "min": 1,
+            "max": 6,
+            "step": 1,
+            "label": "Categorys per row tablet",
+            "default": 3,
+            "info": "Breakpoint 768px ↑"
+         },
+         {
+            "type": "range",
+            "id": "grid_number_sm",
+            "min": 1,
+            "max": 6,
+            "step": 1,
+            "label": "Categorys per row mobile",
+            "default": 1,
+            "info": "Breakpoint 640px ↑"
+         },
+         {
+            "type": "range",
+            "id": "grid_number_xs",
+            "min": 1,
+            "max": 6,
+            "step": 1,
+            "label": "Categorys per row small mobile",
+            "default": 1,
+            "info": "Breakpoint 570px ↑"
+         },
+         {
+            "type": "range",
+            "id": "limit",
+            "min": 4,
+            "max": 15,
+            "step": 1,
+            "label": "Limit",
+            "default": 8,
+            "info": "Select number limit Categorys"
+         },
+         {
+            "type": "range",
+            "id": "spacing",
+            "min": 0,
+            "max": 30,
+            "step": 5,
+            "label": "Spacing",
+            "default": 30,
+            "info": "Spacing item"
+         },
+         {
+            "type": "range",
+            "id": "spacing_mobile",
+            "min": 0,
+            "max": 20,
+            "step": 5,
+            "label": "Spacing Mobile",
+            "default": 10,
+            "info": "Spacing item Mobile. Breakpoint 768px ↓ "
+         },
+         {
+            "type":  "header",
+            "content": "Design option"
+         },
+         {
+            "type": "checkbox",
+            "id": "animate",
+            "label": "Show animated",
+            "default":   true
+         },
+         {
+            "type": "select",
+            "id": "container",
+            "label": "Container",
+            "default": "container",
+            "options": [
+               {"value": "container", "label": "Container"},
+               {"value": "container-fluid", "label": "Container fluid"},
+               {"value": "container-full", "label": "Container full width"}
+            ]
+         },
+         {
+            "type": "text",
+            "id": "class",
+            "label": "Class"
+         },
+         {
+            "type": "number",
+            "id": "distance_top",
+            "label": "Top spacing section (px)",
+            "default": 30
+         },
+         {
+            "type": "number",
+            "id": "distance_bottom",
+            "label": "Bottom spacing section (px)",
+            "default": 30
+         }
+      ],
+      "blocks": [
+         {
+            "type": "offer_category",
+            "name": "Offer Category",
+            "limit": 15,
+            "settings": [
+               {
+                  "type": "image_picker",
+                  "id": "image_category",
+                  "label": "Category Image"
+               },{
+                  "type": "url",
+                  "id": "link_category",
+                  "label": "Link Category"
+               },
+               {
+                  "type": "text",
+                  "id": "number_ct",
+                  "label": "Part Number Category",
+                  "default": "$3,99/Kg"
+               },
+               {
+                  "type": "color",
+                  "id": "color_nct",
+                  "label": "Color Number Category",
+                  "default": "#01693a"
+               },
+               {
+                  "type": "richtext",
+                  "id": "text_category",
+                  "label": "Text Category",
+                  "default": "<p>Salmon Fillet</p>"
+               },
+               {
+                  "type": "color",
+                  "id": "color_ct",
+                  "label": "Color Text Category",
+                  "default": "#000000"
+               }
+            ]
+         }
+      ],
+      "presets": [
+         {
+            "name": "Nov Offer Category",
+            "blocks": [
+               {
+                  "type": "offer_category"
+               },
+               {
+                  "type": "offer_category"
+               },
+               {
+                  "type": "offer_category"
+               },
+               {
+                  "type": "offer_category"
+               },
+               {
+                  "type": "offer_category"
+               },
+               {
+                  "type": "offer_category"
+               },
+               {
+                  "type": "offer_category"
+               },
+               {
+                  "type": "offer_category"
+               }
+            ]
+         }
+      ]
+   }
+{% endschema %}

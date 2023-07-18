@@ -1,0 +1,365 @@
+{% assign sst = section.settings %}
+{%- capture container -%}
+  {{- sst.container -}}
+{%- endcapture -%}
+<div class="{% if sst.bg_size == 'full' %}distance{% endif %}{% if sst.class != blank %} {{ sst.class }}{% endif %}{% if sst.animate == true %} wow fadeInUp animated{% endif %}">
+  <div  class="{{ container }}">
+    {% if section.blocks.size > 0 %}
+      <div class="container-inner{% if sst.bg_size == 'content' %} distance{% endif %}">
+        <div class="row align-items-end">
+          {% for block in section.blocks %}
+            {% assign bst = block.settings %}
+            <div class="nov-policy-item policy-items-{{ forloop.index }} {{ sst.width_xl }} {{ sst.width_lg }} {{ sst.width_md }} {{ sst.width_sm }} {{ sst.width_xs }}{% if bst.class != blank %} {{ bst.class }}{% endif %}">
+              <div class="policy__item--content d-flex flex-column justify-content-center align-items-center">
+                <div class="policy-icon position-relative d-flex justify-content-center align-items-center">
+                  {% if bst.policy_icon != blank %}
+                    {% assign imagewidths = bst.policy_icon.width %}
+                    {{ bst.policy_icon | image_url: width: imagewidths | image_tag:
+                      loading: 'lazy',
+                      sizes: sizes,
+                      class: 'img-fluid',
+                      alt: 'icon_policy',
+                      widths: '45'
+                      }}
+                  {% else %}
+                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' | replace: '<svg', '<svg style="width: 45px; margin: auto"' }}
+                  {% endif %}
+                </div>
+                <div class="heading--policy position-relative">
+                  {% if bst.title_policy != blank %}<div class="title-policy f_pr font-700 text-center">{{ bst.title_policy }}</div>{% endif %}
+                  {% if bst.desc_policy != blank %}<div class="desc-policy line-clamp-3 text-center">{{ bst.desc_policy }}</div>{% endif %}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Vinova Policy 2",
+    "class": "section-policy2",
+    "max_blocks": 3,
+    "settings": [
+      {
+        "type":  "header",
+        "content": "Style item policy"
+      },
+      {
+        "type": "number",
+        "id": "width_icon",
+        "label": "Max width icon policy (px)",
+        "default": 45
+      },
+      {
+        "type": "number",
+        "id": "height_icon",
+        "label": "Max height icon policy (px)",
+        "default": 45
+      },
+      {
+        "type": "color",
+        "id": "bg_icon",
+        "label": "Background icon",
+        "default": "#ffffff",
+        "info": "=========================="
+      },
+      {
+        "type": "number",
+        "id": "text_fz",
+        "label": "Title policy font size (px)",
+        "default": 18
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Title policy colors",
+        "default": "#222222"
+      },
+      {
+        "type": "number",
+        "id": "desc_fz",
+        "label": "Description policy font size (px)",
+        "default": 14
+      },
+      {
+        "type": "color",
+        "id": "desc_color",
+        "label": "Description policy colors",
+        "default": "#434343",
+        "info": "=========================="
+      },
+      {
+        "type":  "header",
+        "content": "Width policy item per row"
+      },
+      {
+        "type": "select",
+        "id": "width_xl",
+        "label": "Large desktop",
+        "info": "Breakpoint 1200px ↑",
+        "default": "col-xl-4",
+        "options": [
+          {"value": "col-xl-1", "label": "1/12"},
+          {"value": "col-xl-2", "label": "2/12"},
+          {"value": "col-xl-3", "label": "3/12"},
+          {"value": "col-xl-4", "label": "4/12"},
+          {"value": "col-xl-5", "label": "5/12"},
+          {"value": "col-xl-6", "label": "6/12"},
+          {"value": "col-xl-7", "label": "7/12"},
+          {"value": "col-xl-8", "label": "8/12"},
+          {"value": "col-xl-9", "label": "9/12"},
+          {"value": "col-xl-10", "label": "10/12"},
+          {"value": "col-xl-11", "label": "11/12"},
+          {"value": "col-xl-12", "label": "12/12"},
+          {"value": "col-xl-cus-5", "label": "1/5"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "width_lg",
+        "label": "Desktop",
+        "info": "Breakpoint 992px ↑",
+        "default": "col-lg-4",
+        "options": [
+          {"value": "col-lg-1", "label": "1/12"},
+          {"value": "col-lg-2", "label": "2/12"},
+          {"value": "col-lg-3", "label": "3/12"},
+          {"value": "col-lg-4", "label": "4/12"},
+          {"value": "col-lg-5", "label": "5/12"},
+          {"value": "col-lg-6", "label": "6/12"},
+          {"value": "col-lg-7", "label": "7/12"},
+          {"value": "col-lg-8", "label": "8/12"},
+          {"value": "col-lg-9", "label": "9/12"},
+          {"value": "col-lg-10", "label": "10/12"},
+          {"value": "col-lg-11", "label": "11/12"},
+          {"value": "col-lg-12", "label": "12/12"},
+          {"value": "col-lg-cus-5", "label": "1/5"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "width_md",
+        "label": "Tablet",
+        "info": "Breakpoint 768px ↑",
+        "default": "col-md-4",
+        "options": [
+          {"value": "col-md-1", "label": "1/12"},
+          {"value": "col-md-2", "label": "2/12"},
+          {"value": "col-md-3", "label": "3/12"},
+          {"value": "col-md-4", "label": "4/12"},
+          {"value": "col-md-5", "label": "5/12"},
+          {"value": "col-md-6", "label": "6/12"},
+          {"value": "col-md-7", "label": "7/12"},
+          {"value": "col-md-8", "label": "8/12"},
+          {"value": "col-md-9", "label": "9/12"},
+          {"value": "col-md-10", "label": "10/12"},
+          {"value": "col-md-11", "label": "11/12"},
+          {"value": "col-md-12", "label": "12/12"},
+          {"value": "col-md-cus-5", "label": "1/5"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "width_sm",
+        "label": "Large mobile",
+        "info": "Breakpoint 576px ↑",
+        "default": "col-sm-12",
+        "options": [
+          {"value": "col-sm-1", "label": "1/12"},
+          {"value": "col-sm-2", "label": "2/12"},
+          {"value": "col-sm-3", "label": "3/12"},
+          {"value": "col-sm-4", "label": "4/12"},
+          {"value": "col-sm-5", "label": "5/12"},
+          {"value": "col-sm-6", "label": "6/12"},
+          {"value": "col-sm-7", "label": "7/12"},
+          {"value": "col-sm-8", "label": "8/12"},
+          {"value": "col-sm-9", "label": "9/12"},
+          {"value": "col-sm-10", "label": "10/12"},
+          {"value": "col-sm-11", "label": "11/12"},
+          {"value": "col-sm-12", "label": "12/12"},
+          {"value": "col-sm-cus-5", "label": "1/5"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "width_xs",
+        "label": "Mobile",
+        "info": "Breakpoint 575px ↓",
+        "default": "col-12",
+        "options": [
+          {"value": "col-1", "label": "1/12"},
+          {"value": "col-2", "label": "2/12"},
+          {"value": "col-3", "label": "3/12"},
+          {"value": "col-4", "label": "4/12"},
+          {"value": "col-5", "label": "5/12"},
+          {"value": "col-6", "label": "6/12"},
+          {"value": "col-7", "label": "7/12"},
+          {"value": "col-8", "label": "8/12"},
+          {"value": "col-9", "label": "9/12"},
+          {"value": "col-10", "label": "10/12"},
+          {"value": "col-11", "label": "11/12"},
+          {"value": "col-12", "label": "12/12"}
+        ]
+      },
+      {
+        "type":  "header",
+        "content": "Design option"
+      },
+      {
+        "type": "checkbox",
+        "id": "animate",
+        "label": "Show animated",
+        "default":   true
+      },
+      {
+        "type": "select",
+        "id": "container",
+        "label": "Container",
+        "default": "container",
+        "options": [
+          {"value": "container", "label": "Container"},
+          {"value": "container-fluid", "label": "Container fluid"},
+          {"value": "container-full", "label": "Container full width"}
+        ]
+      },
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background colors"
+      },
+      {
+        "type": "color_background",
+        "id": "gradient",
+        "label": "Background gradient"
+      },
+      {
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "Background image"
+      },
+      {
+        "type": "select",
+        "id": "bg_size",
+        "label": "Background size",
+        "default": "full",
+        "options": [
+          { "value": "content", "label": "Container" },
+          { "value": "full", "label": "Full width" }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "class",
+        "label": "Class"
+      },
+      {
+        "type": "number",
+        "id": "distance_top",
+        "label": "Top spacing section (px)",
+        "default": 30
+      },
+      {
+        "type": "number",
+        "id": "distance_bottom",
+        "label": "Bottom spacing section (px)",
+        "default": 30
+      }
+    ],
+    "blocks": [
+      {
+        "type": "item_policy",
+        "name": "Policy Item",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "policy_icon",
+            "label": "Policy icon"
+          },
+          {
+            "type": "text",
+            "id": "title_policy",
+            "label": "Title policy",
+            "default": "Premium Quality"
+          },
+          {
+            "type": "inline_richtext",
+            "id": "desc_policy",
+            "label": "Description policy",
+            "default": "The quality and safety of our products is our top priority. We continue to quest for even greater product quality"
+          },
+          {
+            "type": "text",
+            "id": "class",
+            "label": "Class"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Vinova Policy 2",
+        "category": "Text",
+        "blocks": [
+          {
+            "type": "item_policy"
+          },
+          {
+            "type": "item_policy"
+          },
+          {
+            "type": "item_policy"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+  {%- assign bg_image = sst.background_image -%}
+  #shopify-section-{{ section.id }} .distance {
+    padding-top: {{ sst.distance_top | append: 'px' }};
+    padding-bottom: {{ sst.distance_bottom | append: 'px' }};
+    position: relative;
+    {% if sst.background_color != blank or bg_image != blank %}
+      background: {{ sst.background_color }}{% if bg_image != blank %} url("{{ bg_image | img_url: '1920x' }}"){% endif %} no-repeat center bottom;
+      background-size: cover;
+    {% endif %}
+    {%- if sst.gradient != blank -%}
+      background: {{ sst.gradient }};
+    {%- endif -%}
+  }
+  @media(max-width: 991px) {
+    #shopify-section-{{ section.id }} .distance {
+      {%- if sst.distance_top > 20 -%}padding-top: {{ sst.distance_top | times: 0.7 | round: 0 | append: 'px' }};{%- endif -%}
+      {%- if sst.distance_bottom > 20 -%}padding-bottom: {{ sst.distance_bottom | times: 0.7 | round: 0 | append: 'px' }};{%- endif -%}
+    }
+  }
+  #shopify-section-{{ section.id }} .title-policy {
+    font-size: {{ sst.text_fz | divided_by: 10.0 | append: 'rem' }};
+    color: {{ sst.text_color }};
+  }
+  @media(max-width:  575px) {
+    #shopify-section-{{ section.id }} .title-policy {
+      font-size: clamp(11px, {{ sst.text_fz | divided_by: 10.0 | append: 'rem' }}, 2.2rem);
+    }
+  }
+  #shopify-section-{{ section.id }} .sub-policy {
+    font-size: {{ sst.sub_fz | divided_by: 10.0 | append: 'rem' }};
+    color: {{ sst.sub_color }};
+  }
+  #shopify-section-{{ section.id }} .desc-policy {
+    font-size: {{ sst.desc_fz | divided_by: 10.0 | append: 'rem' }};
+    color: {{ sst.desc_color }};
+  }
+  #shopify-section-{{ section.id }} a {
+    color: {{ sst.desc_color }};
+  }
+  #shopify-section-{{ section.id }} .policy-icon img {
+    max-width: {{ sst.width_icon | append: 'px' }};
+    max-height: {{ sst.height_icon | append: 'px' }};
+  }
+</style>

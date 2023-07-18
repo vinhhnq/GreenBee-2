@@ -1,0 +1,113 @@
+<!doctype html>
+<!-- FreshMate 1 -->
+<html class="no-js{% if settings.enable_rtl == true %} lang-rtl{% endif %}"{% if settings.enable_rtl == true %} dir="rtl"{% endif %} lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="theme-color" content="">
+    <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    {%- if settings.favicon != blank -%}
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+    {%- endif -%}
+    {%- unless settings.type_header_family.system? and settings.type_base_family.system? -%}
+      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+    {%- endunless -%}
+    {% if settings.type_google == true %}
+      {%- assign type_base = settings.type_base_family_google | strip | replace: ' ', '+' -%}
+      {%- assign type_header = settings.type_header_family_google | strip | replace: ' ', '+' -%}
+      <link rel="preload" href="https://fonts.googleapis.com/css?family={{ type_base }}:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      {% if type_base != type_header %}
+        <link rel="preload" href="https://fonts.googleapis.com/css?family={{ type_header }}:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      {% endif %}
+    {% endif %}
+    <title>
+      {{ page_title }}
+      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+    </title>
+
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+    {% include 'social-meta-tags' %}
+    {{ content_for_header }}
+    {% render 'judgeme_core' %}
+    {% include 'css-variables' %}
+    {% include 'nov-head-css' %}
+    {% include 'nov-head-js' %}
+    {% render 'variant-options' %}
+    <script src="{{ 'shopify_global.js' | asset_url }}" defer="defer"></script>
+</head>
+
+  <body class="template-{{ template | split: '.' | first }}">
+    <a class="in-page-link hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
+    {% if template.name != "index" and settings.enable_loadpage %}
+      <div class="preloader_nov">
+        <div class="nov_load"></div>
+      </div>
+    {% endif %}
+    {% section 'nov-promotion-bar' %}
+    {% section 'nov-header' %}
+    <main class="main-content" id="MainContent">
+      {{ content_for_layout }}
+    </main>
+    {% section 'nov-footer' %}
+    <div class="sidebar-overlay"></div>
+    {% include 'nov-cart-canvas' %}
+    {% include 'nov-stickymenu-mobile' %}
+    {% include 'nov-popup-newsletter' %}
+    {% include 'nov-popup-login' %}
+    {% include 'nov-popup-faqs' %}
+    {% include 'nov-popup-video' %}
+    {% include 'nov-product-newsletter' %}
+    {% include 'icon-font' %}
+    {% include 'nov-cart-empty' %}
+    {% if settings.show_fake_order_inner_page %}
+      {% include 'nov-popup-fake-order' %}
+    {% else %}
+      {% if template.name == 'index' %}
+        {% include 'nov-popup-fake-order' %}
+      {% endif %}
+    {% endif %}
+
+    {% if template.name == 'product' %}
+      <div id="nov-sizeguide-product" nov-item-act data-act="CanvasSizeGuide">
+        <div class="pointer mb-40" nov-btn-close data-close="CanvasSizeGuide"><svg aria-hidden="true" viewBox="0 0 16 14"><path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path></svg></div>
+        {% section 'nov-page-sizeguide' %}
+      </div>
+    {% endif %}
+    {% if settings.wishlist_enable and settings.show_popup_wishlist %}
+      {% include 'nov-popup-wishlist' %}
+    {% endif %}
+    <div id="_desktop_back_top">
+      <div id="back-top">
+        <span>
+          <i class="zmdi zmdi-chevron-up"></i>
+        </span>
+      </div>
+    </div>
+    {% include 'nov-currency' %}
+    <script src="{{ 'variants.js' | asset_url }}" defer="defer"></script>
+    {{ 'nuranium.js' | asset_url | script_tag }}
+    <section id="Nov_purchasecode" data-email='' class="hide hidden">
+      <div id="Nov_purchasecode-center">
+        <h2 id="Nov_purchasecode-heading" class="text-uppercase mt-35 mb-5">Enter your purchase code</h2>
+        <p id="Nov_purchasecode-text" class="mb-35">To Activate Mate Shopify Theme, Please use Envato Purchase Code</p>
+        <div id="Nov_purchasecode-waring"></div>
+        <div id="Nov_purchasecode-guide"><span>Please Go To Theme Settings > Purchase Code > Enter Your Purchase Code > Save</span></div>
+        <div id="Nov_purchasecode-link" class="d-md-flex justify-content-center mt-45 mt-sm-30">
+          <a href="https://shopifymate.com/documentation/guide/purchase-code.html" target="_blank">Where Is My Purchase Code?</a>
+          <a href="https://shopifymate.com/documentation/" target="_blank">Documentation</a>
+          <a href="https://themeforest.net/licenses/standard" target="_blank">License Policy</a>
+        </div>
+      </div>
+      <div id="Nov_purchasecode-bottom" class="text-center">
+        <i class="zmdi zmdi-alert-circle"></i>
+        <div>You can only use 1 license per domain</div>
+      </div>
+    </section>
+</body>
+</html>

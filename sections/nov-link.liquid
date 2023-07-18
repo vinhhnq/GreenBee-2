@@ -1,0 +1,172 @@
+{% assign sst = section.settings %}
+<div class="distance{% if sst.class != blank %} {{ sst.class }}{% endif %}{% if sst.animate == true %} wow fadeInUp animated{% endif %}" data-section-id="{{ section.id }}" data-section-type="nov-slick">
+  {% if sst.container == 'container' %}
+    <div class="container">
+  {% elsif sst.container == 'container-fluid' %}
+    <div class="container-fluid">
+  {% else %}
+    <div class="container-full">
+  {% endif %}
+    <div class="block-link d-flex justify-content-md-center">
+      {% for block in section.blocks %}
+        {% assign bst = block.settings %}
+        <div class="item">
+            {% if bst.icon != blank %}
+              <img class="icon" src="{{ bst.icon | img_url: '50x' }}">
+            {% endif %}
+            <a href="{{ bst.link }}" class="font-700">{{ bst.title }}</a>
+        </div>
+      {% endfor %}
+    </div>
+    {% if section.blocks.size == 0 %}
+      {% include 'no-blocks' %}
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Vinova Link",
+    "class": "section-link",
+    "max_blocks": 6,
+    "settings": [
+      {
+        "type":  "header",
+        "content": "Item style"
+      },
+      {
+        "type": "color",
+        "id": "color_link",
+        "label": "Text colors",
+        "default": "#666666"
+      },
+      {
+        "type": "color",
+        "id": "color_link_h",
+        "label": "Text colors hover",
+        "default": "#222222"
+      },
+      {
+        "type": "select",
+        "id": "tt",
+        "label": "Text transform",
+        "default": "none",
+        "options": [
+          { "value": "capitalize", "label": "Capitalize" },
+          { "value": "uppercase", "label": "Uppercase" },
+          { "value": "none", "label": "None" }
+        ]
+      },
+      {
+        "type":  "header",
+        "content": "Design Option"
+      },
+      {
+        "type": "select",
+        "id": "container",
+        "label": "Container",
+        "default": "container",
+        "options": [
+          { "value": "container", "label": "Container" },
+          { "value": "container-fluid", "label": "Container fluid" },
+          { "value": "container-full", "label": "Container full width" }
+        ]
+      },
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Colors",
+        "default": "#ffffff"
+      },
+      {
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "Background Image"
+      },
+      {
+        "type": "text",
+        "id": "class",
+        "label": "Class"
+      },
+      {
+        "type": "number",
+        "id": "distance_top",
+        "label": "Top spacing section (px)",
+        "default": 30
+      },
+      {
+        "type": "number",
+        "id": "distance_bottom",
+        "label": "Bottom spacing section (px)",
+        "default": 30
+      }
+    ],
+    "blocks": [
+      {
+        "type": "item",
+        "name": "Link",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Icon"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Vinova Link",
+        "blocks": [
+          {
+            "type": "item"
+          },
+          {
+            "type": "item"
+          },
+          {
+            "type": "item"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+<style>
+  {%- assign bg_image = sst.background_image -%}
+  #shopify-section-{{ section.id }} .distance {
+    padding-top: {{ sst.distance_top }}px;
+    padding-bottom: {{ sst.distance_bottom }}px;
+    {% if sst.background_color != blank %}
+      background-color: {{ sst.background_color }};
+    {% endif %}
+    {% if bg_image.src != blank %}
+      background-image: url("{{ bg_image | img_url: '1920x' }}");
+      background-repeat: no-repeat;
+      background-position: center top;
+    {% endif %}
+  }
+  #shopify-section-{{ section.id }} a {
+    color: {{ sst.color_link }};
+    text-transform: {{ sst.tt }};
+  }
+  #shopify-section-{{ section.id }} a:hover {
+    color: {{ sst.color_link_h }};
+  }
+  @media(max-width: 575px) {
+    #shopify-section-{{ section.id }} .distance {
+      {%- if sst.distance_top > 20 -%}padding-top: {{ sst.distance_top | times: 0.7 | round: 0 | append: 'px' }};{%- endif -%}
+      {%- if sst.distance_bottom > 20 -%}padding-bottom: {{ sst.distance_bottom | times: 0.7 | round: 0 | append: 'px' }};{%- endif -%}
+    }
+  }
+</style>

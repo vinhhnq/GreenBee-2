@@ -1,0 +1,151 @@
+{
+  "sections": {
+    "main": {
+      "type": "collection-template",
+      "settings": {
+        "category": "category",
+        "show_more": 5,
+        "products_per_page": 12,
+        "sort_enable": true,
+        "loadmore": false,
+        "type_loadmore": "btn",
+        "cb": true,
+        "show_tags": true,
+        "show_desc": true,
+        "bg_b": "#f2f2f2",
+        "show_recently": true
+      }
+    },
+    "166020887020e948ae": {
+      "type": "nov-policy",
+      "blocks": {
+        "166020887041ee3f6a-0": {
+          "type": "item_policy",
+          "settings": {
+            "policy_icon": "shopify:\/\/shop_images\/p-8.png",
+            "title_policy": "FREE US DELIVERY",
+            "desc_policy": "Free shipping on all order above $200",
+            "mw": 500,
+            "tl": "Learn More",
+            "link": "#",
+            "bg_icon": "#eaeaea",
+            "class": "mb-sm-30"
+          }
+        },
+        "166020887041ee3f6a-1": {
+          "type": "item_policy",
+          "settings": {
+            "policy_icon": "shopify:\/\/shop_images\/p-12.png",
+            "title_policy": "SUPPORT 24\/7",
+            "desc_policy": "Contact us 24 hours a day, 7 days a week",
+            "mw": 500,
+            "tl": "Learn More",
+            "link": "#",
+            "bg_icon": "#eaeaea",
+            "class": "mb-sm-30"
+          }
+        },
+        "166020887041ee3f6a-2": {
+          "type": "item_policy",
+          "settings": {
+            "policy_icon": "shopify:\/\/shop_images\/p-13.png",
+            "title_policy": "7 DAYS RETURN",
+            "desc_policy": "Return it within 30 days for an exchange.",
+            "mw": 500,
+            "tl": "Learn More",
+            "link": "#",
+            "bg_icon": "#eaeaea",
+            "class": ""
+          }
+        }
+      },
+      "block_order": [
+        "166020887041ee3f6a-0",
+        "166020887041ee3f6a-1",
+        "166020887041ee3f6a-2"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_c": "#222222",
+        "subheading": "",
+        "subheading_c": "#666666",
+        "title_alignment": "text-left",
+        "style": "style2",
+        "width_icon": 31,
+        "height_icon": 34,
+        "bg_i": true,
+        "bg_i_w": 80,
+        "bg_icon": "#eaeaea",
+        "text_fz": 13,
+        "text_color": "#222222",
+        "desc_fz": 13,
+        "desc_color": "#666666",
+        "bg_itemcolor": "",
+        "bd_radius": 0,
+        "show_border_item": false,
+        "c_border": "",
+        "pt": 0,
+        "pb": 0,
+        "width_xl": "col-xl-4",
+        "width_lg": "col-lg-4",
+        "width_md": "col-md-4",
+        "width_sm": "col-sm-12",
+        "width_xs": "col-12",
+        "spacing": 30,
+        "animate": true,
+        "br_container": 0,
+        "container": "container",
+        "background_color": "",
+        "gradient": "",
+        "bg_size": "full",
+        "class": "",
+        "distance_top": 60,
+        "distance_bottom": 30
+      }
+    },
+    "1660210192fc453daa": {
+      "type": "nov-line",
+      "settings": {
+        "height": 1,
+        "color": "#dcdcdc",
+        "style": "solid",
+        "opacity": 100,
+        "animate": false,
+        "container": "container-full",
+        "class": "",
+        "distance_top": 30,
+        "distance_bottom": 30
+      }
+    },
+    "recent-products": {
+      "type": "nov-recently-viewed",
+      "settings": {
+        "heading": "<p>RECENTLY VIEWED PRODUCTS<\/p>",
+        "heading_c": "#222222",
+        "subheading": "",
+        "subheading_c": "#666666",
+        "title_alignment": "text-center",
+        "grid_number_xxl": 5,
+        "grid_number": 3,
+        "grid_number_lg": 3,
+        "grid_number_md": 3,
+        "grid_number_sm": 2,
+        "grid_number_xs": 2,
+        "limit": 13,
+        "show_nav": false,
+        "animate": true,
+        "container": "container",
+        "background_color": "",
+        "class": "",
+        "distance_top": 30,
+        "distance_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "166020887020e948ae",
+    "1660210192fc453daa",
+    "recent-products"
+  ]
+}
