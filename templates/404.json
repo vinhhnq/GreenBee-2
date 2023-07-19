@@ -15,8 +15,7 @@
         "bg_back_hv": "#0d2235",
         "button_continue_shopping": true,
         "bg_continue_shopping": "#e9ebeb",
-        "bg_continue_shopping_hv": "#0d2235",
-        "image": "shopify:\/\/shop_images\/404-sleep-cat.gif"
+        "bg_continue_shopping_hv": "#0d2235"
       }
     }
   },
