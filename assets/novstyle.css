@@ -15494,8 +15494,8 @@ effects the :hover style. This forces the style to be applied.
 .header-top .header-top-right .myaccount,
 .header-top .header-top-right .wishlist,
 .header-top .header-top-right .site-header__cart {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   -ms-border-radius: 100%;
