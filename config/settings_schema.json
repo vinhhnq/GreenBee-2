@@ -31,6 +31,12 @@
       },
       {
         "type": "color",
+        "id": "bgc_navlink",
+        "label": "Background color navlink hover",
+        "default": "#f4f4f4"
+      },
+      {
+        "type": "color",
         "id": "theme_color_default",
         "label": "Theme color default",
         "default": "#222222"

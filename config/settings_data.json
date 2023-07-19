@@ -1,6 +1,7 @@
 {
   "current": {
     "license": "eaa0d837-feb0-4d99-ae55-4c166077a2f6",
+    "bgc_navlink": "#f4f4f4",
     "theme_color_default": "#2ea200",
     "theme_color_primary": "#004c2a",
     "color_body": "#ffffff",
@@ -119,7 +120,7 @@
     "qv_swatch_enable": true,
     "email": "<p>Email<strong>:<\/strong> support@domain.com<\/p>",
     "hotline": "<p>Call Us: (012)-345-67890<\/p>",
-    "favicon": "shopify:\/\/shop_images\/favicon-nov.png",
+    "favicon": "shopify:\/\/shop_images\/favicon.png",
     "link_page_wishlist": "shopify:\/\/pages\/page-wishlist",
     "show_popup_wishlist": true,
     "enable_loadpage": false,
