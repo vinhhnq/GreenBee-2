@@ -21,9 +21,9 @@
     border-top: 1px solid rgba(var(--color-border-rgb), .6);
     @media(min-width: 1200px) {
 	    pointer-events: none;
-	}
+		}
 	>ul {
-		padding: 30px 40px;
+		padding: 15px 5px 18px;
 		@media(max-width: 1199px) {
 			padding: 15px 20px;
 		}
@@ -39,7 +39,7 @@
 		.nav-dropdown--lv2 {
 			@include opacity(1);
 			visibility: visible;
-			top: -30px;
+			top: -16px;
 		}
 	}
 }
@@ -50,11 +50,9 @@
 	opacity: 0;
 	visibility: hidden;
 	@include transition(all 0.3s);
-	@include rtl-pl(40px);
 	ul {
 		background-color: white;
-		padding: 40px;
-		width: 270px;
+		padding: 15px 5px 18px;
 		min-width: max-content;
 	}
 	@media(max-width: 1199px) {
@@ -66,13 +64,15 @@
 	}
 }
 .site-nav__link {
-	padding-bottom: 14px;
-	font-size: 1.4rem;
+	padding: 5px 15px;
+	font-size: 1.3rem;
+	font-weight: 300;
 	color: var(--color-sub-menu);
 	display: block;
 	text-transform: capitalize;
 	&:hover {
 		color: var(--theme-color-primary);
+		background-color: var(--bgc--navlink);
 	}
 }
 .site-nav--icon {
@@ -102,7 +102,7 @@
 }
 .MenuDefault {
 	min-width: max-content;
-	width: 270px;
+	width: 220px;
 }
 .megaMenu {
 	@include rtl-l(50%);
@@ -214,9 +214,10 @@
 	}
 	.site-nav__link--main {
 	    color: var(--color-menu);
-	    font-size: 1.4rem;
-	    font-weight: 700;
-	    font-family: var(--font-family-primary);
+			text-transform: uppercase;
+	    font-size: 1.1rem;
+	    font-weight: 500;
+	    font-family: "Poppins", "HelveticaNeue", "Helvetica Neue", sans-serif;
 	    @include transition(all 0.3s ease);
 	    display: block;
 	    position: relative;

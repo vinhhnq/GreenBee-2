@@ -10335,7 +10335,6 @@ a {
 }
 a:hover {
   text-decoration: none;
-  color: var(--theme-color-primary);
 }
 
 i {
@@ -10450,19 +10449,13 @@ button[disabled], button.disabled {
   vertical-align: middle;
 }
 .wishlist i {
-  font-size: 14px;
+  font-size: 20px;
   margin-right: 5px;
   vertical-align: middle;
 }
 .lang-rtl .wishlist i {
   margin-left: 5px;
   margin-right: initial;
-}
-.wishlist.whislist-added, .wishlist:hover {
-  color: var(--theme-color-default);
-}
-.wishlist.whislist-added i, .wishlist:hover i {
-  color: var(--theme-color-default);
 }
 
 /* Title block ===================================================== */
@@ -15878,8 +15871,8 @@ effects the :hover style. This forces the style to be applied.
   border-radius: 100%;
   background-color: var(--theme-color-default);
   position: absolute;
-  top: 5px;
-  right: -5px;
+  top: 15px;
+  right: -7px;
   z-index: 9;
   display: flex;
   align-items: center;
@@ -15887,7 +15880,7 @@ effects the :hover style. This forces the style to be applied.
   color: white;
 }
 .lang-rtl .site-header__cart .site-header__cart-count {
-  left: -5px;
+  left: -7px;
   right: initial;
 }
 .site-header__cart #CartCount {
@@ -24981,7 +24974,7 @@ a[data-init-quickshop] {
   }
 }
 .nav-dropdown--lv1 > ul {
-  padding: 30px 40px;
+  padding: 15px 5px 18px;
 }
 @media (max-width: 1199px) {
   .nav-dropdown--lv1 > ul {
@@ -25007,7 +25000,7 @@ a[data-init-quickshop] {
   -o-opacity: 1;
   opacity: 1;
   visibility: visible;
-  top: -30px;
+  top: -16px;
 }
 
 .nav-dropdown--lv2 {
@@ -25021,20 +25014,14 @@ a[data-init-quickshop] {
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
-  padding-left: 40px;
 }
 .lang-rtl .nav-dropdown--lv2 {
   right: 100%;
   left: initial;
 }
-.lang-rtl .nav-dropdown--lv2 {
-  padding-right: 40px;
-  padding-left: initial;
-}
 .nav-dropdown--lv2 ul {
   background-color: white;
-  padding: 40px;
-  width: 270px;
+  padding: 15px 5px 18px;
   min-width: max-content;
 }
 @media (max-width: 1199px) {
@@ -25052,14 +25039,16 @@ a[data-init-quickshop] {
 }
 
 .site-nav__link {
-  padding-bottom: 14px;
-  font-size: 1.4rem;
+  padding: 5px 15px;
+  font-size: 1.3rem;
+  font-weight: 300;
   color: var(--color-sub-menu);
   display: block;
   text-transform: capitalize;
 }
 .site-nav__link:hover {
   color: var(--theme-color-primary);
+  background-color: var(--bgc--navlink);
 }
 
 .site-nav--icon {
@@ -25101,7 +25090,7 @@ a[data-init-quickshop] {
 
 .MenuDefault {
   min-width: max-content;
-  width: 270px;
+  width: 220px;
 }
 
 .megaMenu {
@@ -25262,9 +25251,10 @@ a[data-init-quickshop] {
 }
 .site-nav .site-nav__link--main {
   color: var(--color-menu);
-  font-size: 1.4rem;
-  font-weight: 700;
-  font-family: var(--font-family-primary);
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: "Poppins", "HelveticaNeue", "Helvetica Neue", sans-serif;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;

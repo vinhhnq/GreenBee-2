@@ -36,7 +36,6 @@ a {
    text-decoration: none;
    &:hover {
       text-decoration: none;
-      color: var(--theme-color-primary);
    }
 }
 i {
@@ -135,16 +134,9 @@ button {
       vertical-align: middle;
    }
    i {
-      font-size: 14px;
+      font-size: 20px;
       @include rtl-mr(5px);
       vertical-align: middle;
-   }
-   &.whislist-added,
-   &:hover {
-      color: var(--theme-color-default);
-      i {
-         color: var(--theme-color-default);
-      }
    }
 }
 /* Title block ===================================================== */
