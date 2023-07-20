@@ -25325,6 +25325,21 @@ a[data-init-quickshop] {
     -ms-flex-pack: center;
   }
 }
+@media (max-width: 1200px) {
+  .site-nav .nav--lv1 {
+    display: inline-flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    padding: 13px 15px;
+  }
+}
 /*==============   Main menu mobile   ==================*/
 .canvas-menu #canvas-main-menu {
   background: white;
