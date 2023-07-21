@@ -1813,7 +1813,6 @@ effects the :hover style. This forces the style to be applied.
 .site-header__search {
    position: relative;
    flex: auto;
-   max-width: 410px;
    .icon {
       position: absolute;
       @include rtl-l(20px);
@@ -1837,7 +1836,7 @@ effects the :hover style. This forces the style to be applied.
    .search-header__input {
       width: 100%;
       padding: 0;
-      height: 50px;
+      height: 45px;
       font-size: 10px;
       color: var(--color-body-text);
       background-color: #f1f1f1;

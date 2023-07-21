@@ -511,7 +511,8 @@
     },
     "header": {
       "call_us": "Call Us :",
-      "how_to_order": "How to Order?"
+      "how_to_order": "Call Us Now",
+      "categories": "Categories"
     }
   },
   "products": {

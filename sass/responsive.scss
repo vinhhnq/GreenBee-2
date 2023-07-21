@@ -73,8 +73,8 @@
 }
 @media (min-width: 1200px) {
    .container {
-      max-width: 1320px;
-      margin: 0 auto;
+      width: 1200px;
+      max-width: 100%;
    }
    .col-xl-cus-5 {
       position: relative;

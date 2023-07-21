@@ -264,6 +264,14 @@
 		@include justify-content(center);
 	}
 }
+@media(max-width: 1200px){
+	.site-nav .nav--lv1 {
+		display: inline-flex;
+		@include align-items(center); 
+		@include justify-content(center);
+		padding: 13px 15px;
+	}
+}
 /*==============   Main menu mobile   ==================*/
 .canvas-menu {
 	#canvas-main-menu {

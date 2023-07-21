@@ -12569,7 +12569,6 @@ effects the :hover style. This forces the style to be applied.
 .site-header__search {
   position: relative;
   flex: auto;
-  max-width: 410px;
 }
 .site-header__search .icon {
   position: absolute;
@@ -12606,7 +12605,7 @@ effects the :hover style. This forces the style to be applied.
 .site-header__search .search-header__input {
   width: 100%;
   padding: 0;
-  height: 50px;
+  height: 45px;
   font-size: 10px;
   color: var(--color-body-text);
   background-color: #f1f1f1;
@@ -15395,36 +15394,26 @@ effects the :hover style. This forces the style to be applied.
   }
 }
 
+.item-contact {
+  margin-left: 10px;
+}
 .item-contact .icon-phone {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   min-width: 50px;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   -ms-border-radius: 100%;
   -o-border-radius: 100%;
   border-radius: 100%;
-  margin-right: 20px;
-  background-color: var(--theme-color-primary);
-  transition: all 0.35s ease-in-out;
-}
-.lang-rtl .item-contact .icon-phone {
-  margin-left: 20px;
-  margin-right: initial;
 }
 .item-contact .icon-phone i {
-  font-size: 20px;
+  font-size: 30px;
   color: var(--theme-color-default);
-}
-.item-contact .icon-phone:hover i {
-  animation: policy 1.2s linear;
 }
 .item-contact p {
   line-height: 1;
   font-weight: 700;
-}
-.item-contact .how-order {
-  margin-bottom: 16px;
 }
 .item-contact .font-text {
   font-size: 14px;
@@ -15447,6 +15436,40 @@ effects the :hover style. This forces the style to be applied.
 }
 .lang-rtl #header-sticky .header-group-item > div {
   margin-left: 45px;
+  margin-right: initial;
+}
+
+.header-vertical-menu {
+  padding-right: 30px;
+}
+.lang-rtl .header-vertical-menu {
+  padding-left: 30px;
+  padding-right: initial;
+}
+.header-vertical-menu .btn-vertical {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 60px;
+  padding: 0 35px;
+  background-color: var(--theme-color-default);
+  border-radius: 60px;
+  min-width: 184px;
+  padding-left: 30px;
+  padding-right: 34px;
+  cursor: pointer;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+.header-vertical-menu .btn-vertical i {
+  font-size: 24px;
+  display: inline-block;
+  margin-right: 17px;
+}
+.lang-rtl .header-vertical-menu .btn-vertical i {
+  margin-left: 17px;
   margin-right: initial;
 }
 
@@ -15494,8 +15517,8 @@ effects the :hover style. This forces the style to be applied.
 .header-top .header-top-right .myaccount,
 .header-top .header-top-right .wishlist,
 .header-top .header-top-right .site-header__cart {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   -ms-border-radius: 100%;
@@ -15513,30 +15536,31 @@ effects the :hover style. This forces the style to be applied.
 .header-top .header-top-right .site-header__cart i {
   font-size: 20px;
 }
+.header-top .header-top-right .title-cart {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-left: 5px;
+}
 
 .header-center .content-header-center {
-  margin: auto;
-  background-color: white;
+  height: 60px;
+}
+.header-center .content-header-center .block-right {
+  background-color: #0d7a52;
   -webkit-border-radius: 40px;
   -moz-border-radius: 40px;
   -ms-border-radius: 40px;
   -o-border-radius: 40px;
   border-radius: 40px;
-  -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.12);
-  -moz-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.12);
-  -ms-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.12);
-  -o-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.12);
-  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.12);
+  padding: 8px;
 }
 .header-center .content-header-center .content-header-center-right {
-  padding-left: 15px;
-  padding-right: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  min-width: calc(100% - 240px);
+  margin-right: 9px;
 }
 .lang-rtl .header-center .content-header-center .content-header-center-right {
-  padding-left: 10px;
-  padding-right: 15px;
+  margin-left: 9px;
+  margin-right: initial;
 }
 .header-center .content-header-center .content-header-center-left {
   padding-left: 40px;
@@ -15548,11 +15572,12 @@ effects the :hover style. This forces the style to be applied.
 }
 .header-center .content-header-center .btn-vertical {
   margin: 0;
-  width: 50px;
+  width: 100%;
   height: 50px;
   min-width: 50px;
   background-color: var(--theme-color-default);
-  border-radius: 100%;
+  border-radius: 40px;
+  padding: 0 35px;
   cursor: pointer;
   color: white;
   display: flex;
@@ -15561,6 +15586,9 @@ effects the :hover style. This forces the style to be applied.
 }
 .header-center .content-header-center .btn-vertical:hover {
   background-color: var(--theme-color-primary);
+}
+.header-center .header-contact {
+  border-radius: 40px;
 }
 @media (max-width: 1199px) {
   .header-center .content-header-center-left {
@@ -15686,7 +15714,7 @@ effects the :hover style. This forces the style to be applied.
 }
 
 .btn-vertical {
-  font-size: 24px;
+  font-size: 20px;
   margin-left: 20px;
   line-height: 1;
 }
@@ -25325,6 +25353,21 @@ a[data-init-quickshop] {
     -ms-flex-pack: center;
   }
 }
+@media (max-width: 1200px) {
+  .site-nav .nav--lv1 {
+    display: inline-flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    padding: 13px 15px;
+  }
+}
 /*==============   Main menu mobile   ==================*/
 .canvas-menu #canvas-main-menu {
   background: white;
@@ -30841,8 +30884,8 @@ a[data-init-quickshop] {
 }
 @media (min-width: 1200px) {
   .container {
-    max-width: 1320px;
-    margin: 0 auto;
+    width: 1200px;
+    max-width: 100%;
   }
   .col-xl-cus-5 {
     position: relative;

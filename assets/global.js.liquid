@@ -302,7 +302,7 @@ novtheme.doAddOrRemoveWishlist = function() {
 
     $(document).off('click.addOrRemoveWishlist', iconWishLists).on('click.addOrRemoveWishlist', iconWishLists, function(e) {
         e.preventDefault();
-
+        
         var self = $(this),
         productId = self.data('id'),
         ProductHandle = self.data('product-handle'),
