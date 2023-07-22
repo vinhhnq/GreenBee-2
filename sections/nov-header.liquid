@@ -81,7 +81,7 @@
                 </div>
               </div>
             </div>
-            <div class="contentsticky_cart card-des" style="font-size: 1rem; letter-spacing: 1px;">
+            <div class="contentsticky_cart title-cart"\>
               <span>{{ sst.cart_description }}</span>
             </div>
           </div>
@@ -94,10 +94,10 @@
           <div class="col-lg-3 col-md-3 d-flex align-items-center content-header-center-left">
               <div class="header-vertical position-relative">
                 <div class="btn-vertical text-uppercase d-flex align-items-center justify-content-center">
-                  <i class="rbb-icon-menu-10"></i>
+                  <i class="{{ sst.icon_menu }}"></i>
                   <span>{{ 'layout.header.categories' | t }}</span>
                 </div>
-                {% render 'nov-vertical_menu' %}
+                {% include 'nov-vertical_menu' %}
               </div>
           </div>
           <div class="col-lg-9 col-md-9 content-header-center d-flex">
@@ -114,7 +114,7 @@
                     <div class="how-order">{{ 'layout.header.how_to_order' | t }}</div>
                     <div class="phone-number mb-0 text-uppercase">{{ sst.phone }}</div>
                   </div>
-                     </div>
+                </div>
               </div>
             </div>
           </div>
@@ -249,6 +249,27 @@
       {
         "type": "header",
         "content": "Header top"
+      },
+			{
+        "type": "select",
+        "id": "icon_menu",
+        "label": "Menu icon",
+        "default": "rbb-icon-menu-1",
+        "options": [
+          {"value": "rbb-icon-menu-1", "label": "Menu icon 1"},
+          {"value": "rbb-icon-menu-2", "label": "Menu icon 2"},
+          {"value": "rbb-icon-menu-3", "label": "Menu icon 3"},
+          {"value": "rbb-icon-menu-4", "label": "Menu icon 4"},
+          {"value": "rbb-icon-menu-5", "label": "Menu icon 5"},
+          {"value": "rbb-icon-menu-6", "label": "Menu icon 6"},
+          {"value": "rbb-icon-menu-7", "label": "Menu icon 7"},
+          {"value": "rbb-icon-menu-8", "label": "Menu icon 8"},
+          {"value": "rbb-icon-menu-9", "label": "Menu icon 9"},
+          {"value": "rbb-icon-menu-10", "label": "Menu icon 10"},
+          {"value": "rbb-icon-menu-11", "label": "Menu icon 11"},
+          {"value": "rbb-icon-menu-12", "label": "Menu icon 12"},
+          {"value": "rbb-icon-menu-13", "label": "Menu icon 13"}
+        ]
       },
       {
         "type": "select",
