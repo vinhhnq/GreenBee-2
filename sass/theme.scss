@@ -1858,14 +1858,14 @@ effects the :hover style. This forces the style to be applied.
       position: absolute;
       top: 50%;
       @include translateY(-50%);
-      @include rtl-r(4px);
-      border: none;
+      @include rtl-r(2px);
+      border: none
       z-index: 9;
       cursor: pointer;
       background-color: var(--theme-color-default);
       transition: all 0.2s;
       color: white;
-      @include square(42px);
+      @include square(41px);
       line-height: 43px;
       border-radius: 100%;
       &:hover {

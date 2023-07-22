@@ -91,7 +91,7 @@
     <div class="header-center header-search__parent d-none d-md-block position-relative">
       <div class="container">
         <div class="row">
-          <div class="col-lg-3 d-flex align-items-center content-header-center-left">
+          <div class="col-lg-3 col-md-3 d-flex align-items-center content-header-center-left">
               <div class="header-vertical position-relative">
                 <div class="btn-vertical text-uppercase d-flex align-items-center justify-content-center">
                   <i class="rbb-icon-menu-10"></i>
@@ -100,7 +100,7 @@
                 {% render 'nov-vertical_menu' %}
               </div>
           </div>
-          <div class="col-lg-9 content-header-center d-flex">
+          <div class="col-lg-9 col-md-9 content-header-center d-flex">
             <div class="w-100 d-flex block-right">
               <div class="content-header-center-right">
                 <div class="site-header__search d-none d-md-block">
@@ -112,9 +112,9 @@
                   <div class="icon-phone d-flex align-items-center justify-content-center"><a class="d-flex" href="tel:{{ sst.phone }}"><i class="{{ sst.phone_icon }}"></i></a></div>
                   <div class="address">
                     <div class="how-order">{{ 'layout.header.how_to_order' | t }}</div>
-                    <div class="mb-0 text-uppercase">{{ sst.phone }}</div>
+                    <div class="phone-number mb-0 text-uppercase">{{ sst.phone }}</div>
                   </div>
-                </div>
+                     </div>
               </div>
             </div>
           </div>

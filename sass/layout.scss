@@ -200,6 +200,22 @@
          font-size: 30px;
          color: var(--theme-color-default);
       }
+
+   }
+   .address {
+      .how-order {
+         color: #b7b7b7;
+         font-weight: 700;
+         font-size: 10px;
+         text-transform: uppercase;
+         letter-spacing: .5px;
+      }
+      .phone-number {
+         font-size: 1.2rem;
+         font-weight: 800;
+         color: #0d7a52;
+         font-family: Poppins,HelveticaNeue,Helvetica Neue,sans-serif;
+      }
    }
    p {
       line-height: 1;
@@ -227,26 +243,13 @@
       }
    }
 }
-.header-vertical-menu {
-   @include rtl-pr(30px);
-   .btn-vertical{
-      font-size: 14px;
-      font-weight: 700;
-      line-height: 60px;
-      padding: 0 35px;
-      background-color: var(--theme-color-default);
-      border-radius: 60px;
-      min-width: 184px;
-      padding-left: 30px;
-      padding-right: 34px;
-      cursor: pointer;
-      @include transition(all 0.35s ease-in-out);
-      i {
-         font-size: 24px;
-         display: inline-block;
-         @include rtl-mr(17px);
-      }
-   }
+.header-vertical {
+   background-color: #0d7a52;
+   width: 100%;
+   height: 60px;
+   display: flex;
+   border-radius: 40px;
+   justify-content: start;
 }
 .header-top {
    padding: 41px 0;
@@ -426,6 +429,10 @@
    font-size: 20px;
    @include rtl-ml(20px);
    line-height: 1;
+   span {
+      color: white;
+      
+   }
 }
 /* Header Sticky ==================================================================================== */
 #header-sticky {
