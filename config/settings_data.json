@@ -139,6 +139,7 @@
     "fake_order_time": "10 minutes | 15 minutes | 20 minutes | 30 minutes | 40 minutes | 50 minutes | 1 hour | 2 hours | 3 hours",
     "fake_order_location": "Berlin | New York | London | Paris | Amsterdam | Vienna | Rome, Italy | Madrid",
     "fake_order_name": "Luna | Dutton | Liam | Noah | Oliver | James | Elijah | William | Henry",
+    "color_icon-phone": "#0d7a52",
     "show_verification_popup": false,
     "logo_verification": "shopify:\/\/shop_images\/logo-casan-3.png",
     "product_list": [
@@ -218,6 +219,7 @@
           "w_logo": 165,
           "logo_mobile": "shopify:\/\/shop_images\/logo_88e88697-03ae-4043-9f12-a61517e379e0.jpg",
           "wm_logo": 100,
+          "icon_menu": "rbb-icon-menu-3",
           "phone_icon": "rbb-icon-phone-1",
           "phone": "0123-456-7890",
           "enable_currency": false,

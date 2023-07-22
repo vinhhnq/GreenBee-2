@@ -198,7 +198,7 @@
       @include border-radius(100%);
       i {
          font-size: 30px;
-         color: var(--theme-color-default);
+         color: var(--color-icon-phone);
       }
 
    }
@@ -429,9 +429,16 @@
    font-size: 20px;
    @include rtl-ml(20px);
    line-height: 1;
+   cursor: pointer;
+   font-family: "Poppins", "HelveticaNeue", "Helvetica Neue", sans-serif;
+   i {
+      color: #ff9c00;
+   }
    span {
       color: white;
-      
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-left: 28px;
    }
 }
 /* Header Sticky ==================================================================================== */

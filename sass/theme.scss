@@ -1859,7 +1859,7 @@ effects the :hover style. This forces the style to be applied.
       top: 50%;
       @include translateY(-50%);
       @include rtl-r(2px);
-      border: none
+      border: none;
       z-index: 9;
       cursor: pointer;
       background-color: var(--theme-color-default);
