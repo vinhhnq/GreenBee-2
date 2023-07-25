@@ -12768,6 +12768,7 @@ effects the :hover style. This forces the style to be applied.
     padding-top: 45px;
     padding-bottom: 40px;
     z-index: 11;
+    width: 100%;
     -webkit-box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.1);
     -ms-box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.1);
@@ -32098,4 +32099,183 @@ a[data-init-quickshop] {
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+}
+
+/*==============   Style Vertical   ==================*/
+.site-nav-vertical {
+  list-style: none;
+  margin: 0;
+  border: 1px solid var(--color-border);
+  background-color: #ffffff;
+  padding: 0;
+}
+.site-nav-vertical ul {
+  list-style-type: none;
+  padding: 0;
+}
+.site-nav-vertical .parent--lv1 .site-nav__link--main,
+.site-nav-vertical .parent--lv2 .site-nav__link--second {
+  display: flex;
+  align-items: center;
+}
+.site-nav-vertical .parent--lv1 .site-nav__link--main:after,
+.site-nav-vertical .parent--lv2 .site-nav__link--second:after {
+  content: "\f301";
+  font-family: "Material-Design-Iconic-Font";
+  display: inline-block;
+  line-height: 1;
+  margin-left: auto;
+  transition: transform 0.2s linear;
+}
+.lang-rtl .site-nav-vertical .parent--lv1 .site-nav__link--main:after,
+.lang-rtl .site-nav-vertical .parent--lv2 .site-nav__link--second:after {
+  margin-right: auto;
+  margin-left: initial;
+}
+.site-nav-vertical .nav--lv1.last a {
+  border-bottom: none;
+}
+.site-nav-vertical .nav--lv1:hover {
+  background-color: #eaf2ef;
+}
+.site-nav-vertical .site-nav__link--main {
+  font-family: var(--font-family-default);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #222;
+  padding: 0 30px;
+  line-height: 75px;
+  border-bottom: 1px solid var(--color-border);
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+.site-nav-vertical .site-nav__link--main:hover img {
+  animation: policy 1.2s linear;
+}
+.site-nav-vertical .site-nav__link--main .site-nav--icon {
+  min-width: 35px;
+  margin-right: 25px;
+}
+.lang-rtl .site-nav-vertical .site-nav__link--main .site-nav--icon {
+  margin-left: 25px;
+  margin-right: initial;
+}
+.site-nav-vertical .site-nav__link {
+  padding: 15px 35px;
+  border-bottom: 1px solid var(--color-border);
+}
+.site-nav-vertical .site-nav__link--last {
+  border-bottom: none;
+}
+.site-nav-vertical .nav-dropdown--lv2 {
+  padding: 0;
+}
+.site-nav-vertical .nav-dropdown--lv2 ul {
+  height: 100%;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+}
+@media (min-width: 992px) {
+  .site-nav-vertical {
+    position: absolute;
+    top: calc(100% + 20px);
+    left: 0;
+    width: 300px;
+    border-radius: 20px;
+    display: none;
+  }
+  .lang-rtl .site-nav-vertical {
+    right: 0;
+    left: initial;
+  }
+  .site-nav-vertical .site-nav--Default {
+    position: relative;
+  }
+  .site-nav-vertical .nav--lv1 .nav-dropdown--lv1,
+.site-nav-vertical .nav--lv1 .nav-dropdown--lv2,
+.site-nav-vertical .nav--lv2 .nav-dropdown--lv1,
+.site-nav-vertical .nav--lv2 .nav-dropdown--lv2 {
+    position: absolute;
+    left: 100%;
+    top: 55px;
+    border-radius: 20px;
+  }
+  .lang-rtl .site-nav-vertical .nav--lv1 .nav-dropdown--lv1,
+.lang-rtl .site-nav-vertical .nav--lv1 .nav-dropdown--lv2,
+.lang-rtl .site-nav-vertical .nav--lv2 .nav-dropdown--lv1,
+.lang-rtl .site-nav-vertical .nav--lv2 .nav-dropdown--lv2 {
+    right: 100%;
+    left: initial;
+  }
+  .site-nav-vertical .nav--lv1:hover .nav-dropdown--lv1,
+.site-nav-vertical .nav--lv1:hover .nav-dropdown--lv2,
+.site-nav-vertical .nav--lv2:hover .nav-dropdown--lv1,
+.site-nav-vertical .nav--lv2:hover .nav-dropdown--lv2 {
+    top: 0;
+  }
+  .site-nav-vertical .nav--lv1 ul li:last-child > a,
+.site-nav-vertical .nav--lv2 ul li:last-child > a {
+    border-bottom: none;
+    padding-bottom: 25px;
+  }
+  .site-nav-vertical .nav--lv1 ul li:first-child > a,
+.site-nav-vertical .nav--lv2 ul li:first-child > a {
+    padding-top: 25px;
+  }
+}
+@media (max-width: 991px) {
+  .site-nav-vertical {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    top: 0;
+    left: -300px;
+    z-index: 9999;
+    width: 300px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    display: block;
+  }
+  .lang-rtl .site-nav-vertical {
+    right: -300px;
+    left: initial;
+  }
+  .site-nav-vertical.act {
+    left: 0;
+    opacity: 1;
+  }
+  .lang-rtl .site-nav-vertical.act {
+    right: 0;
+    left: initial;
+  }
+  .site-nav-vertical .nav-dropdown--lv1,
+.site-nav-vertical .nav-dropdown--lv2 {
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+    transition: none !important;
+    box-shadow: none;
+  }
+  .site-nav-vertical .nav-dropdown--lv2 ul {
+    box-shadow: none;
+    width: initial;
+    padding-bottom: 30px;
+  }
 }

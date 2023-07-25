@@ -1944,6 +1944,7 @@ effects the :hover style. This forces the style to be applied.
       padding-top: 45px;
       padding-bottom: 40px;
       z-index: 11;
+      width: 100%;
       @include box-shadow(5px 10px 10px rgba(black, 0.1));
       .search_trend-content {
          max-width: 1320px;
