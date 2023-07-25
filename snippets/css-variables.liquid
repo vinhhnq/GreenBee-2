@@ -107,6 +107,8 @@
         --color-body-text-rgb: {{ settings.color_body_text | color_to_rgb | remove: 'rgb(' | remove: 'rgba(' | remove: ')' | remove: ', 0.0' }};
         --color-button: {{ settings.color_button }};
         --color-button-hover: {{ settings.color_button_hover }};
+        --background-color-button-search: {{ settings.search-btn_c }};
+        --color-button-search_hover: {{ settings.search-btn-hover_c }};
         --color-button-text: {{ settings.color_button_text }};
         --color-button-text-hover: {{ settings.color_button_text_hover }};
         --transition-drawer: all 0.45s cubic-bezier(0.29, 0.63, 0.44, 1);

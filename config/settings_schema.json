@@ -43,6 +43,18 @@
       },
       {
         "type": "color",
+        "id": "search-btn_c",
+        "label": "Color search button",
+        "default": "#ff9c00"
+      },
+      {
+        "type": "color",
+        "id": "search-btn-hover_c",
+        "label": "Color search button hover",
+        "default": "#f09300"
+      },
+      {
+        "type": "color",
         "id": "theme_color_default",
         "label": "Theme color default",
         "default": "#222222"

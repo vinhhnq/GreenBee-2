@@ -3,7 +3,7 @@
     "03a7c309-b07b-4bbc-8489-95436c02bbcc": {
       "type": "nov-gallery-image2",
       "blocks": {
-        "template--19937618100518__03a7c309-b07b-4bbc-8489-95436c02bbcc-1689662287f7f126bf-0": {
+        "96e20351-5b9c-40ff-a258-b3a22ef70aba": {
           "type": "image",
           "settings": {
             "link": "",
@@ -22,7 +22,7 @@
         }
       },
       "block_order": [
-        "template--19937618100518__03a7c309-b07b-4bbc-8489-95436c02bbcc-1689662287f7f126bf-0"
+        "96e20351-5b9c-40ff-a258-b3a22ef70aba"
       ],
       "settings": {
         "col_width": 2,

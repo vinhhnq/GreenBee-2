@@ -15,7 +15,7 @@
       
       $('<div class="search-results__block"></div>').css( { 'position': 'absolute', 'top': offSet} ).appendTo($(this)).hide();
       if ($(window).width() > 767) {
-        searchTrend.css({'top': offSetTrend, 'width': width, 'left': offSetleft });
+        searchTrend.css({'top': offSetTrend });
         $(this).find('.search-results__block').css({'width': width, 'left': offSetleft });
       }
       $(this).find('.search-results__block').append('<ul class="search-results"></ul>');

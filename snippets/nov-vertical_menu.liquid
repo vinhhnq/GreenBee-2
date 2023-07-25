@@ -15,6 +15,7 @@
 			<li class="nav--lv1 parent--lv1 site-nav--Default{% if link.active %} site-nav--active{% endif %}{% if forloop.last %} last{% endif %}">
 				<a href="{{ link.url }}" class="site-nav__link--main">
 					{% for block in section.blocks %}
+						{% assign bls = block.settings %}
 						{% assign menuItem = link.title %}
 						{% if block.settings.name_item == menuItem %}
 							<div class="site-nav--icon">
@@ -90,7 +91,9 @@
 							{% break %}
 						{% endif %}
 					{% endfor %}
-					{{ link.title }}
+					<div class="nav-title">
+						<div>{{ link.title }}</div>
+					</div>
 				</a>
 			</li>
 		{% endif %}

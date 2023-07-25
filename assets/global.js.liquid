@@ -121,6 +121,7 @@ novtheme.init = function() {
     novtheme.NavDropdownMobile();
     novtheme.NumberAnimate();
     novtheme.FakeOrder();
+    novtheme.VerticalMenu();
 };
 //Tooltip, activated by hover event
 novtheme.tooltip = function() {
@@ -151,6 +152,7 @@ novtheme.toggleMobileStyles = function() {
         });
     }
 };
+
 novtheme.toggleSticky = function(action) {
     if (action == true) {
         $("*[class^='contentsticky_']").each(function(idx, el) {
@@ -1970,3 +1972,76 @@ $(document).ready(function() {
         }
     });
 })
+novtheme.VerticalMenu = function() {
+    function showSubMenu() {
+        $('.site-nav-vertical').addClass('act');
+        $('.sidebar-overlay').addClass('act').css('z-index', '1');
+    }
+    function hideSubMenu() {
+        $('.site-nav-vertical').removeClass('act');
+        $('.sidebar-overlay').removeClass('act').css('z-index', 'initial');
+    }
+    function hideAllSubMenus() {
+        $('.nav-dropdown--lv1, .nav-dropdown--lv2').slideUp(300);
+        $('.site-nav__link--main, .site-nav__link--second').removeClass('active');
+    }
+
+    if ($(window).width() > 991) {
+        // For screen width greater than 991
+        $('.btn-vertical').click(function(){
+            $('.site-nav-vertical').slideToggle();
+            if ($('.site-nav-vertical').hasClass('act')) {
+                $('.site-nav-vertical').removeClass('act');
+            } else {
+                $('.site-nav-vertical').addClass('act');
+            }
+        });
+    }
+    else {
+        // Show sub menu canvas tablet
+        $('.btn-vertical').click(function() {
+            if ($('.site-nav-vertical').hasClass('act')) {
+                hideSubMenu();
+                hideAllSubMenus();
+            } else {
+                showSubMenu();
+            }
+        });
+ 
+        $('.parent--lv1 .site-nav__link--main').click(function(e) {
+            e.preventDefault();
+            var $navDropdown = $(this).siblings('.nav-dropdown--lv1');
+            if ($navDropdown.is(':visible')) {
+                $navDropdown.slideUp(300);
+                $(this).removeClass('active');
+            } else {
+                hideAllSubMenus();
+                $navDropdown.slideDown(300);
+                $(this).addClass('active');
+            }
+        });
+
+        // Show sub children menu canvas tablet
+        $('.parent--lv2 .site-nav__link--second').click(function(e) {
+            e.preventDefault();
+            var $navDropdown = $(this).siblings('.nav-dropdown--lv2');
+            if ($navDropdown.is(':visible')) {
+                $navDropdown.slideUp(300);
+            } else {
+                $('.nav-dropdown--lv2').slideUp(300);
+                $('.site-nav__link--second').removeClass('active');
+                $navDropdown.slideDown(300);
+                $(this).addClass('active');
+            }
+            e.stopPropagation();
+        });
+
+        // Prevent hiding parent dropdown when clicking on .site-nav__link--send
+        $('.parent--lv1').find('.site-nav__link--send').click(function(e) {
+            e.stopPropagation();
+        });
+        if ($(window).width() < 992) {
+            novtheme.swapChildren($('#desktopVerticalMenu'), $('#mobileVerticalMenu'));
+        }
+    }
+}

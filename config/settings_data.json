@@ -212,6 +212,64 @@
       },
       "nov-header": {
         "type": "nov-header",
+        "blocks": {
+          "f9a79f40-40a2-4f1a-b5b2-c310770b89f4": {
+            "type": "icon_menu",
+            "settings": {
+              "name_item": "Fresh Fruit",
+              "desc": "",
+              "icon_menus": "shopify:\/\/shop_images\/icon-vertical1_0bf17430-2cda-473a-b38c-b1dff039609c.png"
+            }
+          },
+          "6aeb5942-6166-4e72-b6f3-950b30a6a575": {
+            "type": "icon_menu",
+            "settings": {
+              "name_item": "Vegetables",
+              "desc": "",
+              "icon_menus": "shopify:\/\/shop_images\/icon-vertical2.png"
+            }
+          },
+          "01d20b12-7f70-4a89-8602-471ca8fee832": {
+            "type": "icon_menu",
+            "settings": {
+              "name_item": "Fresh juices",
+              "desc": "",
+              "icon_menus": "shopify:\/\/shop_images\/icon-vertical3_8ded48e3-088c-4329-a9dc-a9fc171ad253.png"
+            }
+          },
+          "34c67598-2b3d-4d72-84c7-846f015c38d6": {
+            "type": "icon_menu",
+            "settings": {
+              "name_item": "Tea & Coffee",
+              "desc": "",
+              "icon_menus": "shopify:\/\/shop_images\/icon-vertical4.png"
+            }
+          },
+          "e3df8524-3d3d-4ff4-ae21-6a40556e4b44": {
+            "type": "icon_menu",
+            "settings": {
+              "name_item": "Bread",
+              "desc": "",
+              "icon_menus": "shopify:\/\/shop_images\/icon-vertical5.png"
+            }
+          },
+          "542f6e6b-de27-4ec4-b74f-7865fd5e4d0f": {
+            "type": "icon_menu",
+            "settings": {
+              "name_item": "Fesh Meats",
+              "desc": "",
+              "icon_menus": "shopify:\/\/shop_images\/icon-vertical6.png"
+            }
+          }
+        },
+        "block_order": [
+          "f9a79f40-40a2-4f1a-b5b2-c310770b89f4",
+          "6aeb5942-6166-4e72-b6f3-950b30a6a575",
+          "01d20b12-7f70-4a89-8602-471ca8fee832",
+          "34c67598-2b3d-4d72-84c7-846f015c38d6",
+          "e3df8524-3d3d-4ff4-ae21-6a40556e4b44",
+          "542f6e6b-de27-4ec4-b74f-7865fd5e4d0f"
+        ],
         "settings": {
           "bg": "#ffffff",
           "bg_opacity": 100,
@@ -231,7 +289,7 @@
           "bd_c": "#e8e8e8",
           "bg_t": "#ffffff",
           "bg_t_opacity": 0,
-          "vertical_menu": "",
+          "vertical_menu": "vertical-menu",
           "c_ver": "#ffffff",
           "bg_ver": "#2ea200",
           "bg_verhv": "#000000",
