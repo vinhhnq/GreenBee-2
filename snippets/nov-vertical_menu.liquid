@@ -10,7 +10,6 @@
 				{% endif %}
 			{% endfor %}
 		{% endif %}
-		
 		{% if linklists[child_list_handle].links != blank %}
 			<li class="nav--lv1 parent--lv1 site-nav--Default{% if link.active %} site-nav--active{% endif %}{% if forloop.last %} last{% endif %}">
 				<a href="{{ link.url }}" class="site-nav__link--main">
