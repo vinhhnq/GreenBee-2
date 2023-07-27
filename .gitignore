@@ -3,3 +3,5 @@ mix-manifest.json
 package.json
 package-lock.json
 webpack.mix.js
+.vscode
+.idea
