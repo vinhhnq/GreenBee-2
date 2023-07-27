@@ -4426,7 +4426,7 @@ img, tr {
 .owl-theme .owl-dots .owl-dot {
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
 }
 
 .owl-theme .owl-dots .owl-dot span {
@@ -5585,7 +5585,7 @@ body.compensate-for-scrollbar {
 
 .mm-menu .mm-listview > li a:not(.mm-next) {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0.5);
-  tap-highlight-color: hsla(0deg, 0%, 100%, 0.5);
+  color: hsla(0deg, 0%, 100%, 0.5);
 }
 
 .mm-menu .mm-listview > li.mm-selected > a:not(.mm-next), .mm-menu .mm-listview > li.mm-selected > span {
@@ -6351,7 +6351,7 @@ html.mm-opening .mm-menu.mm-offcanvas.mm-front, html.mm-opening .mm-menu.mm-offc
 
 .mm-menu.mm-theme-dark .mm-listview > li a:not(.mm-next) {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
-  tap-highlight-color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.1);
 }
 
 .mm-menu.mm-theme-dark .mm-listview > li.mm-selected > a:not(.mm-next), .mm-menu.mm-theme-dark .mm-listview > li.mm-selected > span {
@@ -6431,7 +6431,7 @@ html.mm-opening .mm-menu.mm-offcanvas.mm-front, html.mm-opening .mm-menu.mm-offc
 
 .mm-menu.mm-theme-white .mm-listview > li a:not(.mm-next) {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.05);
-  tap-highlight-color: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.05);
 }
 
 .mm-menu.mm-theme-white .mm-divider, .mm-menu.mm-theme-white .mm-listview > li.mm-opened.mm-vertical > .mm-panel, .mm-menu.mm-theme-white .mm-listview > li.mm-opened.mm-vertical > a.mm-next, .mm-menu.mm-theme-white .mm-listview > li.mm-selected > a:not(.mm-next), .mm-menu.mm-theme-white .mm-listview > li.mm-selected > span, .mm-menu.mm-theme-white.mm-vertical .mm-listview > li.mm-opened > .mm-panel, .mm-menu.mm-theme-white.mm-vertical .mm-listview > li.mm-opened > a.mm-next {
@@ -6503,7 +6503,7 @@ html.mm-opening .mm-menu.mm-offcanvas.mm-front, html.mm-opening .mm-menu.mm-offc
 
 .mm-menu.mm-theme-black .mm-listview > li a:not(.mm-next) {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0.3);
-  tap-highlight-color: hsla(0deg, 0%, 100%, 0.3);
+  color: hsla(0deg, 0%, 100%, 0.3);
 }
 
 .mm-menu.mm-theme-black .mm-listview > li.mm-selected > a:not(.mm-next), .mm-menu.mm-theme-black .mm-listview > li.mm-selected > span {
@@ -12649,7 +12649,7 @@ effects the :hover style. This forces the style to be applied.
   border: none;
   z-index: 9;
   cursor: pointer;
-  background-color: var(--background-color-button-search);
+  background-color: var(--theme-color-default);
   transition: all 0.2s;
   color: white;
   width: 41px;
