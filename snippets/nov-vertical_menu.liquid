@@ -94,6 +94,11 @@
 							<span>{{ block.settings.desc_vertical_menu }}</span>
 						</div>
 						{% break %}
+							<div class="nav-title">
+								<span> {{ link.title }}</span>
+								<p>{{ block.settings.desc_vertical_menu }}</p>
+							</div>
+							{% endif %}
 					{% endfor %}
 				</a>
 			</li>

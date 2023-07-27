@@ -2068,6 +2068,7 @@
       &:last-child {
          border-radius: 0 0 20px 20px;
       }
+
    }
    .site-nav__link--main {
       font-family: var(--font-family-default);
@@ -2092,6 +2093,16 @@
       .site-nav--icon {
          min-width: 35px;
          @include rtl-mr(25px);
+      }
+      .nav-title {
+         span {
+         }
+         p {
+            font-family: 'Roboto','Helvetica Neue', sans-serif;
+            line-height: initial;
+            font-size: 1.1rem;
+            font-weight: 300;
+         }
       }
    }
    .site-nav__link {

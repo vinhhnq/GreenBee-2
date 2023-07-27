@@ -217,7 +217,7 @@
             "type": "icon_menu",
             "settings": {
               "name_item": "Fresh Fruit",
-              "desc": "",
+              "desc_vertical_menu": "gnianisndasdlkil",
               "icon_menus": "shopify:\/\/shop_images\/icon-vertical1_0bf17430-2cda-473a-b38c-b1dff039609c.png"
             }
           },
@@ -225,7 +225,7 @@
             "type": "icon_menu",
             "settings": {
               "name_item": "Vegetables",
-              "desc": "",
+              "desc_vertical_menu": "",
               "icon_menus": "shopify:\/\/shop_images\/icon-vertical2.png"
             }
           },
@@ -233,7 +233,7 @@
             "type": "icon_menu",
             "settings": {
               "name_item": "Fresh juices",
-              "desc": "",
+              "desc_vertical_menu": "",
               "icon_menus": "shopify:\/\/shop_images\/icon-vertical3_8ded48e3-088c-4329-a9dc-a9fc171ad253.png"
             }
           },
@@ -241,7 +241,7 @@
             "type": "icon_menu",
             "settings": {
               "name_item": "Tea & Coffee",
-              "desc": "",
+              "desc_vertical_menu": "",
               "icon_menus": "shopify:\/\/shop_images\/icon-vertical4.png"
             }
           },
@@ -249,7 +249,7 @@
             "type": "icon_menu",
             "settings": {
               "name_item": "Bread",
-              "desc": "",
+              "desc_vertical_menu": "",
               "icon_menus": "shopify:\/\/shop_images\/icon-vertical5.png"
             }
           },
@@ -257,7 +257,7 @@
             "type": "icon_menu",
             "settings": {
               "name_item": "Fesh Meats",
-              "desc": "",
+              "desc_vertical_menu": "",
               "icon_menus": "shopify:\/\/shop_images\/icon-vertical6.png"
             }
           }
