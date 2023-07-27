@@ -1437,7 +1437,7 @@
    .article_cs {
       > span {
          color: #a9a9a9;
-         font-size: 10;
+         font-size: 10px;
          text-transform: uppercase;
          font-weight: 500;
          &:not(:last-child) {
@@ -2028,6 +2028,163 @@
       }
    }
 }
+/*==============   Style Vertical   ==================*/
+
+.site-nav-vertical {
+   list-style: none;
+   margin: 0;
+   border: 1px solid var(--color-border);
+   background-color: #ffffff;
+   padding: 0;
+   ul {
+      list-style-type: none;
+      padding: 0;
+   }
+   .parent--lv1 .site-nav__link--main,
+   .parent--lv2 .site-nav__link--second {
+      display: flex;
+      align-items: center;
+      &:after {
+         content: "\f301";
+         font-family: "Material-Design-Iconic-Font";
+         display: inline-block;
+         line-height: 1;
+         @include rtl-ml(auto);
+         transition: transform 0.2s linear;
+      }
+   }
+   .nav--lv1 {
+      &.last {
+         a {
+            border-bottom: none;
+         }
+      }
+      &:hover {
+         background-color: #eaf2ef;
+      }
+      &:first-child {
+         border-radius: 20px 20px 0 0;
+      }
+      &:last-child {
+         border-radius: 0 0 20px 20px;
+      }
+   }
+   .site-nav__link--main {
+      font-family: var(--font-family-default);
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-transform: none;
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: #222;
+      padding: 0 30px;
+      border-bottom: 1px solid var(--color-border);
+      @include transition(all 0.35s ease-in-out);
+      .nav-title {
+         width: inherit;
+      }
+      &:hover {
+         img {
+            animation: policy 1.2s linear;
+         }
+      }
+      .site-nav--icon {
+         min-width: 35px;
+         @include rtl-mr(25px);
+      }
+   }
+   .site-nav__link {
+      padding: 15px 35px;
+      border-bottom: 1px solid var(--color-border);
+   }
+   .site-nav__link--last {
+      border-bottom: none;
+   }
+   .nav-dropdown--lv2 {
+      padding: 0;
+      ul {
+         height: 100%;
+         box-shadow: 0 10px 10px rgba(black, 0.05);
+         border-radius: 20px;
+      }
+   }
+   @media (min-width: 992px) {
+      position: absolute;
+      top: calc(100% + 30px);
+      @include rtl-l(0);
+      width: 100%;
+      border-radius: 20px;
+      display: none;
+      z-index: 1;
+      .site-nav--Default {
+         position: relative;
+      }
+      .nav--lv1,
+      .nav--lv2 {
+         .nav-dropdown--lv1,
+         .nav-dropdown--lv2 {
+            position: absolute;
+            @include rtl-l(100%);
+            top: 55px;
+            border-radius: 20px;
+         }
+         &:hover {
+            .nav-dropdown--lv1,
+            .nav-dropdown--lv2 {
+               top: 0;
+            }
+         }
+         ul {
+            li {
+               &:last-child {
+                  > a {
+                     border-bottom: none;
+                     padding-bottom: 25px;
+                  }
+               }
+               &:first-child {
+                  > a {
+                     padding-top: 25px;
+                  }
+               }
+            }
+         }
+      }
+   }
+   @media (max-width: 991px) {
+      position: fixed;
+      height: 100vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+      top: 0;
+      @include rtl-l(-300px);
+      z-index: 9999;
+      width: 300px;
+      @include border-radius(0);
+      @include transition(all 0.3s linear);
+      display: block;
+      &.act {
+         @include rtl-l(0);
+         opacity: 1;
+      }
+      .nav-dropdown--lv1,
+      .nav-dropdown--lv2 {
+         position: static;
+         display: none;
+         opacity: 1;
+         visibility: visible;
+         transition: none !important;
+         box-shadow: none;
+      }
+      .nav-dropdown--lv2 ul {
+         box-shadow: none;
+         width: initial;
+         padding-bottom: 30px;
+      }
+   }
+}
+
 /* Section Lookblok =================================================================================================== */
 .lookbook__thumb {
    border-radius: 3px;

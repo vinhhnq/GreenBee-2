@@ -43,7 +43,7 @@
 										<a href="{{ childlink.url }}" class="site-nav__link--second site-nav__link">
 											<span>{{ childlink.title | escape }}</span>
 											{% if linklists[grand_child_list_handle].links != blank %}
-												<span class="site-nav--direc d-none"><i class="zmdi zmdi-chevron-down"></i></span>
+												<span class="site-nav--direc"><i class="zmdi zmdi-chevron-down"></i></span>
 											{% endif %}
 										</a>
 										{% if linklists[grand_child_list_handle].links != blank %}
@@ -91,9 +91,11 @@
 							{% break %}
 						{% endif %}
 					{% endfor %}
-					{{ link.title }}
+					<div class="nav-title">
+						<div>{{ link.title }}</div>
+						<span>{{ block.settings.desc_vertical-menu }}</span>
+					</div>
 				</a>
-				<div></div>
 			</li>
 		{% endif %}
 	{% endfor %}

@@ -1862,7 +1862,7 @@ effects the :hover style. This forces the style to be applied.
       border: none;
       z-index: 9;
       cursor: pointer;
-      background-color: var(--theme-color-default);
+      background-color: var(--background-color-button-search);
       transition: all 0.2s;
       color: white;
       @include square(41px);
@@ -1870,7 +1870,7 @@ effects the :hover style. This forces the style to be applied.
       border-radius: 100%;
       &:hover {
          color: white;
-         background-color: var(--theme-color-primary);
+         background-color: var(--color-button-search_hover);
       }
       .search-header__submit-icon {
          display: block;

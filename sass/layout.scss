@@ -250,6 +250,7 @@
    display: flex;
    border-radius: 40px;
    justify-content: start;
+   cursor: pointer;
 }
 .header-top {
    padding: 41px 0;
@@ -309,7 +310,7 @@
          padding: 8px;
       }
       .content-header-center-right {
-         min-width: calc(100% - 240px); 
+         min-width: calc(100% - 240px);
          @include rtl-mr(9px);
       }
       .content-header-center-left {
@@ -335,6 +336,7 @@
    }
    .header-contact {
       border-radius: 40px;
+      cursor: pointer;
    }
    @media (max-width: 1199px) {
       .content-header-center-left {
@@ -429,7 +431,6 @@
    font-size: 20px;
    @include rtl-ml(20px);
    line-height: 1;
-   cursor: pointer;
    font-family: "Poppins", "HelveticaNeue", "Helvetica Neue", sans-serif;
    i {
       color: #ff9c00;

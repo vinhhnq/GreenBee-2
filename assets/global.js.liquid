@@ -1975,7 +1975,7 @@ $(document).ready(function() {
 novtheme.VerticalMenu = function() {
     function showSubMenu() {
         $('.site-nav-vertical').addClass('act');
-        $('.sidebar-overlay').addClass('act').css('z-index', '90');
+        $('.sidebar-overlay').addClass('act').css('z-index', '1');
     }
     function hideSubMenu() {
         $('.site-nav-vertical').removeClass('act');
@@ -1988,7 +1988,7 @@ novtheme.VerticalMenu = function() {
 
     if ($(window).width() > 991) {
         // For screen width greater than 991
-        $('.btn-vertical').click(function(){
+        $('.header-vertical').click(function(){
             $('.site-nav-vertical').slideToggle();
             if ($('.site-nav-vertical').hasClass('act')) {
                 $('.site-nav-vertical').removeClass('act');
@@ -1996,10 +1996,10 @@ novtheme.VerticalMenu = function() {
                 $('.site-nav-vertical').addClass('act');
             }
         });
-    } 
+    }
     else {
         // Show sub menu canvas tablet
-        $('.btn-vertical').click(function() {
+        $('.header-vertical').click(function() {
             if ($('.site-nav-vertical').hasClass('act')) {
                 hideSubMenu();
                 hideAllSubMenus();
