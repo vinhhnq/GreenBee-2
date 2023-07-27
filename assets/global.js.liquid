@@ -1933,8 +1933,8 @@ $(document).ready(function() {
     $('.no-view').click(function () {
         if($('.contact-form').hasClass('add')) {
             $('.contact-form').removeClass('add')
-        } else {
-            $('.contact-form').addClass('add')
+        } else {d
+            $('.contact-form').addClass('ad')
         }
     });
     // Accordion footer mobile
@@ -1989,7 +1989,7 @@ novtheme.VerticalMenu = function() {
 
     if ($(window).width() > 991) {
         // For screen width greater than 991
-        $('.btn-vertical').click(function(){
+        $('.header-vertical').click(function(){
             $('.site-nav-vertical').slideToggle();
             if ($('.site-nav-vertical').hasClass('act')) {
                 $('.site-nav-vertical').removeClass('act');
@@ -1999,7 +1999,7 @@ novtheme.VerticalMenu = function() {
         });
     } else {
         // Show sub menu canvas tablet
-        $('.btn-vertical').click(function() {
+        $('.header-vertical').click(function() {
             if ($('.site-nav-vertical').hasClass('act')) {
                 hideSubMenu();
                 hideAllSubMenus();
@@ -2007,7 +2007,6 @@ novtheme.VerticalMenu = function() {
                 showSubMenu();
             }
         });
-
         $('.parent--lv1 .site-nav__link--main').click(function(e) {
             e.preventDefault();
             var $navDropdown = $(this).siblings('.nav-dropdown--lv1');
