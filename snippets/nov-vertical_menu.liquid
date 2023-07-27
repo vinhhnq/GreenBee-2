@@ -88,10 +88,13 @@
 								widths: '35 50 70'
 								}}
 							</div>
-							{% break %}
 						{% endif %}
+						<div class="nav-title">
+							<span> {{ link.title }} </span>
+							<span>{{ block.settings.desc_vertical_menu }}</span>
+						</div>
+						{% break %}
 					{% endfor %}
-					{{ link.title }}
 				</a>
 			</li>
 		{% endif %}
