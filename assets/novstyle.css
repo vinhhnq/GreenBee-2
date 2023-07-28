@@ -28003,7 +28003,7 @@ a[data-init-quickshop] {
   display: flex;
   align-items: center;
   color: #222;
-  padding: 0 30px;
+  padding: 0 18px;
   border-bottom: 1px solid var(--color-border);
   -webkit-transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
@@ -28019,17 +28019,27 @@ a[data-init-quickshop] {
 }
 .site-nav-vertical .site-nav__link--main .site-nav--icon {
   min-width: 35px;
-  margin-right: 25px;
+  margin-right: 19px;
 }
 .lang-rtl .site-nav-vertical .site-nav__link--main .site-nav--icon {
-  margin-left: 25px;
+  margin-left: 19px;
   margin-right: initial;
 }
-.site-nav-vertical .site-nav__link--main .nav-title p {
+.site-nav-vertical .site-nav__link--main .nav-title {
+  padding: 6px 0;
+}
+.site-nav-vertical .site-nav__link--main .nav-title .vertical_nav_title {
+  font-family: "Poppins", "HelveticaNeue", sans-serif;
+  font-size: 1.5rem;
+}
+.site-nav-vertical .site-nav__link--main .nav-title .vertical_nav_subtitle {
   font-family: "Roboto", "Helvetica Neue", sans-serif;
   line-height: initial;
   font-size: 1.1rem;
-  font-weight: 300;
+  font-weight: 400;
+  margin: 3px 0;
+  color: #909090;
+  line-height: 16px;
 }
 .site-nav-vertical .site-nav__link {
   padding: 15px 35px;
@@ -28049,7 +28059,7 @@ a[data-init-quickshop] {
 @media (min-width: 992px) {
   .site-nav-vertical {
     position: absolute;
-    top: calc(100% + 30px);
+    top: calc(100% + 20px);
     left: 0;
     width: 100%;
     border-radius: 20px;

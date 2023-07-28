@@ -76,7 +76,6 @@
                       {% endif %}
                     {% endif %}
                   </div>
-
                   <div class="article__excerpt">
                     {% if article.excerpt.size > 0 %}
                       {{ article.excerpt }}
@@ -128,7 +127,6 @@
                             <i class="zmdi zmdi-calendar-note"></i>{{ article.published_at | time_tag: format: 'month_day_year' }}
                           </span>
                         {% endif %}
-
                         {% if section.settings.blog_show_author %}
                           <span class="article__author"><i class="zmdi zmdi-account"></i>{{ article.author }}</span>
                         {% endif %}

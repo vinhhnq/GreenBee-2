@@ -225,7 +225,7 @@
             "type": "icon_menu",
             "settings": {
               "name_item": "Vegetables",
-              "desc_vertical_menu": "",
+              "desc_vertical_menu": "Cabbage, Onion, Kale, Parsley Garlic, Asparagus...",
               "icon_menus": "shopify:\/\/shop_images\/icon-vertical2.png"
             }
           },
@@ -233,7 +233,7 @@
             "type": "icon_menu",
             "settings": {
               "name_item": "Fresh juices",
-              "desc_vertical_menu": "",
+              "desc_vertical_menu": "Apple, Orange, Watermelon, Banana Pineapple, Grapes...",
               "icon_menus": "shopify:\/\/shop_images\/icon-vertical3_8ded48e3-088c-4329-a9dc-a9fc171ad253.png"
             }
           },
@@ -241,7 +241,7 @@
             "type": "icon_menu",
             "settings": {
               "name_item": "Tea & Coffee",
-              "desc_vertical_menu": "",
+              "desc_vertical_menu": "Leamon tea, Peach tea, Milk tea  Weight loss tea, Coffee ....",
               "icon_menus": "shopify:\/\/shop_images\/icon-vertical4.png"
             }
           },
@@ -249,7 +249,7 @@
             "type": "icon_menu",
             "settings": {
               "name_item": "Bread",
-              "desc_vertical_menu": "",
+              "desc_vertical_menu": "Bread, CupCake, Croissants, Rice cake, Donus  ...",
               "icon_menus": "shopify:\/\/shop_images\/icon-vertical5.png"
             }
           },
@@ -257,7 +257,7 @@
             "type": "icon_menu",
             "settings": {
               "name_item": "Fesh Meats",
-              "desc_vertical_menu": "",
+              "desc_vertical_menu": "Pork, Beef, Lamb chops, Salmon Chicken, Sausage...",
               "icon_menus": "shopify:\/\/shop_images\/icon-vertical6.png"
             }
           }

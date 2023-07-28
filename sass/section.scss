@@ -2079,7 +2079,7 @@
       display: flex;
       align-items: center;
       color: #222;
-      padding: 0 30px;
+      padding: 0 18px;
       border-bottom: 1px solid var(--color-border);
       @include transition(all 0.35s ease-in-out);
       .nav-title {
@@ -2092,14 +2092,23 @@
       }
       .site-nav--icon {
          min-width: 35px;
-         @include rtl-mr(25px);
+         @include rtl-mr(19px);
       }
       .nav-title {
-         p {
+         padding: 6px 0;
+         .vertical_nav_title {
+            font-family: "Poppins", "HelveticaNeue", sans-serif;
+            font-size: 1.5rem;
+
+         }
+         .vertical_nav_subtitle {
             font-family: 'Roboto','Helvetica Neue', sans-serif;
             line-height: initial;
             font-size: 1.1rem;
-            font-weight: 300;
+            font-weight: 400;
+            margin: 3px 0;
+            color: #909090;
+            line-height: 16px;
          }
       }
    }
@@ -2120,7 +2129,7 @@
    }
    @media (min-width: 992px) {
       position: absolute;
-      top: calc(100% + 30px);
+      top: calc(100% + 20px);
       @include rtl-l(0);
       width: 100%;
       border-radius: 20px;
