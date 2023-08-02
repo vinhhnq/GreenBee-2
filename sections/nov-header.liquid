@@ -4,7 +4,7 @@
     <div class="header-top pt-md-10 pb-md-10 d-none d-md-block">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-3 col-md-3 d-flex justify-content-start align-items-center">
+          <div class="col-lg-3 col-md-5 d-flex justify-content-start align-items-center">
             <div class="site-nav--btn d-flex d-lg-none hover:c_df">
               <i class="zmdi zmdi-menu"></i>
             </div>
@@ -25,12 +25,12 @@
               {% endif %}
             </div>
           </div>
-          <div class="col-lg-6 col-md-7 align-items-center content-header-center-left">
+          <div class="col-lg-6 col-md-2 align-items-center content-header-center-left">
             <div class="contentsticky_menu d-none d-lg-block">
               <nav id="AccessibleNav">{% include 'site-nav' %}</nav>
             </div>
           </div>
-          <div class="col-lg-3 col-md-2 d-sm-flex header-top-right align-items-center justify-content-end">
+          <div class="col-lg-3 col-md-5 d-sm-flex header-top-right align-items-center justify-content-end">
             <div class="header-cu-lang d-flex align-items-center">
               {%- if sst.enable_language and localization.available_languages.size > 1 -%}
                 <div class="footer-language d-none d-lg-block">
@@ -107,12 +107,17 @@
                   {% include 'nov-formsearch-inline' %}
                 </div>
               </div>
-              <div class="header-contact w-100">
+              <div class="header-contact position-relative w-100">
                 <div class="item-contact align-items-center d-flex">
                   <div class="icon-phone d-flex align-items-center justify-content-center"><a class="d-flex" href="tel:{{ sst.phone }}"><i class="{{ sst.phone_icon }}"></i></a></div>
                   <div class="address">
                     <div class="how-order">{{ 'layout.header.how_to_order' | t }}</div>
                     <div class="phone-number mb-0 text-uppercase">{{ sst.phone }}</div>
+                  </div>
+                  <div class="h_address position-absolute">
+                    {% for block in section.blocks%}  
+                      {% include 'address' %}
+                    {% endfor %}
                   </div>
                 </div>
               </div>
@@ -140,7 +145,7 @@
           <div class="mobile_logo col-4 text-center">
             {% if sst.logo_mobile %}
             <a href="/" class="site-header__logo-image img-fluid d-inline-block">
-              {% assign imagewidth = sst.logo_mobile.width %}
+              {% assign imagewid = sst.logo_mobile.width %}
               {%- assign imagealt = sst.logo_mobile.alt | default: shop.name | escape -%}
               {{ sst.logo_mobile | image_url: width: imagewidth | image_tag:
               loading: 'lazy',

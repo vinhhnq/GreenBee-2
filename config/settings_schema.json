@@ -642,7 +642,18 @@
         "id": "key_trend_6",
         "label": "Key trend",
         "default": "Lorem"
-      }
+      },
+      {
+        "type": "text",
+        "id": "title_address_1",
+        "label": "Title address 1"
+      },
+      {
+        "type": "text",
+        "id": "title_address_2",
+        "label": "Title address 2"
+      },
+      {}
     ]
   },
   {
