@@ -15532,6 +15532,11 @@ effects the :hover style. This forces the style to be applied.
   margin-left: 5px;
 }
 
+@media (max-width: 992px) {
+  .header-top .header-top-right .title-cart {
+    display: none;
+  }
+}
 .header-center .content-header-center {
   height: 60px;
 }
@@ -15586,7 +15591,6 @@ effects the :hover style. This forces the style to be applied.
     padding-left: 10px !important;
     padding-right: 0px !important;
     width: 70px;
-    max-width: 70px;
   }
   .lang-rtl .header-center .content-header-center-left {
     padding-left: 0px !important;
@@ -15724,6 +15728,12 @@ effects the :hover style. This forces the style to be applied.
   margin-left: 28px;
 }
 
+@media (max-width: 992px) {
+  .btn-vertical span {
+    font-size: 1.3rem;
+    margin-left: 10px;
+  }
+}
 /* Header Sticky ==================================================================================== */
 @media (min-width: 768px) {
   #header-sticky {
