@@ -1,7 +1,7 @@
 {% assign sst = section.settings %}
 <div data-section-id="{{ section.id }}" data-section-type="nov-slick">
   <header class="site-header{% if sst.stickymenu == true %} sticky-header{% endif %}">
-    <div class="header-top pt-md-10 pb-md-10 d-none d-md-block">
+    <div class="header-top pt-md-10 pb-md-30 d-none d-md-block">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-3 col-md-5 d-flex justify-content-start align-items-center">
@@ -92,13 +92,13 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-3 col-md-3 d-flex align-items-center content-header-center-left">
-              <div class="header-vertical position-relative">
-                <div class="btn-vertical text-uppercase d-flex align-items-center justify-content-center">
-                  <i class="{{ sst.icon_menu }}"></i>
-                  <span>{{ 'layout.header.categories' | t }}</span>
-                </div>
-                {% include 'nov-vertical_menu' %}
+            <div class="header-vertical position-relative">
+              <div class="btn-vertical text-uppercase d-flex align-items-center justify-content-center">
+                <i class="{{ sst.icon_menu }}"></i>
+                <span>{{ 'layout.header.categories' | t }}</span>
               </div>
+              {% include 'nov-vertical_menu' %}
+            </div>
           </div>
           <div class="col-lg-9 col-md-9 content-header-center d-flex">
             <div class="w-100 d-flex block-right">
