@@ -26,10 +26,12 @@
 								widths: '35 50 70'
 								}}
 							</div>
-							{% break %}
-						{% endif %}
-					{% endfor %}
-					<span class="site-nav--title">{{ link.title }}</span>
+						<div class="nav-title">
+							<div class="vertical_nav-title"> {{ link.title }}</div>
+							<div class="vertical_nav_subtitle">{{ block.settings.desc_vertical_menu }}</div>
+						</div>
+					{% endif %}
+				{% endfor %}
 				</a>
 				<div class="nav-dropdown--lv1 MenuDefault">
 					{% if three_level_nav %}
@@ -90,7 +92,7 @@
 								<div class="vertical_nav-title"> {{ link.title }}</div>
 								<div class="vertical_nav_subtitle">{{ block.settings.desc_vertical_menu }}</div>
 							</div>
-							{% endif %}
+						{% endif %}
 					{% endfor %}
 				</a>
 			</li>

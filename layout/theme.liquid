@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- FreshMate 1 -->
+<!-- Greenbee 2 -->
 <html class="no-js{% if settings.enable_rtl == true %} lang-rtl{% endif %}"{% if settings.enable_rtl == true %} dir="rtl"{% endif %} lang="{{ request.locale.iso_code }}">
   <head>
     <meta charset="utf-8">
@@ -65,6 +65,7 @@
     {% include 'nov-product-newsletter' %}
     {% include 'icon-font' %}
     {% include 'nov-cart-empty' %}
+    <div id="mobileVerticalMenu" class="site-nav-vertical"></div>
     {% if settings.show_fake_order_inner_page %}
       {% include 'nov-popup-fake-order' %}
     {% else %}

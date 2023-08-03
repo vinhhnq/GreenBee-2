@@ -15586,6 +15586,9 @@ effects the :hover style. This forces the style to be applied.
   border-radius: 40px;
   cursor: pointer;
 }
+.header-center .header-contact:hover .rbb-icon-phone-1 {
+  animation: policy 1.2s linear;
+}
 @media (max-width: 1199px) {
   .header-center .content-header-center-left {
     padding-left: 10px !important;
@@ -15730,7 +15733,7 @@ effects the :hover style. This forces the style to be applied.
 
 @media (max-width: 992px) {
   .btn-vertical span {
-    font-size: 1.3rem;
+    font-size: 10px;
     margin-left: 10px;
   }
 }

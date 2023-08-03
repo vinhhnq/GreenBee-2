@@ -299,6 +299,15 @@
       }
    }
 }
+@media(max-width: 992px){
+   .header-top {
+      .header-top-right {
+         .title-cart {
+            display: none;
+         }
+      }
+   }
+}
 
 
 .header-center {
@@ -337,12 +346,16 @@
    .header-contact {
       border-radius: 40px;
       cursor: pointer;
+      &:hover {
+         .rbb-icon-phone-1 {
+            animation: policy 1.2s linear;
+         }
+      }
    }
    @media (max-width: 1199px) {
       .content-header-center-left {
          @include rtl-plr(10px !important, 0px !important);
          width: 70px;
-         max-width: 70px;
       }
       .content-header-center-right {
          @include rtl-plr(0!important, 10px!important);
@@ -442,8 +455,13 @@
       margin-left: 28px;
    }
 }
-@media(min-width: 991px){
-   
+@media(max-width: 992px){
+   .btn-vertical {
+      span {
+         font-size: 10px;
+         margin-left: 10px;
+      }
+   }
 }
 /* Header Sticky ==================================================================================== */
 #header-sticky {
