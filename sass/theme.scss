@@ -2021,6 +2021,9 @@ effects the :hover style. This forces the style to be applied.
    padding: 0;
    list-style: none;
    display: flex;
+   bottom: 25px;
+   left: 50%;
+   transform: translate(-50%);
    li {
       margin: 0 7.5px;
       button {

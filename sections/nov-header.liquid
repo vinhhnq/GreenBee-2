@@ -67,7 +67,7 @@
                 </span>
               </a>
             </div>
-            <div class="contentsticky_cart cart_canvas">
+            <div class="contentsticky_cart d-flex cart_canvas">
               <div id="cart_block">
                 <div class="header-cart pointer">
                   <div class="site-header__cart d-flex justify-content-center align-items-center">
@@ -81,8 +81,8 @@
                 </div>
               </div>
             </div>
-            <div class="contentsticky_cart title-cart">
-              <span>{{ sst.cart_description }}</span>
+            <div class="title-cart">
+              <div>{{ sst.cart_description }}</div>
             </div>
           </div>
         </div>
@@ -114,11 +114,11 @@
                     <div class="how-order">{{ 'layout.header.how_to_order' | t }}</div>
                     <div class="phone-number mb-0 text-uppercase">{{ sst.phone }}</div>
                   </div>
-                  <div class="h_address position-absolute">
+                  {% comment %} <div class="h_address position-absolute">
                     {% for block in section.blocks%}  
                       {% include 'address' %}
                     {% endfor %}
-                  </div>
+                  </div> {% endcomment %}
                 </div>
               </div>
             </div>
@@ -186,8 +186,10 @@
           </div>
           <div class="contentstickynew_logo d-flex align-items-center"></div>
         </div>
-        <div class="col-md-9 d-flex align-items-center justify-content-end justify-content-xl-between">
+        <div class="col-md-6 d-flex align-items-center justify-content-xl-center">
           <div class="contentstickynew_menu d-none d-xl-block"></div>
+        </div>
+        <div class="col-md-3">
           <div class="header-group-item d-flex align-items-center justify-content-end">
             <div class="search__btn-overlay pointer d-flex" nov-btn-act data-toggle="search_canvas" overlay>
               <i class="rbb-icon-search-10 position-relative"></i>

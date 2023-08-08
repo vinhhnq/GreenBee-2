@@ -83,7 +83,6 @@
 	                  {% if bst.icon !=blank %}<i class="{{ bst.icon }}"></i>{% endif %}
 	                  <div class="text {{ sst.t_fw }}">{{ bst.t }}</div>
 	                {% endif %}
-
 	                {% if block.type == 'countdown' %}
 	                  {% if bst.title != blank %}<div class="text {{ sst.t_fw }}">{{ bst.title }}</div>{% endif %}
 	                  <div class="countdownfree d-flex justify-content-center" data-countdown="{{ bst.countdown_timeend }}" data-show-days={{ settings.show_day }} data-restart="{{ settings.restart }}"></div>

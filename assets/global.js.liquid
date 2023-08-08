@@ -1875,6 +1875,7 @@ novtheme.VerticalMenu = function () {
           .off("click")
           .on("click", function () {
              $("#desktopVerticalMenu").slideToggle();
+             //if class site
              if ($(".site-nav-vertical").hasClass("act")) {
                 $(".site-nav-vertical").removeClass("act");
              } else {
@@ -2002,7 +2003,6 @@ $(document).ready(function() {
             $('#popup-Wishlist').addClass('novload')
         }
     })
-
     // Zoom Product Image Page Detail
     if ($(window).width()>=992) {
         var productImageZoom = $('.image-zoom');

@@ -1,10 +1,6 @@
 <script>
-  $(function() {
-    // Current Ajax request.
-    var currentAjaxRequest = null;
-    // Grabbing all search forms on the page, and adding a .search-results list to each.
+  function searchTrendWidth(){
     var searchForms = $('form[action="/search"]').css('position','relative').each(function() {
-      // Grabbing text input.
       var input = $(this).find('input[name="q"]');
       var searchTrend = $(this).find('.search_trend');
       var Height = ($(this).parents('.header-search__parent').outerHeight() - $(this).outerHeight()) / 2;
@@ -12,12 +8,30 @@
       var offSet = input.position().top + input.innerHeight() + searchTrend.innerHeight() + Height - 10;
       var offSetleft = $(this).offset().left * -1;
       var width = $(window).width();
-      
-      $('<div class="search-results__block"></div>').css( { 'position': 'absolute', 'top': offSet} ).appendTo($(this)).hide();
       if ($(window).width() > 767) {
         searchTrend.css({'top': offSetTrend, 'width': width, 'left': offSetleft });
         $(this).find('.search-results__block').css({'width': width, 'left': offSetleft });
+      }else{
+        searchTrend.css({'top': offSetTrend, 'width': width, 'left': 0});
+        $(this).find('.search-results__block').css({'width': width, 'left': 0 });
       }
+    });
+  };
+  function searchTrend(){
+    // Current Ajax request.
+    var currentAjaxRequest = null;
+    // Grabbing all search forms on the page, and adding a .search-results list to each.
+    var searchForms = $('form[action="/search"]').css('position','relative').each(function() {
+      // Grabbing text input.
+      var searchTrend = $(this).find('.search_trend');
+      var input = $(this).find('input[name="q"]');
+      var Height = ($(this).parents('.header-search__parent').outerHeight() - $(this).outerHeight()) / 2;
+      var offSetTrend = input.position().top + input.outerHeight() + Height;
+      var offSet = input.position().top + input.innerHeight() + searchTrend.innerHeight() + Height - 10;
+      var offSetleft = $(this).offset().left * -1;
+      var width = $(window).width();
+
+      $('<div class="search-results__block"></div>').css( { 'position': 'absolute', 'top': offSet} ).appendTo($(this)).hide();
       $(this).find('.search-results__block').append('<ul class="search-results"></ul>');
       // Listening to keyup and change on the text field within these search forms.
       input.attr('autocomplete', 'off').bind('keyup change', function() {
@@ -27,6 +41,7 @@
           $('.search-w__animate').hide();
           $('.btn-search__clear-text').removeClass('hide');
           $('.search-header__content .icon').hide();
+          $('.search_trend').slideDown();
         } else {
           $('.search-w__animate').show();
           $('.btn-search__clear-text').addClass('hide');
@@ -77,7 +92,7 @@
                 resultsList.after('<div class="search-see_all"><a class="see_all" href="' + searchURL + '">' + theme.strings.results_all + ' (' + data.results_count + ')</a></div>');
               }
               resultsListBlock.fadeIn(200);
-            }        
+            }
           });
         }
       });
@@ -86,5 +101,13 @@
     $('body').bind('click', function(){
       $('.search-results__block').hide();
     });
+  };
+  $(document).ready(function() {
+    searchTrend();
+    searchTrendWidth();
+  });
+
+  $(window).resize(function() {
+    searchTrendWidth();
   });
 </script>

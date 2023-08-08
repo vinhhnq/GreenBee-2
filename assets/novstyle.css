@@ -12869,6 +12869,9 @@ effects the :hover style. This forces the style to be applied.
   padding: 0;
   list-style: none;
   display: flex;
+  bottom: 25px;
+  left: 50%;
+  transform: translate(-50%);
 }
 .slick-slider .slick-dots li {
   margin: 0 7.5px;
@@ -28016,7 +28019,7 @@ a[data-init-quickshop] {
   display: flex;
   align-items: center;
   color: #222;
-  padding: 0 18px;
+  padding: 10px 15px;
   border-bottom: 1px solid var(--color-border);
   -webkit-transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
@@ -28032,10 +28035,10 @@ a[data-init-quickshop] {
 }
 .site-nav-vertical .site-nav__link--main .site-nav--icon {
   min-width: 35px;
-  margin-right: 19px;
+  margin-right: 17px;
 }
 .lang-rtl .site-nav-vertical .site-nav__link--main .site-nav--icon {
-  margin-left: 19px;
+  margin-left: 17px;
   margin-right: initial;
 }
 .site-nav-vertical .site-nav__link--main .nav-title {
@@ -28072,7 +28075,7 @@ a[data-init-quickshop] {
 @media (min-width: 992px) {
   .site-nav-vertical {
     position: absolute;
-    top: calc(100% + 20px);
+    top: calc(100% + 30px);
     left: 0;
     width: 100%;
     border-radius: 20px;
