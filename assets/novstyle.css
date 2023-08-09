@@ -28019,7 +28019,7 @@ a[data-init-quickshop] {
   display: flex;
   align-items: center;
   color: #222;
-  padding: 10px 15px;
+  padding: 8px 15px;
   border-bottom: 1px solid var(--color-border);
   -webkit-transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
@@ -28035,11 +28035,10 @@ a[data-init-quickshop] {
 }
 .site-nav-vertical .site-nav__link--main .site-nav--icon {
   min-width: 35px;
-  margin-right: 17px;
+  margin: 0 17px 20px 0;
 }
 .lang-rtl .site-nav-vertical .site-nav__link--main .site-nav--icon {
-  margin-left: 17px;
-  margin-right: initial;
+  margin: 0 0 20px 17px;
 }
 .site-nav-vertical .site-nav__link--main .nav-title {
   padding: 6px 0;

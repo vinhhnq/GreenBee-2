@@ -33,7 +33,7 @@
                       </div>
                     {% endif %}
                   </div>
-                  {% unless bst.img == blank %}
+                  {% unless bst.img == blank %}l
                     <div class="caption-img-element-{{ forloop.index }}{% if bst.img_animate %} img_animate{% endif %} d-inline-block position-absolute">
                       <img data-src="{{ bst.img | img_url: '600x' }}" class="lazyload layer w-100" data-depth="0.4"></div>
                   {% endunless %}
@@ -79,7 +79,7 @@
                 </div> 
               {% endif %}
               {% if bst.image == blank %}
-              <div class="item blank">
+                <div class="item blank">
                   <figure>
                     {% capture current %}{% cycle 1, 2 %}{% endcapture %}
                     {{ 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
@@ -140,7 +140,7 @@
                       <circle cx='14' cy='14' r='10' fill="none" stroke-width="8"/>
                     </svg>
                   {% endif %}
-                </div>
+                </div>    
               {% endif %}
             {% endfor %}
           </div>

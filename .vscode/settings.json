@@ -1,9 +1,0 @@
-{
-  "editor.fontSize": 14,
-  "files.autoSave": "afterDelay",
-  "themeCheck.checkOnSave": false,
-  "themeCheck.checkOnOpen": false,
-  "themeCheck.checkOnChange": false,
-  "shopifyLiquid.disableWindowsWarning": true,
-  "themeCheck.onlySingleFileChecks": false
-}
