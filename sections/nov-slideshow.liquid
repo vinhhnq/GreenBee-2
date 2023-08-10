@@ -8,149 +8,152 @@
     <div class="container-full">
   {% endif %}
     {% comment %} Slideshow {% endcomment %}
-    <div class="slideshow position-relative{% if sst.pl %} pl{% endif %}">
-      {% if section.blocks.size > 0 %}
-        <div class="main-slider" data-autoplay="{{ sst.autoplay }}" data-speed="{{ sst.autoplay_speed }}" data-arrows="{{ sst.arrows }}" data-dots="{{ sst.dots }}"{% if sst.loading_bar %} data-loading-bar{% endif %} data-zoom="{{ sst.zoom }}">
-          {% for block in section.blocks %}
-          {% assign bst = block.settings %}
-            {% if block.type == 'image' %}
-              {% if bst.image != blank %}
-                <div class="item">
-                  <div class="slide-image s-{{ forloop.index }}">
-                    {% assign img_url = bst.image %}
-                    <div class="respone_image{% if bst.img_sm != blank %} d-none d-md-block{% endif %}" style="padding-top:{{ 1 | divided_by: img_url.aspect_ratio | times: 100}}%;">
-                      <img class="image-entity lazyload"
-                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 0.6'%3E%3C/svg%3E"
-                        data-src="{{ img_url | img_url: '360x' }}"
-                        data-srcset="{{ img_url | img_url: '768x' }} 768w,{{ img_url | img_url: '900x' }} 900w,{{ img_url | img_url: '1080x' }} 1080w,{{ img_url | img_url: '1296x' }} 1296w,{{ img_url | img_url: '1512x' }} 1512w,{{ img_url | img_url: '1728x' }} 1728w, {{ img_url | img_url: '2048x' }} 2048w" data-sizes="auto" alt="{{ img_url.alt }}">
-                    </div>
-                    {% if bst.img_sm != blank %}
-                      {% assign img_url = bst.img_sm %}
-                      <div class="respone_image d-md-none" style="padding-top:{{ 1 | divided_by: img_url.aspect_ratio | times: 100}}%;">
+    <div class="row">
+      <div class="col-xl-3"></div>
+      <div class="slideshow position-relative{% if sst.pl %} pl{% endif %} col-xl-9 col-md-12">
+        {% if section.blocks.size > 0 %}
+          <div class="main-slider" data-autoplay="{{ sst.autoplay }}" data-speed="{{ sst.autoplay_speed }}" data-arrows="{{ sst.arrows }}" data-dots="{{ sst.dots }}"{% if sst.loading_bar %} data-loading-bar{% endif %} data-zoom="{{ sst.zoom }}">
+            {% for block in section.blocks %}
+            {% assign bst = block.settings %}
+              {% if block.type == 'image' %}
+                {% if bst.image != blank %}
+                  <div class="item">
+                    <div class="slide-image s-{{ forloop.index }}">
+                      {% assign img_url = bst.image %}
+                      <div class="respone_image{% if bst.img_sm != blank %} d-none d-md-block{% endif %}" style="padding-top:{{ 1 | divided_by: img_url.aspect_ratio | times: 100}}%;">
                         <img class="image-entity lazyload"
+                          src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 0.6'%3E%3C/svg%3E"
                           data-src="{{ img_url | img_url: '360x' }}"
-                          data-srcset="{{ img_url | img_url: '380x' }} 380w,{{ img_url | img_url: '580x' }} 580w, {{ img_url | img_url: '767x' }} 767w" data-sizes="auto" alt="{{ img_url.alt }}">
+                          data-srcset="{{ img_url | img_url: '768x' }} 768w,{{ img_url | img_url: '900x' }} 900w,{{ img_url | img_url: '1080x' }} 1080w,{{ img_url | img_url: '1296x' }} 1296w,{{ img_url | img_url: '1512x' }} 1512w,{{ img_url | img_url: '1728x' }} 1728w, {{ img_url | img_url: '2048x' }} 2048w" data-sizes="auto" alt="{{ img_url.alt }}">
+                      </div>
+                      {% if bst.img_sm != blank %}
+                        {% assign img_url = bst.img_sm %}
+                        <div class="respone_image d-md-none" style="padding-top:{{ 1 | divided_by: img_url.aspect_ratio | times: 100}}%;">
+                          <img class="image-entity lazyload"
+                            data-src="{{ img_url | img_url: '360x' }}"
+                            data-srcset="{{ img_url | img_url: '380x' }} 380w,{{ img_url | img_url: '580x' }} 580w, {{ img_url | img_url: '767x' }} 767w" data-sizes="auto" alt="{{ img_url.alt }}">
+                        </div>
+                      {% endif %}
+                    </div>
+                    {% unless bst.img == blank %}l
+                      <div class="caption-img-element-{{ forloop.index }}{% if bst.img_animate %} img_animate{% endif %} d-inline-block position-absolute">
+                        <img data-src="{{ bst.img | img_url: '600x' }}" class="lazyload layer w-100" data-depth="0.4"></div>
+                    {% endunless %}
+                    {% if bst.cap_content == 'container' %}
+                      <div class="cap_content container">
+                    {% endif %}
+                    <div class="content position-absolute content-{{ forloop.index }}" style="text-align: {{ bst.text_align }};">
+                      {% unless bst.caption_1 == blank %}
+                        <div class="caption-animate caption-1{% if bst.ff1 == 'heading' %} f_pr{% endif %}" data-animate="{{ bst.cap_animate_1 }} animated" style="color: {{ bst.color_cap1 }};">{{ bst.caption_1 | nofilter }}</div>
+                      {% endunless %}
+                      {% unless bst.caption_2 == blank %}
+                        <div class="caption-animate caption-2{% if bst.ff2 == 'heading' %} f_pr{% endif %}" data-animate="{{ bst.cap_animate_2 }} animated" style="color: {{ bst.color_cap2 }};">{{ bst.caption_2 | nofilter }}</div>
+                      {% endunless %}
+                      {% unless bst.caption_3 == blank %}
+                        <div class="caption-animate caption-3{% if bst.ff3 == 'heading' %} f_pr{% endif %}" data-animate="{{ bst.cap_animate_3 }} animated" style="color: {{ bst.color_cap3 }};">{{ bst.caption_3 | nofilter }}</div>
+                      {% endunless %}
+                      {% unless bst.caption_4 == blank %}
+                        <div class="caption-animate caption-4{% if bst.ff4 == 'heading' %} f_pr{% endif %}" data-animate="{{ bst.cap_animate_4 }} animated" style="color: {{ bst.color_cap4 }};">{{ bst.caption_4 | nofilter }}</div>
+                      {% endunless %}
+                      {% unless bst.caption_btn == blank %}
+                        {% if bst.slider_link != blank %}
+                          <a class="caption-animate btn" href="{{ bst.slider_link }}" style="background-color: {{ bst.b_btn }}; color: {{ bst.c_btn }};">
+                            <span class="d-flex align-items-center justify-content-center">
+                              {% if bst.caption_btn_i != blank %}<img src="{{ bst.caption_btn_i | img_url: '12x' }}">{% endif %}
+                              <span>{{ bst.caption_btn | nofilter }}</span>
+                            </span>
+                          </a>
+                        {% endif %}
+                        {% if bst.slider_link2 != blank %}
+                          <a class="caption-animate btn btn-2" href="{{ bst.slider_link2 }}" style="background-color: {{ bst.b_btn }}; color: {{ bst.c_btn }};">
+                            <span class="font-700 d-flex align-items-center justify-content-center">
+                              {% if bst.caption_btn_i2 != blank %}<img src="{{ bst.caption_btn_i2 | img_url: '12x' }}">{% endif %}
+                              <span>{{ bst.caption_btn2 | nofilter }}</span>
+                            </span>
+                          </a>
+                        {% endif %}
+                      {% endunless %}
+                    </div>
+                    {% if bst.cap_content == 'container' %}
                       </div>
                     {% endif %}
-                  </div>
-                  {% unless bst.img == blank %}l
-                    <div class="caption-img-element-{{ forloop.index }}{% if bst.img_animate %} img_animate{% endif %} d-inline-block position-absolute">
-                      <img data-src="{{ bst.img | img_url: '600x' }}" class="lazyload layer w-100" data-depth="0.4"></div>
-                  {% endunless %}
-                  {% if bst.cap_content == 'container' %}
-                    <div class="cap_content container">
-                  {% endif %}
-                  <div class="content position-absolute content-{{ forloop.index }}" style="text-align: {{ bst.text_align }};">
-                    {% unless bst.caption_1 == blank %}
-                      <div class="caption-animate caption-1{% if bst.ff1 == 'heading' %} f_pr{% endif %}" data-animate="{{ bst.cap_animate_1 }} animated" style="color: {{ bst.color_cap1 }};">{{ bst.caption_1 | nofilter }}</div>
-                    {% endunless %}
-                    {% unless bst.caption_2 == blank %}
-                      <div class="caption-animate caption-2{% if bst.ff2 == 'heading' %} f_pr{% endif %}" data-animate="{{ bst.cap_animate_2 }} animated" style="color: {{ bst.color_cap2 }};">{{ bst.caption_2 | nofilter }}</div>
-                    {% endunless %}
-                    {% unless bst.caption_3 == blank %}
-                      <div class="caption-animate caption-3{% if bst.ff3 == 'heading' %} f_pr{% endif %}" data-animate="{{ bst.cap_animate_3 }} animated" style="color: {{ bst.color_cap3 }};">{{ bst.caption_3 | nofilter }}</div>
-                    {% endunless %}
-                    {% unless bst.caption_4 == blank %}
-                      <div class="caption-animate caption-4{% if bst.ff4 == 'heading' %} f_pr{% endif %}" data-animate="{{ bst.cap_animate_4 }} animated" style="color: {{ bst.color_cap4 }};">{{ bst.caption_4 | nofilter }}</div>
-                    {% endunless %}
-                    {% unless bst.caption_btn == blank %}
-                      {% if bst.slider_link != blank %}
-                        <a class="caption-animate btn" href="{{ bst.slider_link }}" style="background-color: {{ bst.b_btn }}; color: {{ bst.c_btn }};">
-                          <span class="d-flex align-items-center justify-content-center">
-                            {% if bst.caption_btn_i != blank %}<img src="{{ bst.caption_btn_i | img_url: '12x' }}">{% endif %}
-                            <span>{{ bst.caption_btn | nofilter }}</span>
-                          </span>
-                        </a>
-                      {% endif %}
-                      {% if bst.slider_link2 != blank %}
-                        <a class="caption-animate btn btn-2" href="{{ bst.slider_link2 }}" style="background-color: {{ bst.b_btn }}; color: {{ bst.c_btn }};">
-                          <span class="font-700 d-flex align-items-center justify-content-center">
-                            {% if bst.caption_btn_i2 != blank %}<img src="{{ bst.caption_btn_i2 | img_url: '12x' }}">{% endif %}
-                            <span>{{ bst.caption_btn2 | nofilter }}</span>
-                          </span>
-                        </a>
-                      {% endif %}
-                    {% endunless %}
-                  </div>
-                  {% if bst.cap_content == 'container' %}
-                    </div>
-                  {% endif %}
-                  
-                </div> 
+                    
+                  </div> 
+                {% endif %}
+                {% if bst.image == blank %}
+                  <div class="item blank">
+                    <figure>
+                      {% capture current %}{% cycle 1, 2 %}{% endcapture %}
+                      {{ 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+                    </figure>
+                  </div>  
+                {% endif %}
               {% endif %}
-              {% if bst.image == blank %}
-                <div class="item blank">
-                  <figure>
-                    {% capture current %}{% cycle 1, 2 %}{% endcapture %}
-                    {{ 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
-                  </figure>
-                </div>  
-              {% endif %}
-            {% endif %}
-            {% if block.type == 'video' %}
-              <div class="item">
-                <div class="slider-video d-flex">
-                  <video playsinline loop muted style="width: 100%; max-width: 100%; height: auto;"{% if bst.video_mobile != blank %} class="d-none d-sm-block"{% endif %}>
-                    {% if bst.video.sources[0].url contains '.m3u8' and bst.video != blank %}
-                      {%- assign video = bst.video.sources[1].url -%}
-                    {%- else -%}
-                      {%- assign video = bst.video.sources[0].url -%}
-                    {%- endif -%}
-                    <source src="{{ video }}" type="video/mp4"/>
-                  </video>
-                  {% if bst.video_mobile != blank %}
-                    <video playsinline loop muted style="width: 100%; max-width: 100%; height: auto;"{% if bst.video_mobile != blank %} class="d-sm-none"{% endif %}>
-                      {% if bst.video_mobile.sources[0].url contains '.m3u8' and bst.video_mobile != blank %}
-                        {%- assign video = bst.video_mobile.sources[1].url -%}
+              {% if block.type == 'video' %}
+                <div class="item">
+                  <div class="slider-video d-flex">
+                    <video playsinline loop muted style="width: 100%; max-width: 100%; height: auto;"{% if bst.video_mobile != blank %} class="d-none d-sm-block"{% endif %}>
+                      {% if bst.video.sources[0].url contains '.m3u8' and bst.video != blank %}
+                        {%- assign video = bst.video.sources[1].url -%}
                       {%- else -%}
-                        {%- assign video = bst.video_mobile.sources[0].url -%}
+                        {%- assign video = bst.video.sources[0].url -%}
                       {%- endif -%}
                       <source src="{{ video }}" type="video/mp4"/>
                     </video>
-                  {% endif %}
-                </div>
-              </div>  
-            {% endif %}
-          {% endfor %}
-        </div>
-        {% if sst.wave %}
-          {% if sst.wave_style == 'wave1' %}
-            <div class="wave wave1 position-absolute overfow_hidden">
-              <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
-                <path d="M-1.97,86.67 C242.94,271.20 306.15,14.63 501.97,-3.13 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: {{ sst.wave_bg }};"></path>
-              </svg>
-            </div>
-          {% else %}
-            <div class="wave wave2 position-absolute overfow_hidden">
-              <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
-                <path d="M-4.22,-4.42 C206.26,198.86 284.71,198.86 505.36,-3.44 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: {{ sst.wave_bg }};"></path>
-              </svg>
-            </div>
-          {% endif %}
-        {% endif %}
-        {% if sst.dots %}
-          <div class="slideshow-dot-cus position-absolute">
-            {% for block in section.blocks %}
-              {% if block.type == 'image' or block.type == 'video' %}
-                <div class="{% if sst.dot_img %}dot-img{% else %}dot-color{% endif %}" data-1-to data-index="{{ forloop.index0 }}">
-                  {% if sst.dot_img %}
-                    <div class="item-dot"></div>
-                  {% else %}
-                    <svg>
-                      <circle cx='14' cy='14' r='10' fill="none" stroke-width="8"/>
-                    </svg>
-                  {% endif %}
-                </div>    
+                    {% if bst.video_mobile != blank %}
+                      <video playsinline loop muted style="width: 100%; max-width: 100%; height: auto;"{% if bst.video_mobile != blank %} class="d-sm-none"{% endif %}>
+                        {% if bst.video_mobile.sources[0].url contains '.m3u8' and bst.video_mobile != blank %}
+                          {%- assign video = bst.video_mobile.sources[1].url -%}
+                        {%- else -%}
+                          {%- assign video = bst.video_mobile.sources[0].url -%}
+                        {%- endif -%}
+                        <source src="{{ video }}" type="video/mp4"/>
+                      </video>
+                    {% endif %}
+                  </div>
+                </div>  
               {% endif %}
             {% endfor %}
           </div>
+          {% if sst.wave %}
+            {% if sst.wave_style == 'wave1' %}
+              <div class="wave wave1 position-absolute overfow_hidden">
+                <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                  <path d="M-1.97,86.67 C242.94,271.20 306.15,14.63 501.97,-3.13 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: {{ sst.wave_bg }};"></path>
+                </svg>
+              </div>
+            {% else %}
+              <div class="wave wave2 position-absolute overfow_hidden">
+                <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                  <path d="M-4.22,-4.42 C206.26,198.86 284.71,198.86 505.36,-3.44 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: {{ sst.wave_bg }};"></path>
+                </svg>
+              </div>
+            {% endif %}
+          {% endif %}
+          {% if sst.dots %}
+            <div class="slideshow-dot-cus position-absolute">
+              {% for block in section.blocks %}
+                {% if block.type == 'image' or block.type == 'video' %}
+                  <div class="{% if sst.dot_img %}dot-img{% else %}dot-color{% endif %}" data-1-to data-index="{{ forloop.index0 }}">
+                    {% if sst.dot_img %}
+                      <div class="item-dot"></div>
+                    {% else %}
+                      <svg>
+                        <circle cx='14' cy='14' r='10' fill="none" stroke-width="8"/>
+                      </svg>
+                    {% endif %}
+                  </div>    
+                {% endif %}
+              {% endfor %}
+            </div>
+          {% endif %}
         {% endif %}
-      {% endif %}
-      {% if section.blocks.size == 0 %}
-        <div class="placeholder-noblocks">
-          {{ 'homepage.onboarding.no_content' | t }}
-        </div>
-      {% endif %}
+        {% if section.blocks.size == 0 %}
+          <div class="placeholder-noblocks">
+            {{ 'homepage.onboarding.no_content' | t }}
+          </div>
+        {% endif %}
+      </div>
     </div>
     {% comment %} End Slideshow {% endcomment %}
   </div>

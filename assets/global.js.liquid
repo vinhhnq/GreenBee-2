@@ -1236,13 +1236,13 @@ novtheme.CollectionPage = function() {
         }
         localStorage.setItem('view_collection', $('.collection__product-content').attr('data-grid'));
     });
-    if($(document).width() <992 ) {
+    if($(document).width() < 992 ) {
         $('.collection__product-content').attr('data-grid', 'grid-3');
         $('.gridlist-toggle a').removeClass('active');
         $('.gridlist-toggle #grid-3').addClass('active');
         $('.collection-topsidebar .facets__label').addClass('act')
     }
-    if($(document).width() <768 ) {
+    if($(document).width() < 768 ) {
         $('.collection__product-content').attr('data-grid', 'grid-2');
         $('.gridlist-toggle a').removeClass('active');
         $('.gridlist-toggle #grid-2').addClass('active');
