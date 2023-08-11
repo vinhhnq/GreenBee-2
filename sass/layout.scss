@@ -254,6 +254,7 @@
 }
 .header-top {
    padding: 41px 0;
+   min-height: 129px;
    .header-top-right {
       &:last-child {
          @include rtl-mr(0!important);

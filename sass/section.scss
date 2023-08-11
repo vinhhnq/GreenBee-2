@@ -989,6 +989,9 @@
       }
       .content {
          @include opacity(0);
+         .caption-animate {
+            font-family: 'Playfair Display';
+         }
       }
 
       .slick-active .content {
@@ -1009,13 +1012,6 @@
    }
    .slide-image img {
       background-image: none;
-   }
-   .cap_content {
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
    }
    .container-full,
    .container-fluid {
@@ -1387,13 +1383,13 @@
       &:last-child {
          margin-bottom: 0;
       }
-      .bock-image {
+      .block-image {
          img {
             @include transition(all 0.35s linear);
          }
       }
       &:hover {
-         .bock-image {
+         .block-image {
             img {
                transform: scale(1.1);
                object-fit: cover;

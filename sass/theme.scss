@@ -2028,7 +2028,7 @@ effects the :hover style. This forces the style to be applied.
       margin: 0 7.5px;
       button {
          position: relative;
-         @include square(14px);
+         @include square(20px);
          border-radius: 100%;
          background-color: #c3c3c3;
          font-size: 0;

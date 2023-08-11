@@ -26,7 +26,7 @@
       {%- if sst.distance_bottom > 20 -%}padding-bottom: {{ sst.distance_bottom | times: 0.7 | round: 0 | append: 'px' }};{%- endif -%}
       }
    }
-   #shopify-section-{{ section.id }} .block-image-banner .bock-image, #shopify-section-{{ section.id }} .block-image-banner  .bock-image svg {
+   #shopify-section-{{ section.id }} .block-image-banner .block-image, #shopify-section-{{ section.id }} .block-image-banner  .block-image svg {
       border-radius: {{ sst.bd_radius | append: 'px' }};
       overflow: hidden;
    }
@@ -67,15 +67,15 @@
       <div class="row {% if sst.spacing%} spacing-{{ sst.spacing }} {% endif %} content-gallery-image2">
          {% for block in section.blocks %}
             {% assign bst = block.settings %}
-            <div class="block-image-banner position-relative {{ col_width }} overflow_hidden ">
+            <div class="block-image-banner position-relative {{ col_width }} col-lg-4 col-md-4 overflow_hidden ">
                <div class="block-image-text block-image-text-{{ forloop.index }} position-absolute">
                      <div class="banner-text">
-                           <div class="caption1">{{ bst.cta_label }}</div>
-                           <div class="caption2">{{ bst.cta_label2 }}</div>
+                        <div class="caption1">{{ bst.cta_label }}</div>
+                        <div class="caption2">{{ bst.cta_label2 }}</div>
                      </div>
                      <a class="banner-button" href="{{ bst.link }}"><span>{{ bst.banner_button }}<i class="zmdi zmdi-long-arrow-right"></i></span></a>
                </div>
-               <div class="bock-image {% if sst.style_img_1 %} nov-sh-image-1{% endif %}{% if sst.style_img_2 %} nov-sh-image-2{% endif %}">
+               <div class="block-image {% if sst.style_img_1 %} nov-sh-image-1{% endif %}{% if sst.style_img_2 %} nov-sh-image-2{% endif %}">
                   {%- if  bst.image != blank -%}
                      {% assign imagewidth = bst.image.width %}
                      {%- assign imagealt = bst.image_category.alt | default: bst.cta_label | strip_html | escape -%}
