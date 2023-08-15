@@ -25,7 +25,7 @@
             {% assign bst = block.settings %}
             <div class="nov-policy-item {{ sst.width_xl }} {{ sst.width_lg }} {{ sst.width_md }} {{ sst.width_sm }} {{ sst.width_xs }}{% if sst.bg_i == true %} bg-icon{% endif %}{% if sst.show_border_item == true %} show-border{% endif %} {% if bst.class != blank %} {{ bst.class }}{% endif %}">
               {% if sst.style == 'style1' %}
-          <div class="policy__item--content text-md-center d-flex align-items-center d-md-block h-100 style1 block-{{ forloop.index }}">
+                <div class="policy__item--content text-md-center d-flex align-items-center d-md-block h-100 style1 block-{{ forloop.index }}">
                   {% if bst.policy_icon != blank %}
                     <div class="policy-icon d-inline-flex align-items-center justify-content-center mb-25 mb-sm-0 position-relative">
                     {% if bst.policy_icon != blank %}

@@ -8,66 +8,12 @@
   {%- assign col_width = 12 | divided_by: sst.col_width | prepend: 'col-md-' -%}
 {% endif %}
 
-
-{%- style -%}
-   #shopify-section-{{ section.id }} .distance {
-      padding-top: {{ sst.distance_top | append: 'px' }};
-      padding-bottom: {{ sst.distance_bottom | append: 'px' }};
-      {% if sst.background_color != blank %}
-      background-color: {{ sst.background_color }};
-      {% endif %}
-      {% if bg_image.src != blank %}
-      background-image: url("{{ bg_image | img_url: '1920x' }}");background-repeat: no-repeat;background-size: cover;
-      {% endif %}
-   }
-   @media(max-width: 767px) {
-      #shopify-section-{{ section.id }} .distance {
-      {%- if sst.distance_top > 20 -%}padding-top: {{ sst.distance_top | times: 0.7 | round: 0 | append: 'px' }};{%- endif -%}
-      {%- if sst.distance_bottom > 20 -%}padding-bottom: {{ sst.distance_bottom | times: 0.7 | round: 0 | append: 'px' }};{%- endif -%}
-      }
-   }
-   #shopify-section-{{ section.id }} .block-image-banner .block-image, #shopify-section-{{ section.id }} .block-image-banner  .block-image svg {
-      border-radius: {{ sst.bd_radius | append: 'px' }};
-      overflow: hidden;
-   }
-
-   {% for block in section.blocks %}
-      {% assign bst = block.settings %}
-      #shopify-section-{{ section.id }} .block-image-text-{{ forloop.index }} .banner-button :hover{
-            color: {{ bst.banner_color_hover }}
-         }
-
-      #shopify-section-{{ section.id }} .block-image-text-{{ forloop.index }} .caption1 {
-         font-size: {{ bst.cta_label_s1 | append: 'px' }};
-         color: {{ bst.cta_label_c }}
-      }
-      #shopify-section-{{ section.id }} .block-image-text-{{ forloop.index }} .caption2 {
-         font-size: {{ bst.cta_label_s2 | append: 'px' }};
-         color: {{ bst.cta_label_2 }}
-      }
-      #shopify-section-{{ section.id }} .block-image-text-{{ forloop.index }} .banner-button {
-         font-size: {{ bst.cta_label_s2 | append: 'px' }};
-         color: {{ bst.cta_label_2 }}
-      }
-      @media(max-width: 1199px) {
-         #shopify-section-{{ section.id }} .block-image-text-{{ forloop.index }} .caption-{{ forloop.index }} {
-         font-size: {{ bst.cta_label_s2 | times: 0.8 | append: 'px' }};
-         }
-      }
-      @media(max-width: 767px) {
-         #shopify-section-{{ section.id }} .block-image-text-{{ forloop.index }} .caption-{{ forloop.index }} {
-         font-size: clamp(10px, {{ bst.cta_label_s2 | times: 0.7 | append: 'px' }}, 20px);
-         }
-      }
-   {% endfor %}
-{%- endstyle -%}
-
 <div class="distance{% if sst.class_section != blank %} {{ sst.class_section }}{% endif %}{% if sst.animate == true %} wow fadeInUp animated{% endif %}">
    <div  class="{{ container }}">
       <div class="row {% if sst.spacing%} spacing-{{ sst.spacing }} {% endif %} content-gallery-image2">
          {% for block in section.blocks %}
             {% assign bst = block.settings %}
-            <div class="block-image-banner position-relative {{ col_width }} col-lg-4 col-md-4 overflow_hidden ">
+            <div class="block-image-banner position-relative {{ col_width }} col-lg-4 col-md-4 col-sm-12 overflow_hidden ">
                <div class="block-image-text block-image-text-{{ forloop.index }} position-absolute">
                      <div class="banner-text">
                         <div class="caption1">{{ bst.cta_label }}</div>
@@ -160,7 +106,7 @@
             "type": "checkbox",
             "id": "animate",
             "label": "Show animated",
-            "default":   true
+            "default": true
          },
          {
             "type": "color",
@@ -300,3 +246,56 @@
       ]
    }
 {% endschema %}
+
+{%- style -%}
+   #shopify-section-{{ section.id }} .distance {
+      padding-top: {{ sst.distance_top | append: 'px' }};
+      padding-bottom: {{ sst.distance_bottom | append: 'px' }};
+      {% if sst.background_color != blank %}
+      background-color: {{ sst.background_color }};
+      {% endif %}
+      {% if bg_image.src != blank %}
+      background-image: url("{{ bg_image | img_url: '1920x' }}");background-repeat: no-repeat;background-size: cover;
+      {% endif %}
+   }
+   @media(max-width: 767px) {
+      #shopify-section-{{ section.id }} .distance {
+      {%- if sst.distance_top > 20 -%}padding-top: {{ sst.distance_top | times: 0.7 | round: 0 | append: 'px' }};{%- endif -%}
+      {%- if sst.distance_bottom > 20 -%}padding-bottom: {{ sst.distance_bottom | times: 0.7 | round: 0 | append: 'px' }};{%- endif -%}
+      }
+   }
+   #shopify-section-{{ section.id }} .block-image-banner .block-image, #shopify-section-{{ section.id }} .block-image-banner  .block-image svg {
+      border-radius: {{ sst.bd_radius | append: 'px' }};
+      overflow: hidden;
+   }
+
+   {% for block in section.blocks %}
+      {% assign bst = block.settings %}
+      #shopify-section-{{ section.id }} .block-image-text-{{ forloop.index }} .banner-button :hover{
+            color: {{ bst.banner_color_hover }}
+         }
+
+      #shopify-section-{{ section.id }} .block-image-text-{{ forloop.index }} .caption1 {
+         font-size: {{ bst.cta_label_s1 | append: 'px' }};
+         color: {{ bst.cta_label_c }}
+      }
+      #shopify-section-{{ section.id }} .block-image-text-{{ forloop.index }} .caption2 {
+         font-size: {{ bst.cta_label_s2 | append: 'px' }};
+         color: {{ bst.cta_label_2 }}
+      }
+      #shopify-section-{{ section.id }} .block-image-text-{{ forloop.index }} .banner-button {
+         font-size: {{ bst.cta_label_s2 | append: 'px' }};
+         color: {{ bst.cta_label_2 }}
+      }
+      @media(max-width: 1199px) {
+         #shopify-section-{{ section.id }} .block-image-text-{{ forloop.index }} .caption-{{ forloop.index }} {
+         font-size: {{ bst.cta_label_s2 | times: 0.8 | append: 'px' }};
+         }
+      }
+      @media(max-width: 767px) {
+         #shopify-section-{{ section.id }} .block-image-text-{{ forloop.index }} .caption-{{ forloop.index }} {
+         font-size: clamp(10px, {{ bst.cta_label_s2 | times: 0.7 | append: 'px' }}, 20px);
+         }
+      }
+   {% endfor %}
+{%- endstyle -%}
