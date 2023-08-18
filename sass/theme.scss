@@ -135,7 +135,6 @@ button {
    }
    i {
       font-size: 20px;
-      @include rtl-mr(5px);
       vertical-align: middle;
    }
 }
