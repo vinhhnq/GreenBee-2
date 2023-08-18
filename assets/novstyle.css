@@ -13345,12 +13345,7 @@ button[disabled], button.disabled {
 }
 .wishlist i {
   font-size: 20px;
-  margin-right: 5px;
   vertical-align: middle;
-}
-.lang-rtl .wishlist i {
-  margin-left: 5px;
-  margin-right: initial;
 }
 
 /* Title block ===================================================== */
@@ -18343,12 +18338,10 @@ effects the :hover style. This forces the style to be applied.
     z-index: 102;
   }
 }
-#header-sticky .header-group-item > div {
-  margin-right: 45px;
-}
-.lang-rtl #header-sticky .header-group-item > div {
-  margin-left: 45px;
-  margin-right: initial;
+#header-sticky .wishlist, #header-sticky .site-header__cart {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
 }
 
 .header-vertical {
@@ -18432,6 +18425,9 @@ effects the :hover style. This forces the style to be applied.
 }
 
 @media (max-width: 992px) {
+  .header-top {
+    min-height: 45px;
+  }
   .header-top .header-top-right .title-cart {
     display: none;
   }
@@ -18515,12 +18511,12 @@ effects the :hover style. This forces the style to be applied.
 
 .header-center .site-header__cart .site-header__cart-count,
 #header-sticky .site-header__cart .site-header__cart-count {
-  top: -7px;
-  right: -11px;
+  top: -3px;
+  right: -2px;
 }
 .lang-rtl .header-center .site-header__cart .site-header__cart-count,
 .lang-rtl #header-sticky .site-header__cart .site-header__cart-count {
-  left: -11px;
+  left: -2px;
   right: initial;
 }
 
@@ -18577,15 +18573,6 @@ effects the :hover style. This forces the style to be applied.
 .lang-rtl .header-group-item > div:not(:last-child) {
   margin-left: 15px;
   margin-right: initial;
-}
-@media (min-width: 1200px) {
-  .header-group-item > div:not(:last-child) {
-    margin-right: 35px;
-  }
-  .lang-rtl .header-group-item > div:not(:last-child) {
-    margin-left: 35px;
-    margin-right: initial;
-  }
 }
 .header-group-item > div:last-of-type {
   margin: 0 !important;
