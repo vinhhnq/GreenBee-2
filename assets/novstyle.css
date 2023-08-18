@@ -5585,7 +5585,6 @@ body.compensate-for-scrollbar {
 
 .mm-menu .mm-listview > li a:not(.mm-next) {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0.5);
-  color: hsla(0deg, 0%, 100%, 0.5);
 }
 
 .mm-menu .mm-listview > li.mm-selected > a:not(.mm-next), .mm-menu .mm-listview > li.mm-selected > span {
@@ -18511,12 +18510,12 @@ effects the :hover style. This forces the style to be applied.
 
 .header-center .site-header__cart .site-header__cart-count,
 #header-sticky .site-header__cart .site-header__cart-count {
-  top: -3px;
-  right: -2px;
+  top: 12px;
+  right: -7px;
 }
 .lang-rtl .header-center .site-header__cart .site-header__cart-count,
 .lang-rtl #header-sticky .site-header__cart .site-header__cart-count {
-  left: -2px;
+  left: -7px;
   right: initial;
 }
 
@@ -27976,7 +27975,6 @@ a[data-init-quickshop] {
 }
 .site-nav__link:hover {
   color: var(--theme-color-primary);
-  background-color: var(--bgc--navlink);
 }
 
 .site-nav--icon {

@@ -71,7 +71,7 @@
               <div id="cart_block">
                 <div class="header-cart pointer">
                   <div class="site-header__cart d-flex justify-content-center align-items-center">
-                    <span id="_desktop_cart_count" class="site-header__cart-count" title="{{ 'layout.cart.title_cart' | t }}">
+                    <span class="site-header__cart-count" title="{{ 'layout.cart.title_cart' | t }}">
                       <span id="CartCount">{{ cart.item_count }}</span>
                     </span>
                     <div class="site-header__cart-icon d-flex">
@@ -114,11 +114,6 @@
                     <div class="how-order">{{ 'layout.header.how_to_order' | t }}</div>
                     <div class="phone-number mb-0 text-uppercase">{{ sst.phone }}</div>
                   </div>
-                  {% comment %} <div class="h_address position-absolute">
-                    {% for block in section.blocks%}  
-                      {% include 'address' %}
-                    {% endfor %}
-                  </div> {% endcomment %}
                 </div>
               </div>
             </div>
@@ -126,7 +121,7 @@
         </div>
       </div>
     </div>
-    <div class="header-mobile d-md-none{% if sst.stickymenu_sm == true %} sticky-header-mobile{% endif %}">
+    <div class="header-mobile d-md-none {% if sst.stickymenu_sm == true %} sticky-header-mobile{% endif %}">
       <div class="header-mobile-content">
         <div class="row align-items-center h-100">
           <div class="col-4 d-flex align-items-center">
@@ -191,7 +186,7 @@
         </div>
         <div class="col-xl-3 col-md-5 d-flex justify-content-end align-items-center">
           <div class="header-group-item d-flex align-items-center justify-content-end">
-            <div class="contentstickynew_search d-none">
+            <div class="contentstickynew_search">
               <a class="search__btn-overlay pointer d-flex" nov-btn-act data-toggle="search_canvas" overlay>
                 <i class="rbb-icon-search-10 position-relative"></i>
               </a>
