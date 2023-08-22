@@ -898,7 +898,7 @@
       }
    }
    @media (max-width: 991px) {
-      width: 320px;
+      width: 400px;
       @include rtl-r(-320px);
    }
    @media (max-width: 767px) {
@@ -906,7 +906,7 @@
          overflow-x: hidden;
          overflow-y: auto;
       }
-      width: 100%;
+      width: calc(100% - 250px);
       &.open-extend {
          overflow-y: hidden;
          &:before {

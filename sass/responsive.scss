@@ -420,7 +420,7 @@
    }
    .mobile_cart {
       .site-header__cart-icon {
-         font-size: 18px;
+         font-size: 20px;
       }
       .cart-count {
          @include square(18px);
@@ -559,7 +559,7 @@
    z-index: 101;
    top: 0;
    @include rtl-l(-100%);
-   width: calc(100% - 120px);
+   min-width: calc(100% - 670px);
    height: 100%;
    @include transition(all 0.3s);
    display: flex;
