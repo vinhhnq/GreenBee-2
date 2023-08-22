@@ -121,11 +121,11 @@
         </div>
       </div>
     </div>
-    <div class="header-mobile d-md-none {% if sst.stickymenu_sm == true %} sticky-header-mobile{% endif %}">
+    <div class="header-mobile d-md-none {% if sst.stickymenu_szm == true %} sticky-header-mobile{% endif %}">
       <div class="header-mobile-content">
         <div class="row align-items-center h-100">
           <div class="col-4 d-flex align-items-center">
-            <div id="show-megamenu" class="item-mobile-top">
+            <div id="show-megamenu" class="item-mobile-top"> 
               <div class="icon-directional position-absolute"></div>
             </div>
             <div class="mobile-btn_search item-mobile-top">
@@ -539,6 +539,15 @@
         "step": 10,
         "label": "Background opacity",
         "default": 100
+      },
+      {
+        "type": "header",
+        "content": "Desktop cart"
+      },
+      {
+          "type": "color",
+          "id": "c_icon_desktop",
+          "label": "Color icon desktop cart"
       },
       {
         "type": "header",
@@ -1219,5 +1228,11 @@
   #header-sticky .myaccount, #header-sticky .wishlist, #header-sticky .site-header__cart:hover {
     color: {{ sst.c_i_h_sticky }};
     background-color: {{ sst.bg_i_h_stickty }};
+  }
+  .header-mobile .site-header__cart {
+    color: {{ sst.c_icon_m }};
+  }
+  #desktop_cart .site-header__cart {
+    color: {{ sst.c_icon_desktop }};
   }
 </style>

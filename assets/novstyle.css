@@ -19173,7 +19173,7 @@ effects the :hover style. This forces the style to be applied.
 }
 @media (max-width: 991px) {
   .block_cart_canvas #desktop_cart {
-    width: 320px;
+    width: 400px;
     right: -320px;
   }
   .lang-rtl .block_cart_canvas #desktop_cart {
@@ -19183,7 +19183,7 @@ effects the :hover style. This forces the style to be applied.
 }
 @media (max-width: 767px) {
   .block_cart_canvas #desktop_cart {
-    width: 100%;
+    width: calc(100% - 250px);
   }
   .block_cart_canvas #desktop_cart.item_count {
     overflow-x: hidden;
@@ -34425,7 +34425,7 @@ a[data-init-quickshop] {
   display: none !important;
 }
 .header-mobile .mobile_cart .site-header__cart-icon {
-  font-size: 18px;
+  font-size: 20px;
 }
 .header-mobile .mobile_cart .cart-count {
   width: 18px;
@@ -34626,7 +34626,7 @@ a[data-init-quickshop] {
   z-index: 101;
   top: 0;
   left: -100%;
-  width: calc(100% - 120px);
+  min-width: calc(100% - 670px);
   height: 100%;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
