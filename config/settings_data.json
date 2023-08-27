@@ -313,6 +313,7 @@
           "bg_h_i_sticky": "",
           "bg_sticky_opacity": 90,
           "c_icon_desktop": "#222222",
+          "icon_menu-mb": "rbb-icon-menu-3",
           "stickymenu_sm": true,
           "bg_m": "#ffffff",
           "c_icon_m": "#222222",
