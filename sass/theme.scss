@@ -2045,6 +2045,10 @@ effects the :hover style. This forces the style to be applied.
       }
       &.slick-active button {
          background-color: var(--theme-color-default);
+         &:active {
+            background-color: transparent;
+            border: 2px solid #fa9901;
+         }
       }
    }
 }

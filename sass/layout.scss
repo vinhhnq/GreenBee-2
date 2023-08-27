@@ -906,7 +906,7 @@
          overflow-x: hidden;
          overflow-y: auto;
       }
-      width: calc(100% - 250px);
+      width: 100%;
       &.open-extend {
          overflow-y: hidden;
          &:before {
@@ -928,6 +928,9 @@
             @include rtl-b-r(1px solid white);
          }
       }
+   }
+   @media(max-width: 576px) {
+      width: 100%;
    }
 }
 

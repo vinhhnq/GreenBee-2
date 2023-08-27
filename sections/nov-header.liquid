@@ -166,6 +166,9 @@
                 </div>
               </div>
             </div>
+            <div class="btn-vertical vertical-mobile align-items-center d-flex justify-content-center" nov-btn-act data-toggle="vertical_menu">
+              <i class="{{ sst.icon_menu-mb }}"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -554,6 +557,27 @@
         "content": "Header mobile"
       },
       {
+        "type": "select",
+        "id": "icon_menu-mb",
+        "label": "Menu mobile icon",
+        "default": "rbb-icon-menu-1",
+        "options": [
+          {"value": "rbb-icon-menu-1", "label": "Menu icon 1"},
+          {"value": "rbb-icon-menu-2", "label": "Menu icon 2"},
+          {"value": "rbb-icon-menu-3", "label": "Menu icon 3"},
+          {"value": "rbb-icon-menu-4", "label": "Menu icon 4"},
+          {"value": "rbb-icon-menu-5", "label": "Menu icon 5"},
+          {"value": "rbb-icon-menu-6", "label": "Menu icon 6"},
+          {"value": "rbb-icon-menu-7", "label": "Menu icon 7"},
+          {"value": "rbb-icon-menu-8", "label": "Menu icon 8"},
+          {"value": "rbb-icon-menu-9", "label": "Menu icon 9"},
+          {"value": "rbb-icon-menu-10", "label": "Menu icon 10"},
+          {"value": "rbb-icon-menu-11", "label": "Menu icon 11"},
+          {"value": "rbb-icon-menu-12", "label": "Menu icon 12"},
+          {"value": "rbb-icon-menu-13", "label": "Menu icon 13"}
+        ]
+      },
+      {
         "type": "checkbox",
         "id": "stickymenu_sm",
         "label": "Enable sticky mobile",
@@ -568,6 +592,11 @@
         "type": "color",
         "id": "c_icon_m",
         "label": "Color icon header mobile"
+      },
+      {
+        "type": "color",
+        "id": "bg_c_icon_m",
+        "label": "Background color icon mobile"
       },
       {
         "type": "checkbox",
@@ -1231,6 +1260,7 @@
   }
   .header-mobile .site-header__cart {
     color: {{ sst.c_icon_m }};
+    background-color: {{ sst.bg_c_icon_m }};
   }
   #desktop_cart .site-header__cart {
     color: {{ sst.c_icon_desktop }};

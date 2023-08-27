@@ -113,7 +113,7 @@
 		padding: 30px 15px;
 	}
 }
-.site-nav--fw .megaMenu {
+.site-nav--fw .megaMenu { 
 	width: 100%;
 	@include rtl-l(0);
 	transform: translateX(0);
@@ -368,6 +368,9 @@
 	.site-nav > li {
 		padding: 0 20px;
 		border-bottom: 1px solid #e5e5e5;
+		width: 100%;
+		text-align: left;
+		justify-content: left;
 		.site-nav__link--main {
 			font-size: 13px;
 			font-weight: 700;

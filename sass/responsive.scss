@@ -435,6 +435,10 @@
          align-items: center;
          justify-content: center;
       }
+      .vertical-mobile i {
+         color: #000;
+         font-size: 20px;
+      }
    }
 }
 .mobile-boxpage {
@@ -559,7 +563,7 @@
    z-index: 101;
    top: 0;
    @include rtl-l(-100%);
-   min-width: calc(100% - 670px);
+   width: 300px;
    height: 100%;
    @include transition(all 0.3s);
    display: flex;
@@ -570,7 +574,7 @@
       padding-top: 60px !important;
    }
    @media (min-width: 768px) {
-      max-width: 300px;
+      max-width: 400px;
       @include transition(all 0.7s);
    }
    .search-header-inline {

@@ -15789,6 +15789,10 @@ effects the :hover style. This forces the style to be applied.
 .slick-slider .slick-dots li.slick-active button {
   background-color: var(--theme-color-default);
 }
+.slick-slider .slick-dots li.slick-active button:active {
+  background-color: transparent;
+  border: 2px solid #fa9901;
+}
 
 .nov-slick-carousel:not(.slick-initialized),
 .nov-slick-navfor-carousel:not(.slick-initialized) {
@@ -19183,7 +19187,7 @@ effects the :hover style. This forces the style to be applied.
 }
 @media (max-width: 767px) {
   .block_cart_canvas #desktop_cart {
-    width: calc(100% - 250px);
+    width: 100%;
   }
   .block_cart_canvas #desktop_cart.item_count {
     overflow-x: hidden;
@@ -19213,6 +19217,11 @@ effects the :hover style. This forces the style to be applied.
   .lang-rtl .block_cart_canvas #desktop_cart .extend--label__item:not(:last-child) {
     border-left: 1px solid white;
     border-right: initial;
+  }
+}
+@media (max-width: 576px) {
+  .block_cart_canvas #desktop_cart {
+    width: 100%;
   }
 }
 
@@ -28365,6 +28374,9 @@ a[data-init-quickshop] {
 .canvas-menu .site-nav > li {
   padding: 0 20px;
   border-bottom: 1px solid #e5e5e5;
+  width: 100%;
+  text-align: left;
+  justify-content: left;
 }
 .canvas-menu .site-nav > li .site-nav__link--main {
   font-size: 13px;
@@ -34445,6 +34457,10 @@ a[data-init-quickshop] {
   left: -8px;
   right: initial;
 }
+.header-mobile .mobile_cart .vertical-mobile i {
+  color: #000;
+  font-size: 20px;
+}
 
 .mobile-boxpage {
   position: fixed;
@@ -34626,7 +34642,7 @@ a[data-init-quickshop] {
   z-index: 101;
   top: 0;
   left: -100%;
-  min-width: calc(100% - 670px);
+  width: 300px;
   height: 100%;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -34649,7 +34665,7 @@ a[data-init-quickshop] {
 }
 @media (min-width: 768px) {
   #mobile_menu {
-    max-width: 300px;
+    max-width: 400px;
     -webkit-transition: all 0.7s;
     -moz-transition: all 0.7s;
     -ms-transition: all 0.7s;
