@@ -21,7 +21,7 @@
             "fz_cap1_lg": 40,
             "fz_cap1_md": 30,
             "fz_cap1_sm": 30,
-            "fz_cap1_xs": 20,
+            "fz_cap1_xs": 25,
             "lh_cap1": 1.2,
             "fw1": "800",
             "fs1": "italic",
@@ -118,6 +118,9 @@
             "fz_cap1_xxl": 40,
             "fz_cap1_xl": 40,
             "fz_cap1_lg": 40,
+            "fz_cap1_md": 30,
+            "fz_cap1_sm": 20,
+            "fz_cap1_xs": 20,
             "lh_cap1": 1,
             "fw1": "600",
             "fs1": "italic",
@@ -136,6 +139,10 @@
             "color_cap2": "#7cb34a",
             "fz_cap2_xxl": 60,
             "fz_cap2_xl": 60,
+            "fz_cap2_lg": 60,
+            "fz_cap2_md": 60,
+            "fz_cap2_sm": 40,
+            "fz_cap2_xs": 40,
             "fw2": "700",
             "fs2": "normal",
             "tt2": "none",
@@ -191,8 +198,8 @@
             "position_xl": "Width: 50%; Left:8%; Top:35%",
             "position_lg": "Width: 50%; Left8%; Top: 35%",
             "position_md": "Width: 70%; Left:8%; Top: 40%",
-            "position_sm": "Width: 80%; Left:8%; Top: 40%",
-            "position_xs": "Width: 90%; Left:8%; Top: 40%"
+            "position_sm": "Width: 80%; Left:8%; Top: 30%",
+            "position_xs": "Width: 90%; Left:8%; Top: 20%"
           }
         },
         "template--19940596547878__9e374973-f7d9-4a2f-974c-18a90163771d-image-3": {
