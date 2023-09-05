@@ -361,7 +361,7 @@ theme.customerTemplates = (function() {
         // Hide reset password form
         $('#HideRecoverPasswordLink').on('click', function(evt) {
             evt.preventDefault();
-            toggleRecoverPasswordForm();
+            toggleRecoverPasswordForm();s
         });
     }
 

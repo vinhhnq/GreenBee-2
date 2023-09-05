@@ -29160,8 +29160,6 @@ a[data-init-quickshop] {
 }
 .section-gallery-image .gallery-image__caption {
   z-index: 2;
-  writing-mode: tb-rl;
-  transform: rotate(180deg);
   overflow: hidden;
 }
 .lang-rtl .section-gallery-image .gallery-image__caption {

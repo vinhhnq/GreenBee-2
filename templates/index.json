@@ -330,79 +330,122 @@
         "distance_bottom": 0
       }
     },
-    "200b3711-3384-4134-91c1-069c291a57c0": {
-      "type": "nov-gallery-image2",
+    "d650a789-9ea7-4d81-934c-f5c58e6a6e01": {
+      "type": "nov-gallery-image",
       "blocks": {
-        "template--19940596547878__200b3711-3384-4134-91c1-069c291a57c0-image-1": {
+        "template--19940596547878__d650a789-9ea7-4d81-934c-f5c58e6a6e01-image-1": {
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/banner1.jpg",
+            "img_xs": "shopify:\/\/shop_images\/banner1.jpg",
             "link": "",
-            "cta_label": "Vegetable Juice",
-            "cta_label_c": "#000000",
-            "cta_label_s1": 26,
-            "cta_label2": "Effective weight loss drinks",
-            "cta_label_2": "#222222",
-            "cta_label_s2": 14,
-            "banner_button": "Learn More",
-            "banner_color": "#ffffff",
-            "cta_label_bt": 14,
-            "banner_color_hover": "#2ea200",
+            "cta_label": "discount 20%",
+            "cta_label_c": "#ffffff",
+            "cta_label1_n": 24,
+            "ff_1": "f_pr",
+            "tt1": "uppercase",
+            "cta_label_mb": 0,
+            "cta_label2": "<p>Low sugar raspberry ja<\/p><p>D'Arbo from Austria made with Sorbitol.<\/p>",
+            "cta_label2_c": "#ffffff",
+            "cta_label2_n": 14,
+            "ff_2": "f_df",
+            "tt2": "none",
+            "mw_2": 500,
+            "cta_label2_mb": 10,
+            "btn_label": "",
+            "text_align": "left",
+            "position": "width: 70%; left:5%; top: 30%",
+            "position_xl": "",
+            "position_lg": "",
+            "position_md": "",
+            "position_sm": "",
+            "position_xs": "",
             "class": ""
           }
         },
-        "template--19940596547878__200b3711-3384-4134-91c1-069c291a57c0-image-2": {
+        "template--19940596547878__d650a789-9ea7-4d81-934c-f5c58e6a6e01-image-2": {
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/banner2.jpg",
+            "img_xs": "shopify:\/\/shop_images\/banner2.jpg",
             "link": "",
-            "cta_label": "Vegetable Juice",
-            "cta_label_c": "#000000",
-            "cta_label_s1": 26,
-            "cta_label2": "Effective weight loss drinks",
-            "cta_label_2": "#222222",
-            "cta_label_s2": 14,
-            "banner_button": "Learn More",
-            "banner_color": "#ffffff",
-            "cta_label_bt": 14,
-            "banner_color_hover": "#2ea200",
+            "cta_label": "",
+            "cta_label_c": "#222222",
+            "cta_label1_n": 24,
+            "ff_1": "f_pr",
+            "tt1": "uppercase",
+            "cta_label_mb": 0,
+            "cta_label2": "<p>Quisque id odio sit amet erat<\/p>",
+            "cta_label2_c": "#222222",
+            "cta_label2_n": 14,
+            "ff_2": "f_df",
+            "tt2": "uppercase",
+            "mw_2": 500,
+            "cta_label2_mb": 10,
+            "btn_label": "Shop now",
+            "text_align": "left",
+            "position": "width: 70%; left:5%; top: 30%",
+            "position_xl": "",
+            "position_lg": "",
+            "position_md": "",
+            "position_sm": "",
+            "position_xs": "",
             "class": ""
           }
         },
-        "24084b09-6d9b-4912-a040-03809c1d6e07": {
+        "template--19940596547878__d650a789-9ea7-4d81-934c-f5c58e6a6e01-image-3": {
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/banner3.jpg",
+            "img_xs": "shopify:\/\/shop_images\/banner3.jpg",
             "link": "",
-            "cta_label": "Vegetable Juice",
-            "cta_label_c": "#000000",
-            "cta_label_s1": 26,
-            "cta_label2": "Effective weight loss drinks",
-            "cta_label_2": "#222222",
-            "cta_label_s2": 14,
-            "banner_button": "Learn More",
-            "banner_color": "#ffffff",
-            "cta_label_bt": 14,
-            "banner_color_hover": "#2ea200",
+            "cta_label": "",
+            "cta_label_c": "#222222",
+            "cta_label1_n": 24,
+            "ff_1": "f_pr",
+            "tt1": "uppercase",
+            "cta_label_mb": 0,
+            "cta_label2": "<p>Quisque id odio sit amet erat<\/p>",
+            "cta_label2_c": "#222222",
+            "cta_label2_n": 14,
+            "ff_2": "f_df",
+            "tt2": "uppercase",
+            "mw_2": 500,
+            "cta_label2_mb": 10,
+            "btn_label": "Shop now",
+            "text_align": "left",
+            "position": "width: 70%; left:5%; top: 30%",
+            "position_xl": "",
+            "position_lg": "",
+            "position_md": "",
+            "position_sm": "",
+            "position_xs": "",
             "class": ""
           }
         }
       },
       "block_order": [
-        "template--19940596547878__200b3711-3384-4134-91c1-069c291a57c0-image-1",
-        "template--19940596547878__200b3711-3384-4134-91c1-069c291a57c0-image-2",
-        "24084b09-6d9b-4912-a040-03809c1d6e07"
+        "template--19940596547878__d650a789-9ea7-4d81-934c-f5c58e6a6e01-image-1",
+        "template--19940596547878__d650a789-9ea7-4d81-934c-f5c58e6a6e01-image-2",
+        "template--19940596547878__d650a789-9ea7-4d81-934c-f5c58e6a6e01-image-3"
       ],
       "settings": {
-        "col_width": 2,
+        "heading": "",
+        "heading_c": "#222222",
+        "subheading": "",
+        "subheading_c": "#666666",
+        "title_alignment": "text-left",
+        "md": 3,
         "bd_radius": 20,
-        "spacing": 30,
-        "style_img_1": true,
-        "style_img_2": false,
+        "spacing": 15,
+        "spacing_1": false,
+        "style_img_1": false,
+        "style_img_2": true,
         "animate": true,
         "background_color": "",
         "container": "container",
         "class_section": "",
+        "px": 0,
         "distance_top": 30,
         "distance_bottom": 30
       }
@@ -410,6 +453,6 @@
   },
   "order": [
     "9e374973-f7d9-4a2f-974c-18a90163771d",
-    "200b3711-3384-4134-91c1-069c291a57c0"
+    "d650a789-9ea7-4d81-934c-f5c58e6a6e01"
   ]
 }

@@ -845,7 +845,6 @@ novtheme.NovSearchToggle = function() {
             $('.search-button').removeClass('active');
         }
     });
-
 };
 novtheme.NovSearchOverlay = function() {
     $('.search__btn-overlay').on('click.break', function(event) {
@@ -883,7 +882,6 @@ novtheme.goToTop = function() {
         } else {
             $('#_desktop_back_top').fadeOut(100);
         }
-
     });
     $("#_desktop_back_top").click(function () {
         $("body,html").animate({scrollTop: 0}, "normal");
@@ -939,7 +937,7 @@ novtheme.MenuSidebar = function() {
 //nov-IFRAME_VIDEO
 novtheme.Nov_iframe_video = function() {
     var $videoSrc;
-    $('.icon_play').click(function() {
+    $('.icon_play').click(function() {w
         $videoSrc = $(this).data( "src" );
     });
     $('#ModalVideo').on('shown.bs.modal', function (e) {
@@ -1824,7 +1822,6 @@ $(document).ready(function() {
             });
         })
     }
-
     // Product item button sold out
     $('.no-view').click(function () {
         if($('.contact-form').hasClass('add')) {
