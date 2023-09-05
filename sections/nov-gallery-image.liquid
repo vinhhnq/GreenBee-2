@@ -526,6 +526,7 @@
       #shopify-section-{{ section.id }} .cap-{{ forloop.index }} {
         {% if settings.enable_rtl and iso_rtl %}{{ bst.position_xl | downcase | replace: 'left', 'right' }}{% else %}{{ bst.position_xl }}{% endif %};
       }
+      
     }
     @media(max-width: 1199px) {
       #shopify-section-{{ section.id }} .cap-{{ forloop.index }} {
