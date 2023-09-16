@@ -88,6 +88,7 @@
         {%- else -%}
             --font-family-primary: {{ settings.type_header_family.family }}, {{ settings.type_header_family.fallback_families }};
             --font-family-default: {{ settings.type_base_family.family }}, {{ settings.type_base_family.fallback_families }};
+            --font-family-default: {{ settings.type_base_family.family }}, {{ settings.type_base_family.falllback_families }};
         {%- endif -%}
         --brightness:  {{ brightness }};
         --font-size-base: {{ settings.type_base_size | divided_by: 10.0 | append: 'rem' }};
