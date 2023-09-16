@@ -10019,6 +10019,10 @@ textarea {
   font-family: var(--font-family-primary) !important;
 }
 
+.f_gl {
+  font-family: var(--font-family-text) !important;
+}
+
 .hover\:c_white:hover {
   color: white !important;
 }
@@ -29144,6 +29148,7 @@ a[data-init-quickshop] {
 }
 .section-gallery-image .split-gallery .gallery-image__text1 {
   transition: color 0.5s linear;
+  font-size: "Playfair Display";
 }
 @media (max-width: 991px) {
   .section-gallery-image .split-gallery .gallery-image__caption {
