@@ -245,6 +245,13 @@
         "label": "Font",
         "default": "Roboto",
         "info": "[Find the font here](http:\/\/www.google.com\/fonts)"
+      },
+      {
+        "type": "text",
+        "id": "type_base_family_text_gallery",
+        "label": "Font",
+        "default": "Playfair Display",
+        "info": "[Find the font here](http:\/\/www.google.com\/fonts)"
       }
     ]
   },
