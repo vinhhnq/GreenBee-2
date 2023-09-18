@@ -217,7 +217,7 @@ textarea {
       .row.spacing-sm-#{$value} {
          margin-right: #{-(calc($value / 2))}px;
          margin-left: #{-(calc($value / 2))}px;
-         > [class*="col-"],
+         > [class*="col-"],sc 
          > [class*=" col-"],
          > [class*="col"],
          .p_item {
@@ -331,6 +331,7 @@ textarea {
 }
 .f_pr {
    font-family: var(--font-family-primary) !important;
+   // font-family: "Playfair Display" !important;
 }
 .f_gl{
    font-family: var(--font-family-text) !important;

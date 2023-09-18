@@ -64,10 +64,10 @@
               <div class="gallery-image__caption position-absolute text-{{ bst.text_align }} cap-{{ forloop.index }}">
                 <div class="image-caption__content">
                   {% if bst.cta_label != blank %}
-                    <div class="gallery-image__text1 {% if bst.ff_1 == 'f_pr' %}f_pr{% endif %} {% if bst.ff_1 == 'f_gl' %} f_gl {% endif %} font-700 text-{{ bst.tt1 }}" style="color: {{ bst.cta_label_c }}">{{ bst.cta_label }}</div>
+                    <div class="gallery-image__text1{% if bst.ff_1 == 'f_pr' %}f_pr{% endif %} {% if bst.ff_1 == 'f_gl' %}f_gl{% endif %} font-700 text-{{ bst.tt1 }}" style="color: {{ bst.cta_label_c }}">{{ bst.cta_label }}</div>
                   {% endif %}
                   {% if bst.cta_label2 != blank %}
-                    <div class="gallery-image__text2 {% if bst.ff_2 == 'f_pr' %}f_pr{% endif %} {%  if bst.ff_2 == 'f_gl' %} f_gl {% endif %} text-{{ bst.tt1 }}" style="color: {{ bst.cta_label2_c }}">{{ bst.cta_label2 }}</div>
+                    <div class="gallery-image__text2{% if bst.ff_2 == 'f_pr' %}f_pr{% endif %} {% if bst.ff_2 == 'f_gl' %}f_gl{% endif %} text-{{ bst.tt2 }}" style="color: {{ bst.cta_label_c }}">{{ bst.cta_label2 }}</div>
                   {% endif %}
                 </div>
               </div>
@@ -286,7 +286,7 @@
             "id": "ff_1",
             "label": "Font family",
             "default": "f_pr",
-            "options": [
+            "options": [ 
               {"value": "f_df","label": "Body font"},
               {"value": "f_pr","label": "Heading font"},
               {"value": "f_gl","label": "Text font"}
@@ -349,7 +349,8 @@
             "default": "f_df",
             "options": [
               {"value": "f_df","label": "Body font"},
-              {"value": "f_pr","label": "Heading font"}
+              {"value": "f_pr","label": "Heading font"},
+              {"value": "f_gl", "label": "Text font"}
             ]
           },
           {
@@ -527,7 +528,6 @@
       #shopify-section-{{ section.id }} .cap-{{ forloop.index }} {
         {% if settings.enable_rtl and iso_rtl %}{{ bst.position_xl | downcase | replace: 'left', 'right' }}{% else %}{{ bst.position_xl }}{% endif %};
       }
-      
     }
     @media(max-width: 1199px) {
       #shopify-section-{{ section.id }} .cap-{{ forloop.index }} {

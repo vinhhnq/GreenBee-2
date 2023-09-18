@@ -9773,8 +9773,7 @@ textarea {
     margin-right: 0px;
     margin-left: 0px;
   }
-  .row.spacing-sm-0 > [class*=col-],
-.row.spacing-sm-0 > [class*=" col-"],
+  .row.spacing-sm-0 > [class*=col-], .row.spacing-sm-0 sc > [class*=" col-"],
 .row.spacing-sm-0 > [class*=col],
 .row.spacing-sm-0 .p_item {
     padding-left: 0px;
@@ -9784,8 +9783,7 @@ textarea {
     margin-right: -2.5px;
     margin-left: -2.5px;
   }
-  .row.spacing-sm-5 > [class*=col-],
-.row.spacing-sm-5 > [class*=" col-"],
+  .row.spacing-sm-5 > [class*=col-], .row.spacing-sm-5 sc > [class*=" col-"],
 .row.spacing-sm-5 > [class*=col],
 .row.spacing-sm-5 .p_item {
     padding-left: 2.5px;
@@ -9795,8 +9793,7 @@ textarea {
     margin-right: -5px;
     margin-left: -5px;
   }
-  .row.spacing-sm-10 > [class*=col-],
-.row.spacing-sm-10 > [class*=" col-"],
+  .row.spacing-sm-10 > [class*=col-], .row.spacing-sm-10 sc > [class*=" col-"],
 .row.spacing-sm-10 > [class*=col],
 .row.spacing-sm-10 .p_item {
     padding-left: 5px;
@@ -9806,8 +9803,7 @@ textarea {
     margin-right: -7.5px;
     margin-left: -7.5px;
   }
-  .row.spacing-sm-15 > [class*=col-],
-.row.spacing-sm-15 > [class*=" col-"],
+  .row.spacing-sm-15 > [class*=col-], .row.spacing-sm-15 sc > [class*=" col-"],
 .row.spacing-sm-15 > [class*=col],
 .row.spacing-sm-15 .p_item {
     padding-left: 7.5px;
@@ -9817,8 +9813,7 @@ textarea {
     margin-right: -10px;
     margin-left: -10px;
   }
-  .row.spacing-sm-20 > [class*=col-],
-.row.spacing-sm-20 > [class*=" col-"],
+  .row.spacing-sm-20 > [class*=col-], .row.spacing-sm-20 sc > [class*=" col-"],
 .row.spacing-sm-20 > [class*=col],
 .row.spacing-sm-20 .p_item {
     padding-left: 10px;
@@ -9828,8 +9823,7 @@ textarea {
     margin-right: -12.5px;
     margin-left: -12.5px;
   }
-  .row.spacing-sm-25 > [class*=col-],
-.row.spacing-sm-25 > [class*=" col-"],
+  .row.spacing-sm-25 > [class*=col-], .row.spacing-sm-25 sc > [class*=" col-"],
 .row.spacing-sm-25 > [class*=col],
 .row.spacing-sm-25 .p_item {
     padding-left: 12.5px;
@@ -9839,8 +9833,7 @@ textarea {
     margin-right: -15px;
     margin-left: -15px;
   }
-  .row.spacing-sm-30 > [class*=col-],
-.row.spacing-sm-30 > [class*=" col-"],
+  .row.spacing-sm-30 > [class*=col-], .row.spacing-sm-30 sc > [class*=" col-"],
 .row.spacing-sm-30 > [class*=col],
 .row.spacing-sm-30 .p_item {
     padding-left: 15px;
