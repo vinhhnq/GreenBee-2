@@ -1445,7 +1445,7 @@ novtheme.PageSizeGuild = function() {
 };
 novtheme.MobileSlider = function() {
     if ($(window).width() < 768) {
-        $('.nov-slide-mobile').each(function(){
+        $('.nov-slide-mobile').each(function() {
             if ($('html').hasClass('lang-rtl')) {
                 var rtl = true
             } else {

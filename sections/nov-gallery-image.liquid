@@ -64,10 +64,10 @@
               <div class="gallery-image__caption position-absolute text-{{ bst.text_align }} cap-{{ forloop.index }}">
                 <div class="image-caption__content">
                   {% if bst.cta_label != blank %}
-                    <div class="gallery-image__text1 {% if bst.ff_1 == 'f_pr' %}f_pr{% endif %} {% if bst.ff_1 == 'f_gl' %}f_gl{% endif %} font-700 text-{{ bst.tt1 }}" style="color: {{ bst.cta_label_c }}">{{ bst.cta_label }}</div>
+                    <div class="gallery-image__text1{% if bst.ff_1 == 'f_pr' %}f_pr{% endif %} {% if bst.ff_1 == 'f_gl' %}f_gl{% endif %} font-700 text-{{ bst.tt1 }}" style="color: {{ bst.cta_label_c }}">{{ bst.cta_label }}</div>
                   {% endif %}
                   {% if bst.cta_label2 != blank %}
-                    <div class="gallery-image__text2 {% if bst.ff_2 == 'f_pr' %}f_pr{% endif %} {% if bst.ff_2 == 'f_gl' %}f_gl{% endif %} text-{{ bst.tt2 }}" style="color: {{ bst.cta_label_c }}">{{ bst.cta_label2 }}</div>
+                    <div class="gallery-image__text2{% if bst.ff_2 == 'f_pr' %}f_pr{% endif %} {% if bst.ff_2 == 'f_gl' %}f_gl{% endif %} text-{{ bst.tt2 }}" style="color: {{ bst.cta_label_c }}">{{ bst.cta_label2 }}</div>
                   {% endif %}
                 </div>
               </div>
@@ -522,7 +522,7 @@
       {% if settings.enable_rtl and iso_rtl %}{{ bst.position | downcase | replace: 'left', 'right' }}{% else %}{{ bst.position }}{% endif %};
     }
     #shopify-section-{{ section.id }} .cap-{{ forloop.index }} .gallery-image__text1 {
-      font-size: {{ bst.cta_label_n | time: 0.7 }}px;
+      font-size: {{ bst.cta_label1_n | time: 0.7 }}px;
     }
     @media(max-width: 1440px) { 
       #shopify-section-{{ section.id }} .cap-{{ forloop.index }} {
@@ -534,11 +534,11 @@
         {% if settings.enable_rtl and iso_rtl %}{{ bst.position_lg | downcase | replace: 'left', 'right' }}{% else %}{{ bst.position_lg }}{% endif %};
       }
       #shopify-section-{{ section.id }} .cap-{{ forloop.index }} .gallery-image__text1 {
-        font-size: {{ bst.cta_label1_n | times: 0.7}}px;
+        font-size: clamp(10px, {{ bst.cta_label1_n | times: 0.7}}px, 30px);
         margin-bottom: {{ bst.cta_label_mb | times: 0.7}}px;
       }
       #shopify-section-{{ section.id }} .cap-{{ forloop.index }} .gallery-image__text2 {
-        font-size: {{ bst.cta_label2_n | times: 0.7}}px;
+        font-size: clamp(10px, {{ bst.cta_label1_n | times: 0.7}}px, 11px);
         margin-bottom: {{ bst.cta_label2_mb | times: 0.7}}px;
       }
     }
@@ -546,13 +546,19 @@
       #shopify-section-{{ section.id }} .cap-{{ forloop.index }} {
         {% if settings.enable_rtl and iso_rtl %}{{ bst.position_md | downcase | replace: 'left', 'right' }}{% else %}{{ bst.position_md }}{% endif %};
       }
+      #shopify-section-{{ section.id }} .cap-{{ forloop.index }} .gallery-image__text1{ 
+        font-size: clamp(10px, {{ bst.cta_label1_n | times: 0.7}}px, 20px);
+      }
+      #shopify-section-{{ section.id }} .cap-{{ forloop.index }} .gallery-image__text2 {
+        font-size: clamp(10px, {{ bst.cta_label2_n | times: 0.7 }}px, 20px);
+      }
     }
     @media(max-width: 767px) {
       #shopify-section-{{ section.id }} .cap-{{ forloop.index }} {
         {% if settings.enable_rtl and iso_rtl %}{{ bst.position_sm | downcase | replace: 'left', 'right' }}{% else %}{{ bst.position_sm }}{% endif %};
       }
       #shopify-section-{{ section.id }} .cap-{{ forloop.index }} .gallery-image__text1 {
-        font-size: clamp(10px, {{ bst.cta_label_n | times: 0.6}}px, 20px);
+        font-size: clamp(10px, {{ bst.cta_label1_n | times: 0.6}}px, 40px);
         margin-bottom: clamp(5px, {{ bst.cta_label_mb | times: 0.6}}px, 20px);
       }
       #shopify-section-{{ section.id }} .cap-{{ forloop.index }} .gallery-image__text2 {
