@@ -668,9 +668,6 @@
     #shopify-section-{{ section.id }} .block-{{ forloop.index }} .desc-policy {
       max-width: {{ block.settings.mw | append: 'px' }};
     }
-    #shopify-section-{{ section.id }} .policy-icon {
-      background: url("./assets/p-i-bg.png") no-repeat;
-    }
     {%- if block.settings.bg_image != blank -%}
       #shopify-section-{{ section.id }} .block-{{ forloop.index }} {
         background: url("{{ block.settings.bg_image | img_url: "650x" }}") no-repeat center;
