@@ -28759,6 +28759,7 @@ a[data-init-quickshop] {
 
 /* Policy  ========================================================================================================== */
 .section-policy .policy-icon {
+  background: url("p-i-bg.png") no-repeat;
   width: 85px;
   height: 85px;
   min-width: 85px;
