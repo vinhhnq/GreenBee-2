@@ -558,11 +558,11 @@
         {% if settings.enable_rtl and iso_rtl %}{{ bst.position_sm | downcase | replace: 'left', 'right' }}{% else %}{{ bst.position_sm }}{% endif %};
       }
       #shopify-section-{{ section.id }} .cap-{{ forloop.index }} .gallery-image__text1 {
-        font-size: clamp(10px, {{ bst.cta_label1_n | times: 0.6}}px, 40px);
+        font-size: clamp(24px, {{ bst.cta_label1_n | times: 0.6}}px, 30px);
         margin-bottom: clamp(5px, {{ bst.cta_label_mb | times: 0.6}}px, 20px);
       }
       #shopify-section-{{ section.id }} .cap-{{ forloop.index }} .gallery-image__text2 {
-        font-size: clamp(10px, {{ bst.cta_label2_n | times: 0.6}}px, 16px);
+        font-size: clamp(14px, {{ bst.cta_label2_n | times: 0.6}}px, 16px);
         margin-bottom: clamp(5px, {{ bst.cta_label2_mb | times: 0.6}}px, 20px);
       }
     }
@@ -570,6 +570,7 @@
       #shopify-section-{{ section.id }} .cap-{{ forloop.index }} {
         {% if settings.enable_rtl and iso_rtl %}{{ bst.position_xs | downcase | replace: 'left', 'right' }}{% else %}{{ bst.position_xs }}{% endif %};
       }
+      
     }
   {% endfor %}
 </style>

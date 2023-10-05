@@ -25,9 +25,9 @@
             {% assign bst = block.settings %}
             <div class="nov-policy-item {{ sst.width_xl }} {{ sst.width_lg }} {{ sst.width_md }} {{ sst.width_sm }} {{ sst.width_xs }}{% if sst.bg_i == true %} bg-icon{% endif %}{% if sst.show_border_item == true %} show-border{% endif %} {% if bst.class != blank %} {{ bst.class }}{% endif %}">
               {% if sst.style == 'style1' %}
-                <div class="policy__item--content text-md-center d-flex align-items-center d-md-block h-100 style1 block-{{ forloop.index }}">
+                <div class="policy__item--content text-{{ bst.text_align }} d-flex d-md-block d-lg-flex align-items-center h-100 style1 block-{{ forloop.index }}">
                   {% if bst.policy_icon != blank %}
-                    <div class="policy-icon d-inline-flex align-items-center justify-content-center mb-25 mb-sm-0 position-relative">
+                    <div class="policy-icon d-inline-flex nv-mr-20 mb-md-10 align-items-center justify-content-center position-relative">
                     {% if bst.policy_icon != blank %}
                         {% assign imagewidths = bst.policy_icon.width %}
                         {{ bst.policy_icon | image_url: width: imagewidths | image_tag:
@@ -42,7 +42,7 @@
                     </div>
                   {% endif %}
                   <div class="heading--policy position-relative">
-                    {% if bst.title_policy != blank %}<div class="title-policy font-700 f_pr">{{ bst.title_policy }}</div>{% endif %}
+                    {% if bst.title_policy != blank %}<div class="title-policy font-700 text-{{ bst.tt1 }}">{{ bst.title_policy }}</div>{% endif %}
                     {% if bst.desc_policy != blank %}<div class="desc-policy{% if bst.title_policy != blank %} mt-5{% endif %}">{{ bst.desc_policy }}</div>{% endif %}
                     {% if bst.tl != blank %}
                       <a href="{{ bst.link }}" class="d-block font-600 mt-10 hover:c_pr">
@@ -71,7 +71,7 @@
                     </div>
                   {% endif %}
                   <div class="heading--policy position-relative">
-                    {% if bst.title_policy != blank %}<div class="title-policy f_pr font-700">{{ bst.title_policy }}</div>{% endif %}
+                    {% if bst.title_policy != blank %}<div class="title-policy f_pr font-700 text-{{ bst.tt1 }}">{{ bst.title_policy }}</div>{% endif %}
                     {% if bst.desc_policy != blank %}<div class="desc-policy{% if bst.title_policy != blank %} mt-10{% endif %}">{{ bst.desc_policy }}</div>{% endif %}
                     {% if bst.tl != blank %}
                       <a href="{{ bst.link }}" class="font-600 hover:c_pr">
@@ -487,6 +487,27 @@
             "default": "Free Delivery From $ 250"
           },
           {
+            "type": "select",
+            "id": "tt1",
+            "label": "Text transform",
+            "default": "uppercase",
+            "options": [
+              { "value": "capitalize", "label": "Capitalize" },
+              { "value": "uppercase", "label": "Uppercase" },
+              { "value": "none", "label": "None" }
+            ]
+          },
+          {
+            "type": "select",
+            "id": "text_align",
+            "label": "Text alignment",
+            "options": [
+              {"value": "left", "label": "Left"},
+              {"value": "center", "label": "Center"},
+              {"value": "right", "label": "Right"}
+            ]
+          },
+          {
             "type": "inline_richtext",
             "id": "desc_policy",
             "label": "Description policy",
@@ -588,7 +609,7 @@
     font-size: {{ sst.desc_fz | divided_by: 10.0 | append: 'rem' }};
     color: {{ sst.desc_color }};
     line-height: 22px;
-    font-weight: 300;
+    font-weight: 400;
   }
   #shopify-section-{{ section.id }} a {
     color: {{ sst.desc_color }};
@@ -646,6 +667,9 @@
   {% for block in section.blocks %}
     #shopify-section-{{ section.id }} .block-{{ forloop.index }} .desc-policy {
       max-width: {{ block.settings.mw | append: 'px' }};
+    }
+    #shopify-section-{{ section.id }} .policy-icon {
+      background: url("./assets/p-i-bg.png") no-repeat;
     }
     {%- if block.settings.bg_image != blank -%}
       #shopify-section-{{ section.id }} .block-{{ forloop.index }} {

@@ -374,7 +374,7 @@
             "position_xl": "width: 60%; left: 10%; top: 30%",
             "position_lg": "width: 50%; left: 10%; top: 30%",
             "position_md": "width: 70%; left: 10%; top: 20%",
-            "position_sm": "",
+            "position_sm": "width: 40%; left: 10%; top: 30%",
             "position_xs": "",
             "class": ""
           }
@@ -404,7 +404,7 @@
             "position_xl": "width: 50%; left: 48%; top: 30%",
             "position_lg": "width: 50%; left: 48%; top: 30%",
             "position_md": "width: 60%; left: 35%; top: 20%",
-            "position_sm": "",
+            "position_sm": "width: 40%; left: 10%; top: 30%",
             "position_xs": "",
             "class": ""
           }
@@ -434,7 +434,7 @@
             "position_xl": "width: 60%; left: 10%; top: 30%",
             "position_lg": "width: 50%; left: 10%; top: 30%",
             "position_md": "width: 60%; left: 10%; top: 20%",
-            "position_sm": "",
+            "position_sm": "width: 40%; left: 10%; top: 30%",
             "position_xs": "",
             "class": ""
           }
@@ -465,10 +465,104 @@
         "distance_top": 30,
         "distance_bottom": 30
       }
+    },
+    "7c0399e5-863a-4a3b-82f7-a3f59f5c1e87": {
+      "type": "nov-policy",
+      "blocks": {
+        "template--19940596547878__7c0399e5-863a-4a3b-82f7-a3f59f5c1e87-item_policy-1": {
+          "type": "item_policy",
+          "settings": {
+            "policy_icon": "shopify:\/\/shop_images\/p-1.png",
+            "title_policy": "cash on delicery",
+            "tt1": "uppercase",
+            "text_align": "left",
+            "desc_policy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit eiusmod tempor",
+            "mw": 500,
+            "tl": "",
+            "link": "",
+            "bg_icon": "",
+            "class": ""
+          }
+        },
+        "template--19940596547878__7c0399e5-863a-4a3b-82f7-a3f59f5c1e87-item_policy-2": {
+          "type": "item_policy",
+          "settings": {
+            "policy_icon": "shopify:\/\/shop_images\/p-2.png",
+            "title_policy": "free shipping",
+            "tt1": "uppercase",
+            "text_align": "left",
+            "desc_policy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit eiusmod tempor",
+            "mw": 500,
+            "tl": "",
+            "link": "",
+            "bg_icon": "",
+            "class": ""
+          }
+        },
+        "template--19940596547878__7c0399e5-863a-4a3b-82f7-a3f59f5c1e87-item_policy-3": {
+          "type": "item_policy",
+          "settings": {
+            "policy_icon": "shopify:\/\/shop_images\/p-3.png",
+            "title_policy": "money back guarantee",
+            "tt1": "uppercase",
+            "text_align": "left",
+            "desc_policy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit eiusmod tempor",
+            "mw": 500,
+            "tl": "",
+            "link": "",
+            "bg_icon": "",
+            "class": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19940596547878__7c0399e5-863a-4a3b-82f7-a3f59f5c1e87-item_policy-1",
+        "template--19940596547878__7c0399e5-863a-4a3b-82f7-a3f59f5c1e87-item_policy-2",
+        "template--19940596547878__7c0399e5-863a-4a3b-82f7-a3f59f5c1e87-item_policy-3"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_c": "#222222",
+        "subheading": "",
+        "subheading_c": "#666666",
+        "title_alignment": "text-left",
+        "style": "style1",
+        "width_icon": 90,
+        "height_icon": 30,
+        "bg_i": false,
+        "bg_i_w": 85,
+        "bg_icon": "#ffffff",
+        "text_fz": 16,
+        "text_color": "#222222",
+        "desc_fz": 13,
+        "desc_color": "#666666",
+        "bg_itemcolor": "",
+        "bd_radius": 0,
+        "show_border_item": false,
+        "c_border": "",
+        "pt": 0,
+        "pb": 0,
+        "width_xl": "col-xl-4",
+        "width_lg": "col-lg-4",
+        "width_md": "col-md-4",
+        "width_sm": "col-sm-12",
+        "width_xs": "col-12",
+        "spacing": 30,
+        "animate": true,
+        "br_container": 0,
+        "container": "container",
+        "background_color": "",
+        "gradient": "",
+        "bg_size": "full",
+        "class": "",
+        "distance_top": 30,
+        "distance_bottom": 30
+      }
     }
   },
   "order": [
     "9e374973-f7d9-4a2f-974c-18a90163771d",
-    "d650a789-9ea7-4d81-934c-f5c58e6a6e01"
+    "d650a789-9ea7-4d81-934c-f5c58e6a6e01",
+    "7c0399e5-863a-4a3b-82f7-a3f59f5c1e87"
   ]
 }
