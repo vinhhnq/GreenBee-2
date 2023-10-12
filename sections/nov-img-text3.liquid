@@ -1,0 +1,133 @@
+{% assign sst = section.settings %}
+<div class="distance{% if sst.class != blank %} {{ sst.class }}{% endif %}{% if sst.animate == true %} wow fadeInUp animated{% endif %}">
+  {% if sst.container == "container" %}
+    <div class="container">
+  {% endif %}
+  {% if sst.container == "container-fluid" %}
+    <div class="container-fluid">
+  {% endif %}
+  {% if sst.container == "container-full" %}
+    <di class="container-full"> 
+  {% endif %} 
+  
+  {% if sst.heading != blank or sst.sub_heading != blank %}
+    <div class="block_title {{ sst.block_alignment }}">
+      {% if sst.heading != blakn %}
+        <span class="title">{{ sst.heading }}</span>
+      {% endif %}
+      {% if sst.sub_heading != blank %}
+        <span class="sub_title">{{ sst.sub_heading }}</span>
+      {% endif %}
+    </div>
+  {% endif %}
+
+</div>  
+{% schema %}
+  {
+    "name": "Vinova Image With text 3",
+    "class": "section-img-text3",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Block Content Text"
+      },
+      {
+        "type": "richtext",
+        "id": "heading", 
+        "label": "Heading Text"
+      },
+      {
+        "type": "color",
+        "id": "c_h_text",
+        "label": "Color Heading"
+      },
+      
+      {
+        "type": "richtext",
+        "id": "sub_heading",
+        "label": "Sub Heading Text"
+      },
+      {
+        "type": "color",
+        "id": "c_subt",
+        "label": "Color Sub Heading Text"
+      },
+      {
+        "type": "text",
+        "id": "class",
+        "label": "Class"
+      },
+      {
+        "type": "header",
+        "content": "Design Option"
+      },
+      {
+        "type": "select",
+        "id": "container",
+        "label": "Container",
+        "default": "container",
+        "options": [
+          { "value": "container", "label": "Container" },
+          { "value": "container-fluid", "label": "Container fluid" },
+          { "value": "container-full", "label": "Container full width" }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "block_alignment",
+        "label": "Block text alignment",
+        "default": "text-center",
+        "options": [
+          { "value": "text-left", "label": "Text left" },
+          { "value": "text-center", "label": "Text center" },
+          { "value": "text-right", "label": "Text right" }
+        ]
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text_item",
+        "name": "Item image text",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "img_ic_text",
+            "label": "Icon Image Text"
+          }
+        ]
+      },
+      {
+        "type": "image_content",
+        "name": "Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image_content",
+            "label": "Image Content"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Vinova Image With Text 3",
+        "blocks": [
+          {
+            "type": "text_item"
+          },
+          {
+            "type": "image_content"
+          },
+          {
+            "type": "text_item"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+{% style %}
+  #shopify-section{{ section.id }} {
+  
+  }
+{% endstyle %}

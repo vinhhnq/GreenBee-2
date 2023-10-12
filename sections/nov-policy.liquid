@@ -59,7 +59,7 @@
                     <div class="policy-icon d-inline-flex align-items-center justify-content-center position-relative">
                       {% if bst.policy_icon != blank %}
                         {% assign imagewidths = bst.policy_icon.width %}
-                        {{ bst.policy_icon | image_url: width: imagewidths | image_tag:
+                        {{ bst.policy_icon | image_url: with: imagewidths | image_tag:
                            loading: 'lazy',
                            class: 'img-fluid',
                            alt: 'icon_policy',

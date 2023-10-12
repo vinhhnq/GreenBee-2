@@ -294,6 +294,20 @@
 }
 /* Policy  ========================================================================================================== */
 .section-policy {
+   .policy-icon {
+      background: url("p-i-bg.png") no-repeat;
+      @include square(85px);
+      min-width: 85px;
+      text-align: center;
+      line-height: 85px;
+   }
+   .title-policy {
+      font-family: Poppins,HelveticaNeue,Helvetica Neue,sans-serif;
+      font-size: 1.4rem;
+   }
+   .desc-policy {
+      font-family: Roboto,HelveticaNeue,Helvetica Neue,sans-serif;
+   }
    .policy__item--content {
       position: relative;
       &:hover img {
@@ -314,7 +328,6 @@
       }
       .style1 .desc-policy {
          margin: auto;
-         padding: 0 10px;
       }
       .style2 .policy-icon {
          margin-bottom: 10px;

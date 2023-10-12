@@ -2495,6 +2495,9 @@ button.close{
 .mb-auto,.my-auto{
     margin-bottom:auto!important 
 }
+.nv-mr-20 {
+    margin-right: 20px!important;
+}
 @media (min-width:576px){
     .m-sm-1{
         margin:.25rem!important 
@@ -2658,6 +2661,9 @@ button.close{
     }
     .mb-lg-auto,.my-lg-auto{
         margin-bottom:auto!important 
+    }
+    .mb-md-10 {
+        margin-bottom: 10px!important;
     }
 }
 @media (min-width:1200px){

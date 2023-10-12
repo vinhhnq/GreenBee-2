@@ -29,8 +29,9 @@
                   {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
                 {% endif %}
               </div>
+            
             {% endif %}
-            {% if sst.video != blank %}
+            {% if sst.video != blank %}   
               <video autoplay playsinline loop muted style="object-fit: cover;width: 100%">
                 {% if sst.video.sources[0].url contains '.m3u8' %}
                   {%- assign video = sst.video.sources[1].url -%}
