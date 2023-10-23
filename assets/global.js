@@ -472,14 +472,8 @@ novtheme.VerticalThumbnailProductDetail = function () {
       );
       $("variant-radios label").click(function () {
          setTimeout(function () {
-            var dindex = $(
-               ".product-template__scroll .proFeaturedImage, .product-template__imggrid .proFeaturedImage"
-            )
-               .find(".item.act")
-               .attr("data-slick-index");
-            $(
-               ".product-template__scroll .proFeaturedImage, .product-template__imggrid .proFeaturedImage"
-            ).slick("slickGoTo", dindex);
+            var dindex = $(".product-template__scroll .proFeaturedImage, .product-template__imggrid .proFeaturedImage").find(".item.act").attr("data-slick-index");
+            $(".product-template__scroll .proFeaturedImage, .product-template__imggrid .proFeaturedImage").slick("slickGoTo", dindex);
          }, 300);
       });
    }

@@ -465,11 +465,179 @@
         "distance_top": 30,
         "distance_bottom": 30
       }
+    },
+    "7c0399e5-863a-4a3b-82f7-a3f59f5c1e87": {
+      "type": "nov-policy",
+      "blocks": {
+        "template--19940596547878__7c0399e5-863a-4a3b-82f7-a3f59f5c1e87-item_policy-1": {
+          "type": "item_policy",
+          "settings": {
+            "policy_icon": "shopify:\/\/shop_images\/p-1.png",
+            "title_policy": "cash on delicery",
+            "tt1": "uppercase",
+            "text_align": "left",
+            "desc_policy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit eiusmod tempor",
+            "mw": 500,
+            "tl": "",
+            "link": "",
+            "bg_icon": "",
+            "class": ""
+          }
+        },
+        "template--19940596547878__7c0399e5-863a-4a3b-82f7-a3f59f5c1e87-item_policy-2": {
+          "type": "item_policy",
+          "settings": {
+            "policy_icon": "shopify:\/\/shop_images\/p-2.png",
+            "title_policy": "free shipping",
+            "tt1": "uppercase",
+            "text_align": "left",
+            "desc_policy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit eiusmod tempor",
+            "mw": 500,
+            "tl": "",
+            "link": "",
+            "bg_icon": "",
+            "class": ""
+          }
+        },
+        "template--19940596547878__7c0399e5-863a-4a3b-82f7-a3f59f5c1e87-item_policy-3": {
+          "type": "item_policy",
+          "settings": {
+            "policy_icon": "shopify:\/\/shop_images\/p-3.png",
+            "title_policy": "money back guarantee",
+            "tt1": "uppercase",
+            "text_align": "left",
+            "desc_policy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit eiusmod tempor",
+            "mw": 500,
+            "tl": "",
+            "link": "",
+            "bg_icon": "",
+            "class": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19940596547878__7c0399e5-863a-4a3b-82f7-a3f59f5c1e87-item_policy-1",
+        "template--19940596547878__7c0399e5-863a-4a3b-82f7-a3f59f5c1e87-item_policy-2",
+        "template--19940596547878__7c0399e5-863a-4a3b-82f7-a3f59f5c1e87-item_policy-3"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_c": "#222222",
+        "subheading": "",
+        "subheading_c": "#666666",
+        "title_alignment": "text-left",
+        "style": "style1",
+        "width_icon": 90,
+        "height_icon": 30,
+        "bg_i": false,
+        "bg_i_w": 85,
+        "bg_icon": "#ffffff",
+        "text_fz": 14,
+        "text_color": "#222222",
+        "desc_fz": 13,
+        "desc_color": "#666666",
+        "bg_itemcolor": "",
+        "bd_radius": 0,
+        "show_border_item": false,
+        "c_border": "",
+        "pt": 0,
+        "pb": 0,
+        "width_xl": "col-xl-4",
+        "width_lg": "col-lg-4",
+        "width_md": "col-md-4",
+        "width_sm": "col-sm-12",
+        "width_xs": "col-12",
+        "spacing": 30,
+        "animate": true,
+        "br_container": 0,
+        "container": "container",
+        "background_color": "",
+        "gradient": "",
+        "bg_size": "full",
+        "class": "",
+        "distance_top": 0,
+        "distance_bottom": 30
+      }
+    },
+    "da511e5e-27a5-47e2-a716-81062978d07d": {
+      "type": "nov-img-text3",
+      "blocks": {
+        "0a038905-3855-41d0-9377-7dcd82b9928b": {
+          "type": "block_text",
+          "settings": {
+            "img_ic_text": "shopify:\/\/shop_images\/p-3.png",
+            "title": "<p>nginaisndlkansdi<\/p>",
+            "desc": "<p>gánigniasnlknlkiglkdngksnlknsdfsld<\/p>",
+            "text_alignment": "text-left"
+          }
+        },
+        "fcc8e440-6bb8-415e-b98c-4cfa7ae4a790": {
+          "type": "block_text",
+          "settings": {
+            "img_ic_text": "shopify:\/\/shop_images\/p-2.png",
+            "title": "<p>asnigniansdlkqw<\/p>",
+            "desc": "<p>gnasidnaisndlkasid<\/p>",
+            "text_alignment": "text-left"
+          }
+        },
+        "58fde01f-18c3-4abb-bcf4-0a92751aed2e": {
+          "type": "block_image",
+          "settings": {
+            "banner_img": "shopify:\/\/shop_images\/banner_img_text3.png"
+          }
+        },
+        "820ba33b-d9cb-46e9-9e2f-f36d879ddd14": {
+          "type": "block_text",
+          "settings": {
+            "img_ic_text": "shopify:\/\/shop_images\/p-1.png",
+            "title": "<p>gbanausnd<\/p>",
+            "desc": "<p>gansasidnalskdlqw;ogqw<\/p>",
+            "text_alignment": "text-right"
+          }
+        },
+        "0d320196-a6e8-4ab9-8d16-318a516d1c50": {
+          "type": "block_text",
+          "settings": {
+            "img_ic_text": "shopify:\/\/shop_images\/p-1.png",
+            "title": "<p>gasdasdasda<\/p>",
+            "desc": "<p>gfasdsdgsdfsdf<\/p>",
+            "text_alignment": "text-right"
+          }
+        }
+      },
+      "block_order": [
+        "0a038905-3855-41d0-9377-7dcd82b9928b",
+        "fcc8e440-6bb8-415e-b98c-4cfa7ae4a790",
+        "58fde01f-18c3-4abb-bcf4-0a92751aed2e",
+        "820ba33b-d9cb-46e9-9e2f-f36d879ddd14",
+        "0d320196-a6e8-4ab9-8d16-318a516d1c50"
+      ],
+      "custom_css": [
+        "p {margin-bottom: 0;}"
+      ],
+      "settings": {
+        "ttle": "<p>We Grow Best Food<\/p>",
+        "c_h_text": "#222222",
+        "fs_text": 28,
+        "fw_tt": "800",
+        "sub_title": "<p>Lorem ipsum dolor sit amet, consectetur elit sed do eiusmod tempor incididunt <\/p>",
+        "c_subt": "#666666",
+        "fs_tt2": 13,
+        "fw_subt": "700",
+        "class": "",
+        "container": "container",
+        "text_alignment": "text-center",
+        "animate": true,
+        "c_bg": "",
+        "distance_top": 30,
+        "distance_bottom": 30
+      }
     }
   },
   "order": [
     "9e374973-f7d9-4a2f-974c-18a90163771d",
     "d650a789-9ea7-4d81-934c-f5c58e6a6e01",
-    "7c0399e5-863a-4a3b-82f7-a3f59f5c1e87"
+    "7c0399e5-863a-4a3b-82f7-a3f59f5c1e87",
+    "da511e5e-27a5-47e2-a716-81062978d07d"
   ]
 }

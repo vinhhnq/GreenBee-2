@@ -29488,6 +29488,7 @@ a[data-init-quickshop] {
   margin-bottom: 0;
 }
 
+/* Section Img Text 3 ======================================================================================================== */
 /* Manufacture ====================================================================================================== */
 .section-manufacture .manufacture__item {
   transition: all 0.3s;
@@ -30917,9 +30918,9 @@ a[data-init-quickshop] {
   border-radius: 0 0 20px 20px;
 }
 .site-nav-vertical .site-nav__link--main {
-  font-family: var(--font-family-default);
+  font-family: Roboto, HelveticaNeue, Helvetica Neue, sans-serif;
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 400;
   text-transform: none;
   position: relative;
   display: flex;

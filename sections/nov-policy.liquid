@@ -88,7 +88,6 @@
           {% if sst.img_bottom != blank %}
           <div class="text-center">
             <img data-src="{{ sst.img_bottom | img_url: '' }}" class="lazyload img-bottom" alt="{{ sst.img_bottom.alt }}">
-
               {% assign imagewidths = sst.img_bottom.width %}
               {%- assign imagealt = sst.img_bottom | default: sst.img_bottom.alt | strip_html | escape -%}
               {{ sst.img_bottom | image_url: width: imagewidths | image_tag:

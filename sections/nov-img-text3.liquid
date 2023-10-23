@@ -7,20 +7,68 @@
     <div class="container-fluid">
   {% endif %}
   {% if sst.container == "container-full" %}
-    <di class="container-full"> 
+    <div class="container-full"> 
   {% endif %} 
   
-  {% if sst.heading != blank or sst.sub_heading != blank %}
-    <div class="block_title {{ sst.block_alignment }}">
-      {% if sst.heading != blakn %}
-        <span class="title">{{ sst.heading }}</span>
+  {% if sst.ttle != blank or sst.sub_title != blank %}
+    <div class="block_title {{ sst.text_alignment }}">
+      {% if sst.ttle != blank %}
+        <div class="head_title mb-0" style="color: {{ sst.c_h_text }};">{{ sst.ttle }}</div>
       {% endif %}
-      {% if sst.sub_heading != blank %}
-        <span class="sub_title">{{ sst.sub_heading }}</span>
+      {% if sst.sub_title != blank %}
+        <div class="sub_title" style="color: {{ sst.c_subt }}">{{ sst.sub_title }}</div>      
       {% endif %}
     </div>
   {% endif %}
-
+  
+  <div class="row align-items-center justify-content-center">
+    {% for block in section.blocks %}
+      {% assign bst = block.settings %}
+      {% case block.type %}
+        {% when 'block_text' %}
+          <div class="block_text col-lg-3 col-md-4 {{ bst.text_alignment }}">
+            <div class="text_icon">
+              {% if bst.img_ic_text != blank %}
+                {% liquid
+                  assign imagewidths = bst.img_ic_text.width 
+                  assign imgalt = bst.img_ic_text | default: bst.img_ic_text.alt | strip_html | escape
+                  assign imgWidths = '55 80 100 200' %}
+                {{ bst.img_ic_text | image_url: width: imagewidths | image_tag: 
+                  loading: 'lazy',
+                  class: 'img-fluid',
+                  alt: imgalt,
+                  widths: imgWidths
+                }}
+              {% endif %}
+            </div>
+            <div class="text_content">
+              {% if bst.title != blank %}
+                <div class="title">{{ bst.title }}</div>
+              {% endif %}
+              {% if bst.desc != blank %}
+                <div class="t_desc">{{ bst.desc }}</div>
+              {% endif %}
+            </div>
+          </div>	
+				{% when 'block_image' %}
+					<div class="col-lg-6 col-md-4">
+            {% if bst.banner_img != blank %}
+              {% liquid
+                assign imagewidths = bst.banner_img.width
+                assign imgealt = bst.banner_img1 | default: bst.banner_img.alt | strip_html | escape
+                assign imgwidths = '519, 750, 1100, 1500, 1780, 2048'
+              %}
+              {{ bst.banner_img |  image_url: width: imagewidths | image_tag:
+                loading: 'lazy',
+                class: 'img-fluid',
+                alt: imgalt,
+                widthsL: imgwidths
+              }}
+            {% endif %}
+          </div>
+				{% endcase %}
+    {% endfor %}
+  </div>
 </div>  
 {% schema %}
   {
@@ -33,24 +81,66 @@
       },
       {
         "type": "richtext",
-        "id": "heading", 
-        "label": "Heading Text"
+        "id": "ttle", 
+        "label": "Title",
+        "default": "<p>We Grow Best Food</p>"
       },
       {
         "type": "color",
         "id": "c_h_text",
         "label": "Color Heading"
       },
-      
       {
+        "type": "number",
+        "id": "fs_text",
+        "label": "Font-size heading (px)",
+        "default": 28
+      },
+      {
+        "type": "select",
+        "id": "fw_tt",
+        "label": "Font weight",
+        "default": "400",
+        "options": [
+          { "value": "300", "label": "Light" },
+          { "value": "400", "label": "Regular" },
+          { "value": "500", "label": "Medium" },
+          { "value": "600", "label": "Semibold" },
+          { "value": "700", "label": "Bold" },
+          { "value": "800", "label": "Extrabold" },
+          { "value": "900", "label": "Black" }
+        ]
+      },
+      {    
         "type": "richtext",
-        "id": "sub_heading",
-        "label": "Sub Heading Text"
+        "id": "sub_title",
+        "label": "Sub Title"
       },
       {
         "type": "color",
         "id": "c_subt",
         "label": "Color Sub Heading Text"
+      },
+      {
+        "type": "number",
+        "id": "fs_tt2",
+        "label": "Font-size sub heading (px)",
+        "default": 13
+      },
+      {
+        "type": "select",
+        "id": "fw_subt",
+        "label": "Font weight",
+        "default": "400",
+        "options": [
+          { "value": "300", "label": "Light" },
+          { "value": "400", "label": "Regular" },
+          { "value": "500", "label": "Medium" },
+          { "value": "600", "label": "Semibold" },
+          { "value": "700", "label": "Bold" },
+          { "value": "800", "label": "Extrabold" },
+          { "value": "900", "label": "Black" }
+        ]
       },
       {
         "type": "text",
@@ -74,36 +164,81 @@
       },
       {
         "type": "select",
-        "id": "block_alignment",
-        "label": "Block text alignment",
-        "default": "text-center",
+        "id": "text_alignment",
+        "label": "Text alignment",
+        "default": "text-left",
         "options": [
           { "value": "text-left", "label": "Text left" },
           { "value": "text-center", "label": "Text center" },
           { "value": "text-right", "label": "Text right" }
         ]
+      },
+      {
+        "type": "checkbox",
+        "id": "animate",
+        "label": "Show animate",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "c_bg",
+        "label": "Backround color"
+      },
+      {
+        "type": "number",
+        "id": "distance_top",
+        "label": "Top Spacing Section (px)",
+        "default": 30
+      },
+      {
+        "type": "number",
+        "id": "distance_bottom",
+        "label": "Bottom Spacing Section (px)",
+        "default": 30
       }
     ],
     "blocks": [
       {
-        "type": "text_item",
-        "name": "Item image text",
+        "type": "block_text",
+        "name": "Text",
         "settings": [
           {
             "type": "image_picker",
             "id": "img_ic_text",
             "label": "Icon Image Text"
+          },
+          {
+            "type": "richtext",
+            "id": "title",
+            "label": "Block title"
+          },
+          {
+            "type": "richtext",
+            "id": "desc",
+            "label": "Description"
+          },
+          {
+            "type": "select",
+            "id": "text_alignment",
+            "label": "Text alignment",
+            "default": "text-left",
+            "options": [
+              { "value": "text-left", "label": "Text left" },
+              { "value": "text-center", "label": "Text center" },
+              { "value": "text-right", "label": "Text right" }
+            ]
           }
         ]
       },
       {
-        "type": "image_content",
+        "type": "block_image",
         "name": "Image",
+        "limit": 1,
         "settings": [
           {
             "type": "image_picker",
-            "id": "image_content",
-            "label": "Image Content"
+            "id": "banner_img",
+            "label": "Image"
           }
         ]
       }
@@ -113,21 +248,27 @@
         "name": "Vinova Image With Text 3",
         "blocks": [
           {
-            "type": "text_item"
-          },
+            "type": "block_text"
+          }, 
           {
-            "type": "image_content"
-          },
-          {
-            "type": "text_item"
+            "type": "block_image"
           }
         ]
       }
     ]
   }
 {% endschema %}
+
 {% style %}
-  #shopify-section{{ section.id }} {
-  
+  #shopify-section-{{ section.id }} .distance {
+    padding-top: {{ sst.distance_top | append: 'px'}};
+    padding-bottom: {{ sst.distance_bottom | append: 'px' }};
+    {%  if sst.c_bg != blank %}
+      background-color: {{ sst.c_bg }};
+    {% endif %}   
   }
+  #shopify-section-{{ section.id }} .head_title {
+    font-size: {{ sst.fs_text |  append: 'px' }};
+    font-weight: {{ sst.fw_tt }};
+  }    
 {% endstyle %}
