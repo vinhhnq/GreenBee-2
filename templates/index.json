@@ -565,6 +565,12 @@
         "0a038905-3855-41d0-9377-7dcd82b9928b": {
           "type": "block_text",
           "settings": {
+            "img_ic_text1": "shopify:\/\/shop_images\/p-1.png",
+            "title1": "<p>asfasdas<\/p>",
+            "desc1": "<p>sdfsdfsdfsdfsdfasdsdfsdfsd<\/p>",
+            "img_ic_text2": "shopify:\/\/shop_images\/p-1.png",
+            "title2": "<p>asdasdasdasd<\/p>",
+            "desc2": "<p>gffsdgdfgdfgdfgdfgdfgdfdfgdfs<\/p>",
             "text_alignment": "text-left"
           }
         },
@@ -577,6 +583,12 @@
         "820ba33b-d9cb-46e9-9e2f-f36d879ddd14": {
           "type": "block_text",
           "settings": {
+            "img_ic_text1": "shopify:\/\/shop_images\/p-2.png",
+            "title1": "<p>sfdfsdf<\/p>",
+            "desc1": "<p>sdfdsfsdfsdfsdfdsfsdfdsf<\/p>",
+            "img_ic_text2": "shopify:\/\/shop_images\/p-2.png",
+            "title2": "<p>asdfasfdasfa<\/p>",
+            "desc2": "<p>fsdfsdfsdfsdfsdfsdfsdfsdfsdfsdf<\/p>",
             "text_alignment": "text-right"
           }
         }
