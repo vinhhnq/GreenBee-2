@@ -29489,6 +29489,10 @@ a[data-init-quickshop] {
 }
 
 /* Section Img Text 3 ======================================================================================================== */
+.section-img-text3 .block_text {
+  flex-direction: column;
+}
+
 /* Manufacture ====================================================================================================== */
 .section-manufacture .manufacture__item {
   transition: all 0.3s;

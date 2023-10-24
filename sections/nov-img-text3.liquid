@@ -11,7 +11,7 @@
   {% endif %} 
   
   {% if sst.ttle != blank or sst.sub_title != blank %}
-    <div class="block_title {{ sst.text_alignment }}">
+    <div class="block_title mb-60 {{ sst.text_alignment }}">
       {% if sst.ttle != blank %}
         <div class="head_title mb-0" style="color: {{ sst.c_h_text }};">{{ sst.ttle }}</div>
       {% endif %}
@@ -20,35 +20,42 @@
       {% endif %}
     </div>
   {% endif %}
-  
+
   <div class="row align-items-center justify-content-center">
     {% for block in section.blocks %}
       {% assign bst = block.settings %}
       {% case block.type %}
         {% when 'block_text' %}
-          <div class="block_text col-lg-3 col-md-4 {{ bst.text_alignment }}">
-            <div class="text_icon">
-              {% if bst.img_ic_text != blank %}
-                {% liquid
-                  assign imagewidths = bst.img_ic_text.width 
-                  assign imgalt = bst.img_ic_text | default: bst.img_ic_text.alt | strip_html | escape
-                  assign imgWidths = '55 80 100 200' %}
-                {{ bst.img_ic_text | image_url: width: imagewidths | image_tag: 
-                  loading: 'lazy',
-                  class: 'img-fluid',
-                  alt: imgalt,
-                  widths: imgWidths
-                }}
-              {% endif %}
-            </div>
-            <div class="text_content">
-              {% if bst.title != blank %}
-                <div class="title">{{ bst.title }}</div>
-              {% endif %}
-              {% if bst.desc != blank %}
-                <div class="t_desc">{{ bst.desc }}</div>
-              {% endif %}
-            </div>
+          <div class="block-text col-lg-3 col-md-4 {{ bst.text_alignment }}">
+            {% for i in (1..2) %}
+              {% assign titleID = "title" |  append: i %}
+              {% assign descriptionID = "desc" | append: i %}
+              {% assign img_ic_textID = "img_ic_text" | append: i %}
+              <div class="block_content mb-70 align-items-center justify-content-start">
+                <div class="text_icon">
+                  {% if bst[img_ic_textID] != blank %}
+                    {% liquid
+                      assign imagewidths = bst[img_ic_textID].width 
+                      assign imgalt = bst[img_ic_textID] | default: bst[img_ic_textID].alt | strip_html | escape
+                      assign imgWidths = '55 80 100 200' %}
+                    {{ bst[img_ic_textID] | image_url: width: imagewidths | image_tag: 
+                      loading: 'lazy',
+                      class: 'img-fluid',
+                      alt: imgalt,
+                      widths: imgWidths
+                    }}
+                  {% endif %}
+                </div>
+                <div class="text_content">
+                  {% if bst[titleID] != blank %}
+                    <div class="title">{{ bst[titleID] }}</div>
+                  {% endif %}
+                  {% if bst[descriptionID] != blank %}
+                    <div class="t_desc">{{ bst[descriptionID] }}</div>
+                  {% endif %}
+                </div>
+              </div>
+            {% endfor %}
           </div>	
 				{% when 'block_image' %}
 					<div class="col-lg-6 col-md-4">
@@ -204,18 +211,33 @@
         "settings": [
           {
             "type": "image_picker",
-            "id": "img_ic_text",
-            "label": "Icon Image Text"
+            "id": "img_ic_text1",
+            "label": "Icon Image Text 1"
           },
           {
             "type": "richtext",
-            "id": "title",
-            "label": "Block title"
+            "id": "title1",
+            "label": "Block title 1"
           },
           {
             "type": "richtext",
-            "id": "desc",
-            "label": "Description"
+            "id": "desc1",
+            "label": "Description 1"
+          },
+          {
+            "type": "image_picker",
+            "id": "img_ic_text2",
+            "label": "Icon Image Text 2"
+          },
+          {
+            "type": "richtext",
+            "id": "title2",
+            "label": "Block title 2"
+          },
+          {
+            "type": "richtext",
+            "id": "desc2",
+            "label": "Description 2"
           },
           {
             "type": "select",
@@ -271,4 +293,5 @@
     font-size: {{ sst.fs_text |  append: 'px' }};
     font-weight: {{ sst.fw_tt }};
   }    
+
 {% endstyle %}

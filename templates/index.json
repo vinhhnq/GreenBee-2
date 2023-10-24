@@ -565,18 +565,6 @@
         "0a038905-3855-41d0-9377-7dcd82b9928b": {
           "type": "block_text",
           "settings": {
-            "img_ic_text": "shopify:\/\/shop_images\/p-3.png",
-            "title": "<p>nginaisndlkansdi<\/p>",
-            "desc": "<p>gánigniasnlknlkiglkdngksnlknsdfsld<\/p>",
-            "text_alignment": "text-left"
-          }
-        },
-        "fcc8e440-6bb8-415e-b98c-4cfa7ae4a790": {
-          "type": "block_text",
-          "settings": {
-            "img_ic_text": "shopify:\/\/shop_images\/p-2.png",
-            "title": "<p>asnigniansdlkqw<\/p>",
-            "desc": "<p>gnasidnaisndlkasid<\/p>",
             "text_alignment": "text-left"
           }
         },
@@ -589,28 +577,14 @@
         "820ba33b-d9cb-46e9-9e2f-f36d879ddd14": {
           "type": "block_text",
           "settings": {
-            "img_ic_text": "shopify:\/\/shop_images\/p-1.png",
-            "title": "<p>gbanausnd<\/p>",
-            "desc": "<p>gansasidnalskdlqw;ogqw<\/p>",
-            "text_alignment": "text-right"
-          }
-        },
-        "0d320196-a6e8-4ab9-8d16-318a516d1c50": {
-          "type": "block_text",
-          "settings": {
-            "img_ic_text": "shopify:\/\/shop_images\/p-1.png",
-            "title": "<p>gasdasdasda<\/p>",
-            "desc": "<p>gfasdsdgsdfsdf<\/p>",
             "text_alignment": "text-right"
           }
         }
       },
       "block_order": [
         "0a038905-3855-41d0-9377-7dcd82b9928b",
-        "fcc8e440-6bb8-415e-b98c-4cfa7ae4a790",
         "58fde01f-18c3-4abb-bcf4-0a92751aed2e",
-        "820ba33b-d9cb-46e9-9e2f-f36d879ddd14",
-        "0d320196-a6e8-4ab9-8d16-318a516d1c50"
+        "820ba33b-d9cb-46e9-9e2f-f36d879ddd14"
       ],
       "custom_css": [
         "p {margin-bottom: 0;}"
