@@ -973,6 +973,34 @@
    }
 }
 
+/* Section Img Text 3 ======================================================================================================== */
+.section-img-text3 {
+   .block_title {
+      .head_title {
+         font-family: Poppins,HelveticaNeue,Helvetica Neue,sans-serif;
+      }
+      .sub_title{
+         font-family: Roboto,HelveticaNeue,Helvetica Neue,sans-serif;
+      }
+   }
+   .block-text {
+      .text_content {
+         .title {
+            text-transform: uppercase;
+            padding-bottom: 12px;
+            font-family: Poppins,HelveticaNeue,Helvetica Neue,sans-serif;
+            font-weight: 700;
+         }
+         .t_desc {
+            font-weight: 300;
+         }
+      }
+      .text_icon {
+         padding-bottom: 17px;
+      }
+   }
+}
+
 /* Manufacture ====================================================================================================== */
 .section-manufacture {
    .manufacture__item {
@@ -2080,9 +2108,9 @@
  
    }
    .site-nav__link--main {
-      font-family: var(--font-family-default);
+      font-family: Roboto,HelveticaNeue,Helvetica Neue,sans-serif;
       font-size: 1.4rem;
-      font-weight: 700;
+      font-weight: 400;
       text-transform: none;
       position: relative;
       display: flex;
