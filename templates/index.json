@@ -571,7 +571,11 @@
             "img_ic_text2": "shopify:\/\/shop_images\/imgtext-icon3.png",
             "title2": "<p>super healthy<\/p>",
             "desc2": "<p>Maximus, purus quis tincidunt semper, felis tellus mole stie nulla, in finibus erat magna et tortor phasellus a magna lobortis<\/p>",
-            "text_alignment": "text-left"
+            "text_alignment": "text-left",
+            "c_title": "#78b144",
+            "c_desc": "#808080",
+            "fsz_ti": 16,
+            "fsz_d": 16
           }
         },
         "58fde01f-18c3-4abb-bcf4-0a92751aed2e": {
@@ -589,7 +593,11 @@
             "img_ic_text2": "shopify:\/\/shop_images\/imgtext3-icon4.png",
             "title2": "<p>100% natural<\/p>",
             "desc2": "<p>Maximus, purus quis tincidunt semper, felis tellus mole stie nulla, in finibus erat magna et tortor phasellus a magna lobortis<\/p>",
-            "text_alignment": "text-right"
+            "text_alignment": "text-right",
+            "c_title": "#78b144",
+            "c_desc": "#808080",
+            "fsz_ti": 16,
+            "fsz_d": 16
           }
         }
       },
@@ -610,6 +618,7 @@
         "c_subt": "#666666",
         "fs_tt2": 13,
         "fw_subt": "700",
+        "bg_section": "shopify:\/\/shop_images\/bg-text-img3.png",
         "class": "",
         "container": "container",
         "text_alignment": "text-center",
