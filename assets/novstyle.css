@@ -29489,8 +29489,23 @@ a[data-init-quickshop] {
 }
 
 /* Section Img Text 3 ======================================================================================================== */
-.section-img-text3 .block_text {
-  flex-direction: column;
+.section-img-text3 .block_title .head_title {
+  font-family: Poppins, HelveticaNeue, Helvetica Neue, sans-serif;
+}
+.section-img-text3 .block_title .sub_title {
+  font-family: Roboto, HelveticaNeue, Helvetica Neue, sans-serif;
+}
+.section-img-text3 .block-text .text_content .title {
+  text-transform: uppercase;
+  padding-bottom: 12px;
+  font-family: Poppins, HelveticaNeue, Helvetica Neue, sans-serif;
+  font-weight: 700;
+}
+.section-img-text3 .block-text .text_content .t_desc {
+  font-weight: 300;
+}
+.section-img-text3 .block-text .text_icon {
+  padding-bottom: 17px;
 }
 
 /* Manufacture ====================================================================================================== */

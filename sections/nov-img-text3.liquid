@@ -20,61 +20,62 @@
       {% endif %}
     </div>
   {% endif %}
-
-  <div class="row align-items-center justify-content-center">
-    {% for block in section.blocks %}
-      {% assign bst = block.settings %}
-      {% case block.type %}
-        {% when 'block_text' %}
-          <div class="block-text col-lg-3 col-md-4 {{ bst.text_alignment }}">
-            {% for i in (1..2) %}
-              {% assign titleID = "title" |  append: i %}
-              {% assign descriptionID = "desc" | append: i %}
-              {% assign img_ic_textID = "img_ic_text" | append: i %}
-              <div class="block_content mb-70 align-items-center justify-content-start">
-                <div class="text_icon">
-                  {% if bst[img_ic_textID] != blank %}
-                    {% liquid
-                      assign imagewidths = bst[img_ic_textID].width 
-                      assign imgalt = bst[img_ic_textID] | default: bst[img_ic_textID].alt | strip_html | escape
-                      assign imgWidths = '55 80 100 200' %}
-                    {{ bst[img_ic_textID] | image_url: width: imagewidths | image_tag: 
-                      loading: 'lazy',
-                      class: 'img-fluid',
-                      alt: imgalt,
-                      widths: imgWidths
-                    }}
-                  {% endif %}
+  <div class="block_section">
+    <div class="row align-items-center justify-content-center">
+      {% for block in section.blocks %}
+        {% assign bst = block.settings %}
+        {% case block.type %}
+          {% when 'block_text' %}
+            <div class="block-text col-lg-3 col-md-4 {{ bst.text_alignment }}">
+              {% for i in (1..2) %}
+                {% assign titleID = "title" |  append: i %}
+                {% assign descriptionID = "desc" | append: i %}
+                {% assign img_ic_textID = "img_ic_text" | append: i %}
+                <div class="block_content mb-70 align-items-center justify-content-start">
+                  <div class="text_icon">
+                    {% if bst[img_ic_textID] != blank %}
+                      {% liquid
+                        assign imagewidths = bst[img_ic_textID].width 
+                        assign imgalt = bst[img_ic_textID] | default: bst[img_ic_textID].alt | strip_html | escape
+                        assign imgWidths = '55 80 100 200' %}
+                      {{ bst[img_ic_textID] | image_url: width: imagewidths | image_tag: 
+                        loading: 'lazy',
+                        class: 'img-fluid',
+                        alt: imgalt,
+                        widths: imgWidths
+                      }}
+                    {% endif %}
+                  </div>
+                  <div class="text_content">
+                    {% if bst[titleID] != blank %}
+                      <div class="title"  style = "color: {{ bst.c_title }};">{{ bst[titleID] }}</div>
+                    {% endif %}
+                    {% if bst[descriptionID] != blank %}
+                      <div class="t_desc" style = "color: {{ bst.c_desc }};">{{ bst[descriptionID] }}</div>
+                    {% endif %}
+                  </div>
                 </div>
-                <div class="text_content">
-                  {% if bst[titleID] != blank %}
-                    <div class="title">{{ bst[titleID] }}</div>
-                  {% endif %}
-                  {% if bst[descriptionID] != blank %}
-                    <div class="t_desc">{{ bst[descriptionID] }}</div>
-                  {% endif %}
-                </div>
-              </div>
-            {% endfor %}
-          </div>	
-				{% when 'block_image' %}
-					<div class="col-lg-6 col-md-4">
-            {% if bst.banner_img != blank %}
-              {% liquid
-                assign imagewidths = bst.banner_img.width
-                assign imgealt = bst.banner_img1 | default: bst.banner_img.alt | strip_html | escape
-                assign imgwidths = '519, 750, 1100, 1500, 1780, 2048'
-              %}
-              {{ bst.banner_img |  image_url: width: imagewidths | image_tag:
-                loading: 'lazy',
-                class: 'img-fluid',
-                alt: imgalt,
-                widthsL: imgwidths
-              }}
-            {% endif %}
-          </div>
-				{% endcase %}
-    {% endfor %}
+              {% endfor %}
+            </div>	
+          {% when 'block_image' %}
+            <div class="col-lg-6 col-md-4">
+              {% if bst.banner_img != blank %}
+                {% liquid
+                  assign imagewidths = bst.banner_img.width
+                  assign imgealt = bst.banner_img1 | default: bst.banner_img.alt | strip_html | escape
+                  assign imgwidths = '519, 750, 1100, 1500, 1780, 2048'
+                %}
+                {{ bst.banner_img |  image_url: width: imagewidths | image_tag:
+                  loading: 'lazy',
+                  class: 'img-fluid',
+                  alt: imgalt,
+                  widthsL: imgwidths
+                }}
+              {% endif %}
+            </div>
+          {% endcase %}
+      {% endfor %}
+    </div>
   </div>
 </div>  
 {% schema %}
@@ -148,6 +149,11 @@
           { "value": "800", "label": "Extrabold" },
           { "value": "900", "label": "Black" }
         ]
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_section",
+        "label": "Background section"
       },
       {
         "type": "text",
@@ -249,6 +255,28 @@
               { "value": "text-center", "label": "Text center" },
               { "value": "text-right", "label": "Text right" }
             ]
+          },
+          {
+            "type": "color",
+            "id": "c_title",
+            "label": "Color Title"
+          },
+          {
+            "type": "color",
+            "id": "c_desc",
+            "label": "Color Description"
+          },
+          {
+            "type": "number",
+            "id": "fsz_ti",
+            "label": "Font size title (px)",
+            "default": 16
+          },
+          {
+            "type": "number",
+            "id": "fsz_d",
+            "label": "Font size description (px)",
+            "default": 16
           }
         ]
       },
@@ -293,5 +321,15 @@
     font-size: {{ sst.fs_text |  append: 'px' }};
     font-weight: {{ sst.fw_tt }};
   }    
-
+  #shopify-section-{{ section.id }} .block_section:before {
+    background: url("{{ sst.bg_section }}") no-repeat;
+  }
+  @media(max-width: 1440px) {
+    #shopify-section-{{ section.id }} .title {
+      font-size: {{ bst.fsz_ti }};
+    } 
+    #shopify-section-{{ section.id }} .desc {
+      font-size: {{ bst.fsz_d }};
+    }
+  }
 {% endstyle %}

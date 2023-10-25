@@ -565,12 +565,12 @@
         "0a038905-3855-41d0-9377-7dcd82b9928b": {
           "type": "block_text",
           "settings": {
-            "img_ic_text1": "shopify:\/\/shop_images\/p-1.png",
-            "title1": "<p>asfasdas<\/p>",
-            "desc1": "<p>sdfsdfsdfsdfsdfasdsdfsdfsd<\/p>",
-            "img_ic_text2": "shopify:\/\/shop_images\/p-1.png",
-            "title2": "<p>asdasdasdasd<\/p>",
-            "desc2": "<p>gffsdgdfgdfgdfgdfgdfgdfdfgdfs<\/p>",
+            "img_ic_text1": "shopify:\/\/shop_images\/imgtext3-icon1.png",
+            "title1": "<p>always fresh<\/p>",
+            "desc1": "<p>Maximus, purus quis tincidunt semper, felis tellus mole stie nulla, in finibus erat magna et tortor phasellus a magna lobortis<\/p>",
+            "img_ic_text2": "shopify:\/\/shop_images\/imgtext-icon3.png",
+            "title2": "<p>super healthy<\/p>",
+            "desc2": "<p>Maximus, purus quis tincidunt semper, felis tellus mole stie nulla, in finibus erat magna et tortor phasellus a magna lobortis<\/p>",
             "text_alignment": "text-left"
           }
         },
@@ -583,12 +583,12 @@
         "820ba33b-d9cb-46e9-9e2f-f36d879ddd14": {
           "type": "block_text",
           "settings": {
-            "img_ic_text1": "shopify:\/\/shop_images\/p-2.png",
-            "title1": "<p>sfdfsdf<\/p>",
-            "desc1": "<p>sdfdsfsdfsdfsdfdsfsdfdsf<\/p>",
-            "img_ic_text2": "shopify:\/\/shop_images\/p-2.png",
-            "title2": "<p>asdfasfdasfa<\/p>",
-            "desc2": "<p>fsdfsdfsdfsdfsdfsdfsdfsdfsdfsdf<\/p>",
+            "img_ic_text1": "shopify:\/\/shop_images\/imgtext3-icon2.png",
+            "title1": "<p>premium quality<\/p>",
+            "desc1": "<p>Maximus, purus quis tincidunt semper, felis tellus mole stie nulla, in finibus erat magna et tortor phasellus a magna lobortis<\/p>",
+            "img_ic_text2": "shopify:\/\/shop_images\/imgtext3-icon4.png",
+            "title2": "<p>100% natural<\/p>",
+            "desc2": "<p>Maximus, purus quis tincidunt semper, felis tellus mole stie nulla, in finibus erat magna et tortor phasellus a magna lobortis<\/p>",
             "text_alignment": "text-right"
           }
         }
@@ -605,7 +605,7 @@
         "ttle": "<p>We Grow Best Food<\/p>",
         "c_h_text": "#222222",
         "fs_text": 28,
-        "fw_tt": "800",
+        "fw_tt": "600",
         "sub_title": "<p>Lorem ipsum dolor sit amet, consectetur elit sed do eiusmod tempor incididunt <\/p>",
         "c_subt": "#666666",
         "fs_tt2": 13,
