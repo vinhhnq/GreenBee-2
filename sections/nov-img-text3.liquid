@@ -62,7 +62,7 @@
               {% if bst.banner_img != blank %}
                 {% liquid
                   assign imagewidths = bst.banner_img.width
-                  assign imgealt = bst.banner_img1 | default: bst.banner_img.alt | strip_html | escape
+                  assign imgalt = bst.banner_img | default: bst.banner_img.alt | strip_html | escape
                   assign imgwidths = '519, 750, 1100, 1500, 1780, 2048'
                 %}
                 {{ bst.banner_img |  image_url: width: imagewidths | image_tag:

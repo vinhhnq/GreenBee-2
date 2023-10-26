@@ -983,20 +983,22 @@
          font-family: Roboto,HelveticaNeue,Helvetica Neue,sans-serif;
       }
    }
-   .block-text {
-      .text_content {
-         .title {
-            text-transform: uppercase;
-            padding-bottom: 12px;
-            font-family: Poppins,HelveticaNeue,Helvetica Neue,sans-serif;
-            font-weight: 700;
+   .block_section {
+      .block-text {
+         .text_content {
+            .title {
+               text-transform: uppercase;
+               padding-bottom: 12px;
+               font-family: Poppins,HelveticaNeue,Helvetica Neue,sans-serif;
+               font-weight: 700;
+            }
+            .t_desc {
+               font-weight: 300;
+            }
          }
-         .t_desc {
-            font-weight: 300;
+         .text_icon {
+            padding-bottom: 17px;
          }
-      }
-      .text_icon {
-         padding-bottom: 17px;
       }
    }
 }
@@ -2109,8 +2111,8 @@
    }
    .site-nav__link--main {
       font-family: Roboto,HelveticaNeue,Helvetica Neue,sans-serif;
-      font-size: 1.4rem;
-      font-weight: 400;
+      font-size: 1.5rem;
+      font-weight: 600;
       text-transform: none;
       position: relative;
       display: flex;
@@ -2170,7 +2172,7 @@
       @include rtl-l(0);
       width: 100%;
       border-radius: 20px;
-      display: none;
+      display: block;
       z-index: 1;
       .site-nav--Default {
          position: relative;
