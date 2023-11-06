@@ -627,12 +627,77 @@
         "distance_top": 30,
         "distance_bottom": 30
       }
+    },
+    "e1b98504-6041-492e-ae1e-bfd8cf485433": {
+      "type": "nov-collection-tabs",
+      "blocks": {
+        "template--19940596547878__e1b98504-6041-492e-ae1e-bfd8cf485433-tabitem-1": {
+          "type": "tabitem",
+          "settings": {
+            "tab_title": "Tab one",
+            "collection_handle": "frontpage"
+          }
+        },
+        "template--19940596547878__e1b98504-6041-492e-ae1e-bfd8cf485433-tabitem-2": {
+          "type": "tabitem",
+          "settings": {
+            "tab_title": "Tab Two",
+            "collection_handle": "frontpage"
+          }
+        },
+        "template--19940596547878__e1b98504-6041-492e-ae1e-bfd8cf485433-tabitem-3": {
+          "type": "tabitem",
+          "settings": {
+            "tab_title": "Tab Three",
+            "collection_handle": "frontpage"
+          }
+        }
+      },
+      "block_order": [
+        "template--19940596547878__e1b98504-6041-492e-ae1e-bfd8cf485433-tabitem-1",
+        "template--19940596547878__e1b98504-6041-492e-ae1e-bfd8cf485433-tabitem-2",
+        "template--19940596547878__e1b98504-6041-492e-ae1e-bfd8cf485433-tabitem-3"
+      ],
+      "settings": {
+        "heading": "<p>Vinova Collection Tab<\/p>",
+        "heading_c": "#222222",
+        "subheading": "<p>Subtitle from happy customers<\/p>",
+        "subheading_c": "#666666",
+        "title_alignment": "text-center",
+        "xxl": 4,
+        "xl": 4,
+        "lg": 3,
+        "md": 3,
+        "sm": 2,
+        "xs": 2,
+        "row_number": 1,
+        "row_mobile": 2,
+        "limit": 30,
+        "spacing": 30,
+        "show_dot": false,
+        "show_nav": true,
+        "view_all": true,
+        "nav_c": "#b0b0b0",
+        "nav_ca": "#ffffff",
+        "nav_bd": "#222222",
+        "nav_bg": "#222222",
+        "nav_bga": "#222222",
+        "animate": false,
+        "br_container": 0,
+        "container": "container",
+        "background_color": "",
+        "bg_size": "full",
+        "class": "",
+        "distance_top": 30,
+        "distance_bottom": 30
+      }
     }
   },
   "order": [
     "9e374973-f7d9-4a2f-974c-18a90163771d",
     "d650a789-9ea7-4d81-934c-f5c58e6a6e01",
     "7c0399e5-863a-4a3b-82f7-a3f59f5c1e87",
-    "da511e5e-27a5-47e2-a716-81062978d07d"
+    "da511e5e-27a5-47e2-a716-81062978d07d",
+    "e1b98504-6041-492e-ae1e-bfd8cf485433"
   ]
 }

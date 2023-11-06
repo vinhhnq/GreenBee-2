@@ -28468,7 +28468,6 @@ a[data-init-quickshop] {
   transform: translateX(-50%);
   width: 26px;
   height: 15px;
-  background-image: url(icon-nav-tab.png);
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 0.35s ease-in-out;
@@ -29495,16 +29494,16 @@ a[data-init-quickshop] {
 .section-img-text3 .block_title .sub_title {
   font-family: Roboto, HelveticaNeue, Helvetica Neue, sans-serif;
 }
-.section-img-text3 .block-text .text_content .title {
+.section-img-text3 .block_section .block-text .text_content .title {
   text-transform: uppercase;
   padding-bottom: 12px;
   font-family: Poppins, HelveticaNeue, Helvetica Neue, sans-serif;
   font-weight: 700;
 }
-.section-img-text3 .block-text .text_content .t_desc {
+.section-img-text3 .block_section .block-text .text_content .t_desc {
   font-weight: 300;
 }
-.section-img-text3 .block-text .text_icon {
+.section-img-text3 .block_section .block-text .text_icon {
   padding-bottom: 17px;
 }
 
@@ -30938,8 +30937,8 @@ a[data-init-quickshop] {
 }
 .site-nav-vertical .site-nav__link--main {
   font-family: Roboto, HelveticaNeue, Helvetica Neue, sans-serif;
-  font-size: 1.4rem;
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 600;
   text-transform: none;
   position: relative;
   display: flex;
@@ -31004,7 +31003,7 @@ a[data-init-quickshop] {
     left: 0;
     width: 100%;
     border-radius: 20px;
-    display: none;
+    display: block;
     z-index: 1;
   }
   .lang-rtl .site-nav-vertical {

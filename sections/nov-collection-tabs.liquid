@@ -29,7 +29,8 @@
 			{% endif %}
 			<ul class="nav nav-tabs list-product-tabs list-unstyled d-none d-md-flex justify-content-center mb-50">
 				{% for block in section.blocks %}
-					<li class="nav-item position-relative">
+					{% assign bst = block.settings %}
+					<li class="nav-item position-relative d-block">
 						<a class="nav-link tab-links{% if forloop.first %} active{% endif %} position-relative"
 						data-product-tabtop
 						href="#producttab{{ forloop.index }}{{ section.id }}"
@@ -38,7 +39,20 @@
 						id="tab-{{ forloop.index }}{{ section.id }}" data-id="{{ forloop.index }}{{ section.id }}"
 						data-toggle="tab"
 						data-limit="{{ limit }}">
-							<span>{{ block.settings.tab_title }}</span>
+
+						{% if bst.img_collectiontab != blank %}
+							{% liquid
+								assign imgwidths = bst.img_collectiontab.width
+								assign imgalt = bst.img_collectiontab | default: bst.img_collectiontab | strip_html | escape
+							%}
+							{{ bst.img_collectiontab | img_url: width: imgwidths | img_tag: 
+								loading: 'lazy',
+								class: 'img-fluid',
+								widths: '35 50 70',
+								alt: imgalt
+							}}
+						{% endif %}
+							<span>{{ bst.tab_title }}</span>
 						</a>
 					</li>
 				{% endfor %}
@@ -52,10 +66,10 @@
 		    		data-product-tabTop
 		    		href="#producttab{{ forloop.index }}{{ section.id }}"
 		    		data-target="#producttab{{ forloop.index }}{{ section.id }}"
-		    		data-href="/collections/{{ block.settings.collection_handle }}?view=tab"
+		    		data-href="/collections/{{ bst.collection_handle }}?view=tab"
 		    		id="tab-{{ forloop.index }}{{ section.id }}" data-id="{{ forloop.index }}{{ section.id }}"
 		    		data-toggle="tab">
-		    			<span>{{ block.settings.tab_title }}</span>
+		    			<span>{{ bst.tab_title }}</span>
 		    		</a>
 			    {% endfor %}
 			  </div>
@@ -247,7 +261,7 @@
 			"info": "Spacing item"
 		},
 		{
-			"type":  "header",
+			"type": "header",
 			"content": "Slider option"
 		},
 		{
@@ -377,6 +391,11 @@
 			"type": "tabitem",
 			"name": "Tab Item",
 			"settings": [
+				{
+					"type": "image_picker",
+					"id": "img_collectiontab",
+					"label": "Image Collection Tab"
+				},
 				{
 					"type": "text",
 					"id": "tab_title",

@@ -39,7 +39,7 @@
                <a class="banner-button" style="color: {{ sst.caption_cl }}" href="{{ sst.link }}"><span>{{ sst.banner_button }}<i class="zmdi zmdi-long-arrow-right"></i></span></a>
             </div>
             <div class="block-image nov-sh-image-2">
-               {%- if  sst.image != blank -%}
+               {%- if sst.image != blank -%}
                   {% assign imagewidth = sst.image.width %}
                   {%- assign imagealt = sst.image.alt | default: "banner-product" | strip_html | escape -%}
                   {{ sst.image | image_url: width: imagewidth | image_tag:
@@ -166,7 +166,7 @@
          },
          {
             "type":  "header",
-            "content": "Block product"
+            "content": "Block product" 
          },
          {
             "type": "collection",

@@ -26,7 +26,7 @@
         {% assign bst = block.settings %}
         {% case block.type %}
           {% when 'block_text' %}
-            <div class="block-text col-lg-3 col-md-4 {{ bst.text_alignment }}">
+            <div class="block-text col-md-3 {{ bst.text_alignment }}">
               {% for i in (1..2) %}
                 {% assign titleID = "title" |  append: i %}
                 {% assign descriptionID = "desc" | append: i %}
@@ -58,7 +58,7 @@
               {% endfor %}
             </div>	
           {% when 'block_image' %}
-            <div class="col-lg-6 col-md-4">
+            <div class="block-image col-md-6">
               {% if bst.banner_img != blank %}
                 {% liquid
                   assign imagewidths = bst.banner_img.width
@@ -69,15 +69,16 @@
                   loading: 'lazy',
                   class: 'img-fluid',
                   alt: imgalt,
-                  widthsL: imgwidths
+                  widths: imgwidths
                 }}
               {% endif %}
             </div>
           {% endcase %}
-      {% endfor %}
+        {% endfor %}
+      </div>
     </div>
-  </div>
-</div>  
+  </div>  
+</div>
 {% schema %}
   {
     "name": "Vinova Image With text 3",
