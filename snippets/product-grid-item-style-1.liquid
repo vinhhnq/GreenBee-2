@@ -85,7 +85,7 @@
     <div class="product__info">
       <div class="product__title"><a href="{{ product.url | within: collection }}"><span>{{ product.title }}</span></a></div>
       {% if settings.show_rating %}
-       <div style='{{ jm_style }}' class='jdgm-widget jdgm-preview-badge'>{{ product.metafields.judgeme.badge }}</div>
+        <div style='{{ jm_style }}' class='jdgm-widget jdgm-preview-badge'>{{ product.metafields.judgeme.badge }}</div>
       {% endif %}
       <div class="price-box mt-15">
         {% if on_sale %}

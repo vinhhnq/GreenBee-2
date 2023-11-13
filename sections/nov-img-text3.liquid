@@ -35,7 +35,7 @@
                   <div class="text_icon">
                     {% if bst[img_ic_textID] != blank %}
                       {% liquid
-                        assign imagewidths = bst[img_ic_textID].width 
+                        assign imagewidths = bst[img_ic_textID].width
                         assign imgalt = bst[img_ic_textID] | default: bst[img_ic_textID].alt | strip_html | escape
                         assign imgWidths = '55 80 100 200' %}
                       {{ bst[img_ic_textID] | image_url: width: imagewidths | image_tag: 

@@ -41,14 +41,18 @@
       </div>
    </div>
    <div class="col-md-6 product__info">
-      {% if settings.show_rating %}
-      <div style='{{ jm_style }}' class='jdgm-widget jdgm-preview-badge'>{{ product.metafields.judgeme.badge }}</div>
-      {% endif %}
       <div class="product__title">
          <a href="{{ product.url | within: collection }}">
             <span>{{ product.title }}</span>
          </a>
       </div>
+      {% if settings.show_rating %}
+         {% render 'judgeme_widgets'
+        , widget_type: 'judgeme_preview_badge'
+        , jm_style: ''
+        , concierge_install: true
+        , product: product %}
+      {% endif %}
       <div class="price-box mt-15">
          {% if on_sale %}
          <div class="price-sale">

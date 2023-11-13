@@ -31,7 +31,7 @@
 				{% for block in section.blocks %}
 					{% assign bst = block.settings %}
 					<li class="nav-item position-relative d-block">
-						<a class="nav-link tab-links{% if forloop.first %} active{% endif %} position-relative"
+						<a class="nav-link tab-links{% if forloop.first  %} active{% endif %} position-relative"
 						data-product-tabtop
 						href="#producttab{{ forloop.index }}{{ section.id }}"
 						data-target="#producttab{{ forloop.index }}{{ section.id }}"
@@ -39,13 +39,12 @@
 						id="tab-{{ forloop.index }}{{ section.id }}" data-id="{{ forloop.index }}{{ section.id }}"
 						data-toggle="tab"
 						data-limit="{{ limit }}">
-
 						{% if bst.img_collectiontab != blank %}
 							{% liquid
 								assign imgwidths = bst.img_collectiontab.width
 								assign imgalt = bst.img_collectiontab | default: bst.img_collectiontab | strip_html | escape
 							%}
-							{{ bst.img_collectiontab | img_url: width: imgwidths | img_tag: 
+							{{ bst.img_collectiontab | img_url: width: imgwidths | img_tag:
 								loading: 'lazy',
 								class: 'img-fluid',
 								widths: '35 50 70',
@@ -74,7 +73,7 @@
 			    {% endfor %}
 			  </div>
 			</div>
-			<div class="product_tab_content tab-content product-tabs-content position-relative">
+			<divww class="product_tab_content tab-content product-tabs-content position-relative">
 				{% for block in section.blocks %}
 				<div class="tab-content{% if forloop.first %} active{% endif %}" data-product-TabContent id="producttab{{ forloop.index }}{{ section.id }}">
 					<div class="products-grid grid--view-items row spacing-{{ sst.spacing }} collection-carousel"
@@ -99,7 +98,7 @@
 					</div>
 				</div>
 				{% endfor %}
-			</div>
+			</divww>
 			{% if sst.view_all %}
 				<div class="text-center mt-30">
 					<a href="/collections/all"{% if sst.img_bottom == blank %} class="btn btn-large"{% endif %}>
@@ -213,15 +212,15 @@
 			"label": "Large mobile 576px ↑",
 			"default": 2
 		},
-		{
-			"type": "range",
-			"id": "xs",
-			"min": 1,
-			"max": 6,
-			"step": 1,
-			"label": "Mobile 575px ↓",
-			"default": 2
-		},
+    {
+      "default": 2,
+      "id": "xs",
+      "label": "Mobile 575px ↓",
+      "max": 6,
+      "min": 1,
+      "step": 1,
+      "type": "range"
+    },
 		{
 			"type": "range",
 			"id": "row_number",
@@ -325,7 +324,7 @@
 			"type": "checkbox",
 			"id": "animate",
 			"label": "Show animated",
-			"default":   false
+			"default": false
 		},
     {
 			"type": "range",
@@ -440,7 +439,7 @@
 	]
 }
 {% endschema %}
-<style>
+{% style %}
 	{%- assign bg_image = sst.background_image -%}
 	{% if sst.bg_size == 'full' %}
     #shopify-section-{{ section.id }} .distance {
@@ -492,4 +491,4 @@
 			display: none;
 		}
 	}
-</style>
+{% endstyle %}

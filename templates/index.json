@@ -631,52 +631,76 @@
     "e1b98504-6041-492e-ae1e-bfd8cf485433": {
       "type": "nov-collection-tabs",
       "blocks": {
-        "template--19940596547878__e1b98504-6041-492e-ae1e-bfd8cf485433-tabitem-1": {
+        "24c690a5-a375-4964-9597-d4276e73fe7e": {
           "type": "tabitem",
           "settings": {
-            "tab_title": "Tab one",
-            "collection_handle": "frontpage"
+            "tab_title": "All Product",
+            "collection_handle": "greenbee-collections"
           }
         },
-        "template--19940596547878__e1b98504-6041-492e-ae1e-bfd8cf485433-tabitem-2": {
+        "53a5cf16-9189-45ed-b957-823bfaacf188": {
           "type": "tabitem",
           "settings": {
-            "tab_title": "Tab Two",
-            "collection_handle": "frontpage"
+            "tab_title": "Vegetables",
+            "collection_handle": "vegetables"
           }
         },
-        "template--19940596547878__e1b98504-6041-492e-ae1e-bfd8cf485433-tabitem-3": {
+        "fe68feae-35d6-457d-bd22-636a16ffe28c": {
           "type": "tabitem",
           "settings": {
-            "tab_title": "Tab Three",
-            "collection_handle": "frontpage"
+            "tab_title": "Fruits",
+            "collection_handle": "fruits"
+          }
+        },
+        "21f4fc78-00cc-4f79-bc3a-648c9e05c815": {
+          "type": "tabitem",
+          "settings": {
+            "tab_title": "Bread",
+            "collection_handle": "bread"
+          }
+        },
+        "324c1a4d-c9c2-43ba-8c98-3b84d8b8f3bb": {
+          "type": "tabitem",
+          "settings": {
+            "tab_title": "Juices",
+            "collection_handle": "juices"
+          }
+        },
+        "cee5819d-6766-43d7-8061-4d4ffcda6629": {
+          "type": "tabitem",
+          "settings": {
+            "tab_title": "Tea",
+            "collection_handle": "tea"
           }
         }
       },
       "block_order": [
-        "template--19940596547878__e1b98504-6041-492e-ae1e-bfd8cf485433-tabitem-1",
-        "template--19940596547878__e1b98504-6041-492e-ae1e-bfd8cf485433-tabitem-2",
-        "template--19940596547878__e1b98504-6041-492e-ae1e-bfd8cf485433-tabitem-3"
+        "24c690a5-a375-4964-9597-d4276e73fe7e",
+        "53a5cf16-9189-45ed-b957-823bfaacf188",
+        "fe68feae-35d6-457d-bd22-636a16ffe28c",
+        "21f4fc78-00cc-4f79-bc3a-648c9e05c815",
+        "324c1a4d-c9c2-43ba-8c98-3b84d8b8f3bb",
+        "cee5819d-6766-43d7-8061-4d4ffcda6629"
       ],
       "settings": {
-        "heading": "<p>Vinova Collection Tab<\/p>",
+        "heading": "<p>Discover Our Products <\/p>",
         "heading_c": "#222222",
-        "subheading": "<p>Subtitle from happy customers<\/p>",
+        "subheading": "<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. <\/p>",
         "subheading_c": "#666666",
         "title_alignment": "text-center",
-        "xxl": 4,
-        "xl": 4,
-        "lg": 3,
-        "md": 3,
-        "sm": 2,
-        "xs": 2,
-        "row_number": 1,
+        "xxl": 3,
+        "xl": 3,
+        "lg": 2,
+        "md": 2,
+        "sm": 1,
+        "xs": 1,
+        "row_number": 4,
         "row_mobile": 2,
         "limit": 30,
         "spacing": 30,
         "show_dot": false,
-        "show_nav": true,
-        "view_all": true,
+        "show_nav": false,
+        "view_all": false,
         "nav_c": "#b0b0b0",
         "nav_ca": "#ffffff",
         "nav_bd": "#222222",
