@@ -82,7 +82,7 @@ class FacetFiltersForm extends HTMLElement {
     if (next_url) {
       $('.collection__btn-loadmore').click(function(){
         CollectionLoadmoreFilter();
-      });    
+      });
     };
     function CollectionLoadmoreFilter() {
       $.ajax (
