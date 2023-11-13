@@ -715,6 +715,25 @@
         "distance_top": 30,
         "distance_bottom": 30
       }
+    },
+    "1699848378da3645ab": {
+      "type": "apps",
+      "blocks": {
+        "0f3351bd-a883-476c-9c2b-4757689e6f0f": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge_homepage\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "0f3351bd-a883-476c-9c2b-4757689e6f0f"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -722,6 +741,7 @@
     "d650a789-9ea7-4d81-934c-f5c58e6a6e01",
     "7c0399e5-863a-4a3b-82f7-a3f59f5c1e87",
     "da511e5e-27a5-47e2-a716-81062978d07d",
-    "e1b98504-6041-492e-ae1e-bfd8cf485433"
+    "e1b98504-6041-492e-ae1e-bfd8cf485433",
+    "1699848378da3645ab"
   ]
 }
