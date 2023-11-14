@@ -39,18 +39,20 @@
 						id="tab-{{ forloop.index }}{{ section.id }}" data-id="{{ forloop.index }}{{ section.id }}"
 						data-toggle="tab"
 						data-limit="{{ limit }}">
-						{% if bst.img_collectiontab != blank %}
-							{% liquid
-								assign imgwidths = bst.img_collectiontab.width
-								assign imgalt = bst.img_collectiontab | default: bst.img_collectiontab | strip_html | escape
-							%}
-							{{ bst.img_collectiontab | img_url: width: imgwidths | img_tag:
-								loading: 'lazy',
-								class: 'img-fluid',
-								widths: '35 50 70',
-								alt: imgalt
-							}}
-						{% endif %}
+							<span class="collection_icon">
+								{% if bst.img_collectiontab != blank %}
+									{% liquid
+										assign imgwidths = bst.img_collectiontab.width
+										assign imgalt = bst.img_collectiontab | default: bst.img_collectiontab | strip_html | escape
+									%}
+									{{ bst.img_collectiontab | img_url: width: imgwidths | img_tag:
+										loading: 'lazy',
+										class: 'img-fluid',
+										widths: '35 50 70',
+										alt: imgalt
+									}}
+								{% endif %}
+							</span>
 							<span>{{ bst.tab_title }}</span>
 						</a>
 					</li>
