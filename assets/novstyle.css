@@ -25371,8 +25371,8 @@ variant-selects select:not(.variant-color) {
   margin-bottom: 10px;
 }
 .item-product.item-list-product .product__info .price-regular {
-  color: var(--theme-color-primary);
-  font-size: 18px;
+  color: #222;
+  font-size: 14px;
   font-weight: 700;
 }
 .item-product.item-list-product .product__info .price-sale .special-price {
@@ -28459,6 +28459,7 @@ a[data-init-quickshop] {
   margin-right: initial;
 }
 .section-collection-tabs .nav-tabs .nav-link {
+  padding: 0 0 15px;
   font-size: 13px;
   font-weight: 400;
   font-family: Poppins, HelveticaNeue, Helvetica Neue, sans-serif;
