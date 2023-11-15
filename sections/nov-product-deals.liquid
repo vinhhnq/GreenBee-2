@@ -303,7 +303,8 @@
   ]
 }
 {% endschema %}
-<style>
+
+{% style %}
   {%- assign bg_image = sst.background_image -%}
   #shopify-section-{{ section.id }} .distance {
     padding-top: {{ sst.distance_top | append: 'px' }};
@@ -377,5 +378,5 @@
   #shopify-section-{{ section.id }} .slick-slider .slick-dots li.slick-active {
     border-color:  {{ sst.c_dot }};
   }
-</style>
+{% endstyle %}
 

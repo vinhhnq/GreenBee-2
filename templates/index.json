@@ -42,7 +42,7 @@
             "fz_cap2_xl": 15,
             "fz_cap2_lg": 15,
             "fz_cap2_md": 14,
-            "fz_cap2_sm": 9,
+            "fz_cap2_sm": 10,
             "fw2": "400",
             "fs2": "italic",
             "tt2": "none",
@@ -108,7 +108,7 @@
             "image": "shopify:\/\/shop_images\/slide2.jpg",
             "img_animate": true,
             "position_img": "Width: 50%; Left:10%; Top: 40%",
-            "position_xl_img": "Width: 50%; Left:10%; Top: 50%",
+            "position_xl_img": "Width: 50%; Left:10%; Top: 40%",
             "position_lg_img": "Width: 50%; Left:10%; Top: 40%",
             "position_md_img": "Width: 70%; Left:10%; Top: 40%",
             "position_sm_img": "Width: 80%; Left:10%; Top: 40%",
@@ -740,6 +740,78 @@
       ],
       "settings": {
       }
+    },
+    "38fd551a-96a7-4e3d-98f4-903b56c6518d": {
+      "type": "nov-product-deals",
+      "blocks": {
+        "2d02ebce-9278-4e3a-9c16-4083671a9594": {
+          "type": "productcountdownlist",
+          "settings": {
+            "product_handle": "apple-1",
+            "countdown_timeend": ""
+          }
+        },
+        "1b496f74-d8d5-47c9-8493-009959463d0f": {
+          "type": "productcountdownlist",
+          "settings": {
+            "product_handle": "lorem-ipsum-dolor-sit-amet-consectetur-5",
+            "countdown_timeend": ""
+          }
+        },
+        "8a0b5cb5-3c97-4737-a4d5-15a7d197c1be": {
+          "type": "productcountdownlist",
+          "settings": {
+            "product_handle": "banana",
+            "countdown_timeend": ""
+          }
+        },
+        "266bbacb-cec3-4cc8-991c-36ec779c383f": {
+          "type": "productcountdownlist",
+          "settings": {
+            "product_handle": "lorem-ipsum-dolor-sit-amet-consectetur-2",
+            "countdown_timeend": ""
+          }
+        },
+        "224a5c17-dcca-4544-a4dd-3c3c5da5e74a": {
+          "type": "productcountdownlist",
+          "settings": {
+            "product_handle": "lorem-ipsum-dolor-sit-amet-consectetur",
+            "countdown_timeend": ""
+          }
+        }
+      },
+      "block_order": [
+        "2d02ebce-9278-4e3a-9c16-4083671a9594",
+        "1b496f74-d8d5-47c9-8493-009959463d0f",
+        "8a0b5cb5-3c97-4737-a4d5-15a7d197c1be",
+        "266bbacb-cec3-4cc8-991c-36ec779c383f",
+        "224a5c17-dcca-4544-a4dd-3c3c5da5e74a"
+      ],
+      "settings": {
+        "heading": "<p>Flash Deals<\/p>",
+        "heading_c": "#222222",
+        "subheading": "<p>At vero etos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. <\/p>",
+        "subheading_c": "#666666",
+        "title_alignment": "text-center",
+        "xxl": 2,
+        "xl": 2,
+        "lg": 2,
+        "md": 2,
+        "sm": 1,
+        "xs": 1,
+        "spacing": 30,
+        "show_dot": true,
+        "c_dot": "#78b144",
+        "show_nav": false,
+        "animate": true,
+        "br_container": 0,
+        "container": "container",
+        "border_color": "",
+        "background_color": "#f7f6f2",
+        "class": "",
+        "distance_top": 30,
+        "distance_bottom": 30
+      }
     }
   },
   "order": [
@@ -748,6 +820,7 @@
     "7c0399e5-863a-4a3b-82f7-a3f59f5c1e87",
     "da511e5e-27a5-47e2-a716-81062978d07d",
     "e1b98504-6041-492e-ae1e-bfd8cf485433",
-    "1699848378da3645ab"
+    "1699848378da3645ab",
+    "38fd551a-96a7-4e3d-98f4-903b56c6518d"
   ]
 }
