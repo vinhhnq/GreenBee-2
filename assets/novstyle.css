@@ -18066,6 +18066,10 @@ effects the :hover style. This forces the style to be applied.
   display: none !important;
 }
 
+.section-collection-tabs .style-1 .nav-link.active:before {
+  width: 100%;
+}
+
 /* Breadcrumbs =============================================================================================== */
 #NovBreadcrumbs {
   position: relative;
@@ -28471,6 +28475,26 @@ a[data-init-quickshop] {
   text-align: center;
   position: relative;
 }
+.section-collection-tabs .nav-tabs .nav-link.active:before {
+  width: 100%;
+}
+.section-collection-tabs .nav-tabs .nav-link:before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translate(-50%);
+  width: 0;
+  height: 3px;
+  background: #78b144;
+  -webkit-transition: all 0.35s ease;
+  -moz-transition: all 0.35s ease;
+  -ms-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
 .section-collection-tabs .nav-tabs .nav-link .collection_icon {
   min-height: 31px;
   line-height: 31px;
@@ -30332,7 +30356,6 @@ a[data-init-quickshop] {
   overflow: hidden;
 }
 .section-product-deals .container-inner {
-  border: 2px dashed;
   padding: 0 20px;
 }
 .section-product-deals .img-top {
