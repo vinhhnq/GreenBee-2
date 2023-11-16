@@ -3757,3 +3757,10 @@ effects the :hover style. This forces the style to be applied.
       background-position: -60px -60px;
    }
 }
+
+.shopify-app-block[data-block-handle="preview_badge_homepage"]{
+   display: none !important;
+}
+.section-collection-tabs .style-1 .nav-link.active:before {
+   width: 100%;
+}

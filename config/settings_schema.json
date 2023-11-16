@@ -502,7 +502,7 @@
         "default": "default"
       },
       {
-        "type": "header",
+        "type": "header", 
         "content": "Language RTL"
       },
       {

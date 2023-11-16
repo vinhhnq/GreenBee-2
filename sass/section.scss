@@ -4,8 +4,15 @@
    .title_section {
       margin-bottom: 4rem;
       .title {
-         font-size: 3.6rem;
-         font-weight: 700;
+         font-size: 2.8rem;
+         font-weight: 600;
+         font-family: Poppins,HelveticaNeue,Helvetica Neue,sans-serif;
+      }
+      .sub_title {
+         font-size: 1.3rem;
+         font-weight: 500;
+         font-family: Roboto,HelveticaNeue,Helvetica Neue,sans-serif;
+         line-height: 1.5;
       }
    }
    .nav-tabs {
@@ -18,8 +25,10 @@
          }
       }
       .nav-link {
-         font-size: 16px;
-         font-weight: 700;
+         padding: 0 0 15px;
+         font-size: 13px;
+         font-weight: 400;
+         font-family: Poppins,HelveticaNeue,Helvetica Neue,sans-serif;
          text-transform: capitalize;
          white-space: nowrap;
          background-color: transparent;
@@ -27,6 +36,34 @@
          line-height: 1;
          text-align: center;
          position: relative;
+         &.active {
+            &:before{
+               width: 100%;
+            }
+         }
+         &:before {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translate(-50%);
+            width: 0;
+            height: 3px;
+            background: #78b144;
+            -webkit-transition: all .35s ease;
+            -moz-transition: all .35s ease;
+            -ms-transition: all .35s ease;
+            -o-transition: all .35s ease;
+            transition: all .35s ease;
+         }
+         .collection_icon {
+            min-height: 31px;
+            line-height: 31px;
+            margin-bottom: 10px;
+            display: block;
+         }
          span {
             position: relative;
             &:before {
@@ -1597,7 +1634,7 @@
 .section-product-deals {
    overflow: hidden;
    .container-inner {
-      border: 2px dashed;
+      // border: 2px dashed;
       padding: 0 20px;
    }
    .img-top {

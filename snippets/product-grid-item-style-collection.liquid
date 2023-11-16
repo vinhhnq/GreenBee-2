@@ -54,7 +54,7 @@
             {% endif %}
           {% endfor %}
         </div>
-      </a>
+      </a>            
       {% assign date_created = product.created_at | date:'%s' %}
       {% assign date_now = 'now' | date:'%s' %}
       {% assign difference = date_now | minus: date_created %}
