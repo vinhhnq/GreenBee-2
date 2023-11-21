@@ -747,15 +747,15 @@
         "2d02ebce-9278-4e3a-9c16-4083671a9594": {
           "type": "productcountdownlist",
           "settings": {
-            "product_handle": "apple-1",
-            "countdown_timeend": ""
+            "product_handle": "lorem-ipsum-is-simply-dummy-text-of-the-printing-and-typesetting-industry",
+            "countdown_timeend": "2023\/12\/15"
           }
         },
         "1b496f74-d8d5-47c9-8493-009959463d0f": {
           "type": "productcountdownlist",
           "settings": {
-            "product_handle": "lorem-ipsum-dolor-sit-amet-consectetur-5",
-            "countdown_timeend": ""
+            "product_handle": "lorem-ipsum-is-simply-dummy-text-of-the-printing-and-typesetting-industry-1",
+            "countdown_timeend": "2023\/12\/15"
           }
         },
         "8a0b5cb5-3c97-4737-a4d5-15a7d197c1be": {

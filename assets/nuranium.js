@@ -1132,7 +1132,7 @@
                           '.item-product__popup--variant [data-option="option2"]'
                       )
                       .val();
-              a
+                a
                   .find(
                       '.item-product__popup--variant [data-option="option3"]'
                   )

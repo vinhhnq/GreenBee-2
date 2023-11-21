@@ -5,6 +5,7 @@
 {%- assign md = 100 | divided_by: sst.md -%}
 {%- assign sm = 100 | divided_by: sst.sm -%}
 {%- assign xs = 100 | divided_by: sst.xs -%}
+
 <div class="distance position-relative{% if sst.class != blank %} {{ sst.class }}{% endif %}{% if sst.animate == true %} wow fadeInUp animated{% endif %}" data-section-id="{{ section.id }}" data-section-type="nov-slick">
   {% if sst.container == 'container' %}
     <div class="container">
@@ -339,7 +340,7 @@
     width: {{ xs }}%;
     flex: 0 0 {{ xs }}%;
   }
-  @media(min-width:  576px) {
+  @media(min-width: 576px) {
     #shopify-section-{{ section.id }} .nov-slick-carousel:not(.slick-initialized) .item {
       width: {{ sm }}%;
       flex: 0 0 {{ sm }}%;

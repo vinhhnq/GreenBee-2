@@ -26,9 +26,9 @@
     {% endif %}
 {% endfor %}
 <div class="item-product mb-0{% if settings.b_pro %} h_bd{% endif %}{% if settings.show_bg_product %} bg{% endif %}" data-product-id="product-{{ product.id }}" data-json-product='{"id": {{product.id}},"handle": "{{product.handle}}","variants": {{ product.variants | json | escape }},"media": {{product.media | json}}}'>
-  <div class="inner-top d-sm-flex align-items-center">
+  <div class="inner-top align-items-center">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-xl-6 col-lg-5 col-md-6 col-xs-12">
         <div class="thumbnail-container{% if product.images.size > 1 %} has-multiimage{% endif %}">
           <a href="{{ product.url | within: collection }}"  data-index="0">
             {% assign img_url = product.featured_image %}
@@ -55,24 +55,11 @@
               <div class="badge badge--sale-rt mt-5">{{ 'products.product.new' | t }}</div>
             {% endif %}
           </div>
-          {% if settings.wishlist_enable or settings.quickview_enable %}
-            <div class="button--top">
-              {% if settings.wishlist_enable %}
-                {% render 'nov-wishlist', id: product.id, handle: product.handle %}
-              {% endif %}
-              {% if settings.quickview_enable %}
-                {% render 'nov-quickview', id: product.variants.first.id, handle: product.handle %}
-              {% endif %}
-            </div>
-          {% endif %}
-          <div class="product__popup-swatch">
-            {% render 'add-to-cart-form', product: product, sold_out: sold_out, id: 'grid-product-form-', position: position, sectionId: sectionId %}
-          </div>
           {% render 'item-swatch', product: product, option_color_swatch: option_color_swatch, downcased_option: option_name, product_option: product_option, index: index %}
           <div class="countdownfree d-flex justify-content-center align-items-center mb-sm-15" data-countdown="{{ countdown_timeend }}" data-show-days="{{ settings.show_day }}" data-restart="{{ settings.restart }}"></div>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-xl-6 col-lg-7 col-md-6 col-xs-12">
         <div class="product__info">
           {% if settings.show_rating %}
             {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %}
@@ -88,6 +75,17 @@
               <div class="price-regular">
                 <span data-price-grid>{{ product.variants[0].price | money }}</span>
               </div>
+            {% endif %}
+          </div>
+          <div class="group-buttons d-flex">
+            {% render 'add-to-cart-form', product: product, sold_out: sold_out, id: 'grid-product-form-', position: position, sectionId: sectionId %}
+            {% if settings.wishlist_enable or settings.quickview_enable %}
+              {% if settings.wishlist_enable %}
+                {% render 'nov-wishlist', id: product.id, handle: product.handle %}
+              {% endif %}
+              {% if settings.quickview_enable %}
+                {% render 'nov-quickview', id: product.variants.first.id, handle: product.handle %}
+              {% endif %}
             {% endif %}
           </div>
           <div class="product_desc mt-20">{{ product.description | strip_html | truncatewords: 15 }}</div>

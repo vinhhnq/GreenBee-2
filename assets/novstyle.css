@@ -25034,7 +25034,6 @@ variant-selects select:not(.variant-color) {
   border-radius: var(--border-radius-product-image);
   transform: translateZ(0);
   overflow: hidden;
-  border: 1px solid var(--color-product-border);
 }
 .item-product .thumbnail-container img {
   margin: 0 auto;

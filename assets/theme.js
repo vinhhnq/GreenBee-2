@@ -893,7 +893,6 @@ theme.Nov_SliderShow = (function() {
         var $container = (this.$container = $(container));
         var sectionId = $container.attr('data-section-id');
         var slideWrapper = (this.slideWrapper = '#shopify-section-' + sectionId + ' .main-slider');
-
         if($('html').hasClass('lang-rtl'))
             var rtl = true;
         else
