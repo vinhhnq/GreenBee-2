@@ -61,10 +61,14 @@
       </div>
       <div class="col-xl-6 col-lg-7 col-md-6 col-xs-12">
         <div class="product__info">
-          {% if settings.show_rating %}
-            {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %}
-          {% endif %}
           <div class="product__title mt-10"><a href="{{ product.url | within: collection }}"><span>{{ product.title }}</span></a></div>
+          {% if settings.show_rating %}
+            {% render 'judgeme_widgets'
+           , widget_type: 'judgeme_preview_badge'
+           , jm_style: ''
+           , concierge_install: true
+           , product: product %}
+         {% endif %}
           <div class="price-box mt-10">
             {% if on_sale %}
               <div class="price-sale">

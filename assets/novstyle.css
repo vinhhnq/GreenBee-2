@@ -30448,9 +30448,6 @@ a[data-init-quickshop] {
   border-radius: 3rem;
   padding: 20px;
 }
-.section-product-deals .item-product:hover .countdownfree {
-  opacity: 0 !important;
-}
 .section-product-deals .grid--view-items .item-product .product__info {
   text-align: left;
 }
