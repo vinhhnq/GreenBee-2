@@ -25621,12 +25621,11 @@ variant-selects select:not(.variant-color) {
 .item-product form.variants-default, .item-product form.one-option-color {
   bottom: 0;
   left: 20px;
-  visibility: hidden;
-  opacity: 0;
+  opacity: 1;
   transition: all 0.3s;
 }
 .item-product form.variants-default:hover button, .item-product form.one-option-color:hover button {
-  background-color: var(--theme-color-default);
+  background-color: var(--theme-button-hover);
 }
 .item-product form.one-option-color {
   display: block;
@@ -25668,7 +25667,7 @@ variant-selects select:not(.variant-color) {
   font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
-  border-radius: 3px;
+  border-radius: 40px;
   transition: 0.3s linear;
 }
 .item-product .add-to-cart-btn:hover, .item-product .btn-quick-add:hover {
