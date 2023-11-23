@@ -18070,6 +18070,13 @@ effects the :hover style. This forces the style to be applied.
   width: 100%;
 }
 
+/* ========================= ITEM PRODUCT ========================== */
+.item-product .jdgm-preview-badge[data-template=index],
+.item-product .jdgm-preview-badge[data-template=collection],
+.item-product .jdgm-preview-badge[data-template=product] {
+  display: block !important;
+}
+
 /* Breadcrumbs =============================================================================================== */
 #NovBreadcrumbs {
   position: relative;
@@ -25613,9 +25620,7 @@ variant-selects select:not(.variant-color) {
 }
 .item-product form.variants-default, .item-product form.one-option-color {
   bottom: 0;
-  position: absolute;
   left: 20px;
-  width: calc(100% - 40px);
   visibility: hidden;
   opacity: 0;
   transition: all 0.3s;
