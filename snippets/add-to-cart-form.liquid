@@ -2,7 +2,7 @@
 {% assign variantCount = product.variants | size %}
 {% assign downcased_option = product.options_with_values[0].name | downcase %}
 {% assign option_color_swatch = settings.option_color_swatch | downcase %}
-<form action="{{ routes.cart_url }}/add" method="post" class="{% if product.variants.first.title == 'Default Title' %} variants-default{% endif %}{% if variantCount > 0 and product.variants.first.title != 'Default Title' and sold_out > 0 %} hide{% endif %}{% if optionCount == 1 and downcased_option == 'color' %} one-option-color{% endif %}" id="{{id}}-{{ product.id }}-{{ sectionId }}" data-id="product-actions-{{ product.id }}" enctype="multipart/form-data">
+<form action="{{ routes.cart_url }}/add" method="post" class="{% if product.variants.first.title == 'Default Title' %}variants-default{% endif %}{% if variantCount > 0 and product.variants.first.title != 'Default Title' and sold_out > 0 %} hide{% endif %}{% if optionCount == 1 and downcased_option == 'color' %} one-option-color{% endif %}" id="{{id}}-{{ product.id }}-{{ sectionId }}" data-id="product-actions-{{ product.id }}" enctype="multipart/form-data">
   {% if sold_out %}
     <button class="btn w-100 add-to-cart-btn" type="submit" disabled="disabled">
       {{ 'products.product.sold_out' | t }}

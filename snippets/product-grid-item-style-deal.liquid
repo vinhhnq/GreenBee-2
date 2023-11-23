@@ -33,11 +33,18 @@
           <a href="{{ product.url | within: collection }}"  data-index="0">
             {% assign img_url = product.featured_image %}
             <div class="respone_image" style="padding-top:{{ 1 | divided_by: img_url.aspect_ratio | times: 100}}%;">
-              <img class="product__thumbnail lazyload" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="{{ img_url | img_url: '180x' }}" data-srcset="{{ img_url | img_url: '180x' }} 180w,{{ img_url | img_url: '360x' }} 360w,{{ img_url | img_url: '540x' }} 540w,{{ img_url | img_url: '720x' }} 720w,{{ img_url | img_url: '900x' }} 900w,{{ img_url | img_url: '1080x' }} 1080w,{{ img_url | img_url: '1296x' }} 1296w,{{ img_url | img_url: '1512x' }} 1512w,{{ img_url | img_url: '1728x' }} 1728w, {{ img_url | img_url: '2048x' }} 2048w" data-sizes="auto" alt="{{ img_url.alt }}">
+              <img class="product__thumbnail lazyload" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" 
+                data-src="{{ img_url | img_url: '180x' }}" 
+                data-srcset="{{ img_url | img_url: '180x' }} 180w,{{ img_url | img_url: '360x' }} 360w,{{ img_url | img_url: '540x' }} 540w,{{ img_url | img_url: '720x' }} 720w,{{ img_url | img_url: '900x' }} 900w,{{ img_url | img_url: '1080x' }} 1080w,{{ img_url | img_url: '1296x' }} 1296w,{{ img_url | img_url: '1512x' }} 1512w,{{ img_url | img_url: '1728x' }} 1728w, {{ img_url | img_url: '2048x' }} 2048w" 
+                data-sizes="auto" alt="{{ img_url.alt }}">
               {% for image in product.images %}
                 {% assign img_url = image.src %}
                 {% if forloop.first != true %}
-                  <img class="product__thumbnail-second lazyload" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="{{ img_second | img_url: '180x' }}" data-srcset="{{ img_url | img_url: '180x' }} 180w,{{ img_url | img_url: '360x' }} 360w,{{ img_url | img_url: '540x' }} 540w,{{ img_url | img_url: '720x' }} 720w,{{ img_url | img_url: '900x' }} 900w,{{ img_url | img_url: '1080x' }} 1080w,{{ img_url | img_url: '1296x' }} 1296w,{{ img_url | img_url: '1512x' }} 1512w,{{ img_url | img_url: '1728x' }} 1728w, {{ img_url | img_url: '2048x' }} 2048w" data-sizes="auto" alt="{{ img_url.alt }}">
+                  <img class="product__thumbnail-second lazyload" 
+                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" 
+                    data-src="{{ img_second | img_url: '180x' }}" data-srcset="{{ img_url | img_url: '180x' }} 180w,{{ img_url | img_url: '360x' }} 360w,{{ img_url | img_url: '540x' }} 540w,{{ img_url | img_url: '720x' }} 720w,{{ img_url | img_url: '900x' }} 900w,{{ img_url | img_url: '1080x' }} 1080w,{{ img_url | img_url: '1296x' }} 1296w,{{ img_url | img_url: '1512x' }} 1512w,{{ img_url | img_url: '1728x' }} 1728w, {{ img_url | img_url: '2048x' }} 2048w" 
+                    data-sizes="auto" 
+                    alt="{{ img_url.alt }}">
                   {% break %}
                 {% endif %}
               {% endfor %}
