@@ -67,6 +67,18 @@
       },
       {
         "type": "color",
+        "id": "theme_btn_c",
+        "label": "Theme color default button",
+        "default": "#f0f0f0"
+      },
+      {
+        "type": "color",
+        "id": "theme_btn_c_hover",
+        "label": "Theme color default color button hover",
+        "default": "#0d7a52"
+      },
+      {
+        "type": "color",
         "id": "color_body",
         "label": "Background body",
         "default": "#ffffff"
@@ -502,7 +514,7 @@
         "default": "default"
       },
       {
-        "type": "header", 
+        "type": "header",
         "content": "Language RTL"
       },
       {
