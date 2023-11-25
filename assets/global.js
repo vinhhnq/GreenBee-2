@@ -736,11 +736,11 @@ novtheme.Countdown = function() {
         } else {
             NewfinalDate = finalDate;
         }
-        var dayString = showDays ? '<div class="item-time"><span class="data-number">%D</span><span class="name-time">Days</span></div>' : '';
+        var dayString = showDays ? '<div class="item-time"><div class="data-number">%D</div><div class="name-time">Days</div></div>' : '';
         var countdown_format = dayString
-                           + '<div class="item-time"><span class="data-number">%H</span><span class="name-time">Hours</span></div>'
-                           + '<div class="item-time"><span class="data-number">%M</span><span class="name-time">Mins</span></div>'
-                           + '<div class="item-time"><span class="data-number">%S</span><span class="name-time">Secs</span></div>';
+                           + '<div class="item-time"><div class="data-number">%H</div><div class="name-time">Hours</div></div>'
+                           + '<div class="item-time"><div class="data-number">%M</div><div class="name-time">Mins</div></div>'
+                           + '<div class="item-time"><div class="data-number">%S</div><div class="name-time">Secs</div></div>';
         $countdown.countdown(NewfinalDate, function(event) {
             $countdown.html(event.strftime(countdown_format));
             $countdown.css('opacity', '1');
