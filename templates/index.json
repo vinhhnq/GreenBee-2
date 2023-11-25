@@ -765,17 +765,24 @@
             "countdown_timeend": ""
           }
         },
-        "266bbacb-cec3-4cc8-991c-36ec779c383f": {
+        "29ea29ac-604e-4a1b-8524-0b3797ae5ede": {
           "type": "productcountdownlist",
           "settings": {
-            "product_handle": "lorem-ipsum-dolor-sit-amet-consectetur-2",
+            "product_handle": "lorem-ipsum-is-simply-dummy-text-of-the-printing-2",
+            "countdown_timeend": "2023\/09\/25"
+          }
+        },
+        "5acbac16-8bd8-48c7-b0be-eaccd84e26a5": {
+          "type": "productcountdownlist",
+          "settings": {
+            "product_handle": "lorem-ipsum-is-simply-dummy-text-of-the-printing-1",
             "countdown_timeend": ""
           }
         },
-        "224a5c17-dcca-4544-a4dd-3c3c5da5e74a": {
+        "72cd0b69-b010-472a-a3fb-a56c317d00b4": {
           "type": "productcountdownlist",
           "settings": {
-            "product_handle": "lorem-ipsum-dolor-sit-amet-consectetur",
+            "product_handle": "lorem-ipsum-is-simply-dummy-text-of-the-printing-4",
             "countdown_timeend": ""
           }
         }
@@ -784,8 +791,9 @@
         "6ef02c3f-a610-4076-a283-37ac3494e438",
         "1b496f74-d8d5-47c9-8493-009959463d0f",
         "8a0b5cb5-3c97-4737-a4d5-15a7d197c1be",
-        "266bbacb-cec3-4cc8-991c-36ec779c383f",
-        "224a5c17-dcca-4544-a4dd-3c3c5da5e74a"
+        "29ea29ac-604e-4a1b-8524-0b3797ae5ede",
+        "5acbac16-8bd8-48c7-b0be-eaccd84e26a5",
+        "72cd0b69-b010-472a-a3fb-a56c317d00b4"
       ],
       "settings": {
         "heading": "<p>Flash Deals<\/p>",
@@ -802,12 +810,77 @@
         "spacing": 30,
         "show_dot": true,
         "c_dot": "#78b144",
+        "c_dots_act": "#78b144",
         "show_nav": false,
         "animate": true,
         "br_container": 0,
         "container": "container",
         "border_color": "",
         "background_color": "#f7f6f2",
+        "class": "",
+        "distance_top": 80,
+        "distance_bottom": 80
+      }
+    },
+    "e259110d-9c53-4ec9-9c92-77851cd823b1": {
+      "type": "nov-collection-tabs2",
+      "blocks": {
+        "template--19940596547878__e259110d-9c53-4ec9-9c92-77851cd823b1-tabitem-1": {
+          "type": "tabitem",
+          "settings": {
+            "tab_title": "New Arrivals",
+            "collection_handle": "new-arrivals"
+          }
+        },
+        "template--19940596547878__e259110d-9c53-4ec9-9c92-77851cd823b1-tabitem-2": {
+          "type": "tabitem",
+          "settings": {
+            "tab_title": "Best Sellers",
+            "collection_handle": "best-sellers"
+          }
+        },
+        "template--19940596547878__e259110d-9c53-4ec9-9c92-77851cd823b1-tabitem-3": {
+          "type": "tabitem",
+          "settings": {
+            "tab_title": "Tab Three",
+            "collection_handle": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19940596547878__e259110d-9c53-4ec9-9c92-77851cd823b1-tabitem-1",
+        "template--19940596547878__e259110d-9c53-4ec9-9c92-77851cd823b1-tabitem-2",
+        "template--19940596547878__e259110d-9c53-4ec9-9c92-77851cd823b1-tabitem-3"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_c": "#222222",
+        "subheading": "",
+        "subheading_c": "#666666",
+        "title_alignment": "text-left",
+        "xxl": 5,
+        "xl": 5,
+        "lg": 3,
+        "md": 3,
+        "sm": 2,
+        "xs": 2,
+        "row_number": 1,
+        "row_mobile": 2,
+        "limit": 30,
+        "spacing": 30,
+        "show_dot": false,
+        "show_nav": true,
+        "view_all": false,
+        "nav_c": "#b0b0b0",
+        "nav_ca": "#ffffff",
+        "nav_bd": "#222222",
+        "nav_bg": "#222222",
+        "nav_bga": "#222222",
+        "animate": false,
+        "br_container": 0,
+        "container": "container",
+        "background_color": "",
+        "bg_size": "full",
         "class": "",
         "distance_top": 30,
         "distance_bottom": 30
@@ -821,6 +894,7 @@
     "da511e5e-27a5-47e2-a716-81062978d07d",
     "e1b98504-6041-492e-ae1e-bfd8cf485433",
     "1699848378da3645ab",
-    "38fd551a-96a7-4e3d-98f4-903b56c6518d"
+    "38fd551a-96a7-4e3d-98f4-903b56c6518d",
+    "e259110d-9c53-4ec9-9c92-77851cd823b1"
   ]
 }

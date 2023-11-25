@@ -15791,7 +15791,7 @@ effects the :hover style. This forces the style to be applied.
   transform: scale(1.2, 1.2);
 }
 .slick-slider .slick-dots li.slick-active button {
-  background-color: var(--theme-color-default);
+  background-color: #78b144;
 }
 .slick-slider .slick-dots li.slick-active button:active {
   background-color: transparent;

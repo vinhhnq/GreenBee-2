@@ -81,7 +81,7 @@
         {% render 'add-to-cart-form', product: product, sold_out: sold_out, id: 'grid-product-form-', position: position, sectionId: sectionId, blockId: blockId %}
       </div>
     </div>
-
+    
     <div class="product__info">
       <div class="product__title"><a href="{{ product.url | within: collection }}"><span>{{ product.title }}</span></a></div>
       {% if settings.show_rating %}

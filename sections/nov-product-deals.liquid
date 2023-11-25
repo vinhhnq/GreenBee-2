@@ -196,6 +196,12 @@
       "default": "#000000"
     },
     {
+      "type": "color",
+      "id": "c_dots_act",
+      "label": "Dots color active",
+      "default": "#78b144"
+    },
+    {
       "type": "checkbox",
       "id": "show_nav",
       "label": "Show navigation",
@@ -373,11 +379,6 @@
   #shopify-section-{{ section.id }} .progress__bar {
     background: {{ settings.gradient_deal }};
   }
-  #shopify-section-{{ section.id }} .slick-slider .slick-dots button {
-    background-color: {{ sst.c_dot }};
-  }
-  #shopify-section-{{ section.id }} .slick-slider .slick-dots li.slick-active {
-    border-color:  {{ sst.c_dot }};
-  }
+  
 {% endstyle %}
 
