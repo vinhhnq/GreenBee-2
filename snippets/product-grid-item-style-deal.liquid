@@ -42,7 +42,8 @@
                 {% if forloop.first != true %}
                   <img class="product__thumbnail-second lazyload" 
                     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" 
-                    data-src="{{ img_second | img_url: '180x' }}" data-srcset="{{ img_url | img_url: '180x' }} 180w,{{ img_url | img_url: '360x' }} 360w,{{ img_url | img_url: '540x' }} 540w,{{ img_url | img_url: '720x' }} 720w,{{ img_url | img_url: '900x' }} 900w,{{ img_url | img_url: '1080x' }} 1080w,{{ img_url | img_url: '1296x' }} 1296w,{{ img_url | img_url: '1512x' }} 1512w,{{ img_url | img_url: '1728x' }} 1728w, {{ img_url | img_url: '2048x' }} 2048w" 
+                    data-src="{{ img_second | img_url: '180x' }}" 
+                    data-srcset="{{ img_url | img_url: '180x' }} 180w,{{ img_url | img_url: '360x' }} 360w,{{ img_url | img_url: '540x' }} 540w,{{ img_url | img_url: '720x' }} 720w,{{ img_url | img_url: '900x' }} 900w,{{ img_url | img_url: '1080x' }} 1080w,{{ img_url | img_url: '1296x' }} 1296w,{{ img_url | img_url: '1512x' }} 1512w,{{ img_url | img_url: '1728x' }} 1728w, {{ img_url | img_url: '2048x' }} 2048w" 
                     data-sizes="auto" 
                     alt="{{ img_url.alt }}">
                   {% break %}
@@ -56,25 +57,25 @@
           {% assign date_end = settings.time_newproduct | times: 86400 %}
           <div class="product--badge">
             {% if product.compare_at_price > product.price and settings.show_compare_price %}
-            <span class="badge badge--sale-pt"><i class="zmdi zmdi-flash"></i>&nbsp;-{{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | round: 4 }}%</span>
+              <span class="badge badge--sale-pt"><i class="zmdi zmdi-flash"></i>&nbsp;-{{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | round: 4 }}%</span>
             {% endif %}
             {% if difference < date_end and settings.show_new %}
               <div class="badge badge--sale-rt mt-5">{{ 'products.product.new' | t }}</div>
             {% endif %}
           </div>
           {% render 'item-swatch', product: product, option_color_swatch: option_color_swatch, downcased_option: option_name, product_option: product_option, index: index %}
-          <div class="countdownfree d-flex justify-content-center align-items-center mb-sm-15" data-countdown="{{ countdown_timeend }}" data-show-days="{{ settings.show_day }}" data-restart="{{ settings.restart }}"></div>
+          <div class="countdownfree justify-content-center align-items-center mb-sm-15" data-countdown="{{ countdown_timeend }}" data-show-days="{{ settings.show_day }}" data-restart="{{ settings.restart }}"></div>
         </div>
       </div>
       <div class="col-xl-6 col-lg-7 col-md-6 col-xs-12">
         <div class="product__info">
           <div class="product__title mt-10"><a href="{{ product.url | within: collection }}"><span>{{ product.title }}</span></a></div>
-          <div class="rating mt-20">
+          <div class="rating mt-15">
             {% if settings.show_rating %}
               {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %}
             {% endif %}
           </div>
-          <div class="price-box mt-20">
+          <div class="price-box mt-15">
             {% if on_sale %}
               <div class="price-sale">
                 <span class="special-price" data-price-grid>{{ product.variants[0].price | money }}</span>
@@ -86,14 +87,14 @@
               </div>
             {% endif %}
           </div>
-          <div class="group-buttons d-flex mt-40" style="gap: 5px">
+          <div class="group-buttons d-flex mt-30" style="gap: 5px">
             {% render 'add-to-cart-form', product: product, sold_out: sold_out, id: 'grid-product-form-', position: position, sectionId: sectionId %}
             {% if settings.wishlist_enable or settings.quickview_enable %}
-              {% if settings.wishlist_enable %}
-                {% render 'nov-wishlist', id: product.id, handle: product.handle %}
-              {% endif %}
               {% if settings.quickview_enable %}
                 {% render 'nov-quickview', id: product.variants.first.id, handle: product.handle %}
+              {% endif %}
+              {% if settings.wishlist_enable %}
+                {% render 'nov-wishlist', id: product.id, handle: product.handle %}
               {% endif %}
             {% endif %}
           </div>
@@ -126,7 +127,6 @@
               {% endif %}
             </div>
           {% endif %}
-          {% render 'item-swatch', product: product, option_color_swatch: option_color_swatch, downcased_option: option_name, product_option: product_option, index: index %}
         </div>
       </div>
     </div>

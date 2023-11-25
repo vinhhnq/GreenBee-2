@@ -121,6 +121,7 @@
         --color-product-name: {{ settings.color_product_name }};
         --color-product-name-rgb: {{ settings.color_product_name | color_to_rgb | remove: 'rgb(' | remove: 'rgba(' | remove: ')' | remove: ', 0.0' }};
         --color-price: {{ settings.color_price }};
+        --color-price-deal: {{ settings.color_price_deal }};
         --color-reduced-price: {{ settings.color_reduced_price }};
         --bg-product-icon: {{ settings.bg_pi }};
         --color-product-border: {{ settings.b_pro_color }};

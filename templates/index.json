@@ -744,11 +744,11 @@
     "38fd551a-96a7-4e3d-98f4-903b56c6518d": {
       "type": "nov-product-deals",
       "blocks": {
-        "2d02ebce-9278-4e3a-9c16-4083671a9594": {
+        "6ef02c3f-a610-4076-a283-37ac3494e438": {
           "type": "productcountdownlist",
           "settings": {
-            "product_handle": "lorem-ipsum-is-simply-dummy-text-of-the-printing-and-typesetting-industry",
-            "countdown_timeend": "2023\/12\/15"
+            "product_handle": "lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit",
+            "countdown_timeend": ""
           }
         },
         "1b496f74-d8d5-47c9-8493-009959463d0f": {
@@ -781,7 +781,7 @@
         }
       },
       "block_order": [
-        "2d02ebce-9278-4e3a-9c16-4083671a9594",
+        "6ef02c3f-a610-4076-a283-37ac3494e438",
         "1b496f74-d8d5-47c9-8493-009959463d0f",
         "8a0b5cb5-3c97-4737-a4d5-15a7d197c1be",
         "266bbacb-cec3-4cc8-991c-36ec779c383f",

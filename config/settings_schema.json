@@ -860,6 +860,11 @@
       },
       {
         "type": "color",
+        "id": "color_price_deal",
+        "label": "Color price flash deal"
+      },
+      {
+        "type": "color",
         "id": "color_reduced_price",
         "label": "Color reduced price",
         "default": "#d5d5d5"
