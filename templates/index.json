@@ -842,8 +842,8 @@
         "template--19940596547878__e259110d-9c53-4ec9-9c92-77851cd823b1-tabitem-3": {
           "type": "tabitem",
           "settings": {
-            "tab_title": "Tab Three",
-            "collection_handle": ""
+            "tab_title": "Feature",
+            "collection_handle": "featured"
           }
         }
       },

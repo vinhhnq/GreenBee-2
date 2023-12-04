@@ -17,21 +17,11 @@
 		<div class="container-full" style="padding: 0 {{ sst.spacing | append: 'px' }}">
 	{% endif %}
 		<div class="{% if sst.bg_size == 'content' %}distance{% if sst.class != blank %} {{ sst.class }}{% endif %} {% endif %}container-inner position-relative{% if sst.bg_size == 'content' %} overflow_hidden{% endif %}">
-			{% if sst.heading != blank or sst.subheading != blank %}
-				<div class="title_section {{ sst.title_alignment }}">
-          {% if sst.heading != blank %}
-            <span class="title" style="color: {{ sst.heading_c }};">{{ sst.heading }}</span>
-          {% endif %}
-          {% if sst.subheading != blank %}
-            <span class="sub_title" style="color: {{ sst.subheading_c }};">{{ sst.subheading }}</span>
-          {% endif %}
-        </div>
-			{% endif %}
-			<ul class="nav nav-tabs list-product-tabs list-unstyled d-none d-md-flex justify-content-center mb-50">
+			<ul class="nav2 nav-tabs-2 list-product-tabs list-unstyled d-none d-md-flex justify-content-start mb-50">
 				{% for block in section.blocks %}
 					{% assign bst = block.settings %}
-					<li class="nav-item position-relative d-block">
-						<a class="nav-link tab-links{% if forloop.first  %} active{% endif %} position-relative"
+					<li class="nav-item-2 position-relative d-block">
+						<a class="nav-link-2 tab-links{% if forloop.first  %} active{% endif %} position-relative"
 						data-product-tabtop
 						href="#producttab{{ forloop.index }}{{ section.id }}"
 						data-target="#producttab{{ forloop.index }}{{ section.id }}"
@@ -39,20 +29,6 @@
 						id="tab-{{ forloop.index }}{{ section.id }}" data-id="{{ forloop.index }}{{ section.id }}"
 						data-toggle="tab"
 						data-limit="{{ limit }}">
-							<span class="collection_icon">
-								{% if bst.img_collectiontab != blank %}
-									{% liquid
-										assign imgwidths = bst.img_collectiontab.width
-										assign imgalt = bst.img_collectiontab | default: bst.img_collectiontab | strip_html | escape
-									%}
-									{{ bst.img_collectiontab | img_url: width: imgwidths | img_tag:
-										loading: 'lazy',
-										class: 'img-fluid',
-										widths: '35 50 70',
-										alt: imgalt
-									}}
-								{% endif %}
-							</span>
 							<span>{{ bst.tab_title }}</span>
 						</a>
 					</li>
@@ -63,11 +39,11 @@
 			  </div>
 			  <div class="dropdown-menu dropdown-menu-right list-product-tabs w-100">
 			    {% for block in section.blocks %}
-		    		<a class="nav-link tab-links{% if forloop.first %} active{% endif %}"
+		    		<a class="nav-link-2 tab-links{% if forloop.first %} active{% endif %}"
 		    		data-product-tabTop
 		    		href="#producttab{{ forloop.index }}{{ section.id }}"
 		    		data-target="#producttab{{ forloop.index }}{{ section.id }}"
-		    		data-href="/collections/{{ bst.collection_handle }}?view=tab"
+		    		data-href="/collections/{{ bst.collection_handle }}?view=tab2"
 		    		id="tab-{{ forloop.index }}{{ section.id }}" data-id="{{ forloop.index }}{{ section.id }}"
 		    		data-toggle="tab">
 		    			<span>{{ bst.tab_title }}</span>
@@ -119,7 +95,7 @@
 {% schema %}
 {
 	"name": "Vinova Collection Tabs 2",
-	"class": "section-collection-tabs",
+	"class": "section-collection-tabs2",
 	"settings": [
 		{
 			"type": "richtext",
