@@ -882,8 +882,8 @@
         "background_color": "",
         "bg_size": "full",
         "class": "",
-        "distance_top": 30,
-        "distance_bottom": 30
+        "distance_top": 120,
+        "distance_bottom": 100
       }
     }
   },
