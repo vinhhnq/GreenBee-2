@@ -51,7 +51,7 @@
 			    {% endfor %}
 			  </div>
 			</div>
-			<divww class="product_tab_content tab-content product-tabs-content position-relative">
+			<div class="product_tab_content tab-content product-tabs-content position-relative">
 				{% for block in section.blocks %}
 				<div class="tab-content{% if forloop.first %} active{% endif %}" data-product-TabContent id="producttab{{ forloop.index }}{{ section.id }}">
 					<div class="products-grid grid--view-items row spacing-{{ sst.spacing }} collection-carousel"
@@ -76,7 +76,8 @@
 					</div>
 				</div>
 				{% endfor %}
-			</divww>
+			</div>
+			</div>
 			{% if sst.view_all %}
 				<div class="text-center mt-30">
 					<a href="/collections/all"{% if sst.img_bottom == blank %} class="btn btn-large"{% endif %}>
@@ -226,7 +227,7 @@
 			"label": "Limit",
 			"default": 30,
 			"info": "Select number limit products"
-	    },
+	  },
 		{
 			"type": "range",
 			"id": "spacing",

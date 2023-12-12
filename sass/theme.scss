@@ -650,7 +650,6 @@ button {
    color: var(--color-button-text);
    height: 50px;
    line-height: 50px;
-   width: 100%;
    font-size: 12px;
    font-weight: 700;
    text-transform: uppercase;
@@ -2044,7 +2043,7 @@ effects the :hover style. This forces the style to be applied.
          @include scale(1.2, 1.2);
       }
       &.slick-active button {
-         background-color: var(--theme-color-default);
+         background-color: #78b144;
          &:active {
             background-color: transparent;
             border: 2px solid #fa9901;
@@ -3763,4 +3762,12 @@ effects the :hover style. This forces the style to be applied.
 }
 .section-collection-tabs .style-1 .nav-link.active:before {
    width: 100%;
+}
+/* ========================= ITEM PRODUCT ========================== */
+.item-product {
+   .jdgm-preview-badge[data-template=index],
+   .jdgm-preview-badge[data-template=collection],
+   .jdgm-preview-badge[data-template=product] {
+      display: block!important
+   }
 }

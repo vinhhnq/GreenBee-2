@@ -47,11 +47,7 @@
          </a>
       </div>
       {% if settings.show_rating %}
-         {% render 'judgeme_widgets'
-        , widget_type: 'judgeme_preview_badge'
-        , jm_style: ''
-        , concierge_install: true
-        , product: product %}
+         {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %}
       {% endif %}
       <div class="price-box mt-15">
          {% if on_sale %}

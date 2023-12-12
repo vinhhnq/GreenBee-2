@@ -13965,7 +13965,6 @@ button[disabled], button.disabled {
   color: var(--color-button-text);
   height: 50px;
   line-height: 50px;
-  width: 100%;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
@@ -25294,7 +25293,7 @@ variant-selects select:not(.variant-color) {
   background: var(--color-product-item);
 }
 .grid--view-items .item-product .product__info {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 .grid--view-items .item-product.h_bd {
   padding: 10px;
@@ -28653,10 +28652,10 @@ a[data-init-quickshop] {
   margin-bottom: 0;
 }
 .section-collection-tabs2 .nav-tabs-2 .nav-item-2:not(:last-child) {
-  margin-right: 38px;
+  margin-right: 10px;
 }
 .lang-rtl .section-collection-tabs2 .nav-tabs-2 .nav-item-2:not(:last-child) {
-  margin-left: 38px;
+  margin-left: 10px;
   margin-right: initial;
 }
 .section-collection-tabs2 .nav-tabs-2 .nav-link-2 {
@@ -28672,6 +28671,9 @@ a[data-init-quickshop] {
   line-height: 1;
   text-align: center;
   position: relative;
+}
+.section-collection-tabs2 .nav-tabs-2 .nav-link-2:hover {
+  background-color: #0d7a52;
 }
 .section-collection-tabs2 .nav-tabs-2 .nav-link-2:before {
   content: "";
@@ -28718,6 +28720,9 @@ a[data-init-quickshop] {
 .section-collection-tabs2 .nav-tabs-2 .nav-link-2.active,
 .section-collection-tabs2 .nav-tabs-2 .nav-link-2 span {
   color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 .section-collection-tabs2 .nav-tabs-2 .nav-link-2.active:before,
 .section-collection-tabs2 .nav-tabs-2 .nav-link-2 span:before {

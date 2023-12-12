@@ -75,7 +75,7 @@
 	.product--badge {
 		position: absolute;
 		top: 20px;
-		@include rtl-l(20px);
+		@include rtl-r(20px);
 		.badge {
 			font-family: var(--font-family-default);
 			font-size: 11px;
@@ -118,8 +118,8 @@
 		}
 	}
 	.price-regular, .special-price {
-		color: var(--color-price);
-		font-size: 14px;
+		color: var(--color-price-deal);
+		font-size: 18px;
 		font-weight: 700;
 		font-family: var(--font-family-primary);
 		display: inline-block;
@@ -162,31 +162,26 @@
 		}
 	}
 	.item-product__wishlist, .btnProductQuickview {
-		@include square(42px);
+		@include square(42px); 
 		border-radius: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		color: var(--color-product-icon);
-		background-color: var(--bg-product-icon);
-		box-shadow: 4px 4px 5px rgba(black, .1);
+		background-color: var(--theme-button-default);
 		&:hover {
-			background-color: var(--color-button-hover);
+			background-color: var(--theme-button-hover);
 			color: var(--color-button-text-hover);
 		}
 	}
 	.btnProductQuickview {
-		font-size: 13px;
+		font-size: 20px;
 	}
 	.item-product__wishlist {
 		font-size: 18px;
 		line-height: 1;
 		&.whislist-added, &:hover {
-			background-color: var(--color-button-hover);
+			background-color: var(--theme-button-hover);
 			color: var(--color-button-text-hover);
-			i:before {
-				content: "\f15f"
-			}
 		}
 	}
 	.item-product__count-color {
@@ -460,14 +455,11 @@
 	}
 	form.variants-default, form.one-option-color {
 		bottom: 0;
-    position: absolute;
 	  left: 20px;
-	  width: calc(100% - 40px);
-	  visibility: hidden;
-	  opacity: 0;
+	  opacity: 1;
 	  transition: all .3s;
 	  &:hover button {
-	  	background-color: var(--theme-color-default);
+	  	background-color: var( --theme-button-hover);
 	  }
 	}
 	form.one-option-color {
@@ -510,10 +502,14 @@
 		font-size: 10px;
 		font-weight: 700;
 		text-transform: uppercase;
-		border-radius: 3px;
+		border-radius: 40px;
 		transition: .3s linear;
+		i {
+			padding-right: 10px;
+			font-size: 15px;
+		}
 		&:hover {
-			background-color: var(--theme-color-default);
+			background-color: var(--theme-button-hover);
 		}
 		@media(max-width: 991px) {
 			height: 40px;
