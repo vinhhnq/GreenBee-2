@@ -726,32 +726,32 @@ novtheme.RelatedProduct = function () {
 //Countdown
 novtheme.Countdown = function() {
   function startCountdown($countdown, showDays, restartCountdown) {
-      var finalDate = $countdown.data('countdown');
-      var showDays = showDays || false;
-      var restartCountdown = restartCountdown || false;
-      var finalDateGetTime = new Date(finalDate).getTime();
-      var NewfinalDate = "";
-      var now = new Date();
-      if (finalDateGetTime - now.getTime() < 0 && restartCountdown == true) {
-          NewfinalDate = new Date(now.getTime() + (86400 - (now.getHours() * 60 * 60) - (now.getMinutes() * 60) - now.getSeconds()) * 1000);
-      } else {
-          NewfinalDate = finalDate;
+    var finalDate = $countdown.data('countdown');
+    var showDays = showDays || false;
+    var restartCountdown = restartCountdown || false;
+    var finalDateGetTime = new Date(finalDate).getTime();
+    var NewfinalDate = "";
+    var now = new Date();
+    if (finalDateGetTime - now.getTime() < 0 && restartCountdown == true) {
+      NewfinalDate = new Date(now.getTime() + (86400 - (now.getHours() * 60 * 60) - (now.getMinutes() * 60) - now.getSeconds()) * 1000);
+    } else {
+      NewfinalDate = finalDate;
+    }
+    var dayString = showDays ? '<div class="item-time"><div class="data-number">%D</div><div class="name-time">Days</div></div>' : '';
+    var countdown_format = dayString
+                        + '<div class="item-time"><div class="data-number">%H</div><div class="name-time">Hours</div></div>'
+                        + '<div class="item-time"><div class="data-number">%M</div><div class="name-time">Mins</div></div>'
+                        + '<div class="item-time"><div class="data-number">%S</div><div class="name-time">Secs</div></div>';
+    $countdown.countdown(NewfinalDate, function(event) {
+      $countdown.html(event.strftime(countdown_format));
+      $countdown.css('opacity', '1');
+    }).on('finish.countdown', function() {
+      if (restartCountdown) {
+        startCountdown($countdown, showDays, restartCountdown);
       }
-      var dayString = showDays ? '<div class="item-time"><div class="data-number">%D</div><div class="name-time">Days</div></div>' : '';
-      var countdown_format = dayString
-                          + '<div class="item-time"><div class="data-number">%H</div><div class="name-time">Hours</div></div>'
-                          + '<div class="item-time"><div class="data-number">%M</div><div class="name-time">Mins</div></div>'
-                          + '<div class="item-time"><div class="data-number">%S</div><div class="name-time">Secs</div></div>';
-      $countdown.countdown(NewfinalDate, function(event) {
-          $countdown.html(event.strftime(countdown_format));
-          $countdown.css('opacity', '1');
-      }).on('finish.countdown', function() {
-          if (restartCountdown) {
-              startCountdown($countdown, showDays, restartCountdown);
-          }
-      });
-    }  
+    });
   }
+}
 novtheme.Countdown = function () {
   function startCountdown($countdown, showDays, restartCountdown) {
     var finalDate = $countdown.data("countdown");

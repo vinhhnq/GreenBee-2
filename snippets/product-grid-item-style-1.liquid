@@ -25,7 +25,7 @@
       {% assign position = 0 %}
     {% endif %}
 {% endfor %}
-<div class="item-product text-center{% if settings.b_pro %} h_bd{% endif %}{% if settings.show_bg_product %} bg{% endif %}" data-product-id="product-{{ product.id }}" data-json-product='{"variants": {{ product.variants | json | escape }},"media": {{product.media | json}}}'>
+<div class="item-product b_items text-center{% if settings.b_pro %} h_bd{% endif %}{% if settings.show_bg_product %} bg{% endif %}" data-product-id="product-{{ product.id }}" data-json-product='{"variants": {{ product.variants | json | escape }},"media": {{product.media | json}}}'>
   <div class="inner-top">
     <div class="product-top thumbnail-container{% if product.images.size > 1 %} has-multiimage{% endif %}">
       <a href="{{ product.url | within: collection }}">
@@ -96,10 +96,9 @@
           </div>
         {% endif %}
       </div>
-      {% render 'item-swatch', product: product, option_color_swatch: option_color_swatch, downcased_option: option_name, product_option: product_option, index: index %}
     </div>
-    <div class="product__popup-swatch">
-        {% render 'add-to-cart-form', product: product, sold_out: sold_out, id: 'grid-product-form-', position: position, sectionId: sectionId, blockId: blockId %}
-      </div>
+    <div class="group-buttons">
+      {% render 'add-to-cart-form', product: product, sold_out: sold_out, id: 'grid-product-form-', position: position, sectionId: sectionId, blockId: blockId %}
+    </div>
   </div>
 </div>
