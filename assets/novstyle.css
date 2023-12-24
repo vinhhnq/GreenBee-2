@@ -25293,7 +25293,7 @@ variant-selects select:not(.variant-color) {
   background: var(--color-product-item);
 }
 .grid--view-items .item-product .product__info {
-  margin-top: 25px;
+  margin-top: 10px;
 }
 .grid--view-items .item-product.h_bd {
   padding: 10px;
@@ -28847,6 +28847,23 @@ a[data-init-quickshop] {
     top: 43%;
   }
 }
+.section-collection-tabs2 .item-product {
+  position: relative;
+}
+.section-collection-tabs2 .item-product .product__info {
+  padding-bottom: 58px;
+}
+.section-collection-tabs2 .item-product .product__info .price-regular {
+  color: var(--color-price-collection_2);
+  font-size: 1.5rem;
+}
+.section-collection-tabs2 .item-product .formAddToCart .add-to-cart-btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -18px;
+  height: 38px;
+}
 
 .section-product-slider {
   overflow: hidden;
@@ -29444,6 +29461,24 @@ a[data-init-quickshop] {
 .section-gallery-image img {
   height: 100%;
   object-fit: cover;
+}
+.section-gallery-image .banner-button {
+  border: none;
+  width: 170px;
+  height: 42px;
+  border-radius: 21px;
+  margin-top: 25px;
+  cursor: pointer;
+}
+.section-gallery-image .banner-button:hover {
+  transition: 0.2s linear;
+}
+.section-gallery-image .banner-button span {
+  color: white;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: Poppins, HelveticaNeue, Helvetica Neue, sans-serif;
 }
 
 /* Section Gallery Image 2  ======================================================================================================== */

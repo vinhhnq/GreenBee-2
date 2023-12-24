@@ -84,7 +84,7 @@
       {% if settings.show_rating %}
         <div style='{{ jm_style }}' class='jdgm-widget jdgm-preview-badge'>{{ product.metafields.judgeme.badge }}</div>
       {% endif %}
-      <div class="price-box mt-15">
+      <div class="price-box mt-10">
         {% if on_sale %}
         <div class="price-sale">
           <span class="special-price" data-price-grid>{{ product.variants[0].price | money }}</span>

@@ -69,6 +69,9 @@
                   {% if bst.cta_label2 != blank %}
                     <div class="gallery-image__text2{% if bst.ff_2 == 'f_pr' %}f_pr{% endif %} {% if bst.ff_2 == 'f_gl' %}f_gl{% endif %} text-{{ bst.tt2 }}" style="color: {{ bst.cta_label_c }}">{{ bst.cta_label2 }}</div>
                   {% endif %}
+                  {% if bst.button != blank %}
+                    <button href="{{ bst.link }}" class="banner-button"><span>{{ bst.button }}</span></button>
+                  {% endif %}
                 </div>
               </div>
             {% endif %}
@@ -393,9 +396,30 @@
           },
           {
             "type": "text",
-            "id": "btn_label",
+            "id": "button",
             "label": "Text button",
-            "default": "Shop now"
+            "default": "Learn More"
+          },
+          {
+            "type": "color",
+            "id": "text_c_btn",
+            "label": "Text color button"
+          },
+          {
+            "type": "color",
+            "id": "tc_hover",
+            "label": "",
+            "default": ""
+          },
+          {
+            "type": "color",
+            "id": "c_btn",
+            "label": "Button Color"
+          },
+          {
+            "type": "color",
+            "id": "c_hover_btn",
+            "label": "Button hover color"
           },
           {
             "type": "header",
@@ -523,6 +547,12 @@
     }
     #shopify-section-{{ section.id }} .cap-{{ forloop.index }} .gallery-image__text1 {
       font-size: {{ bst.cta_label1_n | time: 0.7 }}px;
+    }
+    #shopify-section-{{ section.id }} .banner-button {
+      background-color: {{ bst.c_btn }};
+    }
+    #shopify-section-{{ section.id }} .banner-button:hover {
+      background-color: {{ bst.c_hover_btn }};
     }
     @media(max-width: 1440px) { 
       #shopify-section-{{ section.id }} .cap-{{ forloop.index }} {

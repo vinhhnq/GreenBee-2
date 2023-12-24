@@ -9,7 +9,7 @@
 {% endif %}
 
 <div class="distance{% if sst.class_section != blank %} {{ sst.class_section }}{% endif %}{% if sst.animate == true %} wow fadeInUp animated{% endif %}">
-   <div  class="{{ container }}">
+   <div class="{{ container }}">
       <div class="row {% if sst.spacing%} spacing-{{ sst.spacing }} {% endif %} content-gallery-image2">
          {% for block in section.blocks %}
             {% assign bst = block.settings %}
@@ -22,15 +22,15 @@
                      <a class="banner-button" href="{{ bst.link }}"><span>{{ bst.banner_button }}<i class="zmdi zmdi-long-arrow-right"></i></span></a>
                </div>
                <div class="block-image {% if sst.style_img_1 %} nov-sh-image-1{% endif %}{% if sst.style_img_2 %} nov-sh-image-2{% endif %}">
-                  {%- if  bst.image != blank -%}
+                  {%- if  bst.image != blank -%}                    
                      {% assign imagewidth = bst.image.width %}
                      {%- assign imagealt = bst.image_category.alt | default: bst.cta_label | strip_html | escape -%}
                      {{ bst.image | image_url: width: imagewidth | image_tag:
-                     loading: 'lazy',
-                     sizes: sizes,
-                     class: 'img-fluid',
-                     alt: iamgealt,
-                     widths: '630 900 1200 1500'
+                        loading: 'lazy',
+                        sizes: sizes,
+                        class: 'img-fluid',
+                        alt: imagealt,
+                        widths: '630 900 1200 1500'
                      }}
                   {% else %}
                      {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' | replace: '<svg', '<svg style="height: 320px; margin: auto"' }}

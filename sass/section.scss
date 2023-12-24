@@ -351,6 +351,25 @@
          top: 43%;
       }
    }
+   .item-product {
+      position: relative;
+      .product__info {
+         padding-bottom: 58px;
+         .price-regular {
+            color: var(--color-price-collection_2);
+            font-size: 1.5rem;
+         }
+      }
+      .formAddToCart {
+         .add-to-cart-btn {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -18px;
+            height: 38px;
+         }
+      }
+   }
 }
 .section-product-slider {
    overflow: hidden;
@@ -903,6 +922,24 @@
       height: 100%;
       object-fit: cover;
    }
+   .banner-button {
+      border: none;
+      width: 170px;
+      height: 42px;
+      border-radius: 21px;
+      margin-top: 25px;
+      cursor: pointer;
+      &:hover {
+         transition: 0.2s linear;
+      }
+      span {
+         color: white;
+         font-size: 1.3rem;
+         text-transform: uppercase;
+         font-weight: 600;
+         font-family: Poppins,HelveticaNeue,Helvetica Neue,sans-serif;
+      }
+   }
 }
 /* Section Gallery Image 2  ======================================================================================================== */
 .section-gallery-image2 {
@@ -1317,7 +1354,7 @@
       justify-content: center;
       box-shadow: 5px 5px 5px rgba(black, 0.1);
       transition: color 0.25s linear, background 0.25s linear,
-         border-color 0.25s linear;
+      border-color 0.25s linear;
       &:nth-child(2) {
          @include rtl-ml(2rem);
       }
@@ -2322,7 +2359,7 @@
       &:last-child {
          border-radius: 0 0 20px 20px;
       }
- 
+
    }
    .site-nav__link--main {
       font-family: Roboto,HelveticaNeue,Helvetica Neue,sans-serif;
@@ -2353,7 +2390,7 @@
          .vertical_nav_title {
             font-family: "Poppins", "HelveticaNeue", sans-serif;
             font-size: 1.5rem;
- 
+
          }
          .vertical_nav_subtitle {
             font-family: 'Roboto','Helvetica Neue', sans-serif;
@@ -2455,7 +2492,7 @@
          padding-bottom: 30px;
       }
    }
- }
+}
 
 /* Section Lookblok =================================================================================================== */
 .lookbook__thumb {
@@ -2924,8 +2961,8 @@
          .nov-product__single-desc {
             @media (min-width: 992px) {
                @include rtl-plr(
-                  clamp(150px, 16vw, 305px),
-                  clamp(30px, 16vw, var(--p-container))
+                               clamp(150px, 16vw, 305px),
+                               clamp(30px, 16vw, var(--p-container))
                );
             }
             @media (max-width: 991px) {

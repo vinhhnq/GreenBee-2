@@ -368,7 +368,9 @@
             "tt2": "none",
             "mw_2": 500,
             "cta_label2_mb": 10,
-            "btn_label": "",
+            "button": "",
+            "c_btn": "",
+            "c_hover_btn": "",
             "text_align": "left",
             "position": "width: 60%; left: 10%; top: 30%",
             "position_xl": "width: 60%; left: 10%; top: 30%",
@@ -398,7 +400,9 @@
             "tt2": "none",
             "mw_2": 500,
             "cta_label2_mb": 10,
-            "btn_label": "Shop now",
+            "button": "",
+            "c_btn": "",
+            "c_hover_btn": "",
             "text_align": "left",
             "position": "width: 50%; left: 48%; top: 30%",
             "position_xl": "width: 50%; left: 48%; top: 30%",
@@ -428,7 +432,9 @@
             "tt2": "none",
             "mw_2": 500,
             "cta_label2_mb": 10,
-            "btn_label": "Shop now",
+            "button": "",
+            "c_btn": "",
+            "c_hover_btn": "",
             "text_align": "left",
             "position": "width: 60%; left: 10%; top: 30%",
             "position_xl": "width: 60%; left: 10%; top: 30%",
@@ -885,6 +891,65 @@
         "distance_top": 120,
         "distance_bottom": 100
       }
+    },
+    "59cfa05d-1382-412a-bde6-352a5c708145": {
+      "type": "nov-gallery-image",
+      "blocks": {
+        "template--19940596547878__59cfa05d-1382-412a-bde6-352a5c708145-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner4.jpg",
+            "link": "",
+            "cta_label": "available",
+            "cta_label_c": "#222222",
+            "cta_label1_n": 42,
+            "ff_1": "f_gl",
+            "tt1": "uppercase",
+            "cta_label_mb": 0,
+            "cta_label2": "<p><em>Treat yourself to dishes made up of exotic vegetables and cherish the eccentric taste of these veggies<\/em><\/p>",
+            "cta_label2_c": "#222222",
+            "cta_label2_n": 14,
+            "ff_2": "f_gl",
+            "tt2": "none",
+            "mw_2": 500,
+            "cta_label2_mb": 10,
+            "button": "Learn More",
+            "c_btn": "#222222",
+            "c_hover_btn": "#0d7a52",
+            "text_align": "center",
+            "position": "width: 27%; left: 70%; top: 30%",
+            "position_xl": "width: 27%; left: 70%; top: 30%",
+            "position_lg": "",
+            "position_md": "",
+            "position_sm": "",
+            "position_xs": "",
+            "class": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19940596547878__59cfa05d-1382-412a-bde6-352a5c708145-image-1"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_c": "#222222",
+        "subheading": "",
+        "subheading_c": "#666666",
+        "title_alignment": "text-left",
+        "md": 1,
+        "bd_radius": 0,
+        "spacing": 20,
+        "spacing_1": false,
+        "style_img_1": true,
+        "style_img_2": false,
+        "animate": true,
+        "background_color": "",
+        "container": "container",
+        "class_section": "",
+        "px": 0,
+        "distance_top": 30,
+        "distance_bottom": 30
+      }
     }
   },
   "order": [
@@ -895,6 +960,7 @@
     "e1b98504-6041-492e-ae1e-bfd8cf485433",
     "1699848378da3645ab",
     "38fd551a-96a7-4e3d-98f4-903b56c6518d",
-    "e259110d-9c53-4ec9-9c92-77851cd823b1"
+    "e259110d-9c53-4ec9-9c92-77851cd823b1",
+    "59cfa05d-1382-412a-bde6-352a5c708145"
   ]
 }

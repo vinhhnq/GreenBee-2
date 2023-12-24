@@ -865,6 +865,12 @@
       },
       {
         "type": "color",
+        "id": "color_price_collection_2",
+        "label": "Color price collection tab 2",
+        "default": "#222"
+      },
+      {
+        "type": "color",
         "id": "color_reduced_price",
         "label": "Color reduced price",
         "default": "#d5d5d5"
