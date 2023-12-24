@@ -1697,8 +1697,6 @@
    }
    .article--listing {
       border-radius: 20px;
-      border: 1px dashed var(--theme-color-default);
-      padding: 20px;
       &:hover {
          @media (min-width: 768px) {
             img {
@@ -1711,10 +1709,13 @@
       @include transition(all 0.35s linear);
    }
    .article__title a {
-      font-size: 1.6rem;
+      font-size: 1.3rem;
+      font-family: Poppins,HelveticaNeue,Helvetica Neue,sans-serif;
    }
    .article__excerpt {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
+      font-family: Poppins,HelveticaNeue,Helvetica Neue,sans-serif;
+      font-weight: 400;
    }
    .article_cs {
       > span {

@@ -369,6 +369,8 @@
             "mw_2": 500,
             "cta_label2_mb": 10,
             "button": "",
+            "text_c_btn": "",
+            "tc_hover_btn": "",
             "c_btn": "",
             "c_hover_btn": "",
             "text_align": "left",
@@ -401,6 +403,8 @@
             "mw_2": 500,
             "cta_label2_mb": 10,
             "button": "",
+            "text_c_btn": "",
+            "tc_hover_btn": "",
             "c_btn": "",
             "c_hover_btn": "",
             "text_align": "left",
@@ -433,6 +437,8 @@
             "mw_2": 500,
             "cta_label2_mb": 10,
             "button": "",
+            "text_c_btn": "",
+            "tc_hover_btn": "",
             "c_btn": "",
             "c_hover_btn": "",
             "text_align": "left",
@@ -914,6 +920,8 @@
             "mw_2": 500,
             "cta_label2_mb": 10,
             "button": "Learn More",
+            "text_c_btn": "",
+            "tc_hover_btn": "",
             "c_btn": "#222222",
             "c_hover_btn": "#0d7a52",
             "text_align": "center",
@@ -950,6 +958,38 @@
         "distance_top": 30,
         "distance_bottom": 30
       }
+    },
+    "c19131da-f921-4b75-9976-876abfa8d474": {
+      "type": "nov-blog",
+      "settings": {
+        "heading": "<p>Lastest Post<\/p>",
+        "heading_c": "#222222",
+        "subheading": "",
+        "subheading_c": "#666666",
+        "title_alignment": "text-center",
+        "view_blog": "",
+        "blog": "lorem-ipsum-dolor-sit-amet-consectetuer",
+        "grid_number": 3,
+        "grid_number_lg": 3,
+        "grid_number_md": 2,
+        "grid_number_sm": 1,
+        "row_number": 1,
+        "limit": 8,
+        "spacing": 30,
+        "show_image": true,
+        "blog_show_comments": false,
+        "blog_show_author": true,
+        "blog_show_date": true,
+        "blog_show_excerpt": true,
+        "show_view_all": false,
+        "show_nav": false,
+        "animate": true,
+        "container": "container",
+        "background_color": "",
+        "class": "",
+        "distance_top": 30,
+        "distance_bottom": 30
+      }
     }
   },
   "order": [
@@ -961,6 +1001,7 @@
     "1699848378da3645ab",
     "38fd551a-96a7-4e3d-98f4-903b56c6518d",
     "e259110d-9c53-4ec9-9c92-77851cd823b1",
-    "59cfa05d-1382-412a-bde6-352a5c708145"
+    "59cfa05d-1382-412a-bde6-352a5c708145",
+    "c19131da-f921-4b75-9976-876abfa8d474"
   ]
 }

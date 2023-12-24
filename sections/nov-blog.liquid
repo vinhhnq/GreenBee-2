@@ -67,39 +67,39 @@
                 <img class="w-100 lazyload" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 0.6'%3E%3C/svg%3E" data-src="{{ article.image | img_url: '410x288', crop: 'center' }}" alt="{{ article.title }}">
               </a>
             {% endif %}
-            <div class="media-body position-relative mt-25">
+            <div class="media-body position-relative mt-25 text-center">
+               <div class="article__title mb-5">
+                <a href="{{ article.url }}" class="c_h font-500 hover:c_pr">{{ article.title | truncate: 60 }}</a>
+              </div>
               {% if sst.blog_show_author or sst.blog_show_comments or sst.blog_show_date %}
-              <div class="article_cs mb-15">
-                {% if sst.blog_show_date %}
-                  <span class="article__date">
-                    <i class="zmdi zmdi-calendar-note"></i>
-                    {{ article.published_at | date: "%d" }} {{ article.published_at | date: "%B" }} {{ article.published_at | date: "%Y" }}
-                  </span>
-                {% endif %}
-                {% if sst.blog_show_author %}
-                  <span class="article__author">
-                    <i class="zmdi zmdi-account-o"></i>
-                    <span>{{ 'blogs.article.by_author' | t: author: article.author }}</span>
-                  </span>
-                {% endif %}
-                {% if sst.blog_show_comments %}
-                  <span class="article__countcomment">
-                    <i class="zmdi zmdi-comments"></i>
-                    <span>{{ 'blogs.comments.comments_with_count' | t: count: article.comments_count }}</span>
-                  </span>
-                {% endif %}
-              </div>
+                <div class="article_cs mb-10">
+                  {% if sst.blog_show_date %}
+                    <span class="article__date">
+                      <i class="zmdi zmdi-calendar-note"></i>
+                      {{ article.published_at | date: "%d" }} {{ article.published_at | date: "%B" }} {{ article.published_at | date: "%Y" }}
+                    </span>
+                  {% endif %}
+                  {% if sst.blog_show_author %}
+                    <span class="article__author">
+                      <i class="zmdi zmdi-account-o"></i>
+                      <span>{{ 'blogs.article.by_author' | t: author: article.author }}</span>
+                    </span>
+                  {% endif %}
+                  {% if sst.blog_show_comments %}
+                    <span class="article__countcomment">
+                      <i class="zmdi zmdi-comments"></i>
+                      <span>{{ 'blogs.comments.comments_with_count' | t: count: article.comments_count }}</span>
+                    </span>
+                  {% endif %}
+                </div>
               {% endif %}
-              <div class="article__title">
-                <a href="{{ article.url }}" class="c_h font-700 hover:c_pr">{{ article.title | truncate: 60 }}</a>
-              </div>
               
               {% if sst.blog_show_excerpt %}
-                <div class="article__excerpt mt-20 pb-20">
+                <div class="article__excerpt">
                   {% if article.excerpt.size > 0 %}
-                  {{ article.excerpt | truncate: 150 }}
+                    {{ article.excerpt | truncate: 150 }}
                   {% else %}
-                  {{ article.content | strip_html | truncate: 150 }}
+                    {{ article.content | strip_html | truncate: 150 }}
                   {% endif %}
                 </div>
               {% endif %}

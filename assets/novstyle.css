@@ -30425,8 +30425,6 @@ a[data-init-quickshop] {
 }
 .nov-section-blog .article--listing {
   border-radius: 20px;
-  border: 1px dashed var(--theme-color-default);
-  padding: 20px;
 }
 @media (min-width: 768px) {
   .nov-section-blog .article--listing:hover img {
@@ -30443,10 +30441,13 @@ a[data-init-quickshop] {
   transition: all 0.35s linear;
 }
 .nov-section-blog .article__title a {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
+  font-family: Poppins, HelveticaNeue, Helvetica Neue, sans-serif;
 }
 .nov-section-blog .article__excerpt {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  font-family: Poppins, HelveticaNeue, Helvetica Neue, sans-serif;
+  font-weight: 400;
 }
 .nov-section-blog .article_cs > span {
   color: #a9a9a9;
