@@ -566,7 +566,7 @@
   }
 {% endschema %}
 
-<style>
+{% style %}
   {%- assign bg_image = sst.background_image -%}
   #shopify-section-{{ section.id }} .distance {
     padding-top: {{ sst.distance_top | append: 'px' }};
@@ -679,4 +679,4 @@
       }
     {%- endif -%}
   {% endfor %}
-</style>
+{% endstyle %}

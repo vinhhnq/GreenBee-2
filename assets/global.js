@@ -287,7 +287,7 @@ novtheme.load_canvas_menu = function () {
     $menu.attr("id", "canvas-main-menu");
     $($menu).find(".menu").removeAttr("id");
     $(".canvas-menu").append($menu);
-    $menu.mmenu({
+    $menu.menu({
       offCanvas: false,
       navbar: {
         title: false,

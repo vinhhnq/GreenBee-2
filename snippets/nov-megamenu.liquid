@@ -1,9 +1,9 @@
 <li class="nav--lv1 parent--lv1 site-nav--Megamenu{{ class_hidden }}{% if block.settings.fw == true %} site-nav--fw{% endif %}{% if link.active %} site-nav--active{% endif %}{% if forloop.last %} last{% endif %}">
   <a class="site-nav__link--main d-flex align-items-center" href="{{ link.url }}" title="{{ link.title }}">
     {% if block.settings.icon_menu != blank %}
-    <div class="site-nav--icon">
-      <img class="img-fluid" src="{{ block.settings.icon_menu | img_url: '50x' }}" alt="image" />
-    </div>
+      <div class="site-nav--icon">
+        <img class="img-fluid" src="{{ block.settings.icon_menu | img_url: '50x' }}" alt="image" />
+      </div>
     {% endif %}
     <div class="site-nav--title">
     {{ link.title }}

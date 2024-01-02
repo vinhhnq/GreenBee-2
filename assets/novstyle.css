@@ -13353,7 +13353,7 @@ button[disabled], button.disabled {
 
 /* Title block ===================================================== */
 .title_section {
-  margin-bottom: 4.5rem;
+  margin-bottom: 4rem;
 }
 .title_section p {
   margin-bottom: 0;
@@ -30440,14 +30440,20 @@ a[data-init-quickshop] {
   -o-transition: all 0.35s linear;
   transition: all 0.35s linear;
 }
+.nov-section-blog .title {
+  font-family: var(--font-family-primary2);
+  font-size: 2.8rem;
+  font-weight: 700;
+}
 .nov-section-blog .article__title a {
   font-size: 1.3rem;
   font-family: Poppins, HelveticaNeue, Helvetica Neue, sans-serif;
 }
 .nov-section-blog .article__excerpt {
   font-size: 1.3rem;
-  font-family: Poppins, HelveticaNeue, Helvetica Neue, sans-serif;
-  font-weight: 400;
+  font-family: var(--font-family-description);
+  font-weight: 500;
+  color: #666666;
 }
 .nov-section-blog .article_cs > span {
   color: #a9a9a9;

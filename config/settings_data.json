@@ -25,6 +25,7 @@
     "type_header_family_google": "Signika",
     "type_base_family_google": "Signika",
     "type_base_family_text_gallery": "Playfair Display",
+    "type_base_family_text": "Poppins",
     "social_twitter_link": "#",
     "social_facebook_link": "#",
     "social_pinterest_link": "#",
@@ -142,6 +143,7 @@
     "fake_order_time": "10 minutes | 15 minutes | 20 minutes | 30 minutes | 40 minutes | 50 minutes | 1 hour | 2 hours | 3 hours",
     "fake_order_location": "Berlin | New York | London | Paris | Amsterdam | Vienna | Rome, Italy | Madrid",
     "fake_order_name": "Luna | Dutton | Liam | Noah | Oliver | James | Elijah | William | Henry",
+    "type_base_family_description": "Roboto",
     "color_price_deal2": "#222222",
     "color_icon-phone": "#0d7a52",
     "show_verification_popup": false,
@@ -332,46 +334,11 @@
       "nov-footer": {
         "type": "nov-footer",
         "blocks": {
-          "c76cbe48-7520-4d29-ba20-3ddd2e193afb": {
-            "type": "block_contact",
-            "settings": {
-              "summary_footer": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus pendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet<\/p>",
-              "block_class": "",
-              "grid_xl": "col-xl-4",
-              "grid_lg": "col-lg-4",
-              "grid_md": "col-md-8",
-              "grid_sm": "col-sm-12"
-            }
-          },
-          "bc269370-9ae4-4042-82c6-1fc53d71deb6": {
-            "type": "block_menu",
-            "settings": {
-              "block_title": "HELP",
-              "menu_handle": "footer",
-              "block_class": "mt-xs-20 mt-sm-20",
-              "grid_xl": "col-xl-2",
-              "grid_lg": "col-lg-2",
-              "grid_md": "col-md-2",
-              "grid_sm": "col-sm-6"
-            }
-          },
-          "ee472781-df32-4e69-8347-7d88757b6741": {
-            "type": "block_menu",
-            "settings": {
-              "block_title": "COMPANY",
-              "menu_handle": "",
-              "block_class": "mt-sm-20",
-              "grid_xl": "col-xl-2",
-              "grid_lg": "col-lg-2",
-              "grid_md": "col-md-2",
-              "grid_sm": "col-sm-6"
-            }
-          },
           "53549ed7-50a5-4657-be39-458f238f5bc2": {
             "type": "block_newsletter",
             "settings": {
               "block_title": "NEWSLETTER",
-              "desc": "<p>Get 15% off your first purchaxse! Plus, be the first to know about sales new product launches and exclusive offers!<\/p>",
+              "desc": "",
               "block_class": "mt-sm-50",
               "grid_xl": "col-xl-4",
               "grid_lg": "col-lg-4",
@@ -381,16 +348,13 @@
           }
         },
         "block_order": [
-          "c76cbe48-7520-4d29-ba20-3ddd2e193afb",
-          "bc269370-9ae4-4042-82c6-1fc53d71deb6",
-          "ee472781-df32-4e69-8347-7d88757b6741",
           "53549ed7-50a5-4657-be39-458f238f5bc2"
         ],
         "settings": {
           "animate": false,
           "border_top": false,
           "border_t_c": "#ea1c1c",
-          "border_t_opaciry": 0,
+          "border_t_opacity": 100,
           "color_t": "#ffffff",
           "color": "#ffffff",
           "color_h": "#2ea200",

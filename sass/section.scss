@@ -1708,14 +1708,20 @@
    img {
       @include transition(all 0.35s linear);
    }
+   .title {
+      font-family: var(--font-family-primary2);
+      font-size: 2.8rem;
+      font-weight: 700;
+   }
    .article__title a {
       font-size: 1.3rem;
       font-family: Poppins,HelveticaNeue,Helvetica Neue,sans-serif;
    }
    .article__excerpt {
       font-size: 1.3rem;
-      font-family: Poppins,HelveticaNeue,Helvetica Neue,sans-serif;
-      font-weight: 400;
+      font-family: var(--font-family-description);
+      font-weight: 500;
+      color: #666666;
    }
    .article_cs {
       > span {
@@ -1746,6 +1752,7 @@
       display: none !important;
    }
 }
+
 // Maps Section ===================================================================================================== */
 .section-maps {
    .map-section {
