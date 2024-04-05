@@ -1374,6 +1374,14 @@ body {
    &.template-index {
       background-color: var(--bg-body);
    }
+   &:not(.template-index){
+      .site-nav-vertical {
+         display: none;
+      }
+      .header-top {
+         min-height: 0;
+      }
+   }
    &.open-canvans-cart {
       overflow: hidden;
       .sidebar-overlay {

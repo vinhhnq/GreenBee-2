@@ -25,7 +25,7 @@
             "policy_icon": "shopify:\/\/shop_images\/p-8.png",
             "title_policy": "FREE US DELIVERY",
             "desc_policy": "Free shipping on all order above $200",
-            "mw": 500,
+            "mw": 500,  
             "tl": "Learn More",
             "link": "#",
             "bg_icon": "#eaeaea",

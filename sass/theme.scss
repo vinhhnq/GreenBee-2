@@ -1835,14 +1835,13 @@ effects the :hover style. This forces the style to be applied.
       width: 100%;
       padding: 0;
       height: 45px;
-      font-size: 10px;
+      font-size: 11px;
       color: var(--color-body-text);
       background-color: #f1f1f1;
       outline: 0;
       border-radius: 50px;
       position: relative;
       border: 1px solid var(--color-border);
-
       @include rtl-plr(25px, 60px);
       @include placeholder {
          color: #a8a8a8;

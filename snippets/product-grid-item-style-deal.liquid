@@ -87,7 +87,9 @@
               </div>
             {% endif %}
           </div>
-          <div class="group-buttons d-flex mt-30" style="gap: 5px">
+          <div style="font-weight: 300; font-size: 1.2rem;" class="product_desc mt-20">{{ product.description | strip_html | truncatewords: 15 }}</div>
+
+          <div class="group-buttons d-flex mt-20" style="gap: 5px">
             {% render 'add-to-cart-form', product: product, sold_out: sold_out, id: 'grid-product-form-', position: position, sectionId: sectionId %}
             {% if settings.wishlist_enable or settings.quickview_enable %}
               {% if settings.quickview_enable %}
@@ -98,7 +100,7 @@
               {% endif %}
             {% endif %}
           </div>
-          <div class="product_desc mt-20">{{ product.description | strip_html | truncatewords: 15 }}</div>
+
           {%- assign productStartCount = product.metafields.stock.initial | times:1 -%}
           {% if product.metafields.stock.initial != blank %}
             <div class="deal-flash__sale mt-35">

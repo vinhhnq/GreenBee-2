@@ -17,7 +17,7 @@
         {% endif %}
       </div>
     {% endif %}
-
+    
     {% if section.blocks.size > 0 %}
       <div class="container-inner{% if sst.bg_size == 'content' %} distance{% endif %}">
         <div class="row spacing-{{ sst.spacing }} align-items-end">
@@ -476,6 +476,11 @@
         "settings": [
           {
             "type": "image_picker",
+            "id": "policy_bg",
+            "label": "Policy Background"
+          },
+          {
+            "type": "image_picker",
             "id": "policy_icon",
             "label": "Policy icon"
           },
@@ -580,6 +585,9 @@
     {%- if sst.gradient != blank -%}
       background: {{ sst.gradient }};
     {%- endif -%}
+  }
+  #shopify-section-{{ section.id }} .policy-icon {
+    background: url("./assets/p-i-bg.png") no-repeat;
   }
   @media(max-width: 991px) {
     #shopify-section-{{ section.id }} .distance {

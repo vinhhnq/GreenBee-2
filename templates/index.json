@@ -762,50 +762,10 @@
             "product_handle": "lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit",
             "countdown_timeend": ""
           }
-        },
-        "1b496f74-d8d5-47c9-8493-009959463d0f": {
-          "type": "productcountdownlist",
-          "settings": {
-            "product_handle": "lorem-ipsum-is-simply-dummy-text-of-the-printing-and-typesetting-industry-1",
-            "countdown_timeend": "2023\/12\/15"
-          }
-        },
-        "8a0b5cb5-3c97-4737-a4d5-15a7d197c1be": {
-          "type": "productcountdownlist",
-          "settings": {
-            "product_handle": "banana",
-            "countdown_timeend": ""
-          }
-        },
-        "29ea29ac-604e-4a1b-8524-0b3797ae5ede": {
-          "type": "productcountdownlist",
-          "settings": {
-            "product_handle": "lorem-ipsum-is-simply-dummy-text-of-the-printing-2",
-            "countdown_timeend": "2023\/09\/25"
-          }
-        },
-        "5acbac16-8bd8-48c7-b0be-eaccd84e26a5": {
-          "type": "productcountdownlist",
-          "settings": {
-            "product_handle": "lorem-ipsum-is-simply-dummy-text-of-the-printing-1",
-            "countdown_timeend": ""
-          }
-        },
-        "72cd0b69-b010-472a-a3fb-a56c317d00b4": {
-          "type": "productcountdownlist",
-          "settings": {
-            "product_handle": "lorem-ipsum-is-simply-dummy-text-of-the-printing-4",
-            "countdown_timeend": ""
-          }
         }
       },
       "block_order": [
-        "6ef02c3f-a610-4076-a283-37ac3494e438",
-        "1b496f74-d8d5-47c9-8493-009959463d0f",
-        "8a0b5cb5-3c97-4737-a4d5-15a7d197c1be",
-        "29ea29ac-604e-4a1b-8524-0b3797ae5ede",
-        "5acbac16-8bd8-48c7-b0be-eaccd84e26a5",
-        "72cd0b69-b010-472a-a3fb-a56c317d00b4"
+        "6ef02c3f-a610-4076-a283-37ac3494e438"
       ],
       "settings": {
         "heading": "<p>Flash Deals<\/p>",

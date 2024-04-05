@@ -1,5 +1,5 @@
 {% assign sst = section.settings %}
-<footer{% if sst.animate == true %} class="wow fadeInUp animated"{% endif %} data-section-id="{{ section.id }}" data-section-type="nov-slick">
+<footer {% if sst.animate == true %} class="wow fadeInUp animated"{% endif %} data-section-id="{{ section.id }}" data-section-type="nov-slick">
   <div class="footer-layout pt-85 pb-80 pb-xs-40">
     <div class="container">
       {% if section.blocks.size > 0 %}
@@ -131,11 +131,11 @@
                             <div class="input-group">
                               <input type="hidden" name="contact[tags]" value="newsletter">
                               <input type="email"
-                                name="contact[email]"
-                                id="Email_Footer"
-                                class="input-group__field newsletter__input form-control"
-                                value="{% if customer %}{{ customer.email }}{% endif %}"
-                                placeholder="{{ 'general.newsletter_form.email_newsletter' | t }}">
+                                     name="contact[email]"
+                                     id="Email_Footer"
+                                     class="input-group__field newsletter__input form-control"
+                                     value="{% if customer %}{{ customer.email }}{% endif %}"
+                                     placeholder="{{ 'general.newsletter_form.email_newsletter' | t }}">
                               <button type="submit" class="btn newsletter__submit" name="commit">
                                 <i class="zmdi zmdi-long-arrow-right"></i>
                               </button>
@@ -923,43 +923,43 @@
   {% endif %}
   }
   .footer-layout .dropdown-toggle {
-    border-color:  rgba({{ sst.color | color_to_rgb | remove: 'rgb(' | remove: 'rgba(' | remove: ')' | remove: ', 0.0' }}, 10%) !important;
+  border-color:  rgba({{ sst.color | color_to_rgb | remove: 'rgb(' | remove: 'rgba(' | remove: ')' | remove: ', 0.0' }}, 10%) !important;
   }
   .footer-layout,
   .site-footer__linklist-item a,
   .footer-layout .nov-language button,
   .footer-layout .currency-dropdown{
-    color: {{ sst.color }};
+  color: {{ sst.color }};
   }
   .footer-layout .title-block, .footer-layout .title {
-    color: {{ sst.color_t }};
+  color: {{ sst.color_t }};
   }
   .footer-layout a:hover, .copyright-menu a:hover {
-    color: {{ sst.color_h }};
+  color: {{ sst.color_h }};
   }
   .nov-footer .footer_newsletter input {
-    border-color: {{ sst.color }};
+  border-color: {{ sst.color }};
   }
   .footer-layout .block_social a {
-    background-color: {{ sst.soc_bg }};
-    color: {{ sst.soc_c }};
+  background-color: {{ sst.soc_bg }};
+  color: {{ sst.soc_c }};
   }
   .footer-layout .block_social svg {
-    fill: {{ sst.soc_c }};
+  fill: {{ sst.soc_c }};
   }
   .footer-layout .block_social a:hover {
-    background-color: {{ sst.soc_bg_h }};
+  background-color: {{ sst.soc_bg_h }};
   }
   .footer_copyright {
-    color: {{ sst.copy_c }};
-    border-color: {{ sst.copy_bd }} !important;
+  color: {{ sst.copy_c }};
+  border-color: {{ sst.copy_bd }} !important;
   }
   .footer_copyright {
-    color: {{ sst.copy_c }};
+  color: {{ sst.copy_c }};
   }
   {% if sst.bg_copy != blank %}
-  .footer_copyright {
+    .footer_copyright {
     background-color: rgba({{ sst.bg_copy | color_to_rgb | remove: 'rgb(' | remove: 'rgba(' | remove: ')' | remove: ', 0.0' }}, {{ sst.opacity }}%);
-  }
+    }
   {% endif %}
 {% endstyle %}
