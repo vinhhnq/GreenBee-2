@@ -756,16 +756,48 @@
     "38fd551a-96a7-4e3d-98f4-903b56c6518d": {
       "type": "nov-product-deals",
       "blocks": {
-        "6ef02c3f-a610-4076-a283-37ac3494e438": {
+        "productcountdownlist_mFN3kF": {
           "type": "productcountdownlist",
           "settings": {
-            "product_handle": "lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit",
+            "product_handle": "apple-fruit",
+            "countdown_timeend": ""
+          }
+        },
+        "productcountdownlist_8WQmjM": {
+          "type": "productcountdownlist",
+          "settings": {
+            "product_handle": "american-beef",
+            "countdown_timeend": ""
+          }
+        },
+        "productcountdownlist_7iqMYX": {
+          "type": "productcountdownlist",
+          "settings": {
+            "product_handle": "bok-choy",
+            "countdown_timeend": ""
+          }
+        },
+        "productcountdownlist_AVjcPX": {
+          "type": "productcountdownlist",
+          "settings": {
+            "product_handle": "bunch-of-grapes",
+            "countdown_timeend": ""
+          }
+        },
+        "productcountdownlist_mwRdUk": {
+          "type": "productcountdownlist",
+          "settings": {
+            "product_handle": "caviar",
             "countdown_timeend": ""
           }
         }
       },
       "block_order": [
-        "6ef02c3f-a610-4076-a283-37ac3494e438"
+        "productcountdownlist_mFN3kF",
+        "productcountdownlist_8WQmjM",
+        "productcountdownlist_7iqMYX",
+        "productcountdownlist_AVjcPX",
+        "productcountdownlist_mwRdUk"
       ],
       "settings": {
         "heading": "<p>Flash Deals<\/p>",

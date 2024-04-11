@@ -1,5 +1,55 @@
 {% assign sst = section.settings %}
 <footer {% if sst.animate == true %} class="wow fadeInUp animated"{% endif %} data-section-id="{{ section.id }}" data-section-type="nov-slick">
+  <div class="container">
+    {% if section.blocks.size > 0 %}
+      {% for block in section.blocks %}
+        {% assign bst = block.settings %}
+          {% case block.type %}
+            {% when 'block_newsletter' %}
+              <div class="footer_newsletter block_footer block-{{ forloop.index }}{% if bst.block_title != blank and sst.mobile_acc %} mt-xs-0 mb-xs-0{% endif %} {{ bst.grid_xl }} {{ bst.grid_lg }} {{ bst.grid_md }} {{ bst.grid_sm }}{% if bst.block_class != blank %} {{ bst.block_class }}{% endif %}">
+                <div class="block h-100">
+                  {% if bst.block_title != blank %}
+                    <div class="title-block">
+                      {{ bst.block_title }}
+                      {% if sst.mobile_acc %}
+                        <span class="f_btn_sl d-sm-none"><i class="zmdi zmdi-plus"></i></span>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                  <div class="block-content{% if bst.block_title != blank and sst.mobile_acc %} h_t{% endif %}">
+                    <div class="pb-xs-30">
+                      {% if bst.desc != blank %}
+                        <div class="footer-subtitle mb-3">{{ bst.desc }}</div>
+                      {% endif %}
+                      {% form 'customer', id: 'footer_contact' %}
+                        {{ form.errors | default_errors }}
+                        {% if form.posted_successfully %}
+                          <p class="form--success text-center">{{ 'general.newsletter_form.confirmation' | t }}</p>
+                        {% else %}
+                          <div class="input-group">
+                            <input type="hidden" name="contact[tags]" value="newsletter">
+                            <input type="email"
+                                  name="contact[email]"
+                                  id="Email_Footer"
+                                  class="input-group__field newsletter__input form-control"
+                                  value="{% if customer %}{{ customer.email }}{% endif %}"
+                                  placeholder="{{ 'general.newsletter_form.email_newsletter' | t }}">
+                            <button type="submit" class="btn newsletter__submit" name="commit">
+                              <i class="zmdi zmdi-long-arrow-right"></i>
+                            </button>
+                          </div>
+                        {% endif %}
+                      {% endform %}
+                      <div class="mt-30">{% render 'nov-social' %}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          {% endcase %}
+      {% endfor %}
+    {% endif %}
+
+  </div>
   <div class="footer-layout pt-85 pb-80 pb-xs-40">
     <div class="container">
       {% if section.blocks.size > 0 %}
@@ -107,46 +157,7 @@
                     </div>
                   </div>
                 </div>
-              {% when 'block_newsletter' %}
-                <div class="footer_newsletter block_footer block-{{ forloop.index }}{% if bst.block_title != blank and sst.mobile_acc %} mt-xs-0 mb-xs-0{% endif %} {{ bst.grid_xl }} {{ bst.grid_lg }} {{ bst.grid_md }} {{ bst.grid_sm }}{% if bst.block_class != blank %} {{ bst.block_class }}{% endif %}">
-                  <div class="block h-100">
-                    {% if bst.block_title != blank %}
-                      <div class="title-block">
-                        {{ bst.block_title }}
-                        {% if sst.mobile_acc %}
-                          <span class="f_btn_sl d-sm-none"><i class="zmdi zmdi-plus"></i></span>
-                        {% endif %}
-                      </div>
-                    {% endif %}
-                    <div class="block-content{% if bst.block_title != blank and sst.mobile_acc %} h_t{% endif %}">
-                      <div class="pb-xs-30">
-                        {% if bst.desc != blank %}
-                          <div class="footer-subtitle mb-3">{{ bst.desc }}</div>
-                        {% endif %}
-                        {% form 'customer', id: 'footer_contact' %}
-                          {{ form.errors | default_errors }}
-                          {% if form.posted_successfully? %}
-                            <p class="form--success text-center">{{ 'general.newsletter_form.confirmation' | t }}</p>
-                          {% else %}
-                            <div class="input-group">
-                              <input type="hidden" name="contact[tags]" value="newsletter">
-                              <input type="email"
-                                     name="contact[email]"
-                                     id="Email_Footer"
-                                     class="input-group__field newsletter__input form-control"
-                                     value="{% if customer %}{{ customer.email }}{% endif %}"
-                                     placeholder="{{ 'general.newsletter_form.email_newsletter' | t }}">
-                              <button type="submit" class="btn newsletter__submit" name="commit">
-                                <i class="zmdi zmdi-long-arrow-right"></i>
-                              </button>
-                            </div>
-                          {% endif %}
-                        {% endform %}
-                        <div class="mt-30">{% render 'nov-social' %}</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              
             {% endcase %}
           {% endfor %}
         </div>
@@ -929,37 +940,37 @@
   .site-footer__linklist-item a,
   .footer-layout .nov-language button,
   .footer-layout .currency-dropdown{
-  color: {{ sst.color }};
+    color: {{ sst.color }};
   }
   .footer-layout .title-block, .footer-layout .title {
-  color: {{ sst.color_t }};
+    color: {{ sst.color_t }};
   }
   .footer-layout a:hover, .copyright-menu a:hover {
-  color: {{ sst.color_h }};
+    color: {{ sst.color_h }};
   }
   .nov-footer .footer_newsletter input {
-  border-color: {{ sst.color }};
+    border-color: {{ sst.color }};
   }
   .footer-layout .block_social a {
-  background-color: {{ sst.soc_bg }};
-  color: {{ sst.soc_c }};
+    background-color: {{ sst.soc_bg }};
+    color: {{ sst.soc_c }};
   }
   .footer-layout .block_social svg {
-  fill: {{ sst.soc_c }};
+    fill: {{ sst.soc_c }};
   }
   .footer-layout .block_social a:hover {
-  background-color: {{ sst.soc_bg_h }};
+    background-color: {{ sst.soc_bg_h }};
   }
   .footer_copyright {
-  color: {{ sst.copy_c }};
-  border-color: {{ sst.copy_bd }} !important;
+    color: {{ sst.copy_c }};
+    border-color: {{ sst.copy_bd }} !important;
   }
   .footer_copyright {
   color: {{ sst.copy_c }};
   }
   {% if sst.bg_copy != blank %}
-    .footer_copyright {
-    background-color: rgba({{ sst.bg_copy | color_to_rgb | remove: 'rgb(' | remove: 'rgba(' | remove: ')' | remove: ', 0.0' }}, {{ sst.opacity }}%);
+      .footer_copyright {
+      background-color: rgba({{ sst.bg_copy | color_to_rgb | remove: 'rgb(' | remove: 'rgba(' | remove: ')' | remove: ', 0.0' }}, {{ sst.opacity }}%);
     }
   {% endif %}
 {% endstyle %}

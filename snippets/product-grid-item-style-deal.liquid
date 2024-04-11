@@ -51,7 +51,7 @@
               {% endfor %}
             </div>
           </a>
-          {% assign date_created = product.created_at | date:'%s' %}
+          {% assign date_created = product.created_at | date:'%ws' %}
           {% assign date_now = 'now' | date:'%s' %}
           {% assign difference = date_now | minus: date_created %}
           {% assign date_end = settings.time_newproduct | times: 86400 %}
@@ -75,7 +75,7 @@
               {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %}
             {% endif %}
           </div>
-          <div class="price-box mt-15">
+          <div class="price-box mt-10">
             {% if on_sale %}
               <div class="price-sale">
                 <span class="special-price" data-price-grid>{{ product.variants[0].price | money }}</span>
@@ -87,7 +87,7 @@
               </div>
             {% endif %}
           </div>
-          <div style="font-weight: 300; font-size: 1.2rem;" class="product_desc mt-20">{{ product.description | strip_html | truncatewords: 15 }}</div>
+          <div style="font-weight: 300; font-size: 1.2rem;" class="product_desc mt-10">{{ product.description | strip_html | truncatewords: 15 }}</div>
 
           <div class="group-buttons d-flex mt-20" style="gap: 5px">
             {% render 'add-to-cart-form', product: product, sold_out: sold_out, id: 'grid-product-form-', position: position, sectionId: sectionId %}
