@@ -48,7 +48,6 @@
           {% endcase %}
       {% endfor %}
     {% endif %}
-
   </div>
   <div class="footer-layout pt-85 pb-80 pb-xs-40">
     <div class="container">
@@ -157,8 +156,7 @@
                     </div>
                   </div>
                 </div>
-              
-            {% endcase %}
+              {% endcase %}
           {% endfor %}
         </div>
       {% endif %}
@@ -934,7 +932,7 @@
   {% endif %}
   }
   .footer-layout .dropdown-toggle {
-  border-color:  rgba({{ sst.color | color_to_rgb | remove: 'rgb(' | remove: 'rgba(' | remove: ')' | remove: ', 0.0' }}, 10%) !important;
+     border-color:  rgba({{ sst.color | color_to_rgb | remove: 'rgb(' | remove: 'rgba(' | remove: ')' | remove: ', 0.0' }}, 10%) !important;
   }
   .footer-layout,
   .site-footer__linklist-item a,
@@ -966,10 +964,10 @@
     border-color: {{ sst.copy_bd }} !important;
   }
   .footer_copyright {
-  color: {{ sst.copy_c }};
+    color: {{ sst.copy_c }};
   }
   {% if sst.bg_copy != blank %}
-      .footer_copyright {
+    .footer_copyright {
       background-color: rgba({{ sst.bg_copy | color_to_rgb | remove: 'rgb(' | remove: 'rgba(' | remove: ')' | remove: ', 0.0' }}, {{ sst.opacity }}%);
     }
   {% endif %}

@@ -2285,7 +2285,7 @@
                   this.st.mainClass = "nov-move-horizontal";
                 },
                 open: function () {
-                  if ($("html").hasClass("lang-rtl")) rtl = true;
+                  if($("html").hasClass("lang-rtl")) rtl = true;
                   else rtl = false;
                   $(".quickview_slick").slick({
                     nextArrow:

@@ -7,7 +7,6 @@
         <div class="form-vertical">
           {% form 'create_customer' %}
             {{ form.errors | default_errors }}
-
             <div class="block-form-login">
               <div class="form-group novform-firstname">
                 <input type="text" name="customer[first_name]" id="FirstName" {% if form.first_name %} value="{{ form.first_name }}"{% endif %} placeholder="First name" required>
