@@ -1242,7 +1242,7 @@ novtheme.CollectionPage = function () {
   var val = $(
     '.FacetsWrapperDesktop [name="sort_by"] [selected="selected"]'
   ).attr("value");
-  $("[data-sortby-filter] .sort-by__label").text(text);
+  $("[data-sortby-filter] .sort-by__label").text(text); 
   $('[data-sortby-filter] [value="' + val + '"]').addClass("act");
   $("[data-sortby-item]").click(function () {
     var valuesort = $(this).attr("value");
