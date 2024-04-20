@@ -40,7 +40,6 @@
                           </div>
                         {% endif %}
                       {% endform %}
-                      <div class="mt-30">{% render 'nov-social' %}</div>
                     </div>
                   </div>
                 </div>
@@ -152,7 +151,6 @@
                             {% include 'nov-social' %}
                           </div>
                         {% endif %}
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -965,7 +963,7 @@
   }
   .footer_copyright {
     color: {{ sst.copy_c }};
-  }
+  } 
   {% if sst.bg_copy != blank %}
     .footer_copyright {
       background-color: rgba({{ sst.bg_copy | color_to_rgb | remove: 'rgb(' | remove: 'rgba(' | remove: ')' | remove: ', 0.0' }}, {{ sst.opacity }}%);
