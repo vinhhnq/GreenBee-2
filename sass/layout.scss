@@ -1089,7 +1089,6 @@
       font-size: 1.8rem;
       font-weight: 900;
       font-family: var(--font-family-primary);
-      margin-bottom: 25px;
       position: relative;
       text-transform: uppercase;
    }
@@ -1208,6 +1207,12 @@
       }
    }
    .footer_newsletter {
+      position: relative;
+      background-color: #0d7a52;
+      bottom: 27px;
+      .block {
+         align-items: center;
+      }
       .errors ul {
          @include rtl-pl(0);
          margin-bottom: 20px;
@@ -1216,6 +1221,8 @@
       }
       .block-content {
          position: relative;
+         width: 52%;
+         margin-left: auto;
       }
       input {
          height: 54px;

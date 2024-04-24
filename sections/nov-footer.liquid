@@ -7,14 +7,11 @@
           {% case block.type %}
             {% when 'block_newsletter' %}
               <div class="footer_newsletter block_footer block-{{ forloop.index }}{% if bst.block_title != blank and sst.mobile_acc %} mt-xs-0 mb-xs-0{% endif %} {{ bst.grid_xl }} {{ bst.grid_lg }} {{ bst.grid_md }} {{ bst.grid_sm }}{% if bst.block_class != blank %} {{ bst.block_class }}{% endif %}">
-                <div class="block h-100">
+                <div class="block d-flex h-100">
                   {% if bst.block_title != blank %}
-                    <div class="title-block">
+                    <span class="title-block">
                       {{ bst.block_title }}
-                      {% if sst.mobile_acc %}
-                        <span class="f_btn_sl d-sm-none"><i class="zmdi zmdi-plus"></i></span>
-                      {% endif %}
-                    </div>
+                    </span>
                   {% endif %}
                   <div class="block-content{% if bst.block_title != blank and sst.mobile_acc %} h_t{% endif %}">
                     <div class="pb-xs-30">

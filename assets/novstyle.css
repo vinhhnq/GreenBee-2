@@ -19483,7 +19483,6 @@ body:not(.template-index) .nov-footer {
   font-size: 1.8rem;
   font-weight: 900;
   font-family: var(--font-family-primary);
-  margin-bottom: 25px;
   position: relative;
   text-transform: uppercase;
 }
@@ -19611,6 +19610,14 @@ body:not(.template-index) .nov-footer {
 .nov-footer .footer_menu li:not(:last-child) {
   margin-bottom: 10px;
 }
+.nov-footer .footer_newsletter {
+  position: relative;
+  background-color: #0d7a52;
+  bottom: 27px;
+}
+.nov-footer .footer_newsletter .block {
+  align-items: center;
+}
 .nov-footer .footer_newsletter .errors ul {
   padding-left: 0;
   margin-bottom: 20px;
@@ -19623,6 +19630,8 @@ body:not(.template-index) .nov-footer {
 }
 .nov-footer .footer_newsletter .block-content {
   position: relative;
+  width: 52%;
+  margin-left: auto;
 }
 .nov-footer .footer_newsletter input {
   height: 54px;

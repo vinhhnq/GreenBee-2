@@ -337,12 +337,12 @@
           "53549ed7-50a5-4657-be39-458f238f5bc2": {
             "type": "block_newsletter",
             "settings": {
-              "block_title": "NEWSLETTER",
+              "block_title": "SIGN UP FOR NEWSLETTERS",
               "desc": "",
               "block_class": "mt-sm-50",
-              "grid_xl": "col-xl-4",
-              "grid_lg": "col-lg-4",
-              "grid_md": "col-md-6",
+              "grid_xl": "col-xl-12",
+              "grid_lg": "col-lg-12",
+              "grid_md": "col-md-12",
               "grid_sm": "col-sm-12"
             }
           }
