@@ -342,6 +342,37 @@
       },
       "nov-footer": {
         "type": "nov-footer",
+        "blocks": {
+          "block_html_VbrPUe": {
+            "type": "block_html",
+            "settings": {
+              "block_title": "",
+              "img": "shopify://shop_images/logo.png",
+              "html_content": "",
+              "block_class": "",
+              "grid_xl": "col-xl-3",
+              "grid_lg": "col-lg-3",
+              "grid_md": "col-md-3",
+              "grid_sm": "col-sm-3"
+            }
+          },
+          "block_menu_krjY7J": {
+            "type": "block_menu",
+            "settings": {
+              "block_title": "",
+              "menu_handle": "footer-menu-1",
+              "block_class": "",
+              "grid_xl": "col-xl-3",
+              "grid_lg": "col-lg-3",
+              "grid_md": "col-md-3",
+              "grid_sm": "col-sm-3"
+            }
+          }
+        },
+        "block_order": [
+          "block_html_VbrPUe",
+          "block_menu_krjY7J"
+        ],
         "settings": {
           "animate": false,
           "border_top": false,
