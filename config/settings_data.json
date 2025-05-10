@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "license": "eaa0d837-feb0-4d99-ae55-4c166077a2f6",
@@ -40,7 +49,7 @@
     "newsletter_type": "newsletter",
     "title_newsletter": "NEWSLETTER",
     "desc_newsletter": "Get 15% off your first purchaxse! Plus, be the first to know  about sales, new product launches and exclusive offers!",
-    "bg_newsletter": "shopify:\/\/shop_images\/newsletter-freshmate_0f450167-4ea4-4f55-8568-34a69aca6f72.jpg",
+    "bg_newsletter": "shopify://shop_images/newsletter-freshmate_0f450167-4ea4-4f55-8568-34a69aca6f72.jpg",
     "supported_currencies": "USD, ($) US Dollars | EUR, (€) Euro | GBP, (£) British Pounds",
     "key_trend_1": "FRUITS",
     "key_trend_2": "DRINK",
@@ -54,12 +63,12 @@
     "spacing_br_t": 23,
     "spacing_br_b": 23,
     "c_br_collec": "#e7e8eb",
-    "bg_br_collec": "shopify:\/\/shop_images\/breadcrumb.png",
+    "bg_br_collec": "shopify://shop_images/breadcrumb.png",
     "spacing_t_collec": 147,
     "spacing_b_collec": 147,
     "countdown_deal_t": "END IN :",
-    "icon_deal": "shopify:\/\/shop_images\/icon-bolt.gif",
-    "countdown_deal": "2024\/09\/03",
+    "icon_deal": "shopify://shop_images/icon-bolt.gif",
+    "countdown_deal": "2024/09/03",
     "spacing_t_inner": 85,
     "spacing_b_inner": 90,
     "time_newproduct": 30,
@@ -85,35 +94,35 @@
     "payment_button_enable": true,
     "tooltip_enable": true,
     "color1": "black white",
-    "img_color1": "shopify:\/\/shop_images\/black-white.png",
+    "img_color1": "shopify://shop_images/black-white.png",
     "color2": "blue white",
-    "img_color2": "shopify:\/\/shop_images\/blue-white.png",
+    "img_color2": "shopify://shop_images/blue-white.png",
     "color3": "green white",
-    "img_color3": "shopify:\/\/shop_images\/green-white.png",
+    "img_color3": "shopify://shop_images/green-white.png",
     "color4": "red white",
-    "img_color4": "shopify:\/\/shop_images\/red-white.png",
+    "img_color4": "shopify://shop_images/red-white.png",
     "color5": "plum white",
-    "img_color5": "shopify:\/\/shop_images\/white-plum.png",
+    "img_color5": "shopify://shop_images/white-plum.png",
     "color6": "black fabric",
-    "img_color6": "shopify:\/\/shop_images\/black_aa51ec9f-f20c-44e5-acfb-e78aa32eb0c4.jpg",
+    "img_color6": "shopify://shop_images/black_aa51ec9f-f20c-44e5-acfb-e78aa32eb0c4.jpg",
     "color7": "brown fabric",
-    "img_color7": "shopify:\/\/shop_images\/brown_040fb480-8bfb-4000-8b44-2fb206e97a7b.jpg",
+    "img_color7": "shopify://shop_images/brown_040fb480-8bfb-4000-8b44-2fb206e97a7b.jpg",
     "color8": "blue fabric",
-    "img_color8": "shopify:\/\/shop_images\/blue_dbaeb76f-7411-4d40-8183-f984dd56599a.jpg",
+    "img_color8": "shopify://shop_images/blue_dbaeb76f-7411-4d40-8183-f984dd56599a.jpg",
     "color9": "green fabric",
-    "img_color9": "shopify:\/\/shop_images\/green_515fbdb0-f3f2-4020-a6cd-05262f46acde.jpg",
+    "img_color9": "shopify://shop_images/green_515fbdb0-f3f2-4020-a6cd-05262f46acde.jpg",
     "free_shipping": 200,
-    "terms_conditions": "<p>I agree with the <a href=\"\/pages\/term-and-services\" title=\"Term and Services\"><strong>Terms<\/strong> & <strong>conditions<\/strong><\/a><\/p>",
+    "terms_conditions": "<p>I agree with the <a href=\"/pages/term-and-services\" title=\"Term and Services\"><strong>Terms</strong> & <strong>conditions</strong></a></p>",
     "cart": "6",
     "collec_1_name": "Drink",
-    "collec_1": "shopify:\/\/collections\/drink",
+    "collec_1": "shopify://collections/drink",
     "collec_2_name": "Fruits",
-    "collec_2": "shopify:\/\/collections\/fruits",
+    "collec_2": "shopify://collections/fruits",
     "collec_3_name": "Tropical Fruits",
-    "collec_3": "shopify:\/\/collections\/tropical-fruits",
+    "collec_3": "shopify://collections/tropical-fruits",
     "collec_4_name": "Meat",
-    "collec_4": "shopify:\/\/collections\/meat",
-    "i_flash": "shopify:\/\/shop_images\/cat.png",
+    "collec_4": "shopify://collections/meat",
+    "i_flash": "shopify://shop_images/cat.png",
     "gradient_deal": "linear-gradient(90deg, rgba(249, 200, 88, 1), rgba(255, 130, 70, 1) 100%)",
     "show_day": true,
     "qv_available": false,
@@ -122,13 +131,13 @@
     "qv_categories": false,
     "qv_vendor": false,
     "qv_swatch_enable": true,
-    "email": "<p>Email<strong>:<\/strong> support@domain.com<\/p>",
-    "hotline": "<p>Call Us: (012)-345-67890<\/p>",
-    "favicon": "shopify:\/\/shop_images\/favicon.png",
-    "link_page_wishlist": "shopify:\/\/pages\/page-wishlist",
+    "email": "<p>Email<strong>:</strong> support@domain.com</p>",
+    "hotline": "<p>Call Us: (012)-345-67890</p>",
+    "favicon": "shopify://shop_images/favicon.png",
+    "link_page_wishlist": "shopify://pages/page-wishlist",
     "show_popup_wishlist": true,
     "enable_loadpage": false,
-    "icon_loadpage": "shopify:\/\/shop_images\/giphy.webp",
+    "icon_loadpage": "shopify://shop_images/giphy.webp",
     "bg_loadpage": "#ffffff",
     "show_fake_order": true,
     "show_fake_order_inner_page": true,
@@ -147,7 +156,7 @@
     "color_price_deal2": "#222222",
     "color_icon-phone": "#0d7a52",
     "show_verification_popup": false,
-    "logo_verification": "shopify:\/\/shop_images\/logo-casan-3.png",
+    "logo_verification": "shopify://shop_images/logo-casan-3.png",
     "product_list": [
       "balo-laptop-15-6in",
       "basic-sweat-joggers",
@@ -159,26 +168,26 @@
       "button-down-jumper"
     ],
     "search_limit": 5,
-    "desc_verification": "<p>The products available on VaporShop are age-restricted and intended for adults of legal smoking age only. By entering our website, you affirm that you are of legal smoking age in your jurisdiction and you agree to be Age Verified.<\/p><p><strong>We will not ship to any individual under the age of 21.<\/strong><\/p>",
+    "desc_verification": "<p>The products available on VaporShop are age-restricted and intended for adults of legal smoking age only. By entering our website, you affirm that you are of legal smoking age in your jurisdiction and you agree to be Age Verified.</p><p><strong>We will not ship to any individual under the age of 21.</strong></p>",
     "second_heading_text": "#222222",
     "sub_heading_text": "#acacac",
     "color_borders_second": "#d0d3d7",
     "mini_cart_type": "canvas",
     "c_br_df": "#0d2235",
     "background_color": "#ffffff",
-    "background_image": "shopify:\/\/shop_images\/breadcrumb.jpg",
+    "background_image": "shopify://shop_images/breadcrumb.jpg",
     "color_text_head": "#0d2235",
     "color_breacrumb_collection": "#ffffff",
     "distance_top": 147,
     "distance_bottom": 147,
-    "background_image_product_detail": "shopify:\/\/shop_images\/breacrumb-detail_82edd3aa-ceab-4206-ad41-53878e220c7d.jpg",
+    "background_image_product_detail": "shopify://shop_images/breacrumb-detail_82edd3aa-ceab-4206-ad41-53878e220c7d.jpg",
     "image_overlay_opacity": 0,
     "title_alignment": "justify-content-center",
     "cd_tt": "END IN :",
-    "countdown_timeend": "2023\/09\/07",
+    "countdown_timeend": "2023/09/07",
     "title_currency": "Currency",
     "account_type": "dropdown",
-    "img_canvas_account": "shopify:\/\/shop_images\/logo_59f8cb84-ca55-4990-a5a3-47229ec1ea5f.png",
+    "img_canvas_account": "shopify://shop_images/logo_59f8cb84-ca55-4990-a5a3-47229ec1ea5f.png",
     "img_canvas_account_link": "#",
     "sections": {
       "blog-template": {
@@ -224,7 +233,7 @@
             "settings": {
               "name_item": "Fresh Fruit",
               "desc_vertical_menu": "Apple, Orange, Watermelon, Banana, Pineapple, Grapes...",
-              "icon_menus": "shopify:\/\/shop_images\/icon-vertical1_0bf17430-2cda-473a-b38c-b1dff039609c.png"
+              "icon_menus": "shopify://shop_images/icon-vertical1_0bf17430-2cda-473a-b38c-b1dff039609c.png"
             }
           },
           "6aeb5942-6166-4e72-b6f3-950b30a6a575": {
@@ -232,7 +241,7 @@
             "settings": {
               "name_item": "Vegetables",
               "desc_vertical_menu": "Cabbage, Onion, Kale, Parsley Garlic, Asparagus...",
-              "icon_menus": "shopify:\/\/shop_images\/icon-vertical2.png"
+              "icon_menus": "shopify://shop_images/icon-vertical2.png"
             }
           },
           "01d20b12-7f70-4a89-8602-471ca8fee832": {
@@ -240,7 +249,7 @@
             "settings": {
               "name_item": "Fresh juices",
               "desc_vertical_menu": "Apple, Orange, Watermelon, Banana Pineapple, Grapes...",
-              "icon_menus": "shopify:\/\/shop_images\/icon-vertical3_8ded48e3-088c-4329-a9dc-a9fc171ad253.png"
+              "icon_menus": "shopify://shop_images/icon-vertical3_8ded48e3-088c-4329-a9dc-a9fc171ad253.png"
             }
           },
           "34c67598-2b3d-4d72-84c7-846f015c38d6": {
@@ -248,7 +257,7 @@
             "settings": {
               "name_item": "Tea & Coffee",
               "desc_vertical_menu": "Leamon tea, Peach tea, Milk tea  Weight loss tea, Coffee ....",
-              "icon_menus": "shopify:\/\/shop_images\/icon-vertical4.png"
+              "icon_menus": "shopify://shop_images/icon-vertical4.png"
             }
           },
           "e3df8524-3d3d-4ff4-ae21-6a40556e4b44": {
@@ -256,7 +265,7 @@
             "settings": {
               "name_item": "Bread",
               "desc_vertical_menu": "Bread, CupCake, Croissants, Rice cake, Donus  ...",
-              "icon_menus": "shopify:\/\/shop_images\/icon-vertical5.png"
+              "icon_menus": "shopify://shop_images/icon-vertical5.png"
             }
           },
           "542f6e6b-de27-4ec4-b74f-7865fd5e4d0f": {
@@ -264,7 +273,7 @@
             "settings": {
               "name_item": "Fesh Meats",
               "desc_vertical_menu": "Pork, Beef, Lamb chops, Salmon Chicken, Sausage...",
-              "icon_menus": "shopify:\/\/shop_images\/icon-vertical6.png"
+              "icon_menus": "shopify://shop_images/icon-vertical6.png"
             }
           }
         },
@@ -279,9 +288,9 @@
         "settings": {
           "bg": "#ffffff",
           "bg_opacity": 100,
-          "logo": "shopify:\/\/shop_images\/logo_294817ff-d11d-4852-be4a-d5698b727d32.png",
+          "logo": "shopify://shop_images/logo_294817ff-d11d-4852-be4a-d5698b727d32.png",
           "w_logo": 165,
-          "logo_mobile": "shopify:\/\/shop_images\/logo_294817ff-d11d-4852-be4a-d5698b727d32.png",
+          "logo_mobile": "shopify://shop_images/logo_294817ff-d11d-4852-be4a-d5698b727d32.png",
           "wm_logo": 100,
           "icon_menu": "rbb-icon-menu-3",
           "phone_icon": "rbb-icon-phone-1",
@@ -333,23 +342,6 @@
       },
       "nov-footer": {
         "type": "nov-footer",
-        "blocks": {
-          "53549ed7-50a5-4657-be39-458f238f5bc2": {
-            "type": "block_newsletter",
-            "settings": {
-              "block_title": "SIGN UP FOR NEWSLETTERS",
-              "desc": "",
-              "block_class": "mt-sm-50",
-              "grid_xl": "col-xl-12",
-              "grid_lg": "col-lg-12",
-              "grid_md": "col-md-12",
-              "grid_sm": "col-sm-12"
-            }
-          }
-        },
-        "block_order": [
-          "53549ed7-50a5-4657-be39-458f238f5bc2"
-        ],
         "settings": {
           "animate": false,
           "border_top": false,
@@ -388,7 +380,7 @@
           "show_description": true,
           "show_payments": true,
           "title_payments": "Guaranteed safe checkout:",
-          "payments": "shopify:\/\/shop_images\/payment.png",
+          "payments": "shopify://shop_images/payment.png",
           "time": "Orders ship within 5 to 10 business days.",
           "size_time": "12px",
           "color_time": "#494949",
@@ -406,7 +398,7 @@
       "nov-page-contact": {
         "type": "nov-page-contact",
         "settings": {
-          "iframe_map": "https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d4082.7742465747338!2d-79.38287617561478!3d43.64905556573276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34d2a57d767f%3A0x935ab2eb9fd5fb31!2sFirst%20Canadian%20Place!5e0!3m2!1svi!2s!4v1591603052999!5m2!1svi!2s",
+          "iframe_map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4082.7742465747338!2d-79.38287617561478!3d43.64905556573276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34d2a57d767f%3A0x935ab2eb9fd5fb31!2sFirst%20Canadian%20Place!5e0!3m2!1svi!2s!4v1591603052999!5m2!1svi!2s",
           "color_title": "#0d2235",
           "color_sub": "#232630",
           "c_button": "#fff",
@@ -556,7 +548,7 @@
             "settings": {
               "banner_title": "",
               "banner_class": "",
-              "banner_image": "shopify:\/\/shop_images\/img-5.jpg",
+              "banner_image": "shopify://shop_images/img-5.jpg",
               "banner_link": ""
             }
           }
@@ -567,8 +559,7 @@
           "ae6a547b-333a-4b8a-8520-7e27d1123faa",
           "70bdcdc8-dd76-4781-86ca-7504cd602fb6"
         ],
-        "settings": {
-        }
+        "settings": {}
       },
       "nov-promotion-bar": {
         "type": "nov-promotion-bar",
@@ -603,15 +594,12 @@
         }
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "blocks": {
       "14060646107696862457": {
-        "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       }
     }
   }
