@@ -19481,10 +19481,12 @@ body:not(.template-index) .nov-footer {
 }
 .nov-footer .title-block {
   font-size: 1.8rem;
-  font-weight: 900;
+  font-weight: 600;
   font-family: var(--font-family-primary);
   position: relative;
   text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 10px;
 }
 .nov-footer .footer-subtitle {
   margin-bottom: 25px;
@@ -19608,12 +19610,14 @@ body:not(.template-index) .nov-footer {
   }
 }
 .nov-footer .footer_menu li:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .nov-footer .footer_newsletter {
   position: relative;
   background-color: #0d7a52;
-  bottom: 27px;
+  bottom: 33px;
+  padding: 12px 10px 12px 20px;
+  border-radius: 50px;
 }
 .nov-footer .footer_newsletter .block {
   align-items: center;
@@ -19634,7 +19638,7 @@ body:not(.template-index) .nov-footer {
   margin-left: auto;
 }
 .nov-footer .footer_newsletter input {
-  height: 54px;
+  height: 46px;
   color: #222222;
   font-family: var(--font-family-default);
   background: white;
@@ -19674,18 +19678,11 @@ body:not(.template-index) .nov-footer {
   font-family: var(--font-family-primary);
   text-transform: capitalize;
   min-width: initial;
-  position: absolute;
-  top: 50%;
-  right: 20px;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   background-color: transparent;
   padding: 0;
-}
-.lang-rtl .nov-footer .footer_newsletter button {
-  left: 20px;
-  right: initial;
 }
 .nov-footer .footer_newsletter button:hover {
   color: var(--theme-color-default);
