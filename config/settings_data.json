@@ -359,8 +359,32 @@
           "block_menu_krjY7J": {
             "type": "block_menu",
             "settings": {
-              "block_title": "",
+              "block_title": "CUSTOMER SERVICE",
               "menu_handle": "footer-menu-1",
+              "block_class": "",
+              "grid_xl": "col-xl-3",
+              "grid_lg": "col-lg-3",
+              "grid_md": "col-md-3",
+              "grid_sm": "col-sm-3"
+            }
+          },
+          "block_menu_WMGRrN": {
+            "type": "block_menu",
+            "settings": {
+              "block_title": "INFORMATION",
+              "menu_handle": "footer-menu-2",
+              "block_class": "",
+              "grid_xl": "col-xl-3",
+              "grid_lg": "col-lg-3",
+              "grid_md": "col-md-3",
+              "grid_sm": "col-sm-3"
+            }
+          },
+          "block_menu_AjAfPi": {
+            "type": "block_menu",
+            "settings": {
+              "block_title": "ABOUT US",
+              "menu_handle": "footer-menu-3",
               "block_class": "",
               "grid_xl": "col-xl-3",
               "grid_lg": "col-lg-3",
@@ -371,15 +395,17 @@
         },
         "block_order": [
           "block_html_VbrPUe",
-          "block_menu_krjY7J"
+          "block_menu_krjY7J",
+          "block_menu_WMGRrN",
+          "block_menu_AjAfPi"
         ],
         "settings": {
           "animate": false,
           "border_top": false,
           "border_t_c": "#ea1c1c",
           "border_t_opacity": 100,
-          "color_t": "#ffffff",
-          "color": "#ffffff",
+          "color_t": "#222222",
+          "color": "#222222",
           "color_h": "#2ea200",
           "soc_c": "#ffffff",
           "soc_bg": "#2ea200",
