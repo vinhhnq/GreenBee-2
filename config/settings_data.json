@@ -35,6 +35,7 @@
     "type_base_family_google": "Signika",
     "type_base_family_text_gallery": "Playfair Display",
     "type_base_family_text": "Poppins",
+    "share_facebook": true,
     "social_twitter_link": "#",
     "social_facebook_link": "#",
     "social_pinterest_link": "#",
@@ -659,5 +660,8 @@
         "settings": {}
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": []
   }
 }
