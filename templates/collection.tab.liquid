@@ -5,10 +5,21 @@
     	<div class="block">
     	  <div>
     	    <div class="item p_item col">
-    	      {% render 'product-list-items-style', product: product, sectionId: collection.title | handle | append: forloop.index %}
+    	      {% render 'product-list-items-style', product: product, sectionId: collection.title, append: forloop.index %}
     	    </div>
     	  </div>
     	</div>
     {% endfor %}
   </div>
-</div>
+</div>{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% render 'product-list-items-style', product: product, sectionId: collection.title
+    | handle | append: forloop.index %}"
+  to: "{% render 'product-list-items-style', product: product, sectionId: collection.title,
+    append: forloop.index %}"
+  position: 205..314
+{%- endcomment -%}
